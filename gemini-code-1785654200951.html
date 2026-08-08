@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBS - ינון בגי סוכנות ביטוח ופיננסים</title>
+    
+    <!-- Favicon / האייקון של האתר בלשונית הדפדפן -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0d3b66;
+            --secondary-color: #f4d35e;
+            --accent-color: #00a896;
+            --bg-light: #f8f9fa;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Heebo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Accessibility Styles */
+        *:focus-visible { outline: 3px solid var(--accent-color) !important; outline-offset: 3px; }
+        body.grayscale { filter: grayscale(100%); }
+        body.high-contrast { background-color: #000 !important; color: #fff !important; }
+        body.high-contrast .service-card, 
+        body.high-contrast .contact-form, 
+        body.high-contrast .testimonial-card, 
+        body.high-contrast header,
+        body.high-contrast .about,
+        body.high-contrast .faq-item,
+        body.high-contrast .modal-content,
+        body.high-contrast .calculator-container,
+        body.high-contrast .why-us-card { background-color: #111 !important; color: #fff !important; border: 1px solid #fff; }
+        body.large-text { font-size: 1.2rem; }
+        body.highlight-links a { text-decoration: underline !important; background-color: #ffeb3b !important; color: #000 !important; font-weight: bold; }
+        
+        /* Modal Styles */
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2000; justify-content: center; align-items: center; padding: 1rem; }
+        .modal-content { background: white; padding: 2rem; border-radius: 12px; max-width: 600px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; }
+        .close-modal { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-dark); }
+
+        .accessibility-btn {
+            position: fixed;
+            top: 100px;
+            right: 10px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            font-size: 1.2rem;
+        }
+
+        .accessibility-menu {
+            display: none;
+            position: fixed;
+            top: 150px;
+            right: 10px;
+            background: white;
+            border: 1px solid #ccc;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            z-index: 1001;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .accessibility-menu button {
+            background: #eee;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 2rem;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .brand-logo .logo-text {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .brand-logo .logo-text span {
+            color: var(--accent-color);
+        }
+
+        .brand-logo .sub-logo {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            display: block;
+            margin-top: -4px;
+            font-weight: 400;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #082846;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1d5285 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 1.2rem;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero .cta-btn-alt {
+            background-color: var(--secondary-color);
+            color: var(--text-dark);
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 900;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s, background 0.3s;
+            display: inline-block;
+        }
+
+        .hero .cta-btn-vcard {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s, background 0.3s;
+            display: inline-block;
+        }
+
+        .hero .cta-btn-alt:hover, .hero .cta-btn-vcard:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Trust Badge Bar */
+        .trust-bar {
+            background: #ffffff;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            text-align: center;
+        }
+
+        .trust-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .trust-item i {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+        }
+
+        /* Interactive Calculator Section */
+        .calculator-section {
+            background-color: #ffffff;
+            padding: 4rem 2rem;
+        }
+
+        .calculator-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            .calc-grid { grid-template-columns: 1fr; }
+        }
+
+        .calc-result {
+            background: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .calc-result h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .calc-result .amount {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Why Us Section */
+        .why-us {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            display: block;
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-us-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        .why-us-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .why-us-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        /* Services Section */
+        .services {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 2.8rem;
+            color: var(--accent-color);
+            margin-bottom: 1.2rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Appointment Scheduling Section */
+        .booking-section {
+            padding: 4rem 2rem;
+        }
+
+        .booking-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .calendar-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .calendar-inputs { grid-template-columns: 1fr; }
+        }
+
+        /* About Section Showcase */
+        .about {
+            padding: 4rem 2rem;
+            background-color: #ffffff;
+        }
+
+        .about-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .about-gallery {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .about-gallery img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            object-fit: cover;
+        }
+
+        .about-text {
+            flex: 1.2;
+            min-width: 300px;
+        }
+
+        .about-text h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary-color);
+            text-align: left;
+            margin-top: 1rem;
+        }
+
+        /* FAQ */
+        .faq {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            padding: 0 1.2rem 1.2rem 1.2rem;
+            display: none;
+            color: var(--text-light);
+            border-top: 1px solid #f0f0f0;
+        }
+
+        /* Contact Form */
+        .contact {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #082846;
+        }
+
+        /* Floating Action Buttons */
+        .floating-container {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 1000;
+        }
+
+        .floating-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s;
+            border: none;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float { background-color: #25d366; }
+        .vcard-float { background-color: var(--primary-color); }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Accessibility Bar -->
+    <button class="accessibility-btn" onclick="toggleAccessibilityMenu()" title="תפריט נגישות" aria-label="פתיחת תפריט נגישות" aria-expanded="false" id="accessibilityBtn">
+        <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+    </button>
+
+    <div class="accessibility-menu" id="accessibilityMenu" role="dialog" aria-label="תפריט נגישות">
+        <button onclick="toggleGrayscale()">גווני אפור</button>
+        <button onclick="toggleHighContrast()">ניגודיות גבוהה</button>
+        <button onclick="toggleLargeText()">הגדלת טקסט</button>
+        <button onclick="toggleHighlightLinks()">הדגשת קישורים</button>
+        <button onclick="openAccessibilityModal()">הצהרת נגישות</button>
+        <button onclick="resetAccessibility()">איפוס הגדרות</button>
+    </div>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="brand-logo">
+                <img src="favicon.png" alt="IBS ינון בגי סוכנות ביטוח ופיננסים" style="height: 70px; object-fit: contain;">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#why-us">למה IBS?</a></li>
+                    <li><a href="#calculator">מחשבון חיסכון</a></li>
+                    <li><a href="#services">שירותים</a></li>
+                    <li><a href="#booking">תיאום פגישה</a></li>
+                    <li><a href="#about">אודות</a></li>
+                    <li><a href="#contact">צור קשר</a></li>
+                </ul>
+            </nav>
+            <a href="#booking" class="cta-btn">תיאום בדיקה חינם</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>מתי בפעם האחרונה בדקתם כמה כסף אתם מפסידים בתיק הפנסיוני?</h1>
+            <p>רוב הישראלים משלמים דמי ניהול מופרזים ומחזיקים בכפילויות ביטוח מיותרות. IBS סוכנות ביטוח ופיננסים מעניקה בדיקה מקיפה, שקופה ואובייקטיבית שתחסוך לכם אלפי שקלים.</p>
+            <div class="hero-buttons">
+                <a href="#booking" class="cta-btn-alt">לקביעת שיחת אבחון ללא עלות <i class="fa-solid fa-arrow-left"></i></a>
+                <button onclick="downloadVCard()" class="cta-btn-vcard"><i class="fa-solid fa-address-card"></i> שמרו את סוכנות IBS באנשי הקשר</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badge Bar -->
+    <div class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-item"><i class="fa-solid fa-shield-check"></i> סוכן מורשה מטעם משרד האוצר</div>
+            <div class="trust-item"><i class="fa-solid fa-handshake"></i> עבודה מול כל חברות הביטוח</div>
+            <div class="trust-item"><i class="fa-solid fa-user-check"></i> ליווי אישי בגובה העיניים</div>
+        </div>
+    </div>
+
+    <!-- Interactive Calculator Section -->
+    <section class="calculator-section" id="calculator">
+        <h2 class="section-title">מחשבון חיסכון ופרישה אינטראקטיבי</h2>
+        <div class="calculator-container">
+            <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-light);" id="calc-rate-text">בדקו כמה תוכלו לצבור עד גיל הפרישה (הערכה לפי תשואה ממוצעת משוערת של 5% בשנה):</p>
+            <div class="calc-grid">
+                <div class="form-group">
+                    <label for="calc-track">מסלול השקעה</label>
+                    <select id="calc-track" onchange="calculateSavings()" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;">
+                        <option value="0.05">מסלול כללי (תשואה משוערת 5%)</option>
+                        <option value="0.03">מסלול סולידי / אג"ח (תשואה משוערת 3%)</option>
+                        <option value="0.08">מסלול מנייתי (תשואה משוערת 8%)</option>
+                        <option value="0.10">מדד S&P 500 (תשואה משוערת 10%)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="calc-age">גיל נוכחי (בשנים)</label>
+                    <input type="number" id="calc-age" value="35" min="18" max="66" oninput="calculateSavings()">
+                </div>
+                <div class="form-group">
+                    <label for="calc-monthly">הפקדה חודשית (בש"ח)</label>
+                    <input type="number" id="calc-monthly" value="1500" min="100" step="100" oninput="calculateSavings()">
+                </div>
+                <div class="form-group">
+                    <label for="calc-current">צבירה קיימת בקרן (בש"ח)</label>
+                    <input type="number" id="calc-current" value="100000" min="0" step="5000" oninput="calculateSavings()">
+                </div>
+            </div>
+
+            <div class="calc-result">
+                <h3>סכום הצבירה המשוער בגיל 67:</h3>
+                <div class="amount" id="result-amount">₪0</div>
+                <p style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 1rem;">שיפור דמי הניהול והתאמת מסלול ההשקעה יכולים להגדיל סכום זה במאות אלפי שקלים!</p>
+                <a href="#booking" class="cta-btn-alt" style="background-color: var(--secondary-color); color: var(--text-dark); text-decoration: none; padding: 0.6rem 1.2rem; font-size: 1rem;">לבדיקת אופטימיזציה לחיסכון שלך</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us" id="why-us">
+        <h2 class="section-title">למה לעבוד עם סוכנות IBS ולא מול מוקדי הביטוח?</h2>
+        <div class="why-us-grid">
+            <div class="why-us-card">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h3>אובייקטיביות מלאה ללא ניגוד עניינים</h3>
+                <p>מוקדן בחברת ביטוח ימכור לכם רק פוליסות של החברה שלו. כסוכנות עצמאית, אנו ב-IBS עובדים מול כל החברות והאינטרס היחיד שלנו הוא למצוא עבורכם את הכיסוי הטוב במחיר המשתלם ביותר.</p>
+            </div>
+
+            <div class="why-us-card">
+                <i class="fa-solid fa-phone-slash"></i>
+                <h3>זמינות ישירה - בלי להמתין במוקדים</h3>
+                <p>שוכחים מחדרי ההמתנה האינסופיים של חברות הביטוח. מולנו יש לכם מענה אנושי, מהיר וישיר ב-WhatsApp ובטלפון הנייד לכל שאלה, שינוי או התייעצות.</p>
+            </div>
+
+            <div class="why-us-card">
+                <i class="fa-solid fa-coins"></i>
+                <h3>חיסכון כספי מורגש ומקסום תשואות</h3>
+                <p>איתור כפילויות ביטוח, הוזלת דמי ניהול למינימום והתאמת מסלולי השקעה להגדלת הקצבה בפרישה במאות אלפי שקלים.</p>
+            </div>
+
+            <div class="why-us-card">
+                <i class="fa-solid fa-hand-holding-medical"></i>
+                <h3>ליווי אישי וייצוג ברגע האמת (תביעות)</h3>
+                <p>המבחן האמיתי הוא ברגע שמתרחש אירוע ביטוחי. הצוות המקצועי שלנו מלווה אתכם מקרוב, מנהל את הגשת התביעה מול החברה ונלחם כדי שתקבלו את מקסימום הפיצויים המגיעים לכם.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">תחומי התמחות</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div>
+                    <i class="fa-solid fa-heart-pulse service-icon"></i>
+                    <h3>ביטוח חיים ובריאות</h3>
+                    <p>הגנה כלכלית מקיפה למשפחה, ביטול כפילויות ביטוח והבטחת הכיסוי הרפואי הטוב ביותר.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <i class="fa-solid fa-piggy-bank service-icon"></i>
+                    <h3>תכנון וניהול פנסיוני</h3>
+                    <p>הורדת דמי ניהול, התאמת מסלולי תשואה ומקסום הון לקראת גיל פרישה.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <i class="fa-solid fa-chart-line service-icon"></i>
+                    <h3>קופות גמל והשתלמות</h3>
+                    <p>ניצול הטבות מס ייחודיות לשכירים ועצמאיים, וצבירת חיסכון נזיל ומרוויח.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <i class="fa-solid fa-shield-halved service-icon"></i>
+                    <h3>אובדן כושר עבודה</h3>
+                    <p>הבטחת ההכנסה החודשית של המשפחה בכל מקרה של פגיעה או מחלה שמונעת עבודה.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking Section -->
+    <section class="booking-section" id="booking">
+        <h2 class="section-title">תיאום שיחת אבחון ביומן</h2>
+        <div class="booking-container">
+            <p style="text-align: center; margin-bottom: 1.5rem; font-weight: 500;">בחר את היום והשעה הנוחים לך לשיחת ייעוץ קצרה (10 דקות) ללא עלות:</p>
+            <form onsubmit="bookAppointment(event)">
+                <div class="form-group">
+                    <label for="book-name">שם מלא</label>
+                    <input type="text" id="book-name" required placeholder="ישראל ישראלי">
+                </div>
+                <div class="form-group">
+                    <label for="book-phone">טלפון ליצירת קשר</label>
+                    <input type="tel" id="book-phone" required placeholder="052-8124966">
+                </div>
+                <div class="calendar-inputs">
+                    <div class="form-group">
+                        <label for="book-date">תאריך מבוקש</label>
+                        <input type="date" id="book-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-time">שעה מועדפת</label>
+                        <select id="book-time" required>
+                            <option value="09:00">09:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="18:00">18:00</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn" style="background-color: var(--accent-color);">קבע פגישה ביומן <i class="fa-solid fa-calendar-check"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>IBS - סוכנות ביטוח ופיננסים</h2>
+                <p>נעים להכיר, אנחנו IBS סוכנות ביטוח ופיננסים. כמשרד מתכננים פיננסיים בעל ניסיון רב, המטרה שלנו היא לעשות סדר מלא בתיק הביטוחי והפנסיוני שלכם ולהבטיח שאתם מקבלים את המקסימום מכל שקל שאתם חוסכים.</p>
+                <p>בעולם הפיננסים והביטוחים המורכב, חשוב שיהיה לצדכם גורם אובייקטיבי, אמין ומקצועי שרואה את הטובה האישית והכלכלית שלכם בלבד – ללא תלות בחברת ביטוח כזו או אחרת.</p>
+                <p>צוות הסוכנות שלנו מעניק מעטפת מקיפה למעסיקים וללקוחות פרטיים, תוך דגש על שירות מקצועי בגובה העיניים, שקיפות מלאה וזמינות גבוהה בזמן אמת – כדי שתדעו שהעתיד הכלכלי והמשפחתי שלכם נמצא בידיים הבטוחות והאחראיות ביותר.</p>
+                
+                <ul style="list-style: none; margin-top: 1.5rem; padding: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+                    <li style="display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--primary-color);">
+                        <i class="fa-solid fa-circle-check" style="color: var(--accent-color); font-size: 1.2rem;"></i> ליווי אישי וצמוד מול כל גופי הביטוח ובתי ההשקעות
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--primary-color);">
+                        <i class="fa-solid fa-circle-check" style="color: var(--accent-color); font-size: 1.2rem;"></i> התאמה מדויקת של מסלולי חיסכון לפי שלבי החיים
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--primary-color);">
+                        <i class="fa-solid fa-circle-check" style="color: var(--accent-color); font-size: 1.2rem;"></i> טיפול מהיר ומקצועי בתביעות ומימוש זכויות המבוטח
+                    </li>
+                </ul>
+            </div>
+
+            <div class="about-gallery">
+                <img src="inon.jpg" alt="ינון בגי סוכן ביטוח">
+                <img src="office.jpg" alt="משרדי IBS ינון בגי סוכנות ביטוח">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2 class="section-title">לקוחות ממליצים</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"צוות IBS עשה לי בדיקה מקיפה בתיק הפנסיוני וגילה שאני משלם דמי ניהול מופרזים. תוך שבוע הם חסכו לי מאות שקלים בחודש!"</p>
+                <div class="testimonial-author">— דוד מ., תל אביב</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"הגעתי ל-IBS כדי להסדיר ביטוח חיים למשפחה. הסבירו לי בסבלנות בגובה העיניים. שירות יוצא מן הכלל."</p>
+                <div class="testimonial-author">— רונית ש., ראשון לציון</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"צוות מקצועי, אמין וזמין תמיד. עזרו לנו להעביר את קופות הגמל למסלולים מרוויחים יותר. ממליץ בחום!"</p>
+                <div class="testimonial-author">— אלון כ., חיפה</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <h2 class="section-title">שאלות נפוצות</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false" onkeydown="handleFaqKey(event, this)">
+                <span>כמה עולה בדיקת התיק הפנסיוני והביטוחי?</span>
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </div>
+            <div class="faq-answer">
+                פגישת הייעוץ והבדיקה הראשונית ניתנות ללא כל עלות וללא התחייבות.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false" onkeydown="handleFaqKey(event, this)">
+                <span>למה חשוב לבדוק את קרן הפנסיה אחת לתקופה?</span>
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </div>
+            <div class="faq-answer">
+                דמי הניהול, מסלולי ההשקעה והצרכים המשפחתיים משתנים עם השנים. בדיקה תקופתית מבטיחה שתקבלו את התשואה המרבית ותשלמו את המינימום הנדרש.
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">השאר פרטים ונחזור אליך</h2>
+        <div class="contact-form">
+            <form onsubmit="sendToWhatsapp(event)">
+                <div class="form-group">
+                    <label for="name">שם מלא</label>
+                    <input type="text" id="name" required placeholder="ישראל ישראלי">
+                </div>
+                <div class="form-group">
+                    <label for="phone">טלפון</label>
+                    <input type="tel" id="phone" required placeholder="052-8124966">
+                </div>
+                <div class="form-group">
+                    <label for="service">תחום התעניינות עיקרי</label>
+                    <select id="service">
+                        <option value="תכנון פנסיוני / בדיקת תיק">תכנון פנסיוני / בדיקת תיק</option>
+                        <option value="ביטוח חיים ובריאות">ביטוח חיים ובריאות</option>
+                        <option value="קופות גמל / קרנות השתלמות">קופות גמל / קרנות השתלמות</option>
+                        <option value="אחר">אחר</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">שלח פנייה מהירה לצוות IBS</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-container">
+        <button onclick="downloadVCard()" class="floating-btn vcard-float" aria-label="שמירת איש קשר" title="שמור איש קשר">
+            <i class="fa-solid fa-address-card" aria-hidden="true"></i>
+        </button>
+        <a href="https://wa.me/972528124966?text=%D7%94%D7%99%D7%99%20%D7%A6%D7%95%D7%95%D7%AA%20IBS,%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%A9%D7%99%D7%97%D7%AA%20%D7%99%D7%99%D7%A2%D7%95%D7%A5" class="floating-btn whatsapp-float" target="_blank" aria-label="פנייה בוואטסאפ" title="דברו איתנו ב-WhatsApp">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <!-- Accessibility Modal -->
+    <div class="modal-overlay" id="accessibilityModal">
+        <div class="modal-content" role="document" aria-labelledby="acc-title">
+            <button class="close-modal" aria-label="סגור הצהרת נגישות" onclick="closeAccessibilityModal()"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+            <h2 id="acc-title" style="margin-bottom: 1rem; color: var(--primary-color);">הצהרת נגישות</h2>
+            <p>אנו ב-IBS סוכנות ביטוח ופיננסים רואים חשיבות רבה במתן שירות שוויוני לכלל הלקוחות והגולשים, ועל כן השקענו מאמצים ומשאבים בהנגשת אתר האינטרנט שלנו. האתר הונגש ברמת AA לפי תקן WCAG 2.0.</p>
+            <h3 style="margin: 1rem 0 0.5rem 0;">התאמות שבוצעו באתר:</h3>
+            <ul style="margin-right: 1.5rem; margin-bottom: 1rem;">
+                <li>התאמה מלאה לניווט באמצעות מקלדת.</li>
+                <li>שימוש בתגיות ARIA לקוראי מסך.</li>
+                <li>תפריט נגישות מתקדם הכולל שינויי ניגודיות, הגדלת טקסט והדגשת קישורים.</li>
+            </ul>
+            <h3 style="margin: 1rem 0 0.5rem 0;">פרטי רכז הנגישות:</h3>
+            <p>אם נתקלתם בבעיית נגישות באתר, נשמח לעמוד לרשותכם:</p>
+            <p><strong>צוות הסוכנות:</strong> IBS סוכנות ביטוח ופיננסים<br>
+            <strong>טלפון:</strong> 058-6603010<br>
+            <strong>אימייל:</strong> inon@ibs.co.il</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 IBS - סוכנות ביטוח ופיננסים | כל הזכויות שמורות | <button onclick="openAccessibilityModal()" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-size:1rem; font-family:inherit;">הצהרת נגישות</button></p>
+    </footer>
+
+    <script>
+        // Interactive Calculator Function
+        function calculateSavings() {
+            const age = parseFloat(document.getElementById('calc-age').value) || 35;
+            const monthly = parseFloat(document.getElementById('calc-monthly').value) || 0;
+            const current = parseFloat(document.getElementById('calc-current').value) || 0;
+            const trackSelect = document.getElementById('calc-track');
+            const annualRate = trackSelect ? parseFloat(trackSelect.value) : 0.05;
+
+            // Update info text
+            const rateText = document.getElementById('calc-rate-text');
+            if (rateText) {
+                rateText.innerText = `בדקו כמה תוכלו לצבור עד גיל הפרישה (הערכה לפי תשואה ממוצעת משוערת של ${Math.round(annualRate * 100)}% בשנה):`;
+            }
+
+            const years = Math.max(0, 67 - age);
+            const months = years * 12;
+            const monthlyRate = Math.pow(1 + annualRate, 1/12) - 1;
+
+            let futureValueCurrent = current * Math.pow(1 + annualRate, years);
+            let futureValueMonthly = 0;
+            if (monthlyRate > 0) {
+                futureValueMonthly = monthly * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
+            }
+
+            const total = Math.round(futureValueCurrent + futureValueMonthly);
+            document.getElementById('result-amount').innerText = '₪' + total.toLocaleString('he-IL');
+        }
+
+        window.addEventListener('DOMContentLoaded', calculateSavings);
+
+        // Download VCard
+        function downloadVCard() {
+            const vcardData = 
+                "BEGIN:VCARD\n" +
+                "VERSION:3.0\n" +
+                "N:בגי;ינון;;;\n" +
+                "FN:ינון בגי - IBS סוכנות ביטוח ופיננסים\n" +
+                "ORG:IBS ינון בגי סוכנות ביטוח ופיננסים\n" +
+                "TITLE:סוכן ביטוח ומתכנן פיננסי\n" +
+                "TEL;TYPE=CELL,VOICE:+972528124966\n" +
+                "NOTE:סוכן ביטוח, פנסיה, קופות גמל וביטוח חיים\n" +
+                "END:VCARD";
+
+            const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.setAttribute('download', 'ינון_בגי_IBS_סוכן_ביטוח.vcf');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Send Appointment Request via WhatsApp
+        function bookAppointment(e) {
+            e.preventDefault();
+            const name = document.getElementById('book-name').value;
+            const phone = document.getElementById('book-phone').value;
+            const date = document.getElementById('book-date').value;
+            const time = document.getElementById('book-time').value;
+
+            const text = `היי צוות IBS, אני רוצה לקבוע פגישה ביומן:%0A` +
+                         `*שם:* ${encodeURIComponent(name)}%0A` +
+                         `*טלפון:* ${encodeURIComponent(phone)}%0A` +
+                         `*תאריך מבוקש:* ${encodeURIComponent(date)}%0A` +
+                         `*שעה:* ${encodeURIComponent(time)}`;
+
+            window.open(`https://wa.me/972528124966?text=${text}`, '_blank');
+        }
+
+        // Send Contact Form via WhatsApp
+        function sendToWhatsapp(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+
+            const text = `היי צוות IBS, מילאתי פרטים באתר:%0A` +
+                         `*שם:* ${encodeURIComponent(name)}%0A` +
+                         `*טלפון:* ${encodeURIComponent(phone)}%0A` +
+                         `*תחום:* ${encodeURIComponent(service)}`;
+
+            window.open(`https://wa.me/972528124966?text=${text}`, '_blank');
+        }
+
+        // Accessibility Menu
+        function toggleAccessibilityMenu() {
+            const menu = document.getElementById('accessibilityMenu');
+            const btn = document.getElementById('accessibilityBtn');
+            const isExpanded = menu.style.display === 'flex';
+            menu.style.display = isExpanded ? 'none' : 'flex';
+            if (btn) btn.setAttribute('aria-expanded', !isExpanded);
+        }
+        function toggleGrayscale() { document.body.classList.toggle('grayscale'); }
+        function toggleHighContrast() { document.body.classList.toggle('high-contrast'); }
+        function toggleLargeText() { document.body.classList.toggle('large-text'); }
+        function toggleHighlightLinks() { document.body.classList.toggle('highlight-links'); }
+        function resetAccessibility() { document.body.classList.remove('grayscale', 'high-contrast', 'large-text', 'highlight-links'); }
+
+        // Accessibility Modal
+        function openAccessibilityModal() {
+            document.getElementById('accessibilityModal').style.display = 'flex';
+            document.getElementById('accessibilityMenu').style.display = 'none';
+        }
+        function closeAccessibilityModal() {
+            document.getElementById('accessibilityModal').style.display = 'none';
+        }
+
+        // FAQ Toggle with Accessibility
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const isExpanded = answer.style.display === 'block';
+            answer.style.display = isExpanded ? 'none' : 'block';
+            element.setAttribute('aria-expanded', !isExpanded);
+        }
+        function handleFaqKey(e, element) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleFaq(element);
+            }
+        }
+    </script>
+</body>
+</html>
