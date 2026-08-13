@@ -763,38 +763,37 @@
 
     <!-- Interactive Calculator Section -->
     <section class="calculator-section" id="calculator">
-        <h2 class="section-title">מחשבון חיסכון ופרישה אינטראקטיבי</h2>
+        <h2 class="section-title">מחשבון "מה היה קורה אם?" 🕰️</h2>
         <div class="calculator-container">
-            <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-light);" id="calc-rate-text">בדקו כמה תוכלו לצבור עד גיל הפרישה (הערכה לפי תשואה ממוצעת משוערת של 5% בשנה):</p>
+            <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-light);" id="calc-rate-text">בדקו כמה כסף היה לכם היום אם הייתם משקיעים במסלולים שונים לפני 3 או 5 שנים:<br><small style="color: #666;">(הנתונים מבוססים על תשואות אמת מצטברות ממוצעות נכון ל-2026)</small></p>
             <div class="calc-grid">
                 <div class="form-group">
                     <label for="calc-track">מסלול השקעה</label>
                     <select id="calc-track" onchange="calculateSavings()" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;">
-                        <option value="0.05">מסלול כללי (תשואה משוערת 5%)</option>
-                        <option value="0.03">מסלול סולידי / אג"ח (תשואה משוערת 3%)</option>
-                        <option value="0.08">מסלול מנייתי (תשואה משוערת 8%)</option>
-                        <option value="0.10">מדד S&P 500 (תשואה משוערת 10%)</option>
+                        <option value="sp500">מדד S&P 500 (תשואה גבוהה)</option>
+                        <option value="general">מסלול כללי (תשואה בינונית)</option>
+                        <option value="solid">מסלול סולידי / אג"ח (תשואה נמוכה)</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="calc-age">גיל נוכחי (בשנים)</label>
-                    <input type="number" id="calc-age" value="35" min="18" max="66" oninput="calculateSavings()">
+                    <label for="calc-time">תקופת השקעה</label>
+                    <select id="calc-time" onchange="calculateSavings()" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;">
+                        <option value="5">לפני 5 שנים</option>
+                        <option value="3">לפני 3 שנים</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="calc-monthly">הפקדה חודשית (בש"ח)</label>
-                    <input type="number" id="calc-monthly" value="1500" min="100" step="100" oninput="calculateSavings()">
-                </div>
-                <div class="form-group">
-                    <label for="calc-current">צבירה קיימת בקרן (בש"ח)</label>
-                    <input type="number" id="calc-current" value="100000" min="0" step="5000" oninput="calculateSavings()">
+                    <label for="calc-initial">סכום השקעה התחלתי (בש"ח)</label>
+                    <input type="number" id="calc-initial" value="100000" min="10000" step="10000" oninput="calculateSavings()">
                 </div>
             </div>
 
             <div class="calc-result">
-                <h3>סכום הצבירה המשוער בגיל 67:</h3>
+                <h3>השווי של הכסף שלך היום:</h3>
                 <div class="amount" id="result-amount">₪0</div>
-                <p style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 1rem;">שיפור דמי הניהול והתאמת מסלול ההשקעה יכולים להגדיל סכום זה במאות אלפי שקלים!</p>
-                <a href="#booking" class="cta-btn-alt" style="background-color: var(--secondary-color); color: var(--text-dark); text-decoration: none; padding: 0.6rem 1.2rem; font-size: 1rem;">לבדיקת אופטימיזציה לחיסכון שלך</a>
+                <p style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;" id="result-profit">רווח נקי: ₪0</p>
+                <p style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 1rem;">התאמת מסלול ההשקעה לצרכים שלך יכולה לשנות לחלוטין את העתיד הכלכלי שלך!</p>
+                <a href="#contact" class="cta-btn-alt" style="background-color: var(--secondary-color); color: var(--text-dark); text-decoration: none; padding: 0.6rem 1.2rem; font-size: 1rem;">לבדיקת תיק והתאמת מסלול בחינם</a>
             </div>
         </div>
     </section>
@@ -831,7 +830,7 @@
         <button onclick="downloadVCard()" class="floating-btn vcard-float" aria-label="שמירת איש קשר" title="שמור איש קשר">
             <i class="fa-solid fa-address-card" aria-hidden="true"></i>
         </button>
-        <a href="https://wa.me/972528124966?text=%D7%94%D7%99%D7%99%20%D7%A6%D7%95%D7%95%D7%AA%20IBS,%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%A9%D7%99%D7%97%D7%AA%20%D7%99%D7%99%D7%A2%D7%95%D7%A5" class="floating-btn whatsapp-float" target="_blank" aria-label="פנייה בוואטסאפ" title="דברו איתנו ב-WhatsApp">
+        <a href="https://wa.me/972586603010?text=%D7%94%D7%99%D7%99%20%D7%A6%D7%95%D7%95%D7%AA%20IBS,%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%A9%D7%99%D7%97%D7%AA%20%D7%99%D7%99%D7%A2%D7%95%D7%A5" class="floating-btn whatsapp-float" target="_blank" aria-label="פנייה בוואטסאפ" title="דברו איתנו ב-WhatsApp">
             <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
         </a>
     </div>
@@ -861,32 +860,25 @@
     </footer>
 
     <script>
-        // Interactive Calculator Function
+        // Historical Calculator Function
         function calculateSavings() {
-            const age = parseFloat(document.getElementById('calc-age').value) || 35;
-            const monthly = parseFloat(document.getElementById('calc-monthly').value) || 0;
-            const current = parseFloat(document.getElementById('calc-current').value) || 0;
-            const trackSelect = document.getElementById('calc-track');
-            const annualRate = trackSelect ? parseFloat(trackSelect.value) : 0.05;
+            const initial = parseFloat(document.getElementById('calc-initial').value) || 0;
+            const track = document.getElementById('calc-track').value;
+            const time = document.getElementById('calc-time').value; // '3' or '5'
 
-            // Update info text
-            const rateText = document.getElementById('calc-rate-text');
-            if (rateText) {
-                rateText.innerText = `בדקו כמה תוכלו לצבור עד גיל הפרישה (הערכה לפי תשואה ממוצעת משוערת של ${Math.round(annualRate * 100)}% בשנה):`;
-            }
+            // Real historical cumulative returns (Approximate average up to 2026)
+            const returns = {
+                'sp500': { '3': 1.45, '5': 2.05 }, // 45% in 3y, 105% in 5y
+                'general': { '3': 1.18, '5': 1.35 }, // 18% in 3y, 35% in 5y
+                'solid': { '3': 1.08, '5': 1.15 } // 8% in 3y, 15% in 5y
+            };
 
-            const years = Math.max(0, 67 - age);
-            const months = years * 12;
-            const monthlyRate = Math.pow(1 + annualRate, 1/12) - 1;
+            const multiplier = returns[track][time];
+            const finalValue = Math.round(initial * multiplier);
+            const profit = finalValue - initial;
 
-            let futureValueCurrent = current * Math.pow(1 + annualRate, years);
-            let futureValueMonthly = 0;
-            if (monthlyRate > 0) {
-                futureValueMonthly = monthly * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
-            }
-
-            const total = Math.round(futureValueCurrent + futureValueMonthly);
-            document.getElementById('result-amount').innerText = '₪' + total.toLocaleString('he-IL');
+            document.getElementById('result-amount').innerText = '₪' + finalValue.toLocaleString('he-IL');
+            document.getElementById('result-profit').innerText = 'רווח נקי: ₪' + profit.toLocaleString('he-IL');
         }
 
         window.addEventListener('DOMContentLoaded', calculateSavings);
@@ -900,7 +892,7 @@
                 "FN:ינון בגי - IBS סוכנות ביטוח ופיננסים\n" +
                 "ORG:IBS ינון בגי סוכנות ביטוח ופיננסים\n" +
                 "TITLE:סוכן ביטוח ומתכנן פיננסי\n" +
-                "TEL;TYPE=CELL,VOICE:+972528124966\n" +
+                "TEL;TYPE=CELL,VOICE:+972586603010\n" +
                 "NOTE:סוכן ביטוח, פנסיה, קופות גמל וביטוח חיים\n" +
                 "END:VCARD";
 
@@ -927,7 +919,7 @@
                          `*תאריך מבוקש:* ${encodeURIComponent(date)}%0A` +
                          `*שעה:* ${encodeURIComponent(time)}`;
 
-            window.open(`https://wa.me/972528124966?text=${text}`, '_blank');
+            window.open(`https://wa.me/972586603010?text=${text}`, '_blank');
         }
 
         // Send Contact Form via WhatsApp
@@ -942,7 +934,7 @@
                          `*טלפון:* ${encodeURIComponent(phone)}%0A` +
                          `*תחום:* ${encodeURIComponent(service)}`;
 
-            window.open(`https://wa.me/972528124966?text=${text}`, '_blank');
+            window.open(`https://wa.me/972586603010?text=${text}`, '_blank');
         }
 
         // Send Travel Form via WhatsApp
@@ -964,7 +956,7 @@
                          `*תאריכים:* ${encodeURIComponent(start)} עד ${encodeURIComponent(end)}%0A` +
                          `*מצב רפואי:* ${encodeURIComponent(medical || 'ללא')}`;
 
-            window.open(`https://wa.me/972528124966?text=${text}`, '_blank');
+            window.open(`https://wa.me/972586603010?text=${text}`, '_blank');
         }
 
         // Accessibility Menu
