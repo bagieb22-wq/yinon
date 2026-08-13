@@ -662,7 +662,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html#why-us">למה IBS?</a></li>
-                    <li><a href="index.html#calculator">מחשבון חיסכון</a></li>
+                    <li><a href="invest.html">מסלולי השקעה ומחשבון</a></li>
                     <li><a href="travel.html" style="font-weight: bold; color: var(--accent-color);">ביטוח נסיעות</a></li>
                     <li><a href="index.html#services">שירותים</a></li>
                     <li><a href="index.html#booking">תיאום פגישה</a></li>
@@ -702,39 +702,37 @@
             <form onsubmit="sendTravelToWhatsapp(event)">
                 <div class="calendar-inputs">
                     <div class="form-group">
-                        <label for="travel-name">שם מלא</label>
-                        <input type="text" id="travel-name" required placeholder="ישראל ישראלי">
-                    </div>
-                    <div class="form-group">
-                        <label for="travel-phone">טלפון</label>
-                        <input type="tel" id="travel-phone" required placeholder="052-8124966">
-                    </div>
-                </div>
-                <div class="calendar-inputs">
-                    <div class="form-group">
-                        <label for="travel-dest">יעד הנסיעה</label>
-                        <input type="text" id="travel-dest" required placeholder="למשל: יוון, ארה״ב">
-                    </div>
-                    <div class="form-group">
-                        <label for="travel-passengers">מספר נוסעים</label>
-                        <input type="number" id="travel-passengers" required value="1" min="1">
-                    </div>
-                </div>
-                <div class="calendar-inputs">
-                    <div class="form-group">
-                        <label for="travel-start">תאריך טיסה (יציאה)</label>
+                        <label for="travel-start">תאריך המראה</label>
                         <input type="date" id="travel-start" required>
                     </div>
                     <div class="form-group">
-                        <label for="travel-end">תאריך חזרה לארץ</label>
+                        <label for="travel-end">תאריך חזרה</label>
                         <input type="date" id="travel-end" required>
                     </div>
                 </div>
-                <div class="form-group" style="margin-top: 1rem;">
-                    <label for="travel-medical">האם קיימות רגישויות או מצב רפואי מיוחד? (מומלץ לפרט)</label>
-                    <textarea id="travel-medical" rows="3" placeholder="אין בעיות רפואיות..."></textarea>
+                
+                <div class="calendar-inputs" style="margin-top: 15px;">
+                    <div class="form-group">
+                        <label for="travel-passengers">מספר נוסעים</label>
+                        <input type="number" id="travel-passengers" min="1" max="10" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="travel-medical">מצב רפואי מיוחד? (אופציונלי)</label>
+                        <input type="text" id="travel-medical">
+                    </div>
                 </div>
-                <button type="submit" class="submit-btn" style="background-color: var(--accent-color);">שלח בקשה לביטוח נסיעות <i class="fa-solid fa-plane"></i></button>
+                
+                <div class="form-group" style="margin-top: 15px;">
+                    <label for="travel-name">שם מלא לתיאום</label>
+                    <input type="text" id="travel-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="travel-phone">טלפון לחזרה</label>
+                    <input type="tel" id="travel-phone" required>
+                </div>
+
+                <button type="submit" class="submit-btn" style="margin-top: 20px;">שלח פנייה מהירה לצוות IBS</button>
             </form>
         </div>
     </section>
