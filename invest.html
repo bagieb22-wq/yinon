@@ -652,12 +652,9 @@
     <!-- Header Navigation -->
     <header>
         <div class="nav-container">
-            <a href="index.html" class="brand-logo">
-                <div class="logo-icon" style="background-color: var(--primary-color); color: white; padding: 5px 10px; border-radius: 5px; font-weight: bold; font-size: 1.2rem;">IBS</div>
-                <div>
-                    <div class="logo-text">IBS <span>ביטוח ופיננסים</span></div>
-                    <span class="sub-logo">השקט הנפשי שלך, המומחיות שלנו.</span>
-                </div>
+            <a href="index.html" class="brand-logo" style="flex-direction: column; gap: 0; align-items: center; margin-top: 5px;">
+                <img src="assets/logo_premium.jpg" alt="IBS" style="height: 70px; object-fit: contain; margin-bottom: -12px;">
+                <span style="font-size: 0.6rem; font-weight: 800; color: var(--primary-color); letter-spacing: 0;">ינון בגי סוכנות ביטוח ופיננסים</span>
             </a>
             <nav>
                 <ul>
@@ -665,12 +662,12 @@
                     <li><a href="invest.html" style="font-weight: bold; color: var(--accent-color);">מחשבון ומדדים חיים</a></li>
                     <li><a href="travel.html">ביטוח נסיעות</a></li>
                     <li><a href="index.html#services">שירותים</a></li>
-                    <li><a href="index.html#booking">תיאום פגישה</a></li>
+                    <li><a href="https://surense.com/app/p/06WNGLU" target="_blank">בדיקת תיק דיגיטלית</a></li>
                     <li><a href="index.html#about">אודות</a></li>
-                    <li><a href="index.html#contact">צור קשר</a></li>
+                    <li><a href="tel:0586603010" style="background-color: var(--accent-color); color: white; padding: 6px 14px; border-radius: 20px; font-weight: bold;"><i class="fa-solid fa-phone"></i> צור קשר</a></li>
                 </ul>
             </nav>
-            <a href="index.html#booking" class="cta-btn">תיאום בדיקה חינם</a>
+            <a href="https://surense.com/app/p/06WNGLU" target="_blank" class="cta-btn">בדיקת תיק חינם</a>
         </div>
     </header>
 
@@ -763,28 +760,44 @@
 
     <!-- Interactive Calculator Section -->
     <section class="calculator-section" id="calculator">
-        <h2 class="section-title">מחשבון "מה היה קורה אם?" 🕰️</h2>
+        <h2 class="section-title">מחשבון השקעה</h2>
         <div class="calculator-container">
             <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-light);" id="calc-rate-text">בדקו כמה כסף היה לכם היום אם הייתם משקיעים במסלולים שונים לפני 3 או 5 שנים:<br><small style="color: #666;">(הנתונים מבוססים על תשואות אמת מצטברות ממוצעות נכון ל-2026)</small></p>
-            <div class="calc-grid">
-                <div class="form-group">
-                    <label for="calc-track">מסלול השקעה</label>
-                    <select id="calc-track" onchange="calculateSavings()" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;">
-                        <option value="sp500">מדד S&P 500 (תשואה גבוהה)</option>
-                        <option value="general">מסלול כללי (תשואה בינונית)</option>
-                        <option value="solid">מסלול סולידי / אג"ח (תשואה נמוכה)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="calc-time">תקופת השקעה</label>
-                    <select id="calc-time" onchange="calculateSavings()" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;">
+            <div class="calc-grid" style="grid-template-columns: 1fr;">
+                <div class="form-group" style="max-width: 400px; margin: 0 auto;">
+                    <label for="calc-time" style="text-align: center; display: block;">תקופת השקעה לאחור</label>
+                    <select id="calc-time" onchange="calculateSavings()" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; text-align: center;">
                         <option value="5">לפני 5 שנים</option>
                         <option value="3">לפני 3 שנים</option>
                     </select>
                 </div>
+            </div>
+            
+            <h4 style="color: var(--text-dark); margin: 2rem 0 1rem 0; text-align: center; font-size: 1.2rem;">כמה כסף היית שם בכל מסלול? (בש"ח)</h4>
+            <div class="calc-grid">
                 <div class="form-group">
-                    <label for="calc-initial">סכום השקעה התחלתי (בש"ח)</label>
-                    <input type="number" id="calc-initial" value="100000" min="10000" step="10000" oninput="calculateSavings()">
+                    <label for="calc-sp500">מדד S&P 500 (מניות חו"ל)</label>
+                    <input type="number" id="calc-sp500" value="" placeholder="0" min="0" step="5000" oninput="calculateSavings()">
+                </div>
+                <div class="form-group">
+                    <label for="calc-nasdaq">מדד נאסד"ק 100 (טכנולוגיה)</label>
+                    <input type="number" id="calc-nasdaq" value="" placeholder="0" min="0" step="5000" oninput="calculateSavings()">
+                </div>
+                <div class="form-group">
+                    <label for="calc-ta125">מדד תל אביב 125 (מניות ישראל)</label>
+                    <input type="number" id="calc-ta125" value="" placeholder="0" min="0" step="5000" oninput="calculateSavings()">
+                </div>
+                <div class="form-group">
+                    <label for="calc-general">מסלול כללי (תשואה בינונית)</label>
+                    <input type="number" id="calc-general" value="" placeholder="0" min="0" step="5000" oninput="calculateSavings()">
+                </div>
+                <div class="form-group">
+                    <label for="calc-halacha">מסלול הלכה (כשר)</label>
+                    <input type="number" id="calc-halacha" value="" placeholder="0" min="0" step="5000" oninput="calculateSavings()">
+                </div>
+                <div class="form-group">
+                    <label for="calc-solid">מסלול אג"ח / סולידי (תשואה נמוכה)</label>
+                    <input type="number" id="calc-solid" value="" placeholder="0" min="0" step="5000" oninput="calculateSavings()">
                 </div>
             </div>
 
@@ -862,19 +875,34 @@
     <script>
         // Historical Calculator Function
         function calculateSavings() {
-            const initial = parseFloat(document.getElementById('calc-initial').value) || 0;
-            const track = document.getElementById('calc-track').value;
+            const sp500_amt = parseFloat(document.getElementById('calc-sp500').value) || 0;
+            const nasdaq_amt = parseFloat(document.getElementById('calc-nasdaq').value) || 0;
+            const ta125_amt = parseFloat(document.getElementById('calc-ta125').value) || 0;
+            const general_amt = parseFloat(document.getElementById('calc-general').value) || 0;
+            const halacha_amt = parseFloat(document.getElementById('calc-halacha').value) || 0;
+            const solid_amt = parseFloat(document.getElementById('calc-solid').value) || 0;
             const time = document.getElementById('calc-time').value; // '3' or '5'
 
             // Real historical cumulative returns (Approximate average up to 2026)
             const returns = {
                 'sp500': { '3': 1.45, '5': 2.05 }, // 45% in 3y, 105% in 5y
+                'nasdaq': { '3': 1.60, '5': 2.40 }, // 60% in 3y, 140% in 5y
+                'ta125': { '3': 1.10, '5': 1.30 }, // 10% in 3y, 30% in 5y
                 'general': { '3': 1.18, '5': 1.35 }, // 18% in 3y, 35% in 5y
+                'halacha': { '3': 1.15, '5': 1.30 }, // 15% in 3y, 30% in 5y
                 'solid': { '3': 1.08, '5': 1.15 } // 8% in 3y, 15% in 5y
             };
 
-            const multiplier = returns[track][time];
-            const finalValue = Math.round(initial * multiplier);
+            const initial = sp500_amt + nasdaq_amt + ta125_amt + general_amt + halacha_amt + solid_amt;
+            
+            const sp500_final = sp500_amt * returns['sp500'][time];
+            const nasdaq_final = nasdaq_amt * returns['nasdaq'][time];
+            const ta125_final = ta125_amt * returns['ta125'][time];
+            const general_final = general_amt * returns['general'][time];
+            const halacha_final = halacha_amt * returns['halacha'][time];
+            const solid_final = solid_amt * returns['solid'][time];
+            
+            const finalValue = Math.round(sp500_final + nasdaq_final + ta125_final + general_final + halacha_final + solid_final);
             const profit = finalValue - initial;
 
             document.getElementById('result-amount').innerText = '₪' + finalValue.toLocaleString('he-IL');

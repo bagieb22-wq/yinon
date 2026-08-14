@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -652,8 +652,9 @@
     <!-- Header Navigation -->
     <header>
         <div class="nav-container">
-            <a href="#" class="brand-logo">
-                <img src="assets/favicon.png" alt="IBS ינון בגי סוכנות ביטוח ופיננסים" style="height: 70px; object-fit: contain;">
+            <a href="#" class="brand-logo" style="flex-direction: column; gap: 0; align-items: center; margin-top: 5px;">
+                <img src="assets/logo_premium.jpg" alt="IBS" style="height: 70px; object-fit: contain; margin-bottom: -12px;">
+                <span style="font-size: 0.6rem; font-weight: 800; color: var(--primary-color); letter-spacing: 0;">ינון בגי סוכנות ביטוח ופיננסים</span>
             </a>
             <nav>
                 <ul>
@@ -661,12 +662,12 @@
                     <li><a href="invest.html">מסלולי השקעה ומחשבון</a></li>
                     <li><a href="travel.html">ביטוח נסיעות</a></li>
                     <li><a href="#services">שירותים</a></li>
-                    <li><a href="#booking">תיאום פגישה</a></li>
+                    <li><a href="https://surense.com/app/p/06WNGLU" target="_blank">בדיקת תיק דיגיטלית</a></li>
                     <li><a href="#about">אודות</a></li>
-                    <li><a href="#contact">צור קשר</a></li>
+                    <li><a href="tel:0586603010" style="background-color: var(--accent-color); color: white; padding: 6px 14px; border-radius: 20px; font-weight: bold;"><i class="fa-solid fa-phone"></i> צור קשר</a></li>
                 </ul>
             </nav>
-            <a href="#booking" class="cta-btn">תיאום בדיקה חינם</a>
+            <a href="https://surense.com/app/p/06WNGLU" target="_blank" class="cta-btn">בדיקת תיק חינם</a>
         </div>
     </header>
 
@@ -676,7 +677,7 @@
             <h1>מתי בפעם האחרונה בדקתם כמה כסף אתם מפסידים בתיק הפנסיוני?</h1>
             <p>רוב הישראלים משלמים דמי ניהול מופרזים ומחזיקים בכפילויות ביטוח מיותרות. IBS סוכנות ביטוח ופיננסים מעניקה בדיקה מקיפה, שקופה ואובייקטיבית שתחסוך לכם אלפי שקלים.</p>
             <div class="hero-buttons">
-                <a href="#booking" class="cta-btn-alt">לקביעת שיחת אבחון ללא עלות <i class="fa-solid fa-arrow-left"></i></a>
+                <a href="https://surense.com/app/p/06WNGLU" target="_blank" class="cta-btn-alt">לאיתור כספים ובדיקת תיק פנסיוני <i class="fa-solid fa-arrow-left"></i></a>
                 <button onclick="downloadVCard()" class="cta-btn-vcard"><i class="fa-solid fa-address-card"></i> שמרו את סוכנות IBS באנשי הקשר</button>
             </div>
         </div>
@@ -729,7 +730,9 @@
                 <div>
                     <i class="fa-solid fa-heart-pulse service-icon"></i>
                     <h3>ביטוח חיים ובריאות</h3>
-                    <p>הגנה כלכלית מקיפה למשפחה, ביטול כפילויות ביטוח והבטחת הכיסוי הרפואי הטוב ביותר.</p>
+                    <p>הגנה כלכלית מקיפה לכם ולמשפחתכם. אנו מתאימים פוליסות פרטיות למימון תרופות מחוץ לסל, ניתוחים פרטיים והשתלות, תוך ביטול כפילויות ביטוח שמוזיל משמעותית את העלויות.</p>
+                    <div class="more-info" style="display: none; margin-top: 12px; padding-top: 12px; border-top: 1px solid #eee; font-size: 0.95rem; color: #555;">במערכת הבריאות הציבורית, תורים לרופאים מומחים או ניתוחים עלולים לקחת חודשים ארוכים. פוליסת בריאות פרטית מבטיחה לכם בחירת מנתח מתוך רשימת מומחים מובילים, וגישה מהירה לטכנולוגיות חדשניות. בנוסף, ביטוח חיים מותאם אישית יבטיח למשפחתכם רשת ביטחון כלכלית איתנה שתאפשר להם להמשיך בשגרת חייהם במקרה של אובדן מפרנס חלילה. נבצע בדיקת תיק יסודית למניעת כפל ביטוחים.</div>
+                    <span class="read-more-btn" onclick="toggleMoreInfo(this)" style="display: inline-block; margin-top: 15px; color: var(--accent-color); font-weight: bold; cursor: pointer; transition: 0.3s;">קרא עוד... <i class="fa-solid fa-chevron-down"></i></span>
                 </div>
             </div>
 
@@ -737,7 +740,9 @@
                 <div>
                     <i class="fa-solid fa-piggy-bank service-icon"></i>
                     <h3>תכנון וניהול פנסיוני</h3>
-                    <p>הורדת דמי ניהול, התאמת מסלולי תשואה ומקסום הון לקראת גיל פרישה.</p>
+                    <p>בדיקה מקיפה דרך המערכת הממשלתית: הוזלת דמי ניהול, איחוד קופות, והתאמת מסלולי ההשקעה במטרה להגדיל את הקצבה שלכם ולצמצם תשלומי מס ביום הפרישה.</p>
+                    <div class="more-info" style="display: none; margin-top: 12px; padding-top: 12px; border-top: 1px solid #eee; font-size: 0.95rem; color: #555;">הפנסיה היא כנראה הנכס הגדול ביותר שלכם, אך רוב החוסכים אינם מודעים לדמי הניהול ולמסלולי ההשקעה שלהם. אנו שואבים את הנתונים, מאתרים כספים אבודים שהצטברו בעבודות קודמות, ומתכננים אסטרטגיה חכמה. המטרה היא כפולה: להוזיל משמעותית את דמי הניהול כיום, ולבנות תוכנית פרישה מדויקת שתקטין את נטל המס בגיל הזהב.</div>
+                    <span class="read-more-btn" onclick="toggleMoreInfo(this)" style="display: inline-block; margin-top: 15px; color: var(--accent-color); font-weight: bold; cursor: pointer; transition: 0.3s;">קרא עוד... <i class="fa-solid fa-chevron-down"></i></span>
                 </div>
             </div>
 
@@ -745,7 +750,9 @@
                 <div>
                     <i class="fa-solid fa-chart-line service-icon"></i>
                     <h3>קופות גמל והשתלמות</h3>
-                    <p>ניצול הטבות מס ייחודיות לשכירים ועצמאיים, וצבירת חיסכון נזיל ומרוויח.</p>
+                    <p>אפיקי החיסכון המשתלמים ביותר כיום. נסייע לכם לנצל הטבות ופטורים ממס רווחי הון, ולהשקיע במסלולים המניבים ביותר בהתאמה אישית למטרות שלכם.</p>
+                    <div class="more-info" style="display: none; margin-top: 12px; padding-top: 12px; border-top: 1px solid #eee; font-size: 0.95rem; color: #555;">קרן השתלמות היא אפיק ההשקעה לטווח קצר-בינוני הטוב ביותר בישראל, בזכות הפטור המלא ממס רווחי הון במועד המשיכה. קופת גמל להשקעה מאפשרת גמישות מלאה במשיכת הכספים או משיכתם כקצבה פטורה ממס בגיל פרישה. אנו מתאימים את התמהיל המדויק, מניידים קופות לגופים המצטיינים בשוק, ומוודאים שהכסף שלכם עובד בשבילכם במינימום סיכון.</div>
+                    <span class="read-more-btn" onclick="toggleMoreInfo(this)" style="display: inline-block; margin-top: 15px; color: var(--accent-color); font-weight: bold; cursor: pointer; transition: 0.3s;">קרא עוד... <i class="fa-solid fa-chevron-down"></i></span>
                 </div>
             </div>
 
@@ -753,55 +760,23 @@
                 <div>
                     <i class="fa-solid fa-shield-halved service-icon"></i>
                     <h3>אובדן כושר עבודה</h3>
-                    <p>הבטחת ההכנסה החודשית של המשפחה בכל מקרה של פגיעה או מחלה שמונעת עבודה.</p>
+                    <p>הנכס היקר ביותר שלכם הוא היכולת לייצר הכנסה. נתאים עבורכם כיסוי עיסוקי שיבטיח קצבה חודשית וישמור על רמת החיים של משפחתכם במקרה של מחלה או תאונה.</p>
+                    <div class="more-info" style="display: none; margin-top: 12px; padding-top: 12px; border-top: 1px solid #eee; font-size: 0.95rem; color: #555;">מה יקרה אם חלילה לא תוכלו לקום לעבודה בגלל תאונה, מחלה קשה או שחיקה? פוליסת אובדן כושר עבודה נועדה לשלם לכם קצבה חודשית קבועה. אנו מוודאים שהכיסוי שלכם הוא 'עיסוקי' – מותאם ספציפית למקצוע שלכם, כולל הגדרת פיצוי מהיום הראשון ושחרור מתשלום פרמיות, כדי שתוכלו להתרכז בהחלמה ללא דאגות.</div>
+                    <span class="read-more-btn" onclick="toggleMoreInfo(this)" style="display: inline-block; margin-top: 15px; color: var(--accent-color); font-weight: bold; cursor: pointer; transition: 0.3s;">קרא עוד... <i class="fa-solid fa-chevron-down"></i></span>
                 </div>
             </div>
 
-            <div class="service-card" onclick="window.location.href='travel.html'" style="cursor: pointer;">
+            <div class="service-card" style="cursor: pointer;">
                 <div>
                     <i class="fa-solid fa-plane-departure service-icon"></i>
                     <h3>ביטוח נסיעות לחו"ל</h3>
-                    <p>כיסוי רפואי מלא, איתור וחילוץ, ביטוח כבודה והתאמה אישית לכל מצב רפואי.</p>
-                    <a href="travel.html" style="color: var(--accent-color); font-weight: bold; margin-top: 10px; display: inline-block;">השארת פרטים לביטוח <i class="fa-solid fa-arrow-left"></i></a>
+                    <p>טסים בראש שקט: כיסוי רפואי נרחב, איתור וחילוץ והגנה מביטולי טיסות. התאמה מדויקת להריון, מצב רפואי קיים, וספורט אתגרי בחו"ל.</p>
+                    <a href="travel.html" style="color: var(--accent-color); font-weight: bold; margin-top: 15px; display: inline-block; padding: 8px 16px; background: rgba(0, 168, 150, 0.1); border-radius: 8px;">להצעת מחיר וביטוח <i class="fa-solid fa-arrow-left"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Appointment Booking Section -->
-    <section class="booking-section" id="booking">
-        <h2 class="section-title">תיאום שיחת אבחון ביומן</h2>
-        <div class="booking-container">
-            <p style="text-align: center; margin-bottom: 1.5rem; font-weight: 500;">בחר את היום והשעה הנוחים לך לשיחת ייעוץ קצרה (10 דקות) ללא עלות:</p>
-            <form onsubmit="bookAppointment(event)">
-                <div class="form-group">
-                    <label for="book-name">שם מלא</label>
-                    <input type="text" id="book-name" required placeholder="ישראל ישראלי">
-                </div>
-                <div class="form-group">
-                    <label for="book-phone">טלפון ליצירת קשר</label>
-                    <input type="tel" id="book-phone" required>
-                </div>
-                <div class="calendar-inputs">
-                    <div class="form-group">
-                        <label for="book-date">תאריך מבוקש</label>
-                        <input type="date" id="book-date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="book-time">שעה מועדפת</label>
-                        <select id="book-time" required>
-                            <option value="09:00">09:00</option>
-                            <option value="11:00">11:00</option>
-                            <option value="14:00">14:00</option>
-                            <option value="16:00">16:00</option>
-                            <option value="18:00">18:00</option>
-                        </select>
-                    </div>
-                </div>
-                <button type="submit" class="submit-btn" style="background-color: var(--accent-color);">קבע פגישה ביומן <i class="fa-solid fa-calendar-check"></i></button>
-            </form>
-        </div>
-    </section>
 
     <!-- About Section -->
     <section class="about" id="about">
@@ -851,29 +826,136 @@
     </section>
 
     <!-- FAQ -->
-    <section class="faq">
-        <h2 class="section-title">שאלות נפוצות</h2>
-        
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false" onkeydown="handleFaqKey(event, this)">
-                <span>כמה עולה בדיקת התיק הפנסיוני והביטוחי?</span>
-                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-            </div>
-            <div class="faq-answer">
-                פגישת הייעוץ והבדיקה הראשונית ניתנות ללא כל עלות וללא התחייבות.
-            </div>
-        </div>
+    <!-- Har HaBituach & Cubes Contact Form -->
+    <style>
+        .contact-cubes {
+            padding: 4rem 1rem;
+            background-color: white;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .cubes-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            direction: rtl;
+        }
+        .cube-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #eaeaea;
+            transition: 0.3s;
+        }
+        .cube-item:focus-within {
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 15px rgba(13, 59, 102, 0.1);
+        }
+        .cube-item label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        .cube-item input, .cube-item select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .cube-submit {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .cube-submit button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .cube-submit button:hover {
+            background-color: var(--accent-color);
+        }
+        @media (max-width: 768px) {
+            .cubes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false" onkeydown="handleFaqKey(event, this)">
-                <span>למה חשוב לבדוק את קרן הפנסיה אחת לתקופה?</span>
-                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-            </div>
-            <div class="faq-answer">
-                דמי הניהול, מסלולי ההשקעה והצרכים המשפחתיים משתנים עם השנים. בדיקה תקופתית מבטיחה שתקבלו את התשואה המרבית ותשלמו את המינימום הנדרש.
-            </div>
+    <!-- Masleka Booking Section -->
+    <section class="booking-section" id="booking" style="background-color: #f8f9fa; padding: 4rem 1rem; border-radius: 12px; margin: 2rem auto; max-width: 900px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        <h2 class="section-title" style="margin-bottom: 1rem;">בדיקת תיק פנסיוני ואיתור כספים</h2>
+        <div class="booking-container" style="background: none; box-shadow: none; padding: 0;">
+            <p style="text-align: center; margin-bottom: 2rem; font-weight: 500; font-size: 1.1rem; color: #444;">
+                משרד האוצר מאפשר לכם לבצע בדיקה מקיפה של כלל החסכונות והביטוחים שלכם בלחיצת כפתור בצורה מאובטחת.<br><br>
+                לחיצה על הכפתור למטה תעביר אתכם לעמוד הממשלתי לאישור משיכת נתונים חד-פעמית ומאובטחת. לאחר מכן, ננתח את הנתונים ונחזור אליכם עם המלצות.
+            </p>
+            <a href="https://surense.com/app/p/06WNGLU" target="_blank" class="submit-btn" style="display: inline-block; background-color: var(--accent-color); color: #fff; text-decoration: none; padding: 15px 30px; font-size: 1.2rem; border-radius: 8px; font-weight: bold; transition: all 0.3s ease;">
+                התחילו בדיקת תיק מאובטחת <i class="fa-solid fa-shield-halved"></i>
+            </a>
+            <p style="margin-top: 1rem; font-size: 0.85rem; color: #777;">התהליך מאובטח לחלוטין ודורש אימות זהות ב-SMS.</p>
         </div>
     </section>
+
+    <!-- Har HaBituach Section -->
+    <section class="booking-section" id="har-habituach" style="background-color: #f8f9fa; padding: 4rem 1rem; border-radius: 12px; margin: 2rem auto; max-width: 900px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        <h2 class="section-title" style="margin-bottom: 1rem;">הר הביטוח: איתור כפילויות ביטוח</h2>
+        <div class="booking-container" style="background: none; box-shadow: none; padding: 0;">
+            <p style="text-align: center; margin-bottom: 2rem; font-weight: 500; font-size: 1.1rem; color: #444;">
+                הידעתם? אלפי ישראלים משלמים על כפל ביטוחים. מערכת "הר הביטוח" הממשלתית מאפשרת לכם לאתר את כל ביטוחי הבריאות, החיים והדירה שלכם בקלות.<br><br>
+                לחיצה על הכפתור תאפשר לנו לרכז עבורכם את הנתונים, להציג לכם תמונת מצב עדכנית ולחסוך לכם הרבה כסף מיותר.
+            </p>
+            <!-- PLACEHOLDER FOR HAR HABITUACH LINK -->
+            <a href="https://surense.com/app/p/NNLLSgG" target="_blank" class="submit-btn" style="display: inline-block; background-color: var(--primary-color); color: #fff; text-decoration: none; padding: 15px 30px; font-size: 1.2rem; border-radius: 8px; font-weight: bold; transition: all 0.3s ease;">
+                התחילו בדיקת כפילויות <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <p style="margin-top: 1rem; font-size: 0.85rem; color: #777;">השירות מאובטח ומתבצע בכפוף להרשאה ממשלתית.</p>
+        </div>
+    </section>
+
+    <!-- Employer Update Cubes Section -->
+    <section class="contact-cubes" id="employer-update" style="padding: 4rem 1rem; background-color: white; max-width: 900px; margin: 0 auto;">
+        <h2 class="section-title">עדכון מעסיק - הפקדות פנסיוניות</h2>
+        <p style="text-align: center; font-size: 1.1rem; color: #555; max-width: 800px; margin: 0 auto 2rem auto;">
+            התחלתם עבודה חדשה? השאירו את הפרטים שלכם כאן ואנו נדאג להעביר למעסיק את כל הטפסים והאישורים הנדרשים להפקדות הפנסיוניות שלכם באופן מסודר.
+        </p>
+        
+        <form onsubmit="sendCubesToWhatsapp(event)">
+            <div class="cubes-grid">
+                <div class="cube-item">
+                    <label for="cube-name">שם מלא</label>
+                    <input type="text" id="cube-name" required placeholder="הכנס שם מלא">
+                </div>
+                <div class="cube-item">
+                    <label for="cube-phone">מספר טלפון</label>
+                    <input type="tel" id="cube-phone" required placeholder="05X-XXXXXXX">
+                </div>
+                <div class="cube-item">
+                    <label for="cube-id">תעודת זהות</label>
+                    <input type="text" id="cube-id" required placeholder="מספר ת.ז.">
+                </div>
+                <div class="cube-item">
+                    <label for="cube-employer">שם המעסיק / מקום העבודה</label>
+                    <input type="text" id="cube-employer" required placeholder="הכנס את שם החברה">
+                </div>
+                <div class="cube-submit" style="margin-top: 1rem;">
+                    <button type="submit">שליחת פרטים לעדכון המעסיק <i class="fa-brands fa-whatsapp"></i></button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+
 
     <!-- Floating Action Buttons -->
     <div class="floating-container">
@@ -994,6 +1076,22 @@
             window.open(`https://wa.me/972586603010?text=${text}`, '_blank');
         }
 
+        // Send Cubes Form via WhatsApp
+        function sendCubesToWhatsapp(e) {
+            e.preventDefault();
+            const name = document.getElementById('cube-name').value;
+            const phone = document.getElementById('cube-phone').value;
+            const idNum = document.getElementById('cube-id').value;
+            const employer = document.getElementById('cube-employer').value;
+            let text = `היי צוות IBS, אשמח לעדכן מעסיק להפקדות פנסיוניות:%0A` +
+                       `*שם:* ${encodeURIComponent(name)}%0A` +
+                       `*טלפון:* ${encodeURIComponent(phone)}%0A` +
+                       `*מעסיק חדש:* ${encodeURIComponent(employer)}%0A` +
+                       `*תעודת זהות:* ${encodeURIComponent(idNum)}%0A`;
+
+            window.open(`https://wa.me/972586603010?text=${text}`, '_blank');
+        }
+
         // Send Travel Form via WhatsApp
         function sendTravelToWhatsapp(e) {
             e.preventDefault();
@@ -1039,19 +1137,18 @@
             document.getElementById('accessibilityModal').style.display = 'none';
         }
 
-        // FAQ Toggle with Accessibility
-        function toggleFaq(element) {
-            const answer = element.nextElementSibling;
-            const isExpanded = answer.style.display === 'block';
-            answer.style.display = isExpanded ? 'none' : 'block';
-            element.setAttribute('aria-expanded', !isExpanded);
-        }
-        function handleFaqKey(e, element) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                toggleFaq(element);
+        function toggleMoreInfo(btn) {
+            const moreText = btn.previousElementSibling;
+            if (moreText.style.display === "none" || moreText.style.display === "") {
+                moreText.style.display = "block";
+                btn.innerHTML = 'סגור <i class="fa-solid fa-chevron-up"></i>';
+            } else {
+                moreText.style.display = "none";
+                btn.innerHTML = 'קרא עוד... <i class="fa-solid fa-chevron-down"></i>';
             }
         }
+
+
     </script>
 </body>
 </html>
