@@ -908,12 +908,12 @@
     <script>
         // Global returns variable
         let marketReturns = {
-            'sp500': { '3': 1.45, '5': 2.05 },
-            'nasdaq': { '3': 1.60, '5': 2.40 },
-            'ta125': { '3': 1.10, '5': 1.30 },
-            'general': { '3': 1.18, '5': 1.35 },
-            'halacha': { '3': 1.15, '5': 1.30 },
-            'solid': { '3': 1.08, '5': 1.15 }
+            'sp500': { '1': 1.15, '3': 1.45, '5': 2.05 },
+            'nasdaq': { '1': 1.25, '3': 1.60, '5': 2.40 },
+            'ta125': { '1': 1.05, '3': 1.10, '5': 1.30 },
+            'general': { '1': 1.07, '3': 1.18, '5': 1.35 },
+            'halacha': { '1': 1.06, '3': 1.15, '5': 1.30 },
+            'solid': { '1': 1.03, '3': 1.08, '5': 1.15 }
         };
 
         // Fetch latest market data
@@ -935,6 +935,15 @@
 
         let portfolioChartInstance = null;
 
+        const baseLabels = {
+            'sp500': 'מדד S&P 500 (מניות חו"ל)',
+            'nasdaq': 'מדד נאסד"ק 100 (טכנולוגיה)',
+            'ta125': 'מדד תל אביב 125 (מניות ישראל)',
+            'general': 'מסלול כללי (תשואה בינונית)',
+            'halacha': 'מסלול הלכה (כשר)',
+            'solid': 'מסלול אג"ח / סולידי (תשואה נמוכה)'
+        };
+
         // Historical Calculator Function
         function calculateSavings() {
             const sp500_amt = parseFloat(document.getElementById('calc-sp500').value) || 0;
@@ -943,7 +952,17 @@
             const general_amt = parseFloat(document.getElementById('calc-general').value) || 0;
             const halacha_amt = parseFloat(document.getElementById('calc-halacha').value) || 0;
             const solid_amt = parseFloat(document.getElementById('calc-solid').value) || 0;
-            const time = document.getElementById('calc-time').value; // '3' or '5'
+            const time = document.getElementById('calc-time').value; // '1', '3', or '5'
+
+            // Update Labels with percentages
+            Object.keys(baseLabels).forEach(key => {
+                const labelElement = document.querySelector(`label[for="calc-${key}"]`);
+                if (labelElement && marketReturns[key] && marketReturns[key][time]) {
+                    const multiplier = marketReturns[key][time];
+                    const percentage = Math.round((multiplier - 1) * 100);
+                    labelElement.innerText = `${baseLabels[key]} [${percentage}%+]`;
+                }
+            });
 
             const initial = sp500_amt + nasdaq_amt + ta125_amt + general_amt + halacha_amt + solid_amt;
             
