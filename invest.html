@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IBS - ינון בגי סוכנות ביטוח ופיננסים</title>
+    <title>IBS - סוכנות ביטוח ופיננסים</title>
     
     <!-- Favicon / האייקון של האתר בלשונית הדפדפן -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -28,6 +28,11 @@
             margin: 0;
             padding: 0;
             font-family: 'Heebo', sans-serif;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
         }
 
         body {
@@ -631,6 +636,25 @@
             padding: 2rem 1rem;
             margin-top: 4rem;
         }
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+                padding: 1rem;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                font-size: 0.9rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero-content {
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -653,8 +677,8 @@
     <header>
         <div class="nav-container">
             <a href="index.html" class="brand-logo" style="flex-direction: column; gap: 0; align-items: center; margin-top: 5px;">
-                <img src="assets/logo_premium.jpg" alt="IBS" style="height: 70px; object-fit: contain; margin-bottom: -12px;">
-                <span style="font-size: 0.6rem; font-weight: 800; color: var(--primary-color); letter-spacing: 0;">ינון בגי סוכנות ביטוח ופיננסים</span>
+                <img src="assets/logo_premium.jpg" alt="IBS" style="height: 70px; object-fit: contain; margin-bottom: -12px; mix-blend-mode: multiply; filter: contrast(1.2) brightness(1.1);">
+                <span style="font-size: 0.75rem; font-weight: 800; color: var(--primary-color); letter-spacing: 0;">סוכנות ביטוח ופיננסים</span>
             </a>
             <nav>
                 <ul>
@@ -717,7 +741,7 @@
               <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
               {
               "colorTheme": "light",
-              "dateRange": "12M",
+              "dateRange": "1M",
               "showChart": true,
               "locale": "he_IL",
               "largeChartUrl": "",
@@ -762,7 +786,7 @@
     <section class="calculator-section" id="calculator">
         <h2 class="section-title">מחשבון השקעה</h2>
         <div class="calculator-container">
-            <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-light);" id="calc-rate-text">בדקו כמה כסף היה לכם היום אם הייתם משקיעים במסלולים שונים לפני 3 או 5 שנים:<br><small style="color: #666;">(הנתונים מבוססים על תשואות אמת מצטברות ממוצעות נכון ל-2026)</small></p>
+            <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-light);" id="calc-rate-text">בדקו כמה כסף היה לכם היום אם הייתם משקיעים במסלולים שונים לפני 3 או 5 שנים:<br><small style="color: #666;" id="update-date-text">(הנתונים מתעדכנים אוטומטית מהבורסה מדי חודש)</small></p>
             <div class="calc-grid" style="grid-template-columns: 1fr;">
                 <div class="form-group" style="max-width: 400px; margin: 0 auto;">
                     <label for="calc-time" style="text-align: center; display: block;">תקופת השקעה לאחור</label>
@@ -873,6 +897,38 @@
     </footer>
 
     <script>
+        // Global returns variable
+        let marketReturns = {
+            'sp500': { '3': 1.45, '5': 2.05 },
+            'nasdaq': { '3': 1.60, '5': 2.40 },
+            'ta125': { '3': 1.10, '5': 1.30 },
+            'general': { '3': 1.18, '5': 1.35 },
+            'halacha': { '3': 1.15, '5': 1.30 },
+            'solid': { '3': 1.08, '5': 1.15 }
+        };
+
+        // Fetch latest market data
+        async function fetchMarketData() {
+            try {
+                const response = await fetch('assets/market_returns.json?v=' + new Date().getTime());
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data && data.sp500) {
+                        marketReturns = data;
+                        console.log("Loaded live market data:", data.last_updated);
+                        const dateText = document.getElementById('update-date-text');
+                        if (dateText && data.last_updated) {
+                            const dateObj = new Date(data.last_updated);
+                            dateText.innerText = `(מעודכן לתאריך: ${dateObj.toLocaleDateString('he-IL')})`;
+                        }
+                    }
+                }
+            } catch (e) {
+                console.log("Using fallback static data, failed to load live data.");
+            }
+            calculateSavings();
+        }
+
         // Historical Calculator Function
         function calculateSavings() {
             const sp500_amt = parseFloat(document.getElementById('calc-sp500').value) || 0;
@@ -883,24 +939,14 @@
             const solid_amt = parseFloat(document.getElementById('calc-solid').value) || 0;
             const time = document.getElementById('calc-time').value; // '3' or '5'
 
-            // Real historical cumulative returns (Approximate average up to 2026)
-            const returns = {
-                'sp500': { '3': 1.45, '5': 2.05 }, // 45% in 3y, 105% in 5y
-                'nasdaq': { '3': 1.60, '5': 2.40 }, // 60% in 3y, 140% in 5y
-                'ta125': { '3': 1.10, '5': 1.30 }, // 10% in 3y, 30% in 5y
-                'general': { '3': 1.18, '5': 1.35 }, // 18% in 3y, 35% in 5y
-                'halacha': { '3': 1.15, '5': 1.30 }, // 15% in 3y, 30% in 5y
-                'solid': { '3': 1.08, '5': 1.15 } // 8% in 3y, 15% in 5y
-            };
-
             const initial = sp500_amt + nasdaq_amt + ta125_amt + general_amt + halacha_amt + solid_amt;
             
-            const sp500_final = sp500_amt * returns['sp500'][time];
-            const nasdaq_final = nasdaq_amt * returns['nasdaq'][time];
-            const ta125_final = ta125_amt * returns['ta125'][time];
-            const general_final = general_amt * returns['general'][time];
-            const halacha_final = halacha_amt * returns['halacha'][time];
-            const solid_final = solid_amt * returns['solid'][time];
+            const sp500_final = sp500_amt * (marketReturns['sp500'][time] || 1);
+            const nasdaq_final = nasdaq_amt * (marketReturns['nasdaq'][time] || 1);
+            const ta125_final = ta125_amt * (marketReturns['ta125'][time] || 1);
+            const general_final = general_amt * (marketReturns['general'][time] || 1);
+            const halacha_final = halacha_amt * (marketReturns['halacha'][time] || 1);
+            const solid_final = solid_amt * (marketReturns['solid'][time] || 1);
             
             const finalValue = Math.round(sp500_final + nasdaq_final + ta125_final + general_final + halacha_final + solid_final);
             const profit = finalValue - initial;
@@ -909,16 +955,16 @@
             document.getElementById('result-profit').innerText = 'רווח נקי: ₪' + profit.toLocaleString('he-IL');
         }
 
-        window.addEventListener('DOMContentLoaded', calculateSavings);
+        window.addEventListener('DOMContentLoaded', fetchMarketData);
 
         // Download VCard
         function downloadVCard() {
             const vcardData = 
                 "BEGIN:VCARD\n" +
                 "VERSION:3.0\n" +
-                "N:בגי;ינון;;;\n" +
-                "FN:ינון בגי - IBS סוכנות ביטוח ופיננסים\n" +
-                "ORG:IBS ינון בגי סוכנות ביטוח ופיננסים\n" +
+                "N:IBS;;;;\n" +
+                "FN:IBS סוכנות ביטוח ופיננסים\n" +
+                "ORG:IBS סוכנות ביטוח ופיננסים\n" +
                 "TITLE:סוכן ביטוח ומתכנן פיננסי\n" +
                 "TEL;TYPE=CELL,VOICE:+972586603010\n" +
                 "NOTE:סוכן ביטוח, פנסיה, קופות גמל וביטוח חיים\n" +
@@ -927,7 +973,7 @@
             const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
             const link = document.createElement('a');
             link.href = URL.createObjectURL(blob);
-            link.setAttribute('download', 'ינון_בגי_IBS_סוכן_ביטוח.vcf');
+            link.setAttribute('download', 'IBS_סוכנות_ביטוח.vcf');
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IBS - ינון בגי סוכנות ביטוח ופיננסים</title>
+    <title>IBS - סוכנות ביטוח ופיננסים</title>
     
     <!-- Favicon / האייקון של האתר בלשונית הדפדפן -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -28,6 +28,11 @@
             margin: 0;
             padding: 0;
             font-family: 'Heebo', sans-serif;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
         }
 
         body {
@@ -631,6 +636,25 @@
             padding: 2rem 1rem;
             margin-top: 4rem;
         }
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+                padding: 1rem;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                font-size: 0.9rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero-content {
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -653,8 +677,8 @@
     <header>
         <div class="nav-container">
             <a href="index.html" class="brand-logo" style="flex-direction: column; gap: 0; align-items: center; margin-top: 5px;">
-                <img src="assets/logo_premium.jpg" alt="IBS" style="height: 70px; object-fit: contain; margin-bottom: -12px;">
-                <span style="font-size: 0.6rem; font-weight: 800; color: var(--primary-color); letter-spacing: 0;">ינון בגי סוכנות ביטוח ופיננסים</span>
+                <img src="assets/logo_premium.jpg" alt="IBS" style="height: 70px; object-fit: contain; margin-bottom: -12px; mix-blend-mode: multiply; filter: contrast(1.2) brightness(1.1);">
+                <span style="font-size: 0.75rem; font-weight: 800; color: var(--primary-color); letter-spacing: 0;">סוכנות ביטוח ופיננסים</span>
             </a>
             <nav>
                 <ul>
@@ -804,9 +828,9 @@
             const vcardData = 
                 "BEGIN:VCARD\n" +
                 "VERSION:3.0\n" +
-                "N:בגי;ינון;;;\n" +
-                "FN:ינון בגי - IBS סוכנות ביטוח ופיננסים\n" +
-                "ORG:IBS ינון בגי סוכנות ביטוח ופיננסים\n" +
+                "N:IBS;;;;\n" +
+                "FN:IBS סוכנות ביטוח ופיננסים\n" +
+                "ORG:IBS סוכנות ביטוח ופיננסים\n" +
                 "TITLE:סוכן ביטוח ומתכנן פיננסי\n" +
                 "TEL;TYPE=CELL,VOICE:+972586603010\n" +
                 "NOTE:סוכן ביטוח, פנסיה, קופות גמל וביטוח חיים\n" +
@@ -815,7 +839,7 @@
             const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
             const link = document.createElement('a');
             link.href = URL.createObjectURL(blob);
-            link.setAttribute('download', 'ינון_בגי_IBS_סוכן_ביטוח.vcf');
+            link.setAttribute('download', 'IBS_סוכנות_ביטוח.vcf');
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
