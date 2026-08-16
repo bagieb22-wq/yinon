@@ -52,22 +52,25 @@ def main():
     except FileNotFoundError:
         # Fallback if file doesn't exist
         data = {
-            "sp500": {"3": 1.45, "5": 2.05},
-            "nasdaq": {"3": 1.60, "5": 2.40},
-            "ta125": {"3": 1.10, "5": 1.30},
-            "general": {"3": 1.18, "5": 1.35},
-            "halacha": {"3": 1.15, "5": 1.30},
-            "solid": {"3": 1.08, "5": 1.15}
+            "sp500": {"1": 1.15, "3": 1.45, "5": 2.05},
+            "nasdaq": {"1": 1.25, "3": 1.60, "5": 2.40},
+            "ta125": {"1": 1.05, "3": 1.10, "5": 1.30},
+            "general": {"1": 1.07, "3": 1.18, "5": 1.35},
+            "halacha": {"1": 1.06, "3": 1.15, "5": 1.30},
+            "solid": {"1": 1.03, "3": 1.08, "5": 1.15}
         }
 
     # Fetch and update
     for key, ticker in tickers.items():
+        r1 = get_return(ticker, 1)
         r3 = get_return(ticker, 3)
         r5 = get_return(ticker, 5)
         
         if key not in data:
             data[key] = {}
             
+        if r1 is not None:
+            data[key]["1"] = r1
         if r3 is not None:
             data[key]["3"] = r3
         if r5 is not None:

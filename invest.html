@@ -13,6 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <style>
         :root {
             --primary-color: #0d3b66;
@@ -786,13 +789,14 @@
     <section class="calculator-section" id="calculator">
         <h2 class="section-title">מחשבון השקעה</h2>
         <div class="calculator-container">
-            <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-light);" id="calc-rate-text">בדקו כמה כסף היה לכם היום אם הייתם משקיעים במסלולים שונים לפני 3 או 5 שנים:<br><small style="color: #666;" id="update-date-text">(הנתונים מתעדכנים אוטומטית מהבורסה מדי חודש)</small></p>
+            <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-light);" id="calc-rate-text">בדקו כמה כסף היה לכם היום אם הייתם משקיעים במסלולים שונים לפני שנה, 3 או 5 שנים:<br><small style="color: #666;" id="update-date-text">(הנתונים מתעדכנים אוטומטית מהבורסה מדי חודש)</small></p>
             <div class="calc-grid" style="grid-template-columns: 1fr;">
                 <div class="form-group" style="max-width: 400px; margin: 0 auto;">
                     <label for="calc-time" style="text-align: center; display: block;">תקופת השקעה לאחור</label>
                     <select id="calc-time" onchange="calculateSavings()" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; text-align: center;">
                         <option value="5">לפני 5 שנים</option>
                         <option value="3">לפני 3 שנים</option>
+                        <option value="1">לפני שנה</option>
                     </select>
                 </div>
             </div>
@@ -828,9 +832,14 @@
             <div class="calc-result">
                 <h3>השווי של הכסף שלך היום:</h3>
                 <div class="amount" id="result-amount">₪0</div>
-                <p style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;" id="result-profit">רווח נקי: ₪0</p>
+                <p style="font-size: 1.1rem; color: #fff; margin-bottom: 1.5rem;" id="result-profit">רווח נקי: ₪0</p>
+                
+                <div id="chart-container" style="display: none; max-width: 250px; margin: 0 auto 2rem auto; position: relative;">
+                    <canvas id="portfolioChart"></canvas>
+                </div>
+
                 <p style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 1rem;">התאמת מסלול ההשקעה לצרכים שלך יכולה לשנות לחלוטין את העתיד הכלכלי שלך!</p>
-                <a href="#contact" class="cta-btn-alt" style="background-color: var(--secondary-color); color: var(--text-dark); text-decoration: none; padding: 0.6rem 1.2rem; font-size: 1rem;">לבדיקת תיק והתאמת מסלול בחינם</a>
+                <a href="#contact" class="cta-btn-alt" style="background-color: var(--secondary-color); color: var(--text-dark); text-decoration: none; padding: 0.6rem 1.2rem; font-size: 1rem; display: inline-block;">לבדיקת תיק והתאמת מסלול בחינם</a>
             </div>
         </div>
     </section>
@@ -929,6 +938,8 @@
             calculateSavings();
         }
 
+        let portfolioChartInstance = null;
+
         // Historical Calculator Function
         function calculateSavings() {
             const sp500_amt = parseFloat(document.getElementById('calc-sp500').value) || 0;
@@ -953,6 +964,81 @@
 
             document.getElementById('result-amount').innerText = '₪' + finalValue.toLocaleString('he-IL');
             document.getElementById('result-profit').innerText = 'רווח נקי: ₪' + profit.toLocaleString('he-IL');
+
+            // --- Chart update logic ---
+            const chartContainer = document.getElementById('chart-container');
+            
+            if (initial === 0) {
+                chartContainer.style.display = 'none';
+                return;
+            }
+            
+            chartContainer.style.display = 'block';
+
+            const tracks = [
+                { label: 'S&P 500', value: sp500_final, color: '#0d3b66' },
+                { label: 'נאסד"ק 100', value: nasdaq_final, color: '#00a896' },
+                { label: 'תל אביב 125', value: ta125_final, color: '#f4d35e' },
+                { label: 'מסלול כללי', value: general_final, color: '#ff8c00' },
+                { label: 'מסלול הלכה', value: halacha_final, color: '#28a745' },
+                { label: 'מסלול אג"ח סולידי', value: solid_final, color: '#6c757d' }
+            ];
+
+            const activeLabels = [];
+            const activeData = [];
+            const activeColors = [];
+
+            tracks.forEach(t => {
+                if (t.value > 0) {
+                    activeLabels.push(t.label);
+                    activeData.push(Math.round(t.value));
+                    activeColors.push(t.color);
+                }
+            });
+
+            const ctx = document.getElementById('portfolioChart').getContext('2d');
+
+            if (portfolioChartInstance) {
+                portfolioChartInstance.data.labels = activeLabels;
+                portfolioChartInstance.data.datasets[0].data = activeData;
+                portfolioChartInstance.data.datasets[0].backgroundColor = activeColors;
+                portfolioChartInstance.update();
+            } else {
+                portfolioChartInstance = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: activeLabels,
+                        datasets: [{
+                            data: activeData,
+                            backgroundColor: activeColors,
+                            borderWidth: 2,
+                            borderColor: 'rgba(255,255,255,0.2)'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        cutout: '60%',
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    color: '#fff',
+                                    font: { family: "'Heebo', sans-serif" }
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        let value = context.raw;
+                                        return context.label + ': ₪' + value.toLocaleString('he-IL');
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
         }
 
         window.addEventListener('DOMContentLoaded', fetchMarketData);
