@@ -77,13 +77,37 @@ def main():
             data[key]["5"] = r5
 
     # Update timestamp
-    data["last_updated"] = datetime.now().isoformat()
+    now = datetime.now()
+    data["last_updated"] = now.isoformat()
 
-    # Save
+    # Save JSON
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
         
-    print(f"Successfully updated market_returns.json at {datetime.now().isoformat()}")
+    # Update HTML
+    html_path = os.path.join(os.path.dirname(__file__), '..', 'invest.html')
+    try:
+        with open(html_path, 'r', encoding='utf-8') as f:
+            html_content = f.read()
+            
+        import re
+        date_str = now.strftime('%d.%m.%Y')
+        new_text = f'(מעודכן לתאריך: {date_str})'
+        # Regex to replace everything inside id="update-date-text">...<
+        html_content = re.sub(
+            r'(id="update-date-text">)[^<]+(</small>)',
+            rf'\g<1>{new_text}\g<2>',
+            html_content
+        )
+        
+        with open(html_path, 'w', encoding='utf-8') as f:
+            f.write(html_content)
+            
+        print(f"Successfully updated HTML with date: {date_str}")
+    except Exception as e:
+        print(f"Error updating HTML: {e}")
+        
+    print(f"Successfully updated market_returns.json at {now.isoformat()}")
 
 if __name__ == "__main__":
     main()

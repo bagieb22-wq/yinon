@@ -925,11 +925,6 @@
                     if (data && data.sp500) {
                         marketReturns = data;
                         console.log("Loaded live market data:", data.last_updated);
-                        const dateText = document.getElementById('update-date-text');
-                        if (dateText && data.last_updated) {
-                            const dateObj = new Date(data.last_updated);
-                            dateText.innerText = `(מעודכן לתאריך: ${dateObj.toLocaleDateString('he-IL')})`;
-                        }
                     }
                 }
             } catch (e) {
