@@ -814,30 +814,7 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials" id="reviews">
-        <h2 class="section-title">לקוחות ממליצים</h2>
-        
-        <div id="reviews-container" class="testimonials-grid">
-            <div style="text-align: center; width: 100%; color: var(--primary-color);">טוען המלצות...</div>
-        </div>
 
-        <div class="review-form-container" style="max-width: 600px; margin: 3rem auto 0; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: right; direction: rtl;">
-            <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; text-align: center;">הוסף המלצה משלך</h3>
-            <form id="review-form" onsubmit="submitReview(event)">
-                <div style="margin-bottom: 1rem;">
-                    <label for="review-name" style="display: block; margin-bottom: 0.5rem; font-weight: bold; color: var(--text-dark);">שם מלא:</label>
-                    <input type="text" id="review-name" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;">
-                </div>
-                <div style="margin-bottom: 1rem;">
-                    <label for="review-text" style="display: block; margin-bottom: 0.5rem; font-weight: bold; color: var(--text-dark);">ההמלצה שלך:</label>
-                    <textarea id="review-text" required rows="4" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; resize: vertical;"></textarea>
-                </div>
-                <button type="submit" id="submit-review-btn" style="width: 100%; padding: 1rem; background-color: var(--accent-color); color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: background-color 0.3s; font-size: 1.1rem;">שלח המלצה</button>
-            </form>
-            <div id="review-status" style="margin-top: 1rem; text-align: center; font-weight: bold; display: none;"></div>
-        </div>
-    </section>
 
     <!-- FAQ -->
     <!-- Har HaBituach & Cubes Contact Form -->
@@ -1017,6 +994,31 @@
             <strong>אימייל:</strong> inon@ibs.co.il</p>
         </div>
     </div>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="reviews">
+        <h2 class="section-title">לקוחות ממליצים</h2>
+        
+        <div id="reviews-container" class="testimonials-grid">
+            <div style="text-align: center; width: 100%; color: var(--primary-color);">טוען המלצות...</div>
+        </div>
+
+        <div class="review-form-container" style="max-width: 600px; margin: 3rem auto 0; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: right; direction: rtl;">
+            <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; text-align: center;">הוסף המלצה משלך</h3>
+            <form id="review-form" onsubmit="submitReview(event)">
+                <div style="margin-bottom: 1rem;">
+                    <label for="review-name" style="display: block; margin-bottom: 0.5rem; font-weight: bold; color: var(--text-dark);">שם מלא:</label>
+                    <input type="text" id="review-name" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label for="review-text" style="display: block; margin-bottom: 0.5rem; font-weight: bold; color: var(--text-dark);">ההמלצה שלך:</label>
+                    <textarea id="review-text" required rows="4" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; resize: vertical;"></textarea>
+                </div>
+                <button type="submit" id="submit-review-btn" style="width: 100%; padding: 1rem; background-color: var(--accent-color); color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: background-color 0.3s; font-size: 1.1rem;">שלח המלצה</button>
+            </form>
+            <div id="review-status" style="margin-top: 1rem; text-align: center; font-weight: bold; display: none;"></div>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2026 IBS - סוכנות ביטוח ופיננסים | כל הזכויות שמורות | <button onclick="openAccessibilityModal()" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-size:1rem; font-family:inherit;">הצהרת נגישות</button></p>
@@ -1207,7 +1209,7 @@
                 const querySnapshot = await getDocs(q);
                 
                 if (querySnapshot.empty) {
-                    container.innerHTML = '<div style="text-align: center; width: 100%;">עדיין אין המלצות. תהיו הראשונים!</div>';
+                    container.innerHTML = '';
                     return;
                 }
 
