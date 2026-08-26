@@ -40,7 +40,7 @@ def main():
     tickers = {
         'sp500': '^GSPC',
         'nasdaq': '^NDX',
-        'ta125': 'TA125.TA'
+        'ta125': '^TA125.TA'
     }
     
     # We will load the existing json to preserve the static tracks (general, halacha, solid)
