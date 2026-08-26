@@ -961,7 +961,7 @@
                 const labelElement = document.querySelector(`label[for="calc-${key}"]`);
                 if (labelElement && marketReturns[key] && marketReturns[key][time]) {
                     const multiplier = marketReturns[key][time];
-                    const percentage = Math.round((multiplier - 1) * 100);
+                    const percentage = parseFloat(((multiplier - 1) * 100).toFixed(2));
                     labelElement.innerText = `${baseLabels[key]} [${percentage}%+]`;
                 }
             });
