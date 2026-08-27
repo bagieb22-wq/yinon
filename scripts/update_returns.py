@@ -30,7 +30,7 @@ def get_return(ticker, years):
         
         # Calculate multiplier (e.g. 1.45 for 45% return)
         multiplier = current_price / past_price
-        return round(multiplier, 3)
+        return round(multiplier, 4)
     except Exception as e:
         print(f"Error fetching data for {ticker}: {e}")
         return None
@@ -81,9 +81,9 @@ def get_gemel_averages():
         if len(percentages) >= 3:
             # We want 1 year (3rd from end), 3 years (2nd from end), 5 years (1st from end)
             return {
-                "1": round(1 + (percentages[-3] / 100), 3),
-                "3": round(1 + (percentages[-2] / 100), 3),
-                "5": round(1 + (percentages[-1] / 100), 3)
+                "1": round(1 + (percentages[-3] / 100), 4),
+                "3": round(1 + (percentages[-2] / 100), 4),
+                "5": round(1 + (percentages[-1] / 100), 4)
             }
         else:
             print(f"Not enough percentage columns found: {percentages}")
