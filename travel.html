@@ -686,7 +686,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html#why-us">למה IBS?</a></li>
-                    <li><a href="invest.html">מסלולי השקעה ומחשבון</a></li>
+                    <li><a href="invest.html">מחשבון תשואות</a></li>
                     <li><a href="travel.html" style="font-weight: bold; color: var(--accent-color);">ביטוח נסיעות</a></li>
                     <li><a href="index.html#services">שירותים</a></li>
                     <li><a href="https://surense.com/app/p/06WNGLU" target="_blank">בדיקת תיק דיגיטלית</a></li>
@@ -741,17 +741,34 @@
                         <input type="number" id="travel-passengers" min="1" max="10" value="1" required>
                     </div>
                     <div class="form-group">
-                        <label for="travel-medical">מצב רפואי מיוחד? (אופציונלי)</label>
-                        <input type="text" id="travel-medical">
+                        <label for="travel-dest">מדינת יעד</label>
+                        <input type="text" id="travel-dest" required>
+                    </div>
+                </div>
+
+                <div class="calendar-inputs" style="margin-top: 15px;">
+                    <div class="form-group">
+                        <label for="travel-name">שם מלא</label>
+                        <input type="text" id="travel-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="travel-id">תעודת זהות</label>
+                        <input type="text" id="travel-id" required pattern="\d{8,9}" title="תעודת זהות תקינה (8-9 ספרות)">
+                    </div>
+                </div>
+
+                <div class="calendar-inputs" style="margin-top: 15px;">
+                    <div class="form-group">
+                        <label for="travel-dob">תאריך לידה</label>
+                        <input type="date" id="travel-dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="travel-issue">תאריך הנפקה (ת.ז)</label>
+                        <input type="date" id="travel-issue" required>
                     </div>
                 </div>
                 
                 <div class="form-group" style="margin-top: 15px;">
-                    <label for="travel-name">שם מלא לתיאום</label>
-                    <input type="text" id="travel-name" required>
-                </div>
-                
-                <div class="form-group">
                     <label for="travel-phone">טלפון לחזרה</label>
                     <input type="tel" id="travel-phone" required>
                 </div>
@@ -892,16 +909,21 @@
             const passengers = document.getElementById('travel-passengers').value;
             const start = document.getElementById('travel-start').value;
             const end = document.getElementById('travel-end').value;
-            const medical = document.getElementById('travel-medical').value;
+            const idNum = document.getElementById('travel-id').value;
+            const dob = document.getElementById('travel-dob').value;
+            const issue = document.getElementById('travel-issue').value;
 
             const text = `היי צוות IBS, אשמח לקבל הצעת מחיר לביטוח נסיעות לחו"ל:%0A` +
                          `*שם:* ${encodeURIComponent(name)}%0A` +
+                         `*ת.ז:* ${encodeURIComponent(idNum)}%0A` +
+                         `*תאריך לידה:* ${encodeURIComponent(dob)}%0A` +
+                         `*תאריך הנפקה:* ${encodeURIComponent(issue)}%0A` +
                          `*טלפון:* ${encodeURIComponent(phone)}%0A` +
                          `*יעד:* ${encodeURIComponent(dest)}%0A` +
                          `*נוסעים:* ${encodeURIComponent(passengers)}%0A` +
-                         `*תאריכים:* ${encodeURIComponent(start)} עד ${encodeURIComponent(end)}%0A` +
-                         `*מצב רפואי:* ${encodeURIComponent(medical || 'ללא')}`;
+                         `*תאריכים:* ${encodeURIComponent(start)} עד ${encodeURIComponent(end)}`;
 
+            // Open WhatsApp in a new tab/app
             window.open(`https://wa.me/972586603010?text=${text}`, '_blank');
         }
 
