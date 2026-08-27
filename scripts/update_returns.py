@@ -42,7 +42,8 @@ def get_gemel_averages():
     # Returns a dict with "1", "3", "5" multipliers for the general track
     try:
         # URL for "קופת גמל להשקעה - כללי"
-        url = "https://www.mygemel.net/%D7%A7%D7%95%D7%A4%D7%AA-%D7%92%D7%9E%D7%9C-%D7%9C%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%9B%D7%9C%D7%9C%D7%99"
+        # The main page for קופת גמל להשקעה. The first table is 'כללי'
+        url = "https://www.mygemel.net/%D7%A7%D7%95%D7%A4%D7%AA-%D7%92%D7%9E%D7%9C-%D7%9C%D7%94%D7%A9%D7%A7%D7%A2%D7%94"
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
         response = requests.get(url, headers=headers, timeout=10)
         response.raise_for_status()
