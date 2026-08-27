@@ -35,6 +35,64 @@ def get_return(ticker, years):
         print(f"Error fetching data for {ticker}: {e}")
         return None
 
+import requests
+from bs4 import BeautifulSoup
+
+def get_gemel_averages():
+    # Returns a dict with "1", "3", "5" multipliers for the general track
+    try:
+        # URL for "קופת גמל להשקעה - כללי"
+        url = "https://www.mygemel.net/%D7%A7%D7%95%D7%A4%D7%AA-%D7%92%D7%9E%D7%9C-%D7%9C%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%9B%D7%9C%D7%9C%D7%99"
+        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+        
+        soup = BeautifulSoup(response.text, 'html.parser')
+        
+        # Look for the row containing "ממוצע"
+        # Since table structures vary, we'll try to find "ממוצע" in any table row
+        # Usually it's "ממוצע קבוצתי" or "ממוצע ענפי"
+        average_row = None
+        for tr in soup.find_all('tr'):
+            text = tr.get_text()
+            if 'ממוצע' in text:
+                average_row = tr
+                break
+                
+        if not average_row:
+            print("Could not find average row in MyGemel")
+            return None
+            
+        # The columns typically contain numbers with '%'
+        # We need to extract all percentages in order. Usually: 1 month, year-to-date, 12 months, 3 years, 5 years
+        # Let's use regex to find all percentages in the row text
+        import re
+        tds = average_row.find_all('td')
+        percentages = []
+        for td in tds:
+            txt = td.get_text().strip()
+            # Match number possibly with negative sign and decimal, followed by %
+            match = re.search(r'(-?\d+\.?\d*)%', txt)
+            if match:
+                percentages.append(float(match.group(1)))
+                
+        # The table has columns like: Month, 1 Year, 3 Years, 5 Years
+        # So we want the last 3 percentages.
+        if len(percentages) >= 3:
+            # We want 1 year (3rd from end), 3 years (2nd from end), 5 years (1st from end)
+            return {
+                "1": round(1 + (percentages[-3] / 100), 3),
+                "3": round(1 + (percentages[-2] / 100), 3),
+                "5": round(1 + (percentages[-1] / 100), 3)
+            }
+        else:
+            print(f"Not enough percentage columns found: {percentages}")
+            return None
+            
+    except Exception as e:
+        print(f"Error scraping MyGemel: {e}")
+        return None
+
 def main():
     # Define tickers
     tickers = {
@@ -75,6 +133,12 @@ def main():
             data[key]["3"] = r3
         if r5 is not None:
             data[key]["5"] = r5
+
+    # Try fetching GemelNet averages for general track
+    gemel_averages = get_gemel_averages()
+    if gemel_averages:
+        data["general"] = gemel_averages
+        print(f"Successfully scraped General Track averages: {gemel_averages}")
 
     # Update timestamp
     now = datetime.now()
