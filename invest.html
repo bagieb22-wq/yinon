@@ -804,34 +804,42 @@
                 </div>
             </div>
             
-            <h4 style="color: var(--text-dark); margin: 2rem 0 1rem 0; text-align: center; font-size: 1.2rem;">כמה כסף היית שם בכל מסלול? (בש"ח)</h4>
-            <div class="calc-grid">
-                <div class="form-group">
-                    <label for="calc-sp500">מדד S&P 500 (מניות חו"ל)</label>
-                    <input type="number" id="calc-sp500" value="" placeholder="0" min="0" step="5000" oninput="calculateSavings()">
-                </div>
-                <div class="form-group">
-                    <label for="calc-nasdaq">מדד נאסד"ק 100 (טכנולוגיה)</label>
-                    <input type="number" id="calc-nasdaq" value="" placeholder="0" min="0" step="5000" oninput="calculateSavings()">
-                </div>
-                <div class="form-group">
-                    <label for="calc-ta125">מדד תל אביב 125 (מניות ישראל)</label>
-                    <input type="number" id="calc-ta125" value="" placeholder="0" min="0" step="5000" oninput="calculateSavings()">
-                </div>
-                <div class="form-group">
-                    <label for="calc-general">מסלול כללי (תשואה בינונית)</label>
-                    <input type="number" id="calc-general" value="" placeholder="0" min="0" step="5000" oninput="calculateSavings()">
-                </div>
-                <div class="form-group">
-                    <label for="calc-halacha">מסלול הלכה (כשר)</label>
-                    <input type="number" id="calc-halacha" value="" placeholder="0" min="0" step="5000" oninput="calculateSavings()">
-                </div>
-                <div class="form-group">
-                    <label for="calc-solid">מסלול אג"ח / סולידי (תשואה נמוכה)</label>
-                    <input type="number" id="calc-solid" value="" placeholder="0" min="0" step="5000" oninput="calculateSavings()">
+            <div class="calc-grid" style="grid-template-columns: 1fr; margin-top: 1rem;">
+                <div class="form-group" style="max-width: 400px; margin: 0 auto;">
+                    <label for="calc-total" style="text-align: center; display: block; font-size: 1.2rem; font-weight: 700; color: var(--text-dark);">סכום השקעה כולל (בש"ח)</label>
+                    <input type="number" id="calc-total" value="100000" placeholder="100000" min="0" step="10000" oninput="calculateSavings()" style="text-align: center; font-size: 1.2rem;">
                 </div>
             </div>
 
+            <h4 style="color: var(--text-dark); margin: 2rem 0 1rem 0; text-align: center; font-size: 1.1rem;">איך תרצו לחלק את הסכום? (באחוזים %)</h4>
+            <div class="calc-grid">
+                <div class="form-group">
+                    <label for="calc-sp500">מדד S&P 500 (מניות חו"ל)</label>
+                    <input type="number" id="calc-sp500" value="" placeholder="0%" min="0" max="100" step="1" oninput="calculateSavings()">
+                </div>
+                <div class="form-group">
+                    <label for="calc-nasdaq">מדד נאסד"ק 100 (טכנולוגיה)</label>
+                    <input type="number" id="calc-nasdaq" value="" placeholder="0%" min="0" max="100" step="1" oninput="calculateSavings()">
+                </div>
+                <div class="form-group">
+                    <label for="calc-ta125">מדד תל אביב 125 (מניות ישראל)</label>
+                    <input type="number" id="calc-ta125" value="" placeholder="0%" min="0" max="100" step="1" oninput="calculateSavings()">
+                </div>
+                <div class="form-group">
+                    <label for="calc-general">מסלול כללי (תשואה בינונית)</label>
+                    <input type="number" id="calc-general" value="" placeholder="0%" min="0" max="100" step="1" oninput="calculateSavings()">
+                </div>
+                <div class="form-group">
+                    <label for="calc-halacha">מסלול הלכה (כשר)</label>
+                    <input type="number" id="calc-halacha" value="" placeholder="0%" min="0" max="100" step="1" oninput="calculateSavings()">
+                </div>
+                <div class="form-group">
+                    <label for="calc-solid">מסלול אג"ח / סולידי (תשואה נמוכה)</label>
+                    <input type="number" id="calc-solid" value="" placeholder="0%" min="0" max="100" step="1" oninput="calculateSavings()">
+                </div>
+            </div>
+
+            <p id="calc-warning" style="color: #e63946; text-align: center; font-weight: bold; margin-bottom: 1rem; display: none;">שימו לב: חילקתם יותר מ-100%!</p>
             <div class="calc-result">
                 <h3>השווי של הכסף שלך היום:</h3>
                 <div class="amount" id="result-amount">₪0</div>
@@ -952,12 +960,14 @@
 
         // Historical Calculator Function
         function calculateSavings() {
-            const sp500_amt = parseFloat(document.getElementById('calc-sp500').value) || 0;
-            const nasdaq_amt = parseFloat(document.getElementById('calc-nasdaq').value) || 0;
-            const ta125_amt = parseFloat(document.getElementById('calc-ta125').value) || 0;
-            const general_amt = parseFloat(document.getElementById('calc-general').value) || 0;
-            const halacha_amt = parseFloat(document.getElementById('calc-halacha').value) || 0;
-            const solid_amt = parseFloat(document.getElementById('calc-solid').value) || 0;
+            const totalAmount = parseFloat(document.getElementById('calc-total').value) || 0;
+            
+            const sp500_pct = parseFloat(document.getElementById('calc-sp500').value) || 0;
+            const nasdaq_pct = parseFloat(document.getElementById('calc-nasdaq').value) || 0;
+            const ta125_pct = parseFloat(document.getElementById('calc-ta125').value) || 0;
+            const general_pct = parseFloat(document.getElementById('calc-general').value) || 0;
+            const halacha_pct = parseFloat(document.getElementById('calc-halacha').value) || 0;
+            const solid_pct = parseFloat(document.getElementById('calc-solid').value) || 0;
             const time = document.getElementById('calc-time').value; // '1', '3', or '5'
 
             // Update Labels with percentages
@@ -969,6 +979,19 @@
                     labelElement.innerText = `${baseLabels[key]} [${percentage}%+]`;
                 }
             });
+
+            const sp500_amt = totalAmount * (sp500_pct / 100);
+            const nasdaq_amt = totalAmount * (nasdaq_pct / 100);
+            const ta125_amt = totalAmount * (ta125_pct / 100);
+            const general_amt = totalAmount * (general_pct / 100);
+            const halacha_amt = totalAmount * (halacha_pct / 100);
+            const solid_amt = totalAmount * (solid_pct / 100);
+
+            const totalPct = sp500_pct + nasdaq_pct + ta125_pct + general_pct + halacha_pct + solid_pct;
+            const warningEl = document.getElementById('calc-warning');
+            if (warningEl) {
+                warningEl.style.display = totalPct > 100 ? 'block' : 'none';
+            }
 
             const initial = sp500_amt + nasdaq_amt + ta125_amt + general_amt + halacha_amt + solid_amt;
             
