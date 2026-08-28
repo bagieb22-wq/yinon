@@ -397,11 +397,42 @@
             padding: 2.5rem 1.5rem;
             border-radius: 12px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eaeaea;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            height: 100%;
+        }
+
+        .service-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card p {
+            flex-grow: 1;
+        }
+
+        .service-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background 0.3s;
+            border: none;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .service-btn:hover {
+            background-color: #005a4e;
         }
 
         .service-card:hover {
@@ -425,6 +456,75 @@
             color: var(--text-light);
             font-size: 0.95rem;
             margin-bottom: 1.5rem;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            animation: fadeIn 0.3s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: right;
+            transform: translateY(-20px);
+            animation: slideDown 0.3s forwards;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-20px); }
+            to { transform: translateY(0); }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #aaa;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .modal-close:hover {
+            color: #333;
+        }
+
+        .modal-title {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            padding-left: 20px;
+        }
+
+        .modal-body {
+            color: #555;
+            line-height: 1.6;
         }
 
         /* Appointment Scheduling Section */
@@ -740,52 +840,38 @@
         <h2 class="section-title">תחומי התמחות</h2>
         <div class="services-grid">
             <div class="service-card">
-                <div>
-                    <i class="fa-solid fa-heart-pulse service-icon"></i>
-                    <h3>ביטוח חיים ובריאות</h3>
-                    <p>הגנה כלכלית מקיפה לכם ולמשפחתכם. אנו מתאימים פוליסות פרטיות למימון תרופות מחוץ לסל, ניתוחים פרטיים והשתלות, תוך ביטול כפילויות ביטוח שמוזיל משמעותית את העלויות.</p>
-                    <div class="more-info" style="display: none; margin-top: 12px; padding-top: 12px; border-top: 1px solid #eee; font-size: 0.95rem; color: #555;">במערכת הבריאות הציבורית, תורים לרופאים מומחים או ניתוחים עלולים לקחת חודשים ארוכים. פוליסת בריאות פרטית מבטיחה לכם בחירת מנתח מתוך רשימת מומחים מובילים, וגישה מהירה לטכנולוגיות חדשניות. בנוסף, ביטוח חיים מותאם אישית יבטיח למשפחתכם רשת ביטחון כלכלית איתנה שתאפשר להם להמשיך בשגרת חייהם במקרה של אובדן מפרנס חלילה. נבצע בדיקת תיק יסודית למניעת כפל ביטוחים.</div>
-                    <span class="read-more-btn" onclick="toggleMoreInfo(this)" style="display: inline-block; margin-top: 15px; color: var(--accent-color); font-weight: bold; cursor: pointer; transition: 0.3s;">קרא עוד... <i class="fa-solid fa-chevron-down"></i></span>
-                </div>
+                <i class="fa-solid fa-heart-pulse service-icon"></i>
+                <h3>ביטוח חיים ובריאות</h3>
+                <p>הגנה כלכלית מקיפה לכם ולמשפחתכם. אנו מתאימים פוליסות פרטיות למימון תרופות מחוץ לסל, ניתוחים פרטיים והשתלות, תוך ביטול כפילויות ביטוח שמוזיל משמעותית את העלויות.</p>
+                <button class="service-btn" onclick="openModal('ביטוח חיים ובריאות', 'במערכת הבריאות הציבורית, תורים לרופאים מומחים או ניתוחים עלולים לקחת חודשים ארוכים. פוליסת בריאות פרטית מבטיחה לכם בחירת מנתח מתוך רשימת מומחים מובילים, וגישה מהירה לטכנולוגיות חדשניות. בנוסף, ביטוח חיים מותאם אישית יבטיח למשפחתכם רשת ביטחון כלכלית איתנה שתאפשר להם להמשיך בשגרת חייהם במקרה של אובדן מפרנס חלילה. נבצע בדיקת תיק יסודית למניעת כפל ביטוחים.')">קרא עוד...</button>
             </div>
 
             <div class="service-card">
-                <div>
-                    <i class="fa-solid fa-piggy-bank service-icon"></i>
-                    <h3>תכנון וניהול פנסיוני</h3>
-                    <p>בדיקה מקיפה דרך המערכת הממשלתית: הוזלת דמי ניהול, איחוד קופות, והתאמת מסלולי ההשקעה במטרה להגדיל את הקצבה שלכם ולצמצם תשלומי מס ביום הפרישה.</p>
-                    <div class="more-info" style="display: none; margin-top: 12px; padding-top: 12px; border-top: 1px solid #eee; font-size: 0.95rem; color: #555;">הפנסיה היא כנראה הנכס הגדול ביותר שלכם, אך רוב החוסכים אינם מודעים לדמי הניהול ולמסלולי ההשקעה שלהם. אנו שואבים את הנתונים, מאתרים כספים אבודים שהצטברו בעבודות קודמות, ומתכננים אסטרטגיה חכמה. המטרה היא כפולה: להוזיל משמעותית את דמי הניהול כיום, ולבנות תוכנית פרישה מדויקת שתקטין את נטל המס בגיל הזהב.</div>
-                    <span class="read-more-btn" onclick="toggleMoreInfo(this)" style="display: inline-block; margin-top: 15px; color: var(--accent-color); font-weight: bold; cursor: pointer; transition: 0.3s;">קרא עוד... <i class="fa-solid fa-chevron-down"></i></span>
-                </div>
+                <i class="fa-solid fa-piggy-bank service-icon"></i>
+                <h3>תכנון וניהול פנסיוני</h3>
+                <p>בדיקה מקיפה דרך המערכת הממשלתית: הוזלת דמי ניהול, איחוד קופות, והתאמת מסלולי ההשקעה במטרה להגדיל את הקצבה שלכם ולצמצם תשלומי מס ביום הפרישה.</p>
+                <button class="service-btn" onclick="openModal('תכנון וניהול פנסיוני', 'הפנסיה היא כנראה הנכס הגדול ביותר שלכם, אך רוב החוסכים אינם מודעים לדמי הניהול ולמסלולי ההשקעה שלהם. אנו שואבים את הנתונים, מאתרים כספים אבודים שהצטברו בעבודות קודמות, ומתכננים אסטרטגיה חכמה. המטרה היא כפולה: להוזיל משמעותית את דמי הניהול כיום, ולבנות תוכנית פרישה מדויקת שתקטין את נטל המס בגיל הזהב.')">קרא עוד...</button>
             </div>
 
             <div class="service-card">
-                <div>
-                    <i class="fa-solid fa-chart-line service-icon"></i>
-                    <h3>קופות גמל והשתלמות</h3>
-                    <p>אפיקי החיסכון המשתלמים ביותר כיום. נסייע לכם לנצל הטבות ופטורים ממס רווחי הון, ולהשקיע במסלולים המניבים ביותר בהתאמה אישית למטרות שלכם.</p>
-                    <div class="more-info" style="display: none; margin-top: 12px; padding-top: 12px; border-top: 1px solid #eee; font-size: 0.95rem; color: #555;">קרן השתלמות היא אפיק ההשקעה לטווח קצר-בינוני הטוב ביותר בישראל, בזכות הפטור המלא ממס רווחי הון במועד המשיכה. קופת גמל להשקעה מאפשרת גמישות מלאה במשיכת הכספים או משיכתם כקצבה פטורה ממס בגיל פרישה. אנו מתאימים את התמהיל המדויק, מניידים קופות לגופים המצטיינים בשוק, ומוודאים שהכסף שלכם עובד בשבילכם במינימום סיכון.</div>
-                    <span class="read-more-btn" onclick="toggleMoreInfo(this)" style="display: inline-block; margin-top: 15px; color: var(--accent-color); font-weight: bold; cursor: pointer; transition: 0.3s;">קרא עוד... <i class="fa-solid fa-chevron-down"></i></span>
-                </div>
+                <i class="fa-solid fa-chart-line service-icon"></i>
+                <h3>קופות גמל והשתלמות</h3>
+                <p>אפיקי החיסכון המשתלמים ביותר כיום. נסייע לכם לנצל הטבות ופטורים ממס רווחי הון, ולהשקיע במסלולים המניבים ביותר בהתאמה אישית למטרות שלכם.</p>
+                <button class="service-btn" onclick="openModal('קופות גמל והשתלמות', 'קרן השתלמות היא אפיק ההשקעה לטווח קצר-בינוני הטוב ביותר בישראל, בזכות הפטור המלא ממס רווחי הון במועד המשיכה. קופת גמל להשקעה מאפשרת גמישות מלאה במשיכת הכספים או משיכתם כקצבה פטורה ממס בגיל פרישה. אנו מתאימים את התמהיל המדויק, מניידים קופות לגופים המצטיינים בשוק, ומוודאים שהכסף שלכם עובד בשבילכם במינימום סיכון.')">קרא עוד...</button>
             </div>
 
             <div class="service-card">
-                <div>
-                    <i class="fa-solid fa-shield-halved service-icon"></i>
-                    <h3>אובדן כושר עבודה</h3>
-                    <p>הנכס היקר ביותר שלכם הוא היכולת לייצר הכנסה. נתאים עבורכם כיסוי עיסוקי שיבטיח קצבה חודשית וישמור על רמת החיים של משפחתכם במקרה של מחלה או תאונה.</p>
-                    <div class="more-info" style="display: none; margin-top: 12px; padding-top: 12px; border-top: 1px solid #eee; font-size: 0.95rem; color: #555;">מה יקרה אם חלילה לא תוכלו לקום לעבודה בגלל תאונה, מחלה קשה או שחיקה? פוליסת אובדן כושר עבודה נועדה לשלם לכם קצבה חודשית קבועה. אנו מוודאים שהכיסוי שלכם הוא 'עיסוקי' – מותאם ספציפית למקצוע שלכם, כולל הגדרת פיצוי מהיום הראשון ושחרור מתשלום פרמיות, כדי שתוכלו להתרכז בהחלמה ללא דאגות.</div>
-                    <span class="read-more-btn" onclick="toggleMoreInfo(this)" style="display: inline-block; margin-top: 15px; color: var(--accent-color); font-weight: bold; cursor: pointer; transition: 0.3s;">קרא עוד... <i class="fa-solid fa-chevron-down"></i></span>
-                </div>
+                <i class="fa-solid fa-shield-halved service-icon"></i>
+                <h3>אובדן כושר עבודה</h3>
+                <p>הנכס היקר ביותר שלכם הוא היכולת לייצר הכנסה. נתאים עבורכם כיסוי עיסוקי שיבטיח קצבה חודשית וישמור על רמת החיים של משפחתכם במקרה של מחלה או תאונה.</p>
+                <button class="service-btn" onclick="openModal('אובדן כושר עבודה', 'מה יקרה אם חלילה לא תוכלו לקום לעבודה בגלל תאונה, מחלה קשה או שחיקה? פוליסת אובדן כושר עבודה נועדה לשלם לכם קצבה חודשית קבועה. אנו מוודאים שהכיסוי שלכם הוא \'עיסוקי\' – מותאם ספציפית למקצוע שלכם, כולל הגדרת פיצוי מהיום הראשון ושחרור מתשלום פרמיות, כדי שתוכלו להתרכז בהחלמה ללא דאגות.')">קרא עוד...</button>
             </div>
 
-            <div class="service-card" style="cursor: pointer;">
-                <div>
-                    <i class="fa-solid fa-plane-departure service-icon"></i>
-                    <h3>ביטוח נסיעות לחו"ל</h3>
-                    <p>טסים בראש שקט: כיסוי רפואי נרחב, איתור וחילוץ והגנה מביטולי טיסות. התאמה מדויקת להריון, מצב רפואי קיים, וספורט אתגרי בחו"ל.</p>
-                    <a href="travel.html" style="color: var(--accent-color); font-weight: bold; margin-top: 15px; display: inline-block; padding: 8px 16px; background: rgba(0, 168, 150, 0.1); border-radius: 8px;">להצעת מחיר וביטוח <i class="fa-solid fa-arrow-left"></i></a>
-                </div>
+            <div class="service-card">
+                <i class="fa-solid fa-plane-departure service-icon"></i>
+                <h3>ביטוח נסיעות לחו"ל</h3>
+                <p>טסים בראש שקט: כיסוי רפואי נרחב, איתור וחילוץ והגנה מביטולי טיסות. התאמה מדויקת להריון, מצב רפואי קיים, וספורט אתגרי בחו"ל.</p>
+                <a href="travel.html" class="service-btn">להצעת מחיר וביטוח <i class="fa-solid fa-arrow-left"></i></a>
             </div>
         </div>
     </section>
@@ -970,7 +1056,14 @@
         </form>
     </section>
 
-
+    <!-- Service Info Modal -->
+    <div class="modal-overlay" id="serviceModal" onclick="if(event.target===this) closeServiceModal()">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeServiceModal()" aria-label="סגור">&times;</button>
+            <h3 class="modal-title" id="serviceModalTitle"></h3>
+            <div class="modal-body" id="serviceModalBody"></div>
+        </div>
+    </div>
 
     <!-- Floating Action Buttons -->
     <div class="floating-container">
@@ -1119,9 +1212,50 @@
             window.open(`https://wa.me/972586603010?text=${text}`, '_blank');
         }
 
+        // Validation Utility
+        function validateFields(nameId, phoneId) {
+            const nameEl = document.getElementById(nameId);
+            const phoneEl = document.getElementById(phoneId);
+            let isValid = true;
+            
+            // Clear old errors
+            [nameEl, phoneEl].forEach(el => {
+                el.style.borderColor = '#ccc';
+                const parent = el.parentElement;
+                const oldErr = parent.querySelector('.err-msg');
+                if(oldErr) oldErr.remove();
+            });
+            
+            const showError = (el, msg) => {
+                el.style.borderColor = 'red';
+                const err = document.createElement('div');
+                err.className = 'err-msg';
+                err.style.color = 'red';
+                err.style.fontSize = '0.85rem';
+                err.style.marginTop = '4px';
+                err.textContent = msg;
+                el.parentElement.appendChild(err);
+                isValid = false;
+            };
+
+            const nameVal = nameEl.value.trim();
+            if (nameVal.length < 2) {
+                showError(nameEl, 'אנא הזן שם תקין (לפחות 2 אותיות)');
+            }
+
+            const phoneVal = phoneEl.value.replace(/[\s-]/g, '');
+            if (!/^05\d{8}$/.test(phoneVal)) {
+                showError(phoneEl, 'מספר הנייד אינו תקין (חייב להכיל 10 ספרות ולהתחיל ב-05)');
+            }
+
+            return isValid;
+        }
+
         // Send Cubes Form via WhatsApp
         function sendCubesToWhatsapp(e) {
             e.preventDefault();
+            if (!validateFields('cube-name', 'cube-phone')) return;
+            
             const name = document.getElementById('cube-name').value;
             const phone = document.getElementById('cube-phone').value;
             const idNum = document.getElementById('cube-id').value;
@@ -1180,15 +1314,15 @@
             document.getElementById('accessibilityModal').style.display = 'none';
         }
 
-        function toggleMoreInfo(btn) {
-            const moreText = btn.previousElementSibling;
-            if (moreText.style.display === "none" || moreText.style.display === "") {
-                moreText.style.display = "block";
-                btn.innerHTML = 'סגור <i class="fa-solid fa-chevron-up"></i>';
-            } else {
-                moreText.style.display = "none";
-                btn.innerHTML = 'קרא עוד... <i class="fa-solid fa-chevron-down"></i>';
-            }
+        // Service Modal Functions
+        function openModal(title, text) {
+            document.getElementById('serviceModalTitle').innerText = title;
+            document.getElementById('serviceModalBody').innerText = text;
+            document.getElementById('serviceModal').classList.add('active');
+        }
+
+        function closeServiceModal() {
+            document.getElementById('serviceModal').classList.remove('active');
         }
 
 

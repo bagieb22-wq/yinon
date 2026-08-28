@@ -900,9 +900,49 @@
             window.open(`https://wa.me/972586603010?text=${text}`, '_blank');
         }
 
+        // Validation Utility
+        function validateFields(nameId, phoneId) {
+            const nameEl = document.getElementById(nameId);
+            const phoneEl = document.getElementById(phoneId);
+            let isValid = true;
+            
+            [nameEl, phoneEl].forEach(el => {
+                el.style.borderColor = '#ccc';
+                const parent = el.parentElement;
+                const oldErr = parent.querySelector('.err-msg');
+                if(oldErr) oldErr.remove();
+            });
+            
+            const showError = (el, msg) => {
+                el.style.borderColor = 'red';
+                const err = document.createElement('div');
+                err.className = 'err-msg';
+                err.style.color = 'red';
+                err.style.fontSize = '0.85rem';
+                err.style.marginTop = '4px';
+                err.textContent = msg;
+                el.parentElement.appendChild(err);
+                isValid = false;
+            };
+
+            const nameVal = nameEl.value.trim();
+            if (nameVal.length < 2) {
+                showError(nameEl, 'אנא הזן שם תקין (לפחות 2 אותיות)');
+            }
+
+            const phoneVal = phoneEl.value.replace(/[\s-]/g, '');
+            if (!/^05\d{8}$/.test(phoneVal)) {
+                showError(phoneEl, 'מספר הנייד אינו תקין (חייב להכיל 10 ספרות ולהתחיל ב-05)');
+            }
+
+            return isValid;
+        }
+
         // Send Travel Form via WhatsApp
         function sendTravelToWhatsapp(e) {
             e.preventDefault();
+            if (!validateFields('travel-name', 'travel-phone')) return;
+            
             const name = document.getElementById('travel-name').value;
             const phone = document.getElementById('travel-phone').value;
             const dest = document.getElementById('travel-dest').value;
