@@ -140,6 +140,12 @@ def main():
     if gemel_averages:
         data["general"] = gemel_averages
         print(f"Successfully scraped General Track averages: {gemel_averages}")
+    else:
+        # User requested Option 2: Fail the entire run if scraping fails, 
+        # so GitHub Actions will send a failure email.
+        import sys
+        print("CRITICAL ERROR: Failed to scrape GemelNet. Halting update to trigger email alert.", file=sys.stderr)
+        sys.exit(1)
 
     # Update timestamp
     now = datetime.now()
