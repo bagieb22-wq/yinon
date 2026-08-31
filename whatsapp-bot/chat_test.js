@@ -10,7 +10,8 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-const chats = new Map();
+const userChats = new Map();
+const modelsToTry = ["gemini-3.6-flash", "gemini-flash-latest", "gemini-3.5-flash"];
 
 async function chatWithBot(userMessage) {
     try {
@@ -30,18 +31,33 @@ async function chatWithBot(userMessage) {
 7. אל תייעץ: אל תמליץ על מסלול, רק תאסוף מידע.
         `;
         
-        const model = genAI.getGenerativeModel({ 
-            model: "gemini-flash-latest",
-            systemInstruction: systemPrompt 
-        });
-
-        if (!chats.has(sessionId)) {
-            chats.set(sessionId, model.startChat());
+        if (!userChats.has(sessionId)) {
+            userChats.set(sessionId, { history: [] });
         }
-
-        const chat = chats.get(sessionId);
-        const result = await chat.sendMessage(userMessage);
-        return await result.response.text();
+        
+        let sessionData = userChats.get(sessionId);
+        
+        for (let i = 0; i < modelsToTry.length; i++) {
+            const modelName = modelsToTry[i];
+            try {
+                const model = genAI.getGenerativeModel({ 
+                    model: modelName,
+                    systemInstruction: systemPrompt 
+                });
+                
+                const chat = model.startChat({ history: sessionData.history });
+                const result = await chat.sendMessage(userMessage);
+                
+                sessionData.history = await chat.getHistory();
+                
+                return await result.response.text();
+            } catch (error) {
+                console.error(`\n[Fallback] Model ${modelName} failed:`, error.message);
+                if (i === modelsToTry.length - 1) {
+                    return "מצטערים, כל השרתים שלנו עמוסים כרגע.";
+                }
+            }
+        }
     } catch (error) {
         return "שגיאה בחיבור לשרת: " + error.message;
     }

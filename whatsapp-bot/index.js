@@ -10,13 +10,15 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const userChats = new Map();
 
 // פונקציה לשליחת ההודעה לגוגל וקבלת תשובה
+const userChats = new Map();
+const modelsToTry = ["gemini-3.6-flash", "gemini-flash-latest", "gemini-3.5-flash"];
+
 async function generateAIResponse(userMessage, userId) {
     if (!process.env.GEMINI_API_KEY) {
         return "שגיאה: חסר מפתח API של גוגל בקובץ .env";
     }
 
-    try {
-        const systemPrompt = `
+    const systemPrompt = `
 אתה איש מכירות אינטליגנטי של סוכנות הביטוח IBS.
 מטרתך היא לנהל שיחה אנושית, מתגלגלת וטבעית עם הלקוח.
 
@@ -30,21 +32,33 @@ async function generateAIResponse(userMessage, userId) {
 7. אל תייעץ: אל תמליץ על מסלול, רק תאסוף מידע.
 `;
 
-        const model = genAI.getGenerativeModel({ 
-            model: "gemini-flash-latest",
-            systemInstruction: systemPrompt 
-        });
-        
-        if (!userChats.has(userId)) {
-            userChats.set(userId, model.startChat());
+    if (!userChats.has(userId)) {
+        userChats.set(userId, { history: [] });
+    }
+    
+    let sessionData = userChats.get(userId);
+    
+    // בכל הודעה מחדש, הבוט ינסה קודם את המודל הכי חזק והכי חדש (באינדקס 0)
+    for (let i = 0; i < modelsToTry.length; i++) {
+        const modelName = modelsToTry[i];
+        try {
+            const model = genAI.getGenerativeModel({ 
+                model: modelName,
+                systemInstruction: systemPrompt 
+            });
+            
+            const chat = model.startChat({ history: sessionData.history });
+            const result = await chat.sendMessage(userMessage);
+            
+            sessionData.history = await chat.getHistory();
+            
+            return await result.response.text();
+        } catch (error) {
+            console.error(`[Fallback] Model ${modelName} failed:`, error.message);
+            if (i === modelsToTry.length - 1) {
+                return "מצטערים, כל השרתים שלנו עמוסים כרגע. נשמח לעזור לך בהמשך או שתחייג אלינו!";
+            }
         }
-        
-        const chat = userChats.get(userId);
-        const result = await chat.sendMessage(userMessage);
-        return await result.response.text();
-    } catch (error) {
-        console.error("Error from AI:", error);
-        return "מצטערים, יש כרגע עומס קטן במערכת. נחזור אליך בהקדם.";
     }
 }
 

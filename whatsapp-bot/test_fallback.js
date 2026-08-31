@@ -14,11 +14,4 @@ async function testModel(modelName) {
         return false;
     }
 }
-
-async function runTests() {
-    const models = ["gemini-3.6-flash", "gemini-3.7-flash", "gemini-flash-latest"];
-    for (const m of models) {
-        if (await testModel(m)) break;
-    }
-}
-runTests();
+testModel("gemini-3.6-flash");

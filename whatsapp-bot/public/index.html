@@ -134,7 +134,9 @@
             timeSpan.className = 'time';
             timeSpan.innerText = new Date().toLocaleTimeString('he-IL', {hour: '2-digit', minute:'2-digit'});
             
-            msgDiv.innerHTML = text.replace(/\n/g, '<br>');
+            let formattedText = text.replace(/\n/g, '<br>');
+            formattedText = formattedText.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" style="color: #039be5; text-decoration: underline;">$1</a>');
+            msgDiv.innerHTML = formattedText;
             msgDiv.appendChild(timeSpan);
             
             msgsDiv.appendChild(msgDiv);

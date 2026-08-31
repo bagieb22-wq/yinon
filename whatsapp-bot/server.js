@@ -10,12 +10,13 @@ app.use(express.static('public')); // Serve the HTML UI
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-const chats = new Map();
+const userChats = new Map();
+const modelsToTry = ["gemini-3.6-flash", "gemini-flash-latest", "gemini-3.5-flash"];
 
 app.post('/api/chat', async (req, res) => {
     try {
         const userMessage = req.body.message;
-        const sessionId = "browser_user"; // בסימולטור יש משתמש אחד
+        const sessionId = "browser_user";
         
         const systemPrompt = `
 אתה איש מכירות אינטליגנטי של סוכנות הביטוח IBS.
@@ -31,23 +32,39 @@ app.post('/api/chat', async (req, res) => {
 7. אל תייעץ: אל תמליץ על מסלול, רק תאסוף מידע.
 `;
 
-        const model = genAI.getGenerativeModel({ 
-            model: "gemini-flash-latest",
-            systemInstruction: systemPrompt 
-        });
-        
-        if (!chats.has(sessionId)) {
-            chats.set(sessionId, model.startChat());
+        if (!userChats.has(sessionId)) {
+            userChats.set(sessionId, { history: [] });
         }
         
-        const chat = chats.get(sessionId);
-        const result = await chat.sendMessage(userMessage);
-        const reply = await result.response.text();
+        let sessionData = userChats.get(sessionId);
+        let reply = "";
+        
+        for (let i = 0; i < modelsToTry.length; i++) {
+            const modelName = modelsToTry[i];
+            try {
+                const model = genAI.getGenerativeModel({ 
+                    model: modelName,
+                    systemInstruction: systemPrompt 
+                });
+                
+                const chat = model.startChat({ history: sessionData.history });
+                const result = await chat.sendMessage(userMessage);
+                
+                sessionData.history = await chat.getHistory();
+                reply = await result.response.text();
+                break;
+            } catch (err) {
+                console.error(`[Fallback] Model ${modelName} failed:`, err.message);
+                if (i === modelsToTry.length - 1) {
+                    reply = "מצטערים, כל השרתים שלנו עמוסים כרגע. נסה שוב מאוחר יותר.";
+                }
+            }
+        }
         
         res.json({ reply });
     } catch (error) {
         console.error(error);
-        res.status(500).json({ reply: "מצטערים, יש עומס בשרת כרגע." });
+        res.status(500).json({ reply: "שגיאה פנימית בשרת." });
     }
 });
 
