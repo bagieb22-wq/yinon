@@ -6,37 +6,45 @@ const { GoogleGenerativeAI } = require('@google/generative-ai');
 // 1. הגדרת הבינה המלאכותית (Gemini)
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
+// שמירת זיכרון שיחות לפי מספר טלפון
+const userChats = new Map();
+
 // פונקציה לשליחת ההודעה לגוגל וקבלת תשובה
-async function generateAIResponse(userMessage) {
+async function generateAIResponse(userMessage, userId) {
     if (!process.env.GEMINI_API_KEY) {
         return "שגיאה: חסר מפתח API של גוגל בקובץ .env";
     }
 
     try {
-        const model = genAI.getGenerativeModel({ model: "gemini-3.6-flash" });
-        
-        // כאן אנחנו מגדירים את ה"מוח" והכללים של הבוט
         const systemPrompt = `
-אתה העוזר הדיגיטלי הרשמי של ינון, מסוכנות הביטוח והפיננסים IBS.
-המטרה שלך היא לענות באדיבות ללקוחות הפונים בוואטסאפ.
+אתה איש מכירות אינטליגנטי של סוכנות הביטוח IBS.
+מטרתך היא לנהל שיחה אנושית, מתגלגלת וטבעית עם הלקוח.
 
-כללי ברזל חמורים:
-1. ענה תמיד בשפה העברית, בצורה מקצועית, שירותית ומזמינה. התשובות צריכות להיות קצרות (עד 3 משפטים) ומותאמות להודעת טקסט.
-2. איסור מוחלט על ייעוץ פנסיוני או השקעות: אסור לך להגיד ללקוח איפה להשקיע או מה כדאי לו.
-3. אם לקוח שואל איפה כדאי להשקיע, ענה: "התאמת אפיק השקעה דורשת היכרות אישית ובחינת צרכים. ינון הסוכן ישמח לבנות לך תיק אישי. נרצה לקבוע שיחה קצרה?"
-4. הסבר כללי מותר: אתה יכול להסביר בכלליות מהי קופת גמל להשקעה (עד 79,000 ש"ח בשנה, נזיל), או מהי קרן השתלמות (פטורה ממס אחרי 6 שנים).
-5. הפניה לאתר: הצע ללקוחות להיכנס לאתר של ינון כדי להשתמש במחשבון התשואות החכם לבדיקת מסלולים.
-6. אם אינך יודע תשובה בוודאות מוחלטת, אמור: "אני אעביר את השאלה המצוינת הזו לינון, והוא יחזור אליך בהקדם."
+חוקים קריטיים (חובה ציות מלא):
+1. זיכרון: אתה מנהל שיחה מתמשכת (יש לך זיכרון).
+2. צעד אחר צעד: שאל *רק שאלה אחת בכל פעם*. לעולם אל תשאל 2 שאלות באותה הודעה.
+3. סבלנות: *אסור* לך להפנות את הלקוח לצוות או להציע שיחה טלפונית בהודעה הראשונה או השנייה.
+4. בלי קישורים בהתחלה: *אסור* לך לתת את הלינק לאתר (https://bagieb22-wq.github.io/yinon/) עד שהלקוח לא מראה עניין ספציפי בתשואות או מבקש לראות נתונים.
+5. איסוף מידע עדין: כשהלקוח פונה, תגיד שלום ותשאל שאלה אחת פשוטה כדי להתחיל. למשל: "שלום! איזה סוג ביטוח אתה מחפש?". 
+6. רק אחרי שיש לך מספיק פרטים (למשל, הלקוח אמר שהוא בן 30 ומחפש קופת גמל ב-1000 ש"ח בחודש), *רק אז* תגיד: "מעולה, זה נשמע מצוין. הצוות המקצועי שלנו ישמח להרכיב לך תיק. מתי נוח שנתקשר?"
+7. אל תייעץ: אל תמליץ על מסלול, רק תאסוף מידע.
+`;
 
-הודעת הלקוח: "${userMessage}"
-        `;
-
-        const result = await model.generateContent(systemPrompt);
-        const response = await result.response;
-        return response.text();
+        const model = genAI.getGenerativeModel({ 
+            model: "gemini-3.5-flash",
+            systemInstruction: systemPrompt 
+        });
+        
+        if (!userChats.has(userId)) {
+            userChats.set(userId, model.startChat());
+        }
+        
+        const chat = userChats.get(userId);
+        const result = await chat.sendMessage(userMessage);
+        return await result.response.text();
     } catch (error) {
         console.error("Error from AI:", error);
-        return "מצטערים, יש כרגע עומס קטן במערכת. ינון יחזור אליך בהקדם.";
+        return "מצטערים, יש כרגע עומס קטן במערכת. נחזור אליך בהקדם.";
     }
 }
 
@@ -75,7 +83,7 @@ client.on('message', async msg => {
     chat.sendStateTyping();
 
     // שולח את ההודעה ל-AI ומקבל תשובה
-    const aiResponse = await generateAIResponse(msg.body);
+    const aiResponse = await generateAIResponse(msg.body, msg.from);
     
     // עוצר את אנימציית ההקלדה ושולח את ההודעה חזרה ללקוח
     chat.clearState();

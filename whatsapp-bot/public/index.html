@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Simulator - IBS</title>
+    <style>
+        body, html {
+            margin: 0; padding: 0; height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #d1d7db;
+        }
+        .app {
+            display: flex; height: 100vh; max-width: 1600px; margin: 0 auto;
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,.06), 0 2px 5px 0 rgba(0,0,0,.2);
+        }
+        .sidebar {
+            width: 30%; background: #ffffff; border-left: 1px solid #e1e1e1;
+            display: flex; flex-direction: column;
+        }
+        .sidebar-header {
+            background: #f0f2f5; height: 59px; display: flex; align-items: center; padding: 10px 16px; box-sizing: border-box;
+        }
+        .chat-list {
+            flex: 1; overflow-y: auto;
+        }
+        .chat-item {
+            display: flex; padding: 10px 15px; border-bottom: 1px solid #f2f2f2; background: #ebebeb; cursor: pointer;
+        }
+        .avatar {
+            width: 49px; height: 49px; border-radius: 50%; background: #dfe5e7; margin-left: 15px;
+            display: flex; justify-content: center; align-items: center; font-size: 24px;
+        }
+        .chat-info { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        .chat-info h3 { margin: 0; font-size: 17px; color: #111b21; font-weight: 400; }
+        
+        .main-chat {
+            width: 70%; display: flex; flex-direction: column; background: #efeae2; position: relative;
+        }
+        .main-chat::before {
+            content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+            opacity: 0.06; z-index: 0;
+        }
+        .chat-header {
+            background: #f0f2f5; height: 59px; display: flex; align-items: center; padding: 10px 16px; box-sizing: border-box; z-index: 1;
+        }
+        .chat-header .avatar { margin-left: 15px; width: 40px; height: 40px; }
+        
+        .messages {
+            flex: 1; overflow-y: auto; padding: 20px 5%; display: flex; flex-direction: column; z-index: 1;
+        }
+        .message {
+            max-width: 65%; padding: 6px 7px 8px 9px; border-radius: 7.5px; margin-bottom: 12px;
+            font-size: 14.2px; line-height: 19px; color: #111b21; position: relative; box-shadow: 0 1px 0.5px rgba(11,20,26,.13);
+        }
+        .message.sent {
+            background-color: #d9fdd3; align-self: flex-start; border-top-right-radius: 0;
+        }
+        .message.sent::before {
+            content: ""; position: absolute; top: 0; right: -8px;
+            border-top: 10px solid #d9fdd3; border-right: 10px solid transparent;
+        }
+        .message.received {
+            background-color: #ffffff; align-self: flex-end; border-top-left-radius: 0;
+        }
+        .message.received::before {
+            content: ""; position: absolute; top: 0; left: -8px;
+            border-top: 10px solid #ffffff; border-left: 10px solid transparent;
+        }
+        .message .time {
+            font-size: 11px; color: #667781; float: left; margin-top: 4px; margin-right: 10px; margin-left: -5px;
+        }
+        .typing {
+            font-style: italic; color: #667781; align-self: flex-end; margin-bottom: 10px; display: none;
+        }
+        
+        .chat-input {
+            background: #f0f2f5; min-height: 62px; display: flex; align-items: center; padding: 10px 16px; box-sizing: border-box; z-index: 1;
+        }
+        .chat-input input {
+            flex: 1; border: none; padding: 9px 12px; border-radius: 8px; font-size: 15px; outline: none; margin-left: 10px;
+        }
+        .chat-input button {
+            background: none; border: none; font-size: 24px; cursor: pointer; color: #54656f;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="avatar">👨‍💼</div>
+            </div>
+            <div class="chat-list">
+                <div class="chat-item">
+                    <div class="avatar">🤖</div>
+                    <div class="chat-info">
+                        <h3>בוט IBS (סימולטור)</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-chat">
+            <div class="chat-header">
+                <div class="avatar">🤖</div>
+                <div class="chat-info">
+                    <h3>בוט IBS (סימולטור)</h3>
+                </div>
+            </div>
+            <div class="messages" id="messages">
+                <div class="message received">
+                    שלום הגעתם לצוות IBS איך אפשר לעזור?
+                    <span class="time" id="init-time"></span>
+                </div>
+            </div>
+            <div class="typing" id="typingIndicator">מקליד...</div>
+            <div class="chat-input">
+                <input type="text" id="msgInput" placeholder="הקלד הודעה..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('init-time').innerText = new Date().toLocaleTimeString('he-IL', {hour: '2-digit', minute:'2-digit'});
+
+        function addMessage(text, isSent) {
+            const msgsDiv = document.getElementById('messages');
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `message ${isSent ? 'sent' : 'received'}`;
+            
+            const timeSpan = document.createElement('span');
+            timeSpan.className = 'time';
+            timeSpan.innerText = new Date().toLocaleTimeString('he-IL', {hour: '2-digit', minute:'2-digit'});
+            
+            msgDiv.innerHTML = text.replace(/\n/g, '<br>');
+            msgDiv.appendChild(timeSpan);
+            
+            msgsDiv.appendChild(msgDiv);
+            msgsDiv.scrollTop = msgsDiv.scrollHeight;
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('msgInput');
+            const text = input.value.trim();
+            if (!text) return;
+            
+            addMessage(text, true);
+            input.value = '';
+            
+            const typing = document.getElementById('typingIndicator');
+            typing.style.display = 'block';
+            document.getElementById('messages').scrollTop = document.getElementById('messages').scrollHeight;
+
+            try {
+                const res = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: text })
+                });
+                const data = await res.json();
+                typing.style.display = 'none';
+                addMessage(data.reply, false);
+            } catch (error) {
+                typing.style.display = 'none';
+                addMessage("שגיאה בחיבור לשרת.", false);
+            }
+        }
+
+        function handleKeyPress(e) {
+            if (e.key === 'Enter') sendMessage();
+        }
+    </script>
+</body>
+</html>
