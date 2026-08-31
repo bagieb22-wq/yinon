@@ -16,7 +16,7 @@ async function testModel(modelName) {
 }
 
 async function runTests() {
-    const models = ["gemini-3.5-flash", "gemini-flash-latest", "gemini-3.7-flash"];
+    const models = ["gemini-3.6-flash", "gemini-3.7-flash", "gemini-flash-latest"];
     for (const m of models) {
         if (await testModel(m)) break;
     }
