@@ -11,25 +11,80 @@ const userChats = new Map();
 
 // פונקציה לשליחת ההודעה לגוגל וקבלת תשובה
 const userChats = new Map();
-const modelsToTry = ["gemini-3.6-flash", "gemini-flash-latest", "gemini-3.5-flash"];
+const modelsToTry = ["gemini-flash-latest", "gemini-3.6-flash", "gemini-3.5-flash"];
 
-async function generateAIResponse(userMessage, userId) {
+const calendarTools = require('./calendar');
+
+// כלי עבודה שה-AI יכול להפעיל
+const tools = [{
+    functionDeclarations: [
+        {
+            name: "check_availability",
+            description: "בודק ביומן מתי סוכן הביטוח פנוי או תפוס בתאריך מסוים.",
+            parameters: {
+                type: "OBJECT",
+                properties: {
+                    dateStr: {
+                        type: "STRING",
+                        description: "התאריך לבדיקה בפורמט YYYY-MM-DD, למשל 2026-09-03"
+                    }
+                },
+                required: ["dateStr"]
+            }
+        },
+        {
+            name: "book_appointment",
+            description: "קובע פגישה ביומן של סוכן הביטוח ומכניס את פרטי הלקוח פנימה.",
+            parameters: {
+                type: "OBJECT",
+                properties: {
+                    name: { type: "STRING", description: "שם הלקוח" },
+                    idNumber: { type: "STRING", description: "תעודת זהות של הלקוח ותאריך הנפקה" },
+                    occupation: { type: "STRING", description: "תעסוקת הלקוח" },
+                    goals: { type: "STRING", description: "מטרת הפגישה של הלקוח" },
+                    dateStr: { type: "STRING", description: "תאריך הפגישה בפורמט YYYY-MM-DD" },
+                    timeStr: { type: "STRING", description: "שעת הפגישה בפורמט HH:MM (למשל 10:30)" }
+                },
+                required: ["name", "idNumber", "occupation", "goals", "dateStr", "timeStr"]
+            }
+        }
+    ]
+}];
+
+async function generateAIResponse(userMessage, userId, onFallbackMessage) {
     if (!process.env.GEMINI_API_KEY) {
         return "שגיאה: חסר מפתח API של גוגל בקובץ .env";
     }
 
     const systemPrompt = `
-אתה איש מכירות אינטליגנטי של סוכנות הביטוח IBS.
-מטרתך היא לנהל שיחה אנושית, מתגלגלת וטבעית עם הלקוח.
+אתה סוכן ביטוח ופיננסים אינטליגנטי של סוכנות IBS. הוא מתנהג כסוכן אנושי.
+מטרתך היא לנהל שיחה אנושית, טבעית, להבין את הצרכים לעומק, ולאסוף פרטים מזהים לבדיקה, ולבסוף לקבוע להם פגישה.
 
-חוקים קריטיים (חובה ציות מלא):
-1. זיכרון: אתה מנהל שיחה מתמשכת (יש לך זיכרון).
-2. צעד אחר צעד: שאל *רק שאלה אחת בכל פעם*. לעולם אל תשאל 2 שאלות באותה הודעה.
-3. סבלנות: *אסור* לך להפנות את הלקוח לצוות או להציע שיחה טלפונית בהודעה הראשונה או השנייה.
-4. בלי קישורים בהתחלה: *אסור* לך לתת את הלינק לאתר (https://bagieb22-wq.github.io/yinon/) עד שהלקוח לא מראה עניין ספציפי בתשואות או מבקש לראות נתונים.
-5. איסוף מידע עדין: כשהלקוח פונה, תגיד שלום ותשאל שאלה אחת פשוטה כדי להתחיל. למשל: "שלום! איזה סוג ביטוח אתה מחפש?". 
-6. רק אחרי שיש לך מספיק פרטים (למשל, הלקוח אמר שהוא בן 30 ומחפש קופת גמל ב-1000 ש"ח בחודש), *רק אז* תגיד: "מעולה, זה נשמע מצוין. הצוות המקצועי שלנו ישמח להרכיב לך תיק. תוכל לבחור שעה שנוחה לך לשיחה ביומן שלנו כאן: https://calendar.app.google/NXSunujKqCn7ag2J9"
-7. אל תייעץ: אל תמליץ על מסלול, רק תאסוף מידע.
+שלבי השיחה (חובה לעבוד לפי הסדר, וכל פעם לשאול *רק שאלה אחת*):
+
+שלב 1: חקר עומק והבנת הצורך
+חובה לאסוף את כל המידע הבא מהלקוח (שאל רק שאלה אחת בכל הודעה):
+1. מה התחום המדויק שמעניין אותו.
+2. גיל ומצב משפחתי.
+3. סטטוס תעסוקתי.
+4. מטרה עיקרית.
+5. סדר גודל סכום להשקעה (אם רלוונטי).
+רק אחרי שיש לך פרופיל מלא, עבור לשלב 2.
+
+שלב 2: איסוף פרטים מזהים
+כדי לבצע בדיקה מקצועית, בקש מהלקוח: תעודת זהות + תאריך הנפקה.
+
+שלב 3: הפניה ליומן פגישות הממוחשב (Function Calling)
+אחרי קבלת הת"ז, עליך לקבוע פגישה ישירות ביומן!
+1. שאל את הלקוח באיזה יום נוח לו (למשל: "מתי נוח לך שנדבר השבוע?").
+2. כשהוא בוחר יום, הפעל מיד את הכלי check_availability עבור התאריך ההוא.
+3. לאחר קבלת התשובה מהיומן על השעות התפוסות, הצג ללקוח שעות פנויות הגיוניות (בין 09:00 ל-18:00 שאינן תפוסות) ושאל אותו מה נוח לו.
+4. כשהלקוח מסכים על שעה, הפעל את הכלי book_appointment עם כל הפרטים שאספת עליו עד כה.
+5. הודע ללקוח שהפגישה נקבעה בהצלחה.
+
+חוקים קריטיים:
+- לעולם אל תשאל 2 שאלות שונות באותה הודעה.
+- התאריך היום הוא: ${new Date().toISOString().split('T')[0]}.
 `;
 
     if (!userChats.has(userId)) {
@@ -38,23 +93,69 @@ async function generateAIResponse(userMessage, userId) {
     
     let sessionData = userChats.get(userId);
     
-    // בכל הודעה מחדש, הבוט ינסה קודם את המודל הכי חזק והכי חדש (באינדקס 0)
     for (let i = 0; i < modelsToTry.length; i++) {
         const modelName = modelsToTry[i];
         try {
             const model = genAI.getGenerativeModel({ 
                 model: modelName,
-                systemInstruction: systemPrompt 
+                systemInstruction: systemPrompt,
+                tools: tools
             });
             
             const chat = model.startChat({ history: sessionData.history });
-            const result = await chat.sendMessage(userMessage);
+            
+            let result;
+            if (i === 0) {
+                const timeoutPromise = new Promise((_, reject) => {
+                    setTimeout(() => reject(new Error("TIMEOUT - לקח יותר מדי זמן")), 7000);
+                });
+                const apiPromise = chat.sendMessage(userMessage);
+                apiPromise.catch(() => {});
+                result = await Promise.race([apiPromise, timeoutPromise]);
+            } else {
+                result = await chat.sendMessage(userMessage);
+            }
+            
+            // Handle Function Calling Loop
+            let responseMsg = result.response;
+            while (responseMsg.functionCalls && responseMsg.functionCalls().length > 0) {
+                const call = responseMsg.functionCalls()[0];
+                let apiResponse;
+                
+                if (call.name === 'check_availability') {
+                    const resultText = await calendarTools.checkAvailability(call.args.dateStr);
+                    apiResponse = { result: resultText };
+                } else if (call.name === 'book_appointment') {
+                    const resultText = await calendarTools.bookAppointment(
+                        call.args.name, 
+                        call.args.idNumber, 
+                        call.args.occupation, 
+                        call.args.goals, 
+                        call.args.dateStr, 
+                        call.args.timeStr
+                    );
+                    apiResponse = { result: resultText };
+                }
+                
+                const functionResponseParts = [{
+                    functionResponse: {
+                        name: call.name,
+                        response: apiResponse
+                    }
+                }];
+                
+                result = await chat.sendMessage(functionResponseParts);
+                responseMsg = result.response;
+            }
             
             sessionData.history = await chat.getHistory();
+            return responseMsg.text();
             
-            return await result.response.text();
         } catch (error) {
             console.error(`[Fallback] Model ${modelName} failed:`, error.message);
+            if (i === 0 && onFallbackMessage) {
+                onFallbackMessage("זיהינו עומס בשרת הראשי. אנחנו מעבירים את השיחה לשרת גיבוי, אנא המתן מספר שניות...");
+            }
             if (i === modelsToTry.length - 1) {
                 return "מצטערים, כל השרתים שלנו עמוסים כרגע. נשמח לעזור לך בהמשך או שתחייג אלינו!";
             }
@@ -96,8 +197,12 @@ client.on('message', async msg => {
     const chat = await msg.getChat();
     chat.sendStateTyping();
 
-    // שולח את ההודעה ל-AI ומקבל תשובה
-    const aiResponse = await generateAIResponse(msg.body, msg.from);
+    // שולח את ההודעה ל-AI ומקבל תשובה, וגם מעביר פונקציית גיבוי
+    const aiResponse = await generateAIResponse(msg.body, msg.from, (fallbackMsg) => {
+        msg.reply(fallbackMsg);
+        // מחזיר אנימציית הקלדה כי הבוט ממשיך לחשוב בשרת השני
+        chat.sendStateTyping();
+    });
     
     // עוצר את אנימציית ההקלדה ושולח את ההודעה חזרה ללקוח
     chat.clearState();
