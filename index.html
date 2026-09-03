@@ -1067,6 +1067,10 @@
 
     <!-- Floating Action Buttons -->
     <div class="floating-container">
+        <!-- New Chatbot Button -->
+        <button id="ibs-chat-button" class="floating-btn" style="background-color: var(--primary-color);" aria-label="צ'אט בוט" title="נציג וירטואלי">
+            <i class="fa-solid fa-comment-dots" aria-hidden="true"></i>
+        </button>
         <a href="https://calendar.app.google/NXSunujKqCn7ag2J9" target="_blank" class="floating-btn calendar-float" aria-label="קביעת פגישה" title="קבע פגישה ביומן">
             <i class="fa-regular fa-calendar" aria-hidden="true"></i>
         </a>
@@ -1431,40 +1435,13 @@
         // Initialize on load
         loadReviews();
     </script>
-    <!-- IBS Chatbot Widget -->
+    <!-- IBS Chatbot Widget Styles -->
     <style>
-        #ibs-chat-widget {
-            position: fixed;
-            bottom: 20px;
-            left: 90px; /* הזזנו ימינה כדי לא להסתיר את הוואטסאפ */
-            z-index: 10000;
-            font-family: 'Heebo', sans-serif;
-        }
-        
-        #ibs-chat-button {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            transition: transform 0.3s;
-        }
-        
-        #ibs-chat-button:hover {
-            transform: scale(1.1);
-        }
-        
         #ibs-chat-window {
             display: none;
-            position: absolute;
-            bottom: 80px;
-            left: 0;
+            position: fixed;
+            bottom: 90px;
+            left: 20px;
             width: 350px;
             height: 500px;
             background: white;
@@ -1473,6 +1450,8 @@
             flex-direction: column;
             overflow: hidden;
             border: 1px solid #eee;
+            z-index: 10000;
+            font-family: 'Heebo', sans-serif;
         }
         
         #ibs-chat-header {
@@ -1570,23 +1549,18 @@
         }
     </style>
 
-    <div id="ibs-chat-widget">
-        <div id="ibs-chat-window">
-            <div id="ibs-chat-header">
-                <span><i class="fa-solid fa-robot"></i> נציג וירטואלי IBS</span>
-                <button id="ibs-chat-close"><i class="fa-solid fa-times"></i></button>
-            </div>
-            <div id="ibs-chat-messages">
-                <div class="chat-msg bot">שלום! הגעת לסוכנות IBS. איך אפשר לעזור לך היום?</div>
-            </div>
-            <div class="typing-indicator" id="ibs-typing">הנציג מקליד...</div>
-            <div id="ibs-chat-input-area">
-                <input type="text" id="ibs-chat-input" placeholder="הקלד הודעה...">
-                <button id="ibs-chat-send"><i class="fa-solid fa-paper-plane"></i></button>
-            </div>
+    <div id="ibs-chat-window">
+        <div id="ibs-chat-header">
+            <span><i class="fa-solid fa-robot"></i> נציג וירטואלי IBS</span>
+            <button id="ibs-chat-close"><i class="fa-solid fa-times"></i></button>
         </div>
-        <div id="ibs-chat-button">
-            <i class="fa-solid fa-comment-dots"></i>
+        <div id="ibs-chat-messages">
+            <div class="chat-msg bot">שלום! הגעת לסוכנות IBS. איך אפשר לעזור לך היום?</div>
+        </div>
+        <div class="typing-indicator" id="ibs-typing">הנציג מקליד...</div>
+        <div id="ibs-chat-input-area">
+            <input type="text" id="ibs-chat-input" placeholder="הקלד הודעה...">
+            <button id="ibs-chat-send"><i class="fa-solid fa-paper-plane"></i></button>
         </div>
     </div>
 
