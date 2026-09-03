@@ -3,3 +3,5 @@ node_modules/
 .puppeteer/
 .wwebjs_auth/
 .wwebjs_cache/
+
+calendar-key.json
