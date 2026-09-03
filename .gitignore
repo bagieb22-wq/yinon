@@ -1,2 +1,9 @@
 
 whatsapp-bot/calendar-key.json
+
+.env
+node_modules/
+whatsapp-bot/node_modules/
+*.pem
+*.key
+*.cert
