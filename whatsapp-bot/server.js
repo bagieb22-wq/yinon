@@ -1,10 +1,12 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 const app = express();
 const port = 3000;
 
+app.use(cors());
 app.use(express.json());
 app.use(express.static('public')); // Serve the HTML UI
 
@@ -13,41 +15,77 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const userChats = new Map();
 const modelsToTry = ["gemini-flash-latest", "gemini-3.6-flash", "gemini-3.5-flash"];
 
+const calendarTools = require('./calendar');
+
+const tools = [{
+    functionDeclarations: [
+        {
+            name: "check_availability",
+            description: "בודק ביומן מתי סוכן הביטוח פנוי או תפוס בתאריך מסוים.",
+            parameters: {
+                type: "OBJECT",
+                properties: {
+                    dateStr: {
+                        type: "STRING",
+                        description: "התאריך לבדיקה בפורמט YYYY-MM-DD"
+                    }
+                },
+                required: ["dateStr"]
+            }
+        },
+        {
+            name: "book_appointment",
+            description: "קובע פגישה ביומן של סוכן הביטוח ומכניס את פרטי הלקוח פנימה.",
+            parameters: {
+                type: "OBJECT",
+                properties: {
+                    name: { type: "STRING" },
+                    idNumber: { type: "STRING" },
+                    occupation: { type: "STRING" },
+                    goals: { type: "STRING" },
+                    dateStr: { type: "STRING" },
+                    timeStr: { type: "STRING" }
+                },
+                required: ["name", "idNumber", "occupation", "goals", "dateStr", "timeStr"]
+            }
+        }
+    ]
+}];
+
 app.post('/api/chat', async (req, res) => {
     try {
         const userMessage = req.body.message;
         const sessionId = "browser_user";
         
         const systemPrompt = `
-אתה סוכן ביטוח ופיננסים אינטליגנטי של סוכנות IBS.
-מטרתך היא לנהל שיחה אנושית, מקצועית וטבעית עם הלקוח, להבין את הצרכים שלו לעומק, ולאסוף פרטים מזהים לבדיקה.
+אתה סוכן ביטוח ופיננסים אינטליגנטי של סוכנות IBS. הוא מתנהג כסוכן אנושי.
+מטרתך היא לנהל שיחה אנושית, טבעית, להבין את הצרכים לעומק, ולאסוף פרטים מזהים לבדיקה, ולבסוף לקבוע להם פגישה.
 
 שלבי השיחה (חובה לעבוד לפי הסדר, וכל פעם לשאול *רק שאלה אחת*):
 
 שלב 1: חקר עומק והבנת הצורך
-כשהלקוח פונה, הראה התעניינות אמיתית ושאל שאלות כדי להבין את המצב שלו. 
-חובה עליך לאסוף את *כל* המידע הבא מהלקוח (זכור: שאל רק שאלה אחת בכל הודעה, לא הכל בבת אחת!):
-1. מה התחום המדויק שמעניין אותו (ביטוח, פנסיה, קופת גמל, השתלמות וכו').
-2. גיל הלקוח ומצב משפחתי (רווק/נשוי/ילדים).
-3. סטטוס תעסוקתי (שכיר או עצמאי) ובמה הוא עוסק.
-4. מה המטרה העיקרית שלו (הוזלת דמי ניהול, חיסכון לילדים, בדיקת כפילויות בביטוחים, בניית תיק השקעות).
-5. אם זה חיסכון/השקעה: מה סדר הגודל של הסכום הפנוי או ההפקדה החודשית.
-רק אחרי שניהלת איתו שיחה ארוכה ויש לך פרופיל מלא ומפורט של הלקוח, עבור לשלב 2.
-*אסור בשלב זה לבקש פרטים אישיים מזהים או לתת קישורים*.
+חובה לאסוף את כל המידע הבא מהלקוח (שאל רק שאלה אחת בכל הודעה):
+1. מה התחום המדויק שמעניין אותו.
+2. גיל ומצב משפחתי.
+3. סטטוס תעסוקתי.
+4. מטרה עיקרית.
+5. סדר גודל סכום להשקעה (אם רלוונטי).
+רק אחרי שיש לך פרופיל מלא, עבור לשלב 2.
 
-שלב 2: איסוף פרטים מזהים לבדיקה
-רק אחרי שהבנת בדיוק מה הלקוח מחפש ויש לך תמונה ברורה, תגיד לו שהשלב הבא הוא לעשות עבורו בדיקה יסודית.
-כדי לבצע את הבדיקה (למשל במסלקה הפנסיונית או בהר הביטוח), בקש ממנו 2 פרטים: מספר תעודת זהות + תאריך הנפקה של תעודת הזהות.
-(שאל רק שאלה אחת בכל פעם, או בקש את שניהם יחד במשפט אחד קצר).
+שלב 2: איסוף פרטים מזהים
+כדי לבצע בדיקה מקצועית, בקש מהלקוח: תעודת זהות + תאריך הנפקה.
 
-שלב 3: הפניה ליומן פגישות
-אחרי שהלקוח סיפק את תעודת הזהות ותאריך ההנפקה, תגיד: "מעולה, הפרטים התקבלו והצוות שלנו יתחיל בבדיקה. כדי שנוכל לחזור אליך עם תשובות והרכבת תיק מסודרת, אנא בחר שעה שנוחה לך לשיחה ביומן שלנו כאן: https://calendar.app.google/NXSunujKqCn7ag2J9"
+שלב 3: הפניה ליומן פגישות הממוחשב (Function Calling)
+אחרי קבלת הת"ז, עליך לקבוע פגישה ישירות ביומן!
+1. שאל את הלקוח באיזה יום נוח לו (למשל: "מתי נוח לך שנדבר השבוע?").
+2. כשהוא בוחר יום, הפעל מיד את הכלי check_availability עבור התאריך ההוא.
+3. לאחר קבלת התשובה מהיומן על השעות התפוסות, הצג ללקוח שעות פנויות הגיוניות (בין 09:00 ל-18:00 שאינן תפוסות) ושאל אותו מה נוח לו.
+4. כשהלקוח מסכים על שעה, הפעל את הכלי book_appointment עם כל הפרטים שאספת עליו עד כה.
+5. הודע ללקוח שהפגישה נקבעה בהצלחה.
 
 חוקים קריטיים:
-- זיכרון: אתה מנהל שיחה מתמשכת (יש לך זיכרון).
 - לעולם אל תשאל 2 שאלות שונות באותה הודעה.
-- אל תייעץ ואל תמליץ על מסלול ספציפי, רק תאסוף מידע.
-- בלי קישורים בהתחלה: אל תיתן את יומן הפגישות ואל תיתן את האתר עד שלב 3.
+- התאריך היום הוא: ${new Date().toISOString().split('T')[0]}.
 `;
 
         if (!userChats.has(sessionId)) {
@@ -62,7 +100,8 @@ app.post('/api/chat', async (req, res) => {
             try {
                 const model = genAI.getGenerativeModel({ 
                     model: modelName,
-                    systemInstruction: systemPrompt 
+                    systemInstruction: systemPrompt,
+                    tools: tools
                 });
                 
                 const chat = model.startChat({ history: sessionData.history });
@@ -78,8 +117,40 @@ app.post('/api/chat', async (req, res) => {
                     result = await chat.sendMessage(userMessage);
                 }
                 
+                // Handle Function Calling Loop
+                let responseMsg = result.response;
+                while (responseMsg.functionCalls && responseMsg.functionCalls().length > 0) {
+                    const call = responseMsg.functionCalls()[0];
+                    let apiResponse;
+                    
+                    if (call.name === 'check_availability') {
+                        const resultText = await calendarTools.checkAvailability(call.args.dateStr);
+                        apiResponse = { result: resultText };
+                    } else if (call.name === 'book_appointment') {
+                        const resultText = await calendarTools.bookAppointment(
+                            call.args.name, 
+                            call.args.idNumber, 
+                            call.args.occupation, 
+                            call.args.goals, 
+                            call.args.dateStr, 
+                            call.args.timeStr
+                        );
+                        apiResponse = { result: resultText };
+                    }
+                    
+                    const functionResponseParts = [{
+                        functionResponse: {
+                            name: call.name,
+                            response: apiResponse
+                        }
+                    }];
+                    
+                    result = await chat.sendMessage(functionResponseParts);
+                    responseMsg = result.response;
+                }
+                
                 sessionData.history = await chat.getHistory();
-                reply = await result.response.text();
+                reply = responseMsg.text();
                 break;
             } catch (err) {
                 console.error(`[Fallback] Model ${modelName} failed:`, err.message);

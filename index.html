@@ -1431,5 +1431,233 @@
         // Initialize on load
         loadReviews();
     </script>
+    <!-- IBS Chatbot Widget -->
+    <style>
+        #ibs-chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 10000;
+            font-family: 'Heebo', sans-serif;
+        }
+        
+        #ibs-chat-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+        
+        #ibs-chat-button:hover {
+            transform: scale(1.1);
+        }
+        
+        #ibs-chat-window {
+            display: none;
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+        
+        #ibs-chat-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        #ibs-chat-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        #ibs-chat-messages {
+            flex-grow: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #f5f5f5;
+        }
+        
+        .chat-msg {
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 15px;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        
+        .chat-msg.bot {
+            background: white;
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+            border: 1px solid #eee;
+        }
+        
+        .chat-msg.user {
+            background: #dcf8c6;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+        }
+        
+        #ibs-chat-input-area {
+            display: flex;
+            padding: 10px;
+            background: white;
+            border-top: 1px solid #eee;
+        }
+        
+        #ibs-chat-input {
+            flex-grow: 1;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 10px 15px;
+            outline: none;
+            font-family: inherit;
+        }
+        
+        #ibs-chat-send {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .typing-indicator {
+            display: none;
+            align-self: flex-start;
+            color: #888;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+        
+        @media (max-width: 400px) {
+            #ibs-chat-window {
+                width: calc(100vw - 40px);
+                height: 60vh;
+            }
+        }
+    </style>
+
+    <div id="ibs-chat-widget">
+        <div id="ibs-chat-window">
+            <div id="ibs-chat-header">
+                <span><i class="fa-solid fa-robot"></i> נציג וירטואלי IBS</span>
+                <button id="ibs-chat-close"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <div id="ibs-chat-messages">
+                <div class="chat-msg bot">שלום! הגעת לסוכנות IBS. איך אפשר לעזור לך היום?</div>
+            </div>
+            <div class="typing-indicator" id="ibs-typing">הנציג מקליד...</div>
+            <div id="ibs-chat-input-area">
+                <input type="text" id="ibs-chat-input" placeholder="הקלד הודעה...">
+                <button id="ibs-chat-send"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <div id="ibs-chat-button">
+            <i class="fa-solid fa-comment-dots"></i>
+        </div>
+    </div>
+
+    <script>
+        const chatButton = document.getElementById('ibs-chat-button');
+        const chatWindow = document.getElementById('ibs-chat-window');
+        const chatClose = document.getElementById('ibs-chat-close');
+        const chatMessages = document.getElementById('ibs-chat-messages');
+        const chatInput = document.getElementById('ibs-chat-input');
+        const chatSend = document.getElementById('ibs-chat-send');
+        const typingIndicator = document.getElementById('ibs-typing');
+
+        chatButton.addEventListener('click', () => {
+            chatWindow.style.display = chatWindow.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        chatClose.addEventListener('click', () => {
+            chatWindow.style.display = 'none';
+        });
+
+        function addMessage(text, sender) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `chat-msg ${sender}`;
+            
+            // Convert URLs to clickable links
+            const urlRegex = /(https?:\/\/[^\s]+)/g;
+            const htmlText = text.replace(urlRegex, function(url) {
+                return `<a href="${url}" target="_blank" style="color: #0056b3; font-weight: bold; text-decoration: underline;">${url}</a>`;
+            });
+            
+            msgDiv.innerHTML = htmlText.replace(/\n/g, '<br>');
+            chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        async function sendMessage() {
+            const text = chatInput.value.trim();
+            if (!text) return;
+
+            addMessage(text, 'user');
+            chatInput.value = '';
+            
+            typingIndicator.style.display = 'block';
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            try {
+                // We assume the Node.js server is running on localhost:3000 for local testing
+                const response = await fetch('http://localhost:3000/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: text })
+                });
+                
+                const data = await response.json();
+                typingIndicator.style.display = 'none';
+                
+                if (data.reply) {
+                    addMessage(data.reply, 'bot');
+                } else {
+                    addMessage("שגיאה בתשובת השרת.", 'bot');
+                }
+            } catch (error) {
+                typingIndicator.style.display = 'none';
+                addMessage("שגיאה בחיבור לשרת הבוט (וודא שהחלון השחור של הבוט פועל ברקע).", 'bot');
+            }
+        }
+
+        chatSend.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+    </script>
 </body>
 </html>
