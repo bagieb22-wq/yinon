@@ -118,7 +118,7 @@ async function generateAIResponse(userMessage, userId, onFallbackMessage) {
             
             // Handle Function Calling Loop
             let responseMsg = result.response;
-            while (responseMsg.functionCalls && responseMsg.functionCalls().length > 0) {
+            while (responseMsg.functionCalls && responseMsg.functionCalls() && responseMsg.functionCalls().length > 0) {
                 const call = responseMsg.functionCalls()[0];
                 let apiResponse;
                 
