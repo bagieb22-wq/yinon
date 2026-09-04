@@ -10,7 +10,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const userChats = new Map();
 
 // מנהל מודלים
-const modelsToTry = ["gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash"];
+const modelsToTry = ["gemini-3.1-flash-lite", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash"];
 
 const calendarTools = require('./calendar');
 
@@ -151,7 +151,10 @@ async function generateAIResponse(messagePayload, userId, onFallbackMessage) {
         } catch (error) {
             console.error(`[Fallback] Model ${modelName} failed:`, error.message);
             if (i === modelsToTry.length - 1) {
-                return "סליחה, הייתה לי תקלת תקשורת קטנה. תוכל בבקשה לכתוב לי את ההודעה האחרונה שוב?";
+                let waitTime = 60;
+                const match = error.message.match(/Please retry in ([\d\.]+)s/);
+                if (match) waitTime = Math.ceil(parseFloat(match[1]));
+                return `מערכת הבינה המלאכותית שלנו תחת עומס קל ותחזור לפעילות בעוד ${waitTime} שניות. אנא המתן...`;
             }
         }
     }
