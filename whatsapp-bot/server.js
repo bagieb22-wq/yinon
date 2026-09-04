@@ -13,7 +13,8 @@ app.use(express.static('public')); // Serve the HTML UI
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 const userChats = new Map();
-const modelsToTry = ["gemini-flash-latest", "gemini-3.6-flash", "gemini-3.5-flash"];
+// מנהל מודלים
+const modelsToTry = ["gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash"];
 
 const calendarTools = require('./calendar');
 
@@ -43,10 +44,10 @@ const tools = [{
                     idNumber: { type: "STRING" },
                     occupation: { type: "STRING" },
                     goals: { type: "STRING" },
-                    dateStr: { type: "STRING" },
-                    timeStr: { type: "STRING" }
+                    dateStr: { type: "STRING", description: "תאריך הפגישה בפורמט YYYY-MM-DD" },
+                    timeStr: { type: "STRING", description: "שעת הפגישה בפורמט HH:MM (לדוגמה 10:30)" }
                 },
-                required: ["name", "idNumber", "occupation", "goals", "dateStr", "timeStr"]
+                required: ["dateStr", "timeStr"]
             }
         }
     ]
@@ -65,11 +66,12 @@ app.post('/api/chat', async (req, res) => {
 
 שלב 1: חקר עומק והבנת הצורך
 חובה לאסוף את כל המידע הבא מהלקוח (שאל רק שאלה אחת בכל הודעה):
-1. מה התחום המדויק שמעניין אותו.
-2. גיל ומצב משפחתי.
-3. סטטוס תעסוקתי.
-4. מטרה עיקרית.
-5. סדר גודל סכום להשקעה (אם רלוונטי).
+1. שם מלא של הלקוח.
+2. מה התחום המדויק שמעניין אותו.
+3. גיל ומצב משפחתי.
+4. סטטוס תעסוקתי.
+5. מטרה עיקרית.
+6. סדר גודל סכום להשקעה (אם רלוונטי).
 רק אחרי שיש לך פרופיל מלא, עבור לשלב 2.
 
 שלב 2: איסוף פרטים מזהים
@@ -107,15 +109,7 @@ app.post('/api/chat', async (req, res) => {
                 const chat = model.startChat({ history: sessionData.history });
                 
                 let result;
-                if (i === 0) {
-                    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error("TIMEOUT")), 7000));
-                    const apiPromise = chat.sendMessage(userMessage);
-                    apiPromise.catch(() => {});
-                    
-                    result = await Promise.race([apiPromise, timeoutPromise]);
-                } else {
-                    result = await chat.sendMessage(userMessage);
-                }
+                result = await chat.sendMessage(userMessage);
                 
                 // Handle Function Calling Loop
                 let responseMsg = result.response;
@@ -155,7 +149,13 @@ app.post('/api/chat', async (req, res) => {
             } catch (err) {
                 console.error(`[Fallback] Model ${modelName} failed:`, err.message);
                 if (i === modelsToTry.length - 1) {
-                    reply = "מצטערים, כל השרתים שלנו עמוסים כרגע. נסה שוב מאוחר יותר.";
+                    let waitTime = 60;
+                    const match = err.message.match(/Please retry in ([\d\.]+)s/);
+                    if (match) {
+                        waitTime = Math.ceil(parseFloat(match[1]));
+                    }
+                    reply = "מערכת הבינה המלאכותית שלנו תחת עומס קל ותחזור לפעילות בעוד מספר שניות. אנא המתן...";
+                    return res.json({ reply, retryAfter: waitTime });
                 }
             }
         }
@@ -163,7 +163,12 @@ app.post('/api/chat', async (req, res) => {
         res.json({ reply });
     } catch (error) {
         console.error(error);
-        res.status(500).json({ reply: "שגיאה פנימית בשרת." });
+        let waitTime = 60;
+        if (error.message) {
+            const match = error.message.match(/Please retry in ([\d\.]+)s/);
+            if (match) waitTime = Math.ceil(parseFloat(match[1]));
+        }
+        res.status(500).json({ reply: "מערכת הבינה המלאכותית שלנו תחת עומס קל ותחזור לפעילות בעוד מספר שניות. אנא המתן...", retryAfter: waitTime });
     }
 });
 

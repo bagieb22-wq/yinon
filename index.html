@@ -1620,7 +1620,27 @@
                 if (data.reply) {
                     addMessage(data.reply, 'bot');
                 } else {
-                    addMessage("שגיאה בתשובת השרת.", 'bot');
+                    addMessage("שגיאת מערכת כללית.", 'bot');
+                }
+                
+                if (data.retryAfter) {
+                    chatInput.disabled = true;
+                    chatSend.disabled = true;
+                    let timeLeft = data.retryAfter;
+                    chatInput.placeholder = `המערכת חסומה. אנא המתן ${timeLeft} שניות...`;
+                    
+                    const timerInterval = setInterval(() => {
+                        timeLeft--;
+                        if (timeLeft <= 0) {
+                            clearInterval(timerInterval);
+                            chatInput.disabled = false;
+                            chatSend.disabled = false;
+                            chatInput.placeholder = "הקלד הודעה...";
+                            chatInput.focus();
+                        } else {
+                            chatInput.placeholder = `המערכת חסומה. אנא המתן ${timeLeft} שניות...`;
+                        }
+                    }, 1000);
                 }
             } catch (error) {
                 typingIndicator.style.display = 'none';

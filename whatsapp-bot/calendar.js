@@ -10,7 +10,7 @@ const KEY_PATH = path.join(__dirname, 'calendar-key.json');
 
 const auth = new google.auth.GoogleAuth({
     keyFile: KEY_PATH,
-    scopes: ['https://www.googleapis.com/auth/calendar.events'],
+    scopes: ['https://www.googleapis.com/auth/calendar'],
 });
 
 const calendar = google.calendar({ version: 'v3', auth });

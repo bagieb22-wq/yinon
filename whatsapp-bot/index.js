@@ -9,9 +9,8 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 // שמירת זיכרון שיחות לפי מספר טלפון
 const userChats = new Map();
 
-// פונקציה לשליחת ההודעה לגוגל וקבלת תשובה
-const userChats = new Map();
-const modelsToTry = ["gemini-flash-latest", "gemini-3.6-flash", "gemini-3.5-flash"];
+// מנהל מודלים
+const modelsToTry = ["gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash"];
 
 const calendarTools = require('./calendar');
 
@@ -43,40 +42,47 @@ const tools = [{
                     occupation: { type: "STRING", description: "תעסוקת הלקוח" },
                     goals: { type: "STRING", description: "מטרת הפגישה של הלקוח" },
                     dateStr: { type: "STRING", description: "תאריך הפגישה בפורמט YYYY-MM-DD" },
-                    timeStr: { type: "STRING", description: "שעת הפגישה בפורמט HH:MM (למשל 10:30)" }
+                    timeStr: { type: "STRING", description: "שעת הפגישה בפורמט HH:MM (לדוגמה 10:30)" }
                 },
-                required: ["name", "idNumber", "occupation", "goals", "dateStr", "timeStr"]
+                required: ["dateStr", "timeStr"]
             }
         }
     ]
 }];
 
-async function generateAIResponse(userMessage, userId, onFallbackMessage) {
+async function generateAIResponse(messagePayload, userId, onFallbackMessage) {
     if (!process.env.GEMINI_API_KEY) {
         return "שגיאה: חסר מפתח API של גוגל בקובץ .env";
     }
 
     const systemPrompt = `
 אתה סוכן ביטוח ופיננסים אינטליגנטי של סוכנות IBS. הוא מתנהג כסוכן אנושי.
-מטרתך היא לנהל שיחה אנושית, טבעית, להבין את הצרכים לעומק, ולאסוף פרטים מזהים לבדיקה, ולבסוף לקבוע להם פגישה.
+מטרתך היא לנהל שיחה אנושית, טבעית, להבין את הצרכים לעומק, ולאסוף נתונים (תעודת זהות או דוחות פנסיוניים), ולבסוף לקבוע להם פגישה.
 
 שלבי השיחה (חובה לעבוד לפי הסדר, וכל פעם לשאול *רק שאלה אחת*):
 
 שלב 1: חקר עומק והבנת הצורך
 חובה לאסוף את כל המידע הבא מהלקוח (שאל רק שאלה אחת בכל הודעה):
-1. מה התחום המדויק שמעניין אותו.
-2. גיל ומצב משפחתי.
-3. סטטוס תעסוקתי.
-4. מטרה עיקרית.
-5. סדר גודל סכום להשקעה (אם רלוונטי).
+1. שם מלא של הלקוח.
+2. מה התחום המדויק שמעניין אותו.
+3. גיל ומצב משפחתי.
+4. סטטוס תעסוקתי.
+5. מטרה עיקרית.
+6. סדר גודל סכום להשקעה (אם רלוונטי).
 רק אחרי שיש לך פרופיל מלא, עבור לשלב 2.
 
-שלב 2: איסוף פרטים מזהים
-כדי לבצע בדיקה מקצועית, בקש מהלקוח: תעודת זהות + תאריך הנפקה.
+שלב 2: איסוף נתונים לבדיקה
+כדי לבצע בדיקה מקצועית, בקש מהלקוח: תעודת זהות + תאריך הנפקה, **או** הצע לו פשוט לשלוח לך לכאן בוואטסאפ קובץ PDF של הדו"ח (מהר הביטוח או המסלקה הפנסיונית).
 
-שלב 3: הפניה ליומן פגישות הממוחשב (Function Calling)
-אחרי קבלת הת"ז, עליך לקבוע פגישה ישירות ביומן!
-1. שאל את הלקוח באיזה יום נוח לו (למשל: "מתי נוח לך שנדבר השבוע?").
+שלב 3: ניתוח הדו"ח (במידה ונשלח קובץ PDF)
+אם הלקוח שלח מסמך, קרא אותו ביסודיות!
+שלוף 2-3 נקודות קריטיות שמצאת שם (למשל: דמי ניהול יקרים במספרים מדויקים, כפל ביטוחים, קופות שאפשר לשפר).
+הצג ללקוח משפט או שניים עם התגליות שלך כדי להראות לו מקצועיות, ומיד לאחר מכן עבור לשלב 4 לקביעת פגישה כדי שתוכלו לסדר את זה.
+אם הוא לא שלח קובץ ונתן רק ת"ז, עבור ישר לשלב 4.
+
+שלב 4: הפניה ליומן פגישות הממוחשב (Function Calling)
+אחרי קבלת הת"ז (או אחרי שניתחת את המסמך שלו), עליך לקבוע פגישה ישירות ביומן!
+1. שאל את הלקוח באיזה יום נוח לו השבוע (למשל: "מתי נוח לך שנדבר?").
 2. כשהוא בוחר יום, הפעל מיד את הכלי check_availability עבור התאריך ההוא.
 3. לאחר קבלת התשובה מהיומן על השעות התפוסות, הצג ללקוח שעות פנויות הגיוניות (בין 09:00 ל-18:00 שאינן תפוסות) ושאל אותו מה נוח לו.
 4. כשהלקוח מסכים על שעה, הפעל את הכלי book_appointment עם כל הפרטים שאספת עליו עד כה.
@@ -105,16 +111,7 @@ async function generateAIResponse(userMessage, userId, onFallbackMessage) {
             const chat = model.startChat({ history: sessionData.history });
             
             let result;
-            if (i === 0) {
-                const timeoutPromise = new Promise((_, reject) => {
-                    setTimeout(() => reject(new Error("TIMEOUT - לקח יותר מדי זמן")), 7000);
-                });
-                const apiPromise = chat.sendMessage(userMessage);
-                apiPromise.catch(() => {});
-                result = await Promise.race([apiPromise, timeoutPromise]);
-            } else {
-                result = await chat.sendMessage(userMessage);
-            }
+            result = await chat.sendMessage(messagePayload);
             
             // Handle Function Calling Loop
             let responseMsg = result.response;
@@ -153,11 +150,8 @@ async function generateAIResponse(userMessage, userId, onFallbackMessage) {
             
         } catch (error) {
             console.error(`[Fallback] Model ${modelName} failed:`, error.message);
-            if (i === 0 && onFallbackMessage) {
-                onFallbackMessage("זיהינו עומס בשרת הראשי. אנחנו מעבירים את השיחה לשרת גיבוי, אנא המתן מספר שניות...");
-            }
             if (i === modelsToTry.length - 1) {
-                return "מצטערים, כל השרתים שלנו עמוסים כרגע. נשמח לעזור לך בהמשך או שתחייג אלינו!";
+                return "סליחה, הייתה לי תקלת תקשורת קטנה. תוכל בבקשה לכתוב לי את ההודעה האחרונה שוב?";
             }
         }
     }
@@ -193,18 +187,48 @@ client.on('message', async msg => {
 
     console.log(`הודעה חדשה התקבלה מ: ${msg.from} | תוכן: ${msg.body}`);
 
-    // שולח אנימציה של "מקליד..." בזמן שה-AI חושב
     const chat = await msg.getChat();
+    
+    // שליחת אינדיקציית "מקליד..."
     chat.sendStateTyping();
+    
+    let userMessage = msg.body || "";
+    let mediaPart = null;
 
-    // שולח את ההודעה ל-AI ומקבל תשובה, וגם מעביר פונקציית גיבוי
-    const aiResponse = await generateAIResponse(msg.body, msg.from, (fallbackMsg) => {
+    try {
+        if (msg.hasMedia) {
+            const media = await msg.downloadMedia();
+            if (media.mimetype === 'application/pdf') {
+                mediaPart = {
+                    inlineData: {
+                        data: media.data,
+                        mimeType: media.mimetype
+                    }
+                };
+                if (!userMessage) {
+                    userMessage = "מצורף קובץ PDF של הדוח. קרא ונתח אותו.";
+                }
+            } else {
+                if (!userMessage) {
+                    chat.clearState();
+                    return; // Ignore random photos without text
+                }
+            }
+        }
+    } catch (e) {
+        console.error("Failed to download media", e);
+    }
+
+    const messagePayload = mediaPart ? [userMessage, mediaPart] : userMessage;
+
+    // קבלת תשובה מה-AI (מעבירים את ה-Payload במקום רק טקסט)
+    const aiResponse = await generateAIResponse(messagePayload, msg.from, (fallbackMsg) => {
         msg.reply(fallbackMsg);
-        // מחזיר אנימציית הקלדה כי הבוט ממשיך לחשוב בשרת השני
+        // מחדש אינדיקציית הקלדה כי הבוט החליף שרת
         chat.sendStateTyping();
     });
     
-    // עוצר את אנימציית ההקלדה ושולח את ההודעה חזרה ללקוח
+    // ניקוי אינדיקציית ההקלדה ושליחת התשובה חזרה ללקוח
     chat.clearState();
     msg.reply(aiResponse);
 });

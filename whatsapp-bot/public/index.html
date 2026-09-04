@@ -164,6 +164,26 @@
                 const data = await res.json();
                 typing.style.display = 'none';
                 addMessage(data.reply, false);
+                
+                if (data.retryAfter) {
+                    input.disabled = true;
+                    document.querySelector('button[onclick="sendMessage()"]').disabled = true;
+                    let timeLeft = data.retryAfter;
+                    input.placeholder = `המערכת חסומה. אנא המתן ${timeLeft} שניות...`;
+                    
+                    const timerInterval = setInterval(() => {
+                        timeLeft--;
+                        if (timeLeft <= 0) {
+                            clearInterval(timerInterval);
+                            input.disabled = false;
+                            document.querySelector('button[onclick="sendMessage()"]').disabled = false;
+                            input.placeholder = "הקלד הודעה...";
+                            input.focus();
+                        } else {
+                            input.placeholder = `המערכת חסומה. אנא המתן ${timeLeft} שניות...`;
+                        }
+                    }, 1000);
+                }
             } catch (error) {
                 typing.style.display = 'none';
                 addMessage("שגיאה בחיבור לשרת.", false);
