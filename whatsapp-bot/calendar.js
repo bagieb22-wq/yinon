@@ -108,11 +108,50 @@ async function bookAppointment(name, idNumber, occupation, goals, dateStr, timeS
         return `הפגישה נקבעה בהצלחה! היא נשמרה ביומן תחת הקישור: ${response.data.htmlLink}`;
     } catch (error) {
         console.error("Error booking appointment:", error);
-        return "הייתה שגיאה בקביעת הפגישה ביומן. ייתכן שההרשאות לא הוגדרו נכון. אנא הבהר ללקוח שתיצור איתו קשר בהקדם.";
+        return "הייתה שגיאה בקביעת הפגישה ביומן. ייתכן שחסרה הרשאת עריכה. אנא ודא שחלקת את היומן כראוי.";
+    }
+}
+
+/**
+ * Cancels a calendar event based on the user's ID number.
+ */
+async function cancelAppointment(idNumber) {
+    try {
+        console.log(`Searching for appointment to cancel with ID: ${idNumber}...`);
+        
+        // Search for future events containing the ID number
+        const response = await calendar.events.list({
+            calendarId: CALENDAR_ID,
+            timeMin: new Date().toISOString(),
+            q: idNumber,
+            maxResults: 10,
+            singleEvents: true,
+            orderBy: 'startTime',
+        });
+
+        const events = response.data.items;
+        
+        if (!events || events.length === 0) {
+            return "לא נמצאה פגישה עתידית ביומן תחת תעודת הזהות שסיפקת. אנא ודא שהלקוח סיפק את המספר המדויק איתו קבע את הפגישה.";
+        }
+
+        // If found, delete the first matching event
+        const eventToDelete = events[0];
+        
+        await calendar.events.delete({
+            calendarId: CALENDAR_ID,
+            eventId: eventToDelete.id,
+        });
+
+        return `הפגישה שנקבעה ל-${new Date(eventToDelete.start.dateTime || eventToDelete.start.date).toLocaleString('he-IL', { timeZone: 'Asia/Jerusalem' })} בוטלה בהצלחה מהיומן!`;
+    } catch (error) {
+        console.error("Error canceling appointment:", error);
+        return "הייתה שגיאה בביטול הפגישה מול היומן. אנא התנצל בפני הלקוח והצע שיפנה טלפונית.";
     }
 }
 
 module.exports = {
     checkAvailability,
-    bookAppointment
+    bookAppointment,
+    cancelAppointment
 };

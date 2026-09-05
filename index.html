@@ -1509,6 +1509,21 @@
             background: white;
             border-top: 1px solid #eee;
         }
+
+        #ibs-chat-attach {
+            background: transparent;
+            color: #777;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0 10px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #ibs-chat-attach:hover {
+            color: var(--primary-color);
+        }
         
         #ibs-chat-input {
             flex-grow: 1;
@@ -1559,6 +1574,8 @@
         </div>
         <div class="typing-indicator" id="ibs-typing">הנציג מקליד...</div>
         <div id="ibs-chat-input-area">
+            <input type="file" id="ibs-chat-file" style="display: none;" accept=".pdf,image/*">
+            <button id="ibs-chat-attach" onclick="document.getElementById('ibs-chat-file').click()"><i class="fa-solid fa-paperclip"></i></button>
             <input type="text" id="ibs-chat-input" placeholder="הקלד הודעה...">
             <button id="ibs-chat-send"><i class="fa-solid fa-paper-plane"></i></button>
         </div>
@@ -1598,20 +1615,43 @@
 
         async function sendMessage() {
             const text = chatInput.value.trim();
-            if (!text) return;
+            const fileInput = document.getElementById('ibs-chat-file');
+            const file = fileInput.files[0];
+            
+            if (!text && !file) return;
 
-            addMessage(text, 'user');
+            if (file) {
+                addMessage(`📎 קובץ מצורף: ${file.name} ${text ? '- ' + text : ''}`, 'user');
+            } else {
+                addMessage(text, 'user');
+            }
+            
             chatInput.value = '';
             
             typingIndicator.style.display = 'block';
             chatMessages.scrollTop = chatMessages.scrollHeight;
 
             try {
+                let requestBody = { message: text };
+                
+                if (file) {
+                    const base64String = await new Promise((resolve) => {
+                        const reader = new FileReader();
+                        reader.onload = () => resolve(reader.result.split(',')[1]);
+                        reader.readAsDataURL(file);
+                    });
+                    
+                    requestBody.fileData = base64String;
+                    requestBody.mimeType = file.type;
+                    requestBody.fileName = file.name;
+                    fileInput.value = ''; // clear input
+                }
+
                 // We assume the Node.js server is running on localhost:3000 for local testing
                 const response = await fetch('http://localhost:3000/api/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ message: text })
+                    body: JSON.stringify(requestBody)
                 });
                 
                 const data = await response.json();

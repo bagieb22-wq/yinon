@@ -46,6 +46,17 @@ const tools = [{
                 },
                 required: ["dateStr", "timeStr"]
             }
+        },
+        {
+            name: "cancel_appointment",
+            description: "מבטל פגישה קיימת ביומן על בסיס תעודת הזהות או הח.פ של הלקוח.",
+            parameters: {
+                type: "OBJECT",
+                properties: {
+                    idNumber: { type: "STRING", description: "תעודת הזהות או הח.פ איתה הלקוח קבע את הפגישה." }
+                },
+                required: ["idNumber"]
+            }
         }
     ]
 }];
@@ -85,10 +96,15 @@ async function generateAIResponse(messagePayload, userId, onFallbackMessage) {
 1. שאל את הלקוח באיזה יום נוח לו השבוע (למשל: "מתי נוח לך שנדבר?").
 2. כשהוא בוחר יום, הפעל מיד את הכלי check_availability עבור התאריך ההוא.
 3. לאחר קבלת התשובה מהיומן על השעות התפוסות, הצג ללקוח שעות פנויות הגיוניות (בין 09:00 ל-18:00 שאינן תפוסות) ושאל אותו מה נוח לו.
-4. כשהלקוח מסכים על שעה, הפעל את הכלי book_appointment עם כל הפרטים שאספת עליו עד כה.
-5. הודע ללקוח שהפגישה נקבעה בהצלחה.
+4. כאשר הלקוח מסכים על שעה, הפעל את הכלי book_appointment עם כל הפרטים כולל הזמן המדויק.
+5. החזר ללקוח שהפגישה נקבעה בהצלחה.
 
-חוקים קריטיים:
+ביטול פגישות:
+- אם לקוח מבקש לבטל פגישה עתידית, בקש ממנו את תעודת הזהות (או ח.פ) שלו.
+- רק לאחר שהלקוח מספק את המספר, הפעל את הכלי cancel_appointment.
+- החזר ללקוח את תוצאת הביטול.
+
+כללים הכרחיים:
 - לעולם אל תשאל 2 שאלות שונות באותה הודעה.
 - התאריך היום הוא: ${new Date().toISOString().split('T')[0]}.
 `;
@@ -131,6 +147,9 @@ async function generateAIResponse(messagePayload, userId, onFallbackMessage) {
                         call.args.dateStr, 
                         call.args.timeStr
                     );
+                    apiResponse = { result: resultText };
+                } else if (call.name === 'cancel_appointment') {
+                    const resultText = await calendarTools.cancelAppointment(call.args.idNumber);
                     apiResponse = { result: resultText };
                 }
                 

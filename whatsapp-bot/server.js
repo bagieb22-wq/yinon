@@ -49,14 +49,41 @@ const tools = [{
                 },
                 required: ["dateStr", "timeStr"]
             }
+        },
+        {
+            name: "cancel_appointment",
+            description: "מבטל פגישה קיימת ביומן על בסיס תעודת הזהות או הח.פ של הלקוח.",
+            parameters: {
+                type: "OBJECT",
+                properties: {
+                    idNumber: { type: "STRING", description: "תעודת הזהות או הח.פ איתה הלקוח קבע את הפגישה." }
+                },
+                required: ["idNumber"]
+            }
         }
     ]
 }];
 
 app.post('/api/chat', async (req, res) => {
     try {
-        const userMessage = req.body.message;
+        const { message, fileData, mimeType, fileName } = req.body;
+        let userMessage = message || "";
         const sessionId = "browser_user";
+        
+        let messagePayload = userMessage;
+        
+        if (fileData && mimeType) {
+            const mediaPart = {
+                inlineData: {
+                    data: fileData,
+                    mimeType: mimeType
+                }
+            };
+            if (!userMessage) {
+                userMessage = `הלקוח העלה קובץ (${fileName}). אנא התייחס לתוכן שלו.`;
+            }
+            messagePayload = [userMessage, mediaPart];
+        }
         
         const systemPrompt = `
 אתה סוכן ביטוח ופיננסים אינטליגנטי של סוכנות IBS. הוא מתנהג כסוכן אנושי.
@@ -85,6 +112,11 @@ app.post('/api/chat', async (req, res) => {
 4. כשהלקוח מסכים על שעה, הפעל את הכלי book_appointment עם כל הפרטים שאספת עליו עד כה.
 5. הודע ללקוח שהפגישה נקבעה בהצלחה.
 
+ביטול פגישות:
+- אם לקוח מבקש לבטל פגישה עתידית, בקש ממנו את תעודת הזהות (או ח.פ) שלו.
+- רק לאחר שהלקוח מספק את המספר, הפעל את הכלי cancel_appointment.
+- החזר ללקוח את תוצאת הביטול.
+
 חוקים קריטיים:
 - לעולם אל תשאל 2 שאלות שונות באותה הודעה.
 - התאריך היום הוא: ${new Date().toISOString().split('T')[0]}.
@@ -109,7 +141,7 @@ app.post('/api/chat', async (req, res) => {
                 const chat = model.startChat({ history: sessionData.history });
                 
                 let result;
-                result = await chat.sendMessage(userMessage);
+                result = await chat.sendMessage(messagePayload);
                 
                 // Handle Function Calling Loop
                 let responseMsg = result.response;
@@ -129,6 +161,9 @@ app.post('/api/chat', async (req, res) => {
                             call.args.dateStr, 
                             call.args.timeStr
                         );
+                        apiResponse = { result: resultText };
+                    } else if (call.name === 'cancel_appointment') {
+                        const resultText = await calendarTools.cancelAppointment(call.args.idNumber);
                         apiResponse = { result: resultText };
                     }
                     
