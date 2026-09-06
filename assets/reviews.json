@@ -1,0 +1,38 @@
+{
+  "overall_rating": 5.0,
+  "total_reviews": 68,
+  "reviews": [
+    {
+      "author_name": "Aviad Levy",
+      "author_url": "#",
+      "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKw_p=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "relative_time_description": "לפני 20 ימים",
+      "text": "ינון הסוכן היה מקצועי, רהוט וענייני, הסביר הכל בצורה מעולה, פרש בפניי את האפשרויות והגענו יחד להחלטות הכי טובות."
+    },
+    {
+      "author_name": "אולגה בוקר עדי",
+      "author_url": "#",
+      "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocL=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "relative_time_description": "לפני חודש 1",
+      "text": "שירות אדיב עם המון סבלנות וסובלנות. תודה רבה לך ינון!"
+    },
+    {
+      "author_name": "שיר טל",
+      "author_url": "#",
+      "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-Uj=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "relative_time_description": "לפני חודשיים",
+      "text": "שירות מעולה! ינון הסוכן שלי בדק בשבילי את כל האפשרויות שמתאימות בדיוק לי והציע לי את המסלול הכי רווחי. מאוד מרוצה!"
+    },
+    {
+      "author_name": "ידידיה בן משה",
+      "author_url": "#",
+      "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "relative_time_description": "לפני חודשיים",
+      "text": "ליווי מקצועי וסבלני לאורך הדרך. ממליץ בחום על IBS."
+    }
+  ]
+}
