@@ -1102,29 +1102,14 @@
         </div>
     </div>
 
-    <!-- Testimonials -->
-    <section class="testimonials" id="reviews">
+    <!-- Testimonials (Google Reviews via Elfsight Widget) -->
+    <section class="testimonials" id="reviews" style="max-width: 1200px; margin: 4rem auto; padding: 0 1rem; text-align: center;">
         <h2 class="section-title">לקוחות ממליצים</h2>
+        <p style="margin-bottom: 2rem; color: #555;">קראו מה הלקוחות שלנו כותבים עלינו בגוגל</p>
         
-        <div id="reviews-container" class="testimonials-grid">
-            <div style="text-align: center; width: 100%; color: var(--primary-color);">טוען המלצות...</div>
-        </div>
-
-        <div class="review-form-container" style="max-width: 600px; margin: 3rem auto 0; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: right; direction: rtl;">
-            <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; text-align: center;">הוסף המלצה משלך</h3>
-            <form id="review-form" onsubmit="submitReview(event)">
-                <div style="margin-bottom: 1rem;">
-                    <label for="review-name" style="display: block; margin-bottom: 0.5rem; font-weight: bold; color: var(--text-dark);">שם מלא:</label>
-                    <input type="text" id="review-name" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;">
-                </div>
-                <div style="margin-bottom: 1rem;">
-                    <label for="review-text" style="display: block; margin-bottom: 0.5rem; font-weight: bold; color: var(--text-dark);">ההמלצה שלך:</label>
-                    <textarea id="review-text" required rows="4" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; resize: vertical;"></textarea>
-                </div>
-                <button type="submit" id="submit-review-btn" style="width: 100%; padding: 1rem; background-color: var(--accent-color); color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: background-color 0.3s; font-size: 1.1rem;">שלח המלצה</button>
-            </form>
-            <div id="review-status" style="margin-top: 1rem; text-align: center; font-weight: bold; display: none;"></div>
-        </div>
+        <!-- Elfsight Google Reviews Widget -->
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-d5f39493-1088-4982-9ad0-b44b445eebb4" data-elfsight-app-lazy></div>
     </section>
 
     <footer>
@@ -1349,91 +1334,7 @@
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        // Load Reviews
-        async function loadReviews() {
-            const container = document.getElementById('reviews-container');
-            try {
-                const q = query(collection(db, "testimonials"), orderBy("timestamp", "desc"));
-                const querySnapshot = await getDocs(q);
-                
-                if (querySnapshot.empty) {
-                    container.innerHTML = '';
-                    return;
-                }
 
-                container.innerHTML = ''; // clear loading text
-                
-                querySnapshot.forEach((doc) => {
-                    const data = doc.data();
-                    const card = document.createElement('div');
-                    card.className = 'testimonial-card';
-                    card.innerHTML = `
-                        <p>"${escapeHtml(data.text)}"</p>
-                        <div class="testimonial-author">— ${escapeHtml(data.name)}</div>
-                    `;
-                    container.appendChild(card);
-                });
-            } catch (error) {
-                console.error("Error loading reviews:", error);
-                // Fallback to static reviews if DB fails (e.g. permissions not set yet)
-                container.innerHTML = `
-                    <div class="testimonial-card">
-                        <p>"צוות IBS עשה לי בדיקה מקיפה בתיק הפנסיוני וגילה שאני משלם דמי ניהול מופרזים. תוך שבוע הם חסכו לי מאות שקלים בחודש!"</p>
-                        <div class="testimonial-author">— דוד מ., תל אביב</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"צוות מקצועי, אמין וזמין תמיד. עזרו לנו להעביר את קופות הגמל למסלולים מרוויחים יותר. ממליץ בחום!"</p>
-                        <div class="testimonial-author">— אלון כ., חיפה</div>
-                    </div>
-                `;
-            }
-        }
-
-        function escapeHtml(unsafe) {
-            return (unsafe || "").toString()
-                 .replace(/&/g, "&amp;")
-                 .replace(/</g, "&lt;")
-                 .replace(/>/g, "&gt;")
-                 .replace(/"/g, "&quot;")
-                 .replace(/'/g, "&#039;");
-        }
-
-        // Expose submit function to global scope
-        window.submitReview = async function(event) {
-            event.preventDefault();
-            const btn = document.getElementById('submit-review-btn');
-            const status = document.getElementById('review-status');
-            const name = document.getElementById('review-name').value;
-            const text = document.getElementById('review-text').value;
-
-            btn.disabled = true;
-            btn.innerText = 'שולח...';
-            status.style.display = 'none';
-
-            try {
-                await addDoc(collection(db, "testimonials"), {
-                    name: name,
-                    text: text,
-                    timestamp: new Date()
-                });
-                status.innerText = 'תודה רבה! ההמלצה נשלחה בהצלחה.';
-                status.style.color = 'green';
-                status.style.display = 'block';
-                document.getElementById('review-form').reset();
-                loadReviews(); // reload to show the new one
-            } catch (e) {
-                console.error("Error adding document: ", e);
-                status.innerText = 'שגיאה בשליחה. אנא ודא שמסד הנתונים מוגדר ב-Test Mode בפיירבייס.';
-                status.style.color = 'red';
-                status.style.display = 'block';
-            } finally {
-                btn.disabled = false;
-                btn.innerText = 'שלח המלצה';
-            }
-        };
-
-        // Initialize on load
-        loadReviews();
     </script>
     <!-- IBS Chatbot Widget Styles -->
     <style>
