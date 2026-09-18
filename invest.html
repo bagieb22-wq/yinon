@@ -40,10 +40,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             font-family: 'Heebo', sans-serif;
         }
 
-        html, body {
-            overflow-x: hidden;
-            width: 100%;
-        }
+        html { overflow: auto !important; overflow-x: auto !important; }
+        body { overflow-x: auto !important; }
 
         body {
             background-color: var(--bg-light);
@@ -64,7 +62,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         body.high-contrast .modal-content,
         body.high-contrast .calculator-container,
         body.high-contrast .why-us-card { background-color: #111 !important; color: #fff !important; border: 1px solid #fff; }
-        body.large-text { font-size: 1.2rem; }
+        
         body.highlight-links a { text-decoration: underline !important; background-color: #ffeb3b !important; color: #000 !important; font-weight: bold; }
         
         /* Modal Styles */
@@ -671,6 +669,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </style>
 </head>
 <body>
+    
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WGJH8GW"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -684,7 +683,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="accessibility-menu" id="accessibilityMenu" role="dialog" aria-label="תפריט נגישות">
         <button onclick="toggleGrayscale()">גווני אפור</button>
         <button onclick="toggleHighContrast()">ניגודיות גבוהה</button>
-        <button onclick="toggleLargeText()">הגדלת טקסט</button>
+        
+        <div class="a11y-stepper" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #eee; color: var(--primary-color); font-weight: 600;">
+            <span>גודל טקסט: <span id="textSizeDisplay">100%</span></span>
+            <div style="display: flex; gap: 5px;">
+                <button aria-label="הקטן טקסט" onclick="changeTextSize(-10)" style="width: 35px; height: 35px; border: 1px solid var(--primary-color); background: white; border-radius: 4px; display: flex; justify-content: center; align-items: center; cursor: pointer;">-</button>
+                <button aria-label="הגדל טקסט" onclick="changeTextSize(10)" style="width: 35px; height: 35px; border: 1px solid var(--primary-color); background: white; border-radius: 4px; display: flex; justify-content: center; align-items: center; cursor: pointer;">+</button>
+            </div>
+        </div>
         <button onclick="toggleHighlightLinks()">הדגשת קישורים</button>
         <button onclick="openAccessibilityModal()">הצהרת נגישות</button>
         <button onclick="resetAccessibility()">איפוס הגדרות</button>
@@ -718,6 +724,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </nav>
         </div>
     </header>
+    <main id="main-content">
 
     <!-- Live Market Data Widget -->
     <section style="background-color: var(--bg-light); padding: 40px 20px; border-bottom: 1px solid #ddd;">
@@ -981,6 +988,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
     </div>
 
+    </main>
     <footer>
         <p>&copy; 2026 IBS - סוכנות ביטוח ופיננסים | כל הזכויות שמורות | <button onclick="openAccessibilityModal()" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-size:1rem; font-family:inherit;">הצהרת נגישות</button></p>
     </footer>
@@ -1202,12 +1210,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 const parent = el.parentElement;
                 const oldErr = parent.querySelector('.err-msg');
                 if(oldErr) oldErr.remove();
+                el.removeAttribute('aria-invalid');
             });
             
             const showError = (el, msg) => {
                 el.style.borderColor = 'red';
                 const err = document.createElement('div');
                 err.className = 'err-msg';
+                err.setAttribute('aria-live', 'polite');
+                el.setAttribute('aria-invalid', 'true');
                 err.style.color = 'red';
                 err.style.fontSize = '0.85rem';
                 err.style.marginTop = '4px';
@@ -1278,9 +1289,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
         function toggleGrayscale() { document.body.classList.toggle('grayscale'); }
         function toggleHighContrast() { document.body.classList.toggle('high-contrast'); }
-        function toggleLargeText() { document.body.classList.toggle('large-text'); }
+        
         function toggleHighlightLinks() { document.body.classList.toggle('highlight-links'); }
-        function resetAccessibility() { document.body.classList.remove('grayscale', 'high-contrast', 'large-text', 'highlight-links'); }
+        
+        let currentTextSize = 100;
+        function changeTextSize(delta) {
+            currentTextSize += delta;
+            // הגבלת טווח מ-100% עד 200% לפי דרישות נגישות
+            if (currentTextSize < 100) currentTextSize = 100;
+            if (currentTextSize > 200) currentTextSize = 200;
+            
+            document.documentElement.style.zoom = (currentTextSize / 100);
+            // כפיית רוחב מינימלי כדי להבטיח פס גלילה אופקי בכרום
+            document.body.style.minWidth = currentTextSize > 100 ? currentTextSize + '%' : '100%';
+            const displays = document.querySelectorAll('#textSizeDisplay');
+            displays.forEach(d => d.innerText = currentTextSize + '%');
+        }
+        function resetAccessibility() { 
+            document.body.classList.remove('grayscale', 'high-contrast', 'highlight-links'); 
+            currentTextSize = 100;
+            document.documentElement.style.zoom = '1';
+            document.body.style.minWidth = '100%';
+            const displays = document.querySelectorAll('#textSizeDisplay');
+            displays.forEach(d => d.innerText = '100%');
+        }
 
         // Accessibility Modal
         function openAccessibilityModal() {
