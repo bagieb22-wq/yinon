@@ -684,8 +684,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="a11y-stepper" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #eee; color: var(--primary-color); font-weight: 600;">
             <span>גודל טקסט: <span id="textSizeDisplay">100%</span></span>
             <div style="display: flex; gap: 5px;">
-                <button aria-label="הקטן טקסט" onclick="changeTextSize(-10)" style="width: 35px; height: 35px; border: 1px solid var(--primary-color); background: white; border-radius: 4px; display: flex; justify-content: center; align-items: center; cursor: pointer;">-</button>
-                <button aria-label="הגדל טקסט" onclick="changeTextSize(10)" style="width: 35px; height: 35px; border: 1px solid var(--primary-color); background: white; border-radius: 4px; display: flex; justify-content: center; align-items: center; cursor: pointer;">+</button>
+                <button aria-label="הקטן טקסט" onclick="changeTextSize(-20)" style="width: 35px; height: 35px; border: 1px solid var(--primary-color); background: white; border-radius: 4px; display: flex; justify-content: center; align-items: center; cursor: pointer;">-</button>
+                <button aria-label="הגדל טקסט" onclick="changeTextSize(20)" style="width: 35px; height: 35px; border: 1px solid var(--primary-color); background: white; border-radius: 4px; display: flex; justify-content: center; align-items: center; cursor: pointer;">+</button>
             </div>
         </div>
         <button onclick="toggleHighlightLinks()">הדגשת קישורים</button>
@@ -1016,9 +1016,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             if (currentTextSize < 100) currentTextSize = 100;
             if (currentTextSize > 200) currentTextSize = 200;
             
-            document.documentElement.style.zoom = (currentTextSize / 100);
-            // כפיית רוחב מינימלי כדי להבטיח פס גלילה אופקי בכרום
-            document.body.style.minWidth = currentTextSize > 100 ? currentTextSize + '%' : '100%';
+            // איפוס זום של כל הדף (שלא יקריב את המצלמה)
+            document.documentElement.style.zoom = '1';
+            document.body.style.zoom = '1';
+            document.body.style.minWidth = '';
+            
+            // הגדלת פונט האותיות עצמן בצורה נקייה
+            document.documentElement.style.fontSize = currentTextSize + '%';
+            
             const displays = document.querySelectorAll('#textSizeDisplay');
             displays.forEach(d => d.innerText = currentTextSize + '%');
         }
@@ -1026,7 +1031,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             document.body.classList.remove('grayscale', 'high-contrast', 'highlight-links'); 
             currentTextSize = 100;
             document.documentElement.style.zoom = '1';
-            document.body.style.minWidth = '100%';
+            document.body.style.zoom = '1';
+            document.body.style.minWidth = '';
+            document.documentElement.style.fontSize = '100%';
             const displays = document.querySelectorAll('#textSizeDisplay');
             displays.forEach(d => d.innerText = '100%');
         }
