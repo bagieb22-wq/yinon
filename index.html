@@ -1407,23 +1407,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         function toggleHighlightLinks() { document.body.classList.toggle('highlight-links'); }
         
         let currentTextSize = 100;
+        let textElementsCache = null;
+
+        function getTextElements() {
+            if (!textElementsCache) {
+                const elements = document.querySelectorAll('h1, h2, h3, h4, p, a, li, label, button, input, select, textarea');
+                textElementsCache = [];
+                elements.forEach(el => {
+                    if (el.closest('.accessibility-menu') || el.closest('.accessibility-btn') || el.classList.contains('hero-dot')) return;
+                    const computedSize = parseFloat(window.getComputedStyle(el).fontSize);
+                    if (computedSize > 0) {
+                        textElementsCache.push({ el, baseSize: computedSize });
+                    }
+                });
+            }
+            return textElementsCache;
+        }
+
         function changeTextSize(delta) {
             currentTextSize += delta;
-            // הגבלת טווח מ-100% עד 200% לפי דרישות נגישות
             if (currentTextSize < 100) currentTextSize = 100;
             if (currentTextSize > 200) currentTextSize = 200;
             
-            // איפוס זום של כל הדף (שלא יקריב את המצלמה)
+            // איפוס מוחלט של זום המצלמה - המסך נשאר במקום ב-100%!
             document.documentElement.style.zoom = '1';
             document.body.style.zoom = '1';
             document.body.style.minWidth = '';
+            document.documentElement.style.fontSize = '100%';
             
-            // הגדלת פונט האותיות עצמן בצורה נקייה
-            document.documentElement.style.fontSize = currentTextSize + '%';
+            // הגדלה ישירה של פיקסלים של כל האותיות עצמן
+            const ratio = currentTextSize / 100;
+            const items = getTextElements();
+            items.forEach(item => {
+                if (currentTextSize === 100) {
+                    item.el.style.fontSize = '';
+                } else {
+                    item.el.style.fontSize = (item.baseSize * ratio) + 'px';
+                }
+            });
             
             const displays = document.querySelectorAll('#textSizeDisplay');
             displays.forEach(d => d.innerText = currentTextSize + '%');
         }
+
         function resetAccessibility() { 
             document.body.classList.remove('grayscale', 'high-contrast', 'highlight-links'); 
             currentTextSize = 100;
@@ -1431,6 +1457,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             document.body.style.zoom = '1';
             document.body.style.minWidth = '';
             document.documentElement.style.fontSize = '100%';
+            
+            if (textElementsCache) {
+                textElementsCache.forEach(item => {
+                    item.el.style.fontSize = '';
+                });
+            }
+            
             const displays = document.querySelectorAll('#textSizeDisplay');
             displays.forEach(d => d.innerText = '100%');
         }
