@@ -1,4 +1,3 @@
-
 whatsapp-bot/calendar-key.json
 
 .env
@@ -7,3 +6,6 @@ whatsapp-bot/node_modules/
 *.pem
 *.key
 *.cert
+
+# CRM (מערכת נפרדת שאינה שייכת לאתר)
+crm/
