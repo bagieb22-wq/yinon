@@ -7,5 +7,8 @@ whatsapp-bot/node_modules/
 *.key
 *.cert
 
-# CRM (מערכת נפרדת שאינה שייכת לאתר)
+# CRM & External scripts (שאינם שייכים לאתר)
 crm/
+*sms*
+
+
