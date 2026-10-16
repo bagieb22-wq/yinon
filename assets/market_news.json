@@ -1,26 +1,26 @@
 {
   "source": "כלכליסט - שוק ההון (Calcalist Market)",
   "source_url": "https://www.calcalist.co.il/market",
-  "last_updated": "2026-10-16T08:56:09.300Z",
-  "formatted_updated": "יום שישי, 16 באוקטובר 2026 בשעה 08:56",
+  "last_updated": "2026-10-16T16:29:17.981Z",
+  "formatted_updated": "יום שישי, 16 באוקטובר 2026 בשעה 16:29",
   "breaking_news": [
     "אל על ממריאה לראשונה לת\"א 35; אלה המניות שיצאו מהמדד",
-    "עסקה ראשונה לקרן LEOX של ארז נחום: רוכש עם הפניקס רשת מרפאות וטרינריה",
+    "בעקבות לחץ אמריקאי: קרן העושר הגדולה בעולם בדרך לחזור להשקיע בענקיות הדיפנס",
     "מדד ספטמבר ירד ב-0.5%, האינפלציה השנתית ב-1.6%; ירידה חדה במחירי הדיור",
     "מדוע הורדת ריבית שישית תעשה את ההבדל?",
     "עוד מכה לכלכלת ארה\"ב: נתון אינפלציה נוסף רשם זינוק חד",
-    "בורסת ת\"א: מניות הנדל\"ן והבנקים עלו ביותר מ-1%, טאואר נפלה ב-7.6%",
     "טראמפ רוצה ריבית של 1%, אך המדיניות שלו דווקא מחייבת את הפד להעלות אותה",
-    "ת\"א קופצת ביותר מ-2% בהובלת השבבים והביטוח; ירידה נוספת בתשואות האג\"ח",
+    "בורסת ת\"א: מניות הנדל\"ן והבנקים עלו ביותר מ-1%, טאואר נפלה ב-7.6%",
+    "עסקה ראשונה לקרן LEOX של ארז נחום: רוכש עם הפניקס רשת מרפאות וטרינריה",
     "בדקו: מה עשתה קרן ההשתלמות שלכם בספטמבר",
-    "43% מהפקדות הציבור בספטמבר היו לפיקדונות לטווח קצר עם ריבית זניחה"
+    "בורסת תל אביב זינקה השבוע ב-4%, אחרי עלייה יומית של 1.6%"
   ],
   "lead_story": {
     "title": "אל על ממריאה לראשונה לת\"א 35; אלה המניות שיצאו מהמדד",
     "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
     "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBmeDI1a2UxaHZXeHVVeHJ2REJtcjN6Qm5ZM3lMV1JBc210SG83bXQ1NkxoTS1KTnlNcXZWQzludm1KZHl6eC1NRG1MVGNEUU4xVkZGcVVwNElCZ1lhdGhxXzhFUQ?oc=5",
     "date": "Thu, 15 Oct 2026 14:54:00 GMT",
-    "formattedDate": "לפני כ-18 שעות",
+    "formattedDate": "15.10.2026",
     "category": "כלכליסט | מאקרו וריבית",
     "categoryKey": "macro",
     "badgeColor": "#b45309",
@@ -28,14 +28,14 @@
   },
   "side_stories": [
     {
-      "title": "עסקה ראשונה לקרן LEOX של ארז נחום: רוכש עם הפניקס רשת מרפאות וטרינריה",
+      "title": "בעקבות לחץ אמריקאי: קרן העושר הגדולה בעולם בדרך לחזור להשקיע בענקיות הדיפנס",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1PVEVyYndIQlUySWZzQ25neHRjT3lNTXpWMTQya3lpTkZpMEdZM09lUkRub1luWHRRMDlNR2xkMUZXcE1FcEIwMjlCbnFEQXlaWWVqbkhFOU04bWgzbl9NZ000VQ?oc=5",
-      "date": "Thu, 15 Oct 2026 03:00:00 GMT",
-      "formattedDate": "15.10.2026",
-      "category": "כלכליסט | פנסיה וחיסכון",
-      "categoryKey": "pension",
-      "badgeColor": "#059669",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5jMWEyNmlCYTNlc0FQcmVuTDNqbjFUa1FDdmczT2ZwMUVlVi1JME1RRi0yYzc2d01NREdTTWJxZWZfQWRHTy00R2k1aTVYa0VMMmdKb3JzZmlWQ0c3N3FDQWllZVF4SHBn?oc=5",
+      "date": "Fri, 16 Oct 2026 14:38:00 GMT",
+      "formattedDate": "לפני כ-1 שעות",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
       "source": "כלכליסט"
     },
     {
@@ -43,7 +43,7 @@
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB1bUZsZ0t6UFlaUFlYWXExTjNfQ29aNWhuNnpFYWZoQ19BZ1RkZFBmd3JVVXpHTk9nNmlUQXBaWlltQ0xWU0JJT08xVy1CcDZiTWRQQVRvc2pzeUZWcUVTbGVIWmxrNEhQ?oc=5",
       "date": "Thu, 15 Oct 2026 15:30:00 GMT",
-      "formattedDate": "לפני כ-17 שעות",
+      "formattedDate": "15.10.2026",
       "category": "כלכליסט | מאקרו וריבית",
       "categoryKey": "macro",
       "badgeColor": "#b45309",
@@ -56,7 +56,7 @@
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4xcHJUZ09wRy1JS0dFUE9ERzFTdFpvZHdmMzhWUVZ3Z3ljSWtPaHdjQ3l2SVBGN3VYNWZPU29uYTZubkUwczY5RVA2S1AyTDE1cXlBTWZIUTR0c1lVSE5YNGFqX3pCVUhE?oc=5",
       "date": "Thu, 15 Oct 2026 12:18:00 GMT",
-      "formattedDate": "לפני כ-20 שעות",
+      "formattedDate": "15.10.2026",
       "category": "כלכליסט | מאקרו וריבית",
       "categoryKey": "macro",
       "badgeColor": "#b45309",
@@ -67,21 +67,10 @@
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE04WkFXdUZ1MUdIOUpaRWRWX29KejlqMEZYdjA0VGxPXzNwOGVlcU94N3BlOVFjYkxFZjZEdG9ZdFdDTkVvX08ybG5YRHplM3d0Q2Q5R3ZxOG5qaDNWUzRGYkwtcW93NVFw?oc=5",
       "date": "Thu, 15 Oct 2026 13:54:00 GMT",
-      "formattedDate": "לפני כ-19 שעות",
+      "formattedDate": "15.10.2026",
       "category": "כלכליסט | וול סטריט ומדדים",
       "categoryKey": "wallstreet",
       "badgeColor": "#0284c7",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "בורסת ת\"א: מניות הנדל\"ן והבנקים עלו ביותר מ-1%, טאואר נפלה ב-7.6%",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1Mb25BdGk3SjZPWm9BLXJGMlhpQWtsYlRGUXQzcTJwNFNFNkx6OU9WejVKbGQ5eW1qZG1yZ1NxUjhtemx0d1ZLeUl3STc1NUtLYnNyMG92RTdObDVZblRJa1BWZw?oc=5",
-      "date": "Thu, 15 Oct 2026 14:40:21 GMT",
-      "formattedDate": "לפני כ-18 שעות",
-      "category": "כלכליסט | נדל\"ן ומשכנתאות",
-      "categoryKey": "realestate",
-      "badgeColor": "#ea580c",
       "source": "כלכליסט"
     },
     {
@@ -96,11 +85,22 @@
       "source": "כלכליסט"
     },
     {
-      "title": "ת\"א קופצת ביותר מ-2% בהובלת השבבים והביטוח; ירידה נוספת בתשואות האג\"ח",
+      "title": "בורסת ת\"א: מניות הנדל\"ן והבנקים עלו ביותר מ-1%, טאואר נפלה ב-7.6%",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBWRjZPMHFPQmRYV3dwMUJBX05nVmd0QU1ncm40X2dMbjVrdnVSc2dvUDdLMW1YRGthbUJXRkdzNDdCR0dFd1p0THdvSVkyMDhPbl8tY3lYWVNrd1Z3UEpCeW1iTXc?oc=5",
-      "date": "Fri, 16 Oct 2026 08:03:45 GMT",
-      "formattedDate": "לפני 52 דקות",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1Mb25BdGk3SjZPWm9BLXJGMlhpQWtsYlRGUXQzcTJwNFNFNkx6OU9WejVKbGQ5eW1qZG1yZ1NxUjhtemx0d1ZLeUl3STc1NUtLYnNyMG92RTdObDVZblRJa1BWZw?oc=5",
+      "date": "Thu, 15 Oct 2026 14:40:21 GMT",
+      "formattedDate": "15.10.2026",
+      "category": "כלכליסט | נדל\"ן ומשכנתאות",
+      "categoryKey": "realestate",
+      "badgeColor": "#ea580c",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "עסקה ראשונה לקרן LEOX של ארז נחום: רוכש עם הפניקס רשת מרפאות וטרינריה",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1PVEVyYndIQlUySWZzQ25neHRjT3lNTXpWMTQya3lpTkZpMEdZM09lUkRub1luWHRRMDlNR2xkMUZXcE1FcEIwMjlCbnFEQXlaWWVqbkhFOU04bWgzbl9NZ000VQ?oc=5",
+      "date": "Thu, 15 Oct 2026 03:00:00 GMT",
+      "formattedDate": "15.10.2026",
       "category": "כלכליסט | פנסיה וחיסכון",
       "categoryKey": "pension",
       "badgeColor": "#059669",
@@ -108,13 +108,24 @@
     },
     {
       "title": "בדקו: מה עשתה קרן ההשתלמות שלכם בספטמבר",
-      "summary": "בדקו: מה עשתה קרן ההשתלמות שלכם ��ספטמבר",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE01UkZUNTNzSjRBVTM2S1lFc1daamtVVFl2dE1ISXlZSzhtRndwUGdkTjhxVWE4SzJGd3NsdjhVbnNzR1AzUjluM3hadTNqRTJPLTA0Y0lsV0d4bUppZVRjNFZhQQ?oc=5",
       "date": "Thu, 15 Oct 2026 15:07:00 GMT",
-      "formattedDate": "לפני כ-17 שעות",
+      "formattedDate": "15.10.2026",
       "category": "כלכליסט | פנסיה וחיסכון",
       "categoryKey": "pension",
       "badgeColor": "#059669",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "בורסת תל אביב זינקה השבוע ב-4%, אחרי עלייה יומית של 1.6%",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBWRjZPMHFPQmRYV3dwMUJBX05nVmd0QU1ncm40X2dMbjVrdnVSc2dvUDdLMW1YRGthbUJXRkdzNDdCR0dFd1p0THdvSVkyMDhPbl8tY3lYWVNrd1Z3UEpCeW1iTXc?oc=5",
+      "date": "Fri, 16 Oct 2026 11:01:15 GMT",
+      "formattedDate": "לפני כ-5 שעות",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
       "source": "כלכליסט"
     },
     {
@@ -177,7 +188,7 @@
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBJVEwtMm9peVFYdFU2QzRMTklaN29MR1I5MDQzN3JoeDlXSU5NVmozV2trRGUwbmltNFNaRGFRYnFMbE5WYTk5RXRTSW1MVEstejN1QVZ4SEVVSFFtaTVfbFpzcXg?oc=5",
       "date": "Thu, 15 Oct 2026 10:07:00 GMT",
-      "formattedDate": "לפני כ-22 שעות",
+      "formattedDate": "15.10.2026",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
@@ -188,10 +199,21 @@
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8xdm1uM2hfdUhBcFB5cVJWb1ZtZHphMGNZaHNRNUU4ZlJtc3pUbHVILVdMN1p6Nmc1a01MSWZZRXQ1U21RT29lVFlNZ0NQdW9FOFBGd3llelRfZmg5SXJoSXRVOA?oc=5",
       "date": "Thu, 15 Oct 2026 20:20:38 GMT",
-      "formattedDate": "לפני כ-12 שעות",
+      "formattedDate": "לפני כ-20 שעות",
       "category": "כלכליסט | וול סטריט ומדדים",
       "categoryKey": "wallstreet",
       "badgeColor": "#0284c7",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "רובוטים במקום דבורים: הסטארט-אפ BloomX גייס 13 מיליון דולר",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5EemhwMUFiZG51d2o2c2NNLWRZYlBLZkNVbVVnWk0xVmxnZUxlQjNTQlZCWXhsQThHd0xGMGJrM0NIUm44RS1iWVFISWc2NFNGV0N2NXVsUmFnRXFyZlplY1pPOG1SQUl4dDVDdg?oc=5",
+      "date": "Thu, 15 Oct 2026 14:59:00 GMT",
+      "formattedDate": "15.10.2026",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
       "source": "כלכליסט"
     },
     {
@@ -206,33 +228,11 @@
       "source": "כלכליסט"
     },
     {
-      "title": "רובוטים במקום דבורים: הסטארט-אפ BloomX גייס 13 מיליון דולר",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5EemhwMUFiZG51d2o2c2NNLWRZYlBLZkNVbVVnWk0xVmxnZUxlQjNTQlZCWXhsQThHd0xGMGJrM0NIUm44RS1iWVFISWc2NFNGV0N2NXVsUmFnRXFyZlplY1pPOG1SQUl4dDVDdg?oc=5",
-      "date": "Thu, 15 Oct 2026 14:59:00 GMT",
-      "formattedDate": "לפני כ-17 שעות",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
       "title": "הבורסה טיפסה ב-1.7%; נאוויטס פטרוליום זינקה ב-6.7%",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5fVjVCejhIRjZqbEFaVUxQa2p3SFZ6NWU2WWtBNjNnVDVGYTE5LTdiRUxHTWtUV0REM1Ixb0p2X2dzdFZPemFacXhiZXJpZTNCVlNKdm1Zay1wZTh1cTB6d043RQ?oc=5",
       "date": "Tue, 13 Oct 2026 13:41:18 GMT",
       "formattedDate": "13.10.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "ריי דליו מזהיר: בועת ה-AI קרובה לפיצוץ",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE80QWVGQTFDa0R4WXBxdHBianZTcEZZMElNZ0VtRG0wVTNmUzQ0Z2lJajV1Nk1nd3ZESDRuMG9zY2JLcUY3TzY1ZmNfXzFocThVRXJkc3RJTEp6QUZlXzlfZFNBcVNtc3BQZDR3?oc=5",
-      "date": "Wed, 07 Oct 2026 07:00:00 GMT",
-      "formattedDate": "7.10.2026",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
@@ -250,17 +250,6 @@
       "source": "כלכליסט"
     },
     {
-      "title": "באיזו חברת ביטוח תחכו בממוצע 4.5 דקות לנציג? מדד השירות השנתי פורסם",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9YZkdfMWNqME1mX3k3LTVIT21QcWlVWW1HMjBQcUFkY3loS09xM3lLeG1TVTh4SDM2Rno2WDRySlczZ2dsRVFzVUp2WVJzWlItNENIamhnd1pQRUtmc1o4V0hFNA?oc=5",
-      "date": "Mon, 12 Oct 2026 09:03:00 GMT",
-      "formattedDate": "12.10.2026",
-      "category": "כלכליסט | מאקרו וריבית",
-      "categoryKey": "macro",
-      "badgeColor": "#b45309",
-      "source": "כלכליסט"
-    },
-    {
       "title": "וול סטריט: באמבל קפצה ב-57%, ג'ונסון אנד ג'ונסון נפלה ב-6%",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9jTkxrT3pLRklYN0paLTNQVWc4WGRMWm5rZHdrclFXVlhTaGlMZ21Ud04zcGV0TmNsWVZnSzVJOFlQendjWE9oTFpZMEYwMTl2VUM2YVhSQTlWZHp5OEVEclJMYw?oc=5",
@@ -269,6 +258,17 @@
       "category": "כלכליסט | וול סטריט ומדדים",
       "categoryKey": "wallstreet",
       "badgeColor": "#0284c7",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "באיזו חברת ביטוח תחכו בממוצע 4.5 דק��ת לנציג? מדד השירות השנתי פורסם",
+      "summary": "באיזו חברת ביטוח תחכו בממוצע 4.5 דקות לנציג? מדד השירות השנתי פורסם",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9YZkdfMWNqME1mX3k3LTVIT21QcWlVWW1HMjBQcUFkY3loS09xM3lLeG1TVTh4SDM2Rno2WDRySlczZ2dsRVFzVUp2WVJzWlItNENIamhnd1pQRUtmc1o4V0hFNA?oc=5",
+      "date": "Mon, 12 Oct 2026 09:03:00 GMT",
+      "formattedDate": "12.10.2026",
+      "category": "כלכליסט | מאקרו וריבית",
+      "categoryKey": "macro",
+      "badgeColor": "#b45309",
       "source": "כלכליסט"
     },
     {
@@ -283,14 +283,14 @@
       "source": "כלכליסט"
     },
     {
-      "title": "כניסה ראשונה לתחום המזון: מנור אוורגרין רוכשת חברה לשיווק בוטנים",
+      "title": "מגמה מעורבת בפתיחת המסחר: ורוניס עולה בכמעט 3%, ירידות במניות השבבים",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE12Z0kxSXhsa2xJeGkyNmVZbHBsOVlfcS01OHY5ZHZCeUd1RHBSUUJxTVViSmZabVByakRJZTdoYnB2V3hIZklxRGt4dnF2Vk1idVZpbmY4V3B4MVkteXBROGN1bw?oc=5",
-      "date": "Mon, 12 Oct 2026 03:00:00 GMT",
-      "formattedDate": "12.10.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE01Y1otcGxZOVRBMHhieS1hLUVmTDRXbFFtaDZGMnpZT1hPbm9KNUxNNy1mTnBxaDloUEpfLUljbzdkbEdEalU0R2l4X0pQTjk1QlpMMHpIVE8tMDk1b3JPaHJB?oc=5",
+      "date": "Fri, 16 Oct 2026 14:06:25 GMT",
+      "formattedDate": "לפני כ-2 שעות",
+      "category": "כלכליסט | מיסוי והטבות",
+      "categoryKey": "tax",
+      "badgeColor": "#7c3aed",
       "source": "כלכליסט"
     }
   ]
