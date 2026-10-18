@@ -1,13 +1,13 @@
 {
   "source": "כלכליסט - שוק ההון (Calcalist Market)",
   "source_url": "https://www.calcalist.co.il/market",
-  "last_updated": "2026-10-18T15:44:37.020Z",
-  "formatted_updated": "יום ראשון, 18 באוקטובר 2026 בשעה 15:44",
+  "last_updated": "2026-10-18T18:33:39.904Z",
+  "formatted_updated": "יום ראשון, 18 באוקטובר 2026 בשעה 18:33",
   "breaking_news": [
     "מנכ\"ל בנק לאומי: \"מתנגד לחובה לשלם ריבית על העו\"ש באופן גורף\"",
     "קרן סנטרברידג' חוזרת למרוץ לרכישת כאל",
-    "בעקבות לחץ אמריקאי: קרן העושר הגדולה בעולם בדרך לחזור להשקיע בענקיות הדיפנס",
     "הטעות שעולה לישראלים מאות אלפי שקלים: להסתכל רק על טבלת התשואות",
+    "בעקבות לחץ אמריקאי: קרן העושר הגדולה בעולם בדרך לחזור להשקיע בענקיות הדיפנס",
     "התרומה לחולי סרטן הוסטה: מנהלי העמותות יחזירו 1.85 מיליון שקל",
     "וול סטריט ננעלה בירידות חדות: נאסד\"ק צנח ב-2.1%, מדד הפחד זינק",
     "בורסת תל אביב זינקה השבוע ב-4%, אחרי עלייה יומית של 1.6%",
@@ -20,7 +20,7 @@
     "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
     "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5SLWM3LUlTYzVYOER2WmVId2w4T0dZdF9QRFFhQTRkdS1rX0F0Mm5UM19wdlh4Nndma3JZUHhkTlVuRzFhSVA3NGZONDF0WV8wZDhRQkItVE9SVnlaZzZjbkRGbw?oc=5",
     "date": "Sun, 18 Oct 2026 13:23:00 GMT",
-    "formattedDate": "לפני כ-2 שעות",
+    "formattedDate": "לפני כ-5 שעות",
     "category": "כלכליסט | מאקרו וריבית",
     "categoryKey": "macro",
     "badgeColor": "#b45309",
@@ -32,12 +32,25 @@
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBILVc2bVp6T0owdV80bV9aYkNWQ21iZmlDcERjVXRVOHJ5YmFfdVNYajl2Z1pyX0U2dVNFSUFhSFpYN2M5TE0wN2N6engzVHlCX2QzcDZIQzFXUEpoOHpWYkZKOA?oc=5",
       "date": "Sun, 18 Oct 2026 03:00:00 GMT",
-      "formattedDate": "לפני כ-12 שעות",
+      "formattedDate": "לפני כ-15 שעות",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
       "source": "כלכליסט"
     },
+    {
+      "title": "הטעות שעולה לישראלים מאות אלפי שקלים: להסתכל רק על טבלת התשואות",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5WcE9tNTlSdllKU3pPdk51Q0ViSFZwRDJIOXZVcWtXeWdXMXo1WERiSmo5WThBVFFtdkVPQTdtWU5OSTZJV0RfcEQ4MG01cGRZVUZUbTdhclliZw?oc=5",
+      "date": "Sun, 18 Oct 2026 06:53:00 GMT",
+      "formattedDate": "לפני כ-11 שעות",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    }
+  ],
+  "articles": [
     {
       "title": "בעקבות לחץ אמריקאי: קרן העושר הגדולה בעולם בדרך לחזור להשקיע בענקיות הדיפנס",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
@@ -48,26 +61,13 @@
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
       "source": "כלכליסט"
-    }
-  ],
-  "articles": [
-    {
-      "title": "הטעות שעולה לישראלים מאות אלפי שקלים: להסתכל רק על טבלת התשואות",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5WcE9tNTlSdllKU3pPdk51Q0ViSFZwRDJIOXZVcWtXeWdXMXo1WERiSmo5WThBVFFtdkVPQTdtWU5OSTZJV0RfcEQ4MG01cGRZVUZUbTdhclliZw?oc=5",
-      "date": "Sun, 18 Oct 2026 06:53:00 GMT",
-      "formattedDate": "לפני כ-8 שעות",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
     },
     {
       "title": "התרומה לחולי סרטן הוסטה: מנהלי העמותות יחזירו 1.85 מיליון שקל",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5sUTh1eVdiTXVvdGxobFlicFhYY2ZiZ3RJSTF6YWlRLXR6X0NIbGRPa0dRV0xOVENGLTFjTE5CRnBYRWdWSjVYRi00Wk5QLWFlMGpmLWttNDZjaWE2NVhfcVFpYlk5ZDh0?oc=5",
       "date": "Sun, 18 Oct 2026 11:49:00 GMT",
-      "formattedDate": "לפני כ-3 שעות",
+      "formattedDate": "לפני כ-6 שעות",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
@@ -239,17 +239,6 @@
       "source": "כלכליסט"
     },
     {
-      "title": "הבורסה בת\"א סגרה יום שלישי של עליות: אלביט זינקה ב-6.1%, אלקטרה נדל\"ן צנחה ב-13.2%",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9talFfaW9TWjJ4aWh3UGlSc1VUQ29QaUZCS2NLS1dyeUlEWUdQMDZWMFY4UHVSdW1fTmZBUC1FbndIX2l6bzVjYlQ2Rl9uZFpONHUxQTFGSWNCNUVuX3h3WnNn?oc=5",
-      "date": "Wed, 14 Oct 2026 14:53:30 GMT",
-      "formattedDate": "14.10.2026",
-      "category": "כלכליסט | נדל\"ן ומשכנתאות",
-      "categoryKey": "realestate",
-      "badgeColor": "#ea580c",
-      "source": "כלכליסט"
-    },
-    {
       "title": "רובוטים במקום דבורים: הסטארט-אפ BloomX גייס 13 מיליון דולר",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5EemhwMUFiZG51d2o2c2NNLWRZYlBLZkNVbVVnWk0xVmxnZUxlQjNTQlZCWXhsQThHd0xGMGJrM0NIUm44RS1iWVFISWc2NFNGV0N2NXVsUmFnRXFyZlplY1pPOG1SQUl4dDVDdg?oc=5",
@@ -258,6 +247,17 @@
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "הבורסה בת\"א סגרה יום שלישי של עליות: אלביט זינקה ב-6.1%, אלקטרה נדל\"ן צנחה ב-13.2%",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9talFfaW9TWjJ4aWh3UGlSc1VUQ29QaUZCS2NLS1dyeUlEWUdQMDZWMFY4UHVSdW1fTmZBUC1FbndIX2l6bzVjYlQ2Rl9uZFpONHUxQTFGSWNCNUVuX3h3WnNn?oc=5",
+      "date": "Wed, 14 Oct 2026 14:53:30 GMT",
+      "formattedDate": "14.10.2026",
+      "category": "כלכליסט | נדל\"ן ומשכנתאות",
+      "categoryKey": "realestate",
+      "badgeColor": "#ea580c",
       "source": "כלכליסט"
     },
     {
@@ -283,11 +283,11 @@
       "source": "כלכליסט"
     },
     {
-      "title": "קרן המטבע מקפיצה את תחזית הצמיחה של ישראל ל-4.5% אבל פחות אופטימית לגבי 2027",
+      "title": "מחקר חושף: בהייטק הישראלי חסרים 18 אלף עובדים לעומת קצב הצמיחה לפני הקורונה",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAtd05xM1F2NVV4ZlRHSU9HMXdsYVNsOGpacXVrVnFBVWZHOXVabkUwYklEbmhJTVNEdEFqanJqeldFZ25iM1hBT1QyRUJlQzRUQkcyZWVSZWNYMjNDNnpIWDB0TWNZSkds?oc=5",
-      "date": "Tue, 13 Oct 2026 02:00:00 GMT",
-      "formattedDate": "13.10.2026",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE81UTRIbmlIaTNsdDlLVHhUbDdPN2VJdFBoeUpVSDg0VDV5cUM3MjNDT2ZMY3JyY3FqejFXNy1VeU9GaXB1azJyTXZiN090NG9VYURseW9hUU9mWXNMMldwQ056azdlLUNqT1ZQNA?oc=5",
+      "date": "Sun, 18 Oct 2026 05:30:00 GMT",
+      "formattedDate": "לפני כ-13 שעות",
       "category": "כלכליסט | מאקרו וריבית",
       "categoryKey": "macro",
       "badgeColor": "#b45309",
