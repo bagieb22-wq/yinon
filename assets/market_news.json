@@ -1,65 +1,87 @@
 {
   "source": "כלכליסט - שוק ההון (Calcalist Market)",
   "source_url": "https://www.calcalist.co.il/market",
-  "last_updated": "2026-10-21T17:02:00.639Z",
-  "formatted_updated": "יום רביעי, 21 באוקטובר 2026 בשעה 17:02",
+  "last_updated": "2026-10-22T09:19:04.839Z",
+  "formatted_updated": "יום חמישי, 22 באוקטובר 2026 בשעה 09:19",
   "breaking_news": [
-    "רבעון שלישי בתיקים המנוהלים: זינוק חד במסלול המנייתי, למרות סביבת הריבית",
-    "מניות הביטוח קפצו ב-2% בבורסת ת\"א; אחרי ששבה מהשעיה - תומר מזון מחקה 15.4%",
-    "הראל שיאנית תלונות הציבור, מרביתן בנושאי ביטוח",
+    "חצי שנה אחרי אישור רשות התחרות: רשות שוק ההון מתנגדת לעסקת וובי",
+    "לא רציונלי ולא רווחי: IBI סוגרת את הקרן שהתבססה על המודל של דן אריאלי",
     "בשנה הבאה כבר לא יטוסו לקורפו: רשות שוק ההון אוסרת על צ'ופרים ליועצי משכנתאות",
+    "רבעון שלישי בתיקים המנוהלים: זינוק חד במסלול המנייתי, למרות סביבת הריבית",
+    "בנק ישראל הותיר את הריבית על 3.25% – ומזהיר מהסיכונים הפוליטיים שאחרי הבחירות",
+    "מניות הביטוח קפצו ב-2% בבורסת ת\"א; אחרי ששבה מהשעיה - תומר מזון מחקה 15.4%",
     "סכנת הבועה: 3 הסיבות שמצננות את מניות ה־AI",
+    "הראל שיאנית תלונות הציבור, מרביתן בנושאי ביטוח",
     "כשהריבית משנה כיוון מתחדד היתרון של שילוב מכשירי חוב בריבית משתנה CLO",
-    "נעילה חיובית בבורסה; המניה הביטחונית עין שלישית קפצה ב-13.3%",
-    "קרן פרופימקס רכשה נכסים בארה\"ב ב-270 מיליון דולר",
-    "קרן מנור אוורגרין רוכשת 35% מהחברה הביטחונית־אזרחית NOVO DR",
-    "קרן סטיל מחדשת את המאבק על רכישת חברת המכשור הרפואי אינמוד"
+    "בורסת פריז נחתכת ב-1.5%, תשואות אג\"ח צרפת מזנקות, החוזים על נאסד\"ק יורדים ב-1.5%"
   ],
   "lead_story": {
-    "title": "רבעון שלישי בתיקים המנוהלים: זינוק חד במסלול המנייתי, למרות סביבת הריבית",
+    "title": "חצי שנה אחרי אישור רשות התחרות: רשות שוק ההון מתנגדת לעסקת וובי",
     "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-    "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1UUGItVHNwcDNwbE0zZ285VjJuYWE2b0hUS1M5bnlxVmFWdGU2RDZDVUhIVFN6aEdXbnZTdVRHSVZyRUI1bE5PMVAzNVpCb1VPREEzT0xXaHZVbjcyZ1d1RzA4SQ?oc=5",
-    "date": "Wed, 21 Oct 2026 08:39:00 GMT",
-    "formattedDate": "לפני כ-8 שעות",
-    "category": "כלכליסט | מאקרו וריבית",
-    "categoryKey": "macro",
-    "badgeColor": "#b45309",
+    "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5pNWFwV0ZqNVh5dDJxU0RRdGpKS2M1dWVURngwd1FYZnRjYy1TRjVLY1Z2amRuZzVtMmVJeUFMSjRkQjdMUUxMVWRGMV90a0pCV29fUnZtMzQ2Uk52Nm9HS05hSQ?oc=5",
+    "date": "Thu, 22 Oct 2026 03:00:00 GMT",
+    "formattedDate": "לפני כ-6 שעות",
+    "category": "כלכליסט | שוק ההון והבורסה",
+    "categoryKey": "wallstreet",
+    "badgeColor": "#dc2626",
     "source": "כלכליסט"
   },
   "side_stories": [
     {
-      "title": "מניות הביטוח קפצו ב-2% בבורסת ת\"א; אחרי ששבה מהשעיה - תומר מזון מחקה 15.4%",
+      "title": "לא רציונלי ולא רווחי: IBI סוגרת את הקרן שהתבססה על המודל של דן אריאלי",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5QQjVYOUFHXzNubUcwYl9xR19oRmZfU2JPZXNwWFFsOE1LREJld0FPc1hyTGpZSm9GcTJzSUZxTjRMX0xXbFJkanZHcW9pMVlicGNuVUYzcFl3MmRvWlJ5UjI4VQ?oc=5",
-      "date": "Wed, 21 Oct 2026 14:42:56 GMT",
-      "formattedDate": "לפני כ-2 שעות",
-      "category": "כלכליסט | פנסיה וחיסכון",
-      "categoryKey": "pension",
-      "badgeColor": "#059669",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE95SmlFd0dXR1lmQklScXBnZDVKb2R6MDJxWnZOdkRfa3dpellyWlZvcHZaSU9tWjduc0kzRW81aUVuSGhJVWZYaWFSZjVORFlVbkdJREg4azkwMzN4dFBGanJPSQ?oc=5",
+      "date": "Wed, 21 Oct 2026 14:45:00 GMT",
+      "formattedDate": "לפני כ-18 שעות",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
       "source": "כלכליסט"
     },
-    {
-      "title": "הראל שיאנית תלונות הציבור, מרביתן בנושאי ביטוח",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9rYV9nb3Z5aUtqZlNxTndDd2ZDN0l3d1hyWGFKcWlOb3lDNTJJcjR3OHpEb3ZpLV9QLS1kVzd2WFBZS0NUcUxCRzJGaVdnYW14eUtTY0NQLVZ2Qy1rYXlEZjI0ZmZObWJL?oc=5",
-      "date": "Wed, 21 Oct 2026 03:10:00 GMT",
-      "formattedDate": "לפני כ-13 שעות",
-      "category": "כלכליסט | פנסיה וחיסכון",
-      "categoryKey": "pension",
-      "badgeColor": "#059669",
-      "source": "כלכליסט"
-    }
-  ],
-  "articles": [
     {
       "title": "בשנה הבאה כבר לא יטוסו לקורפו: רשות שוק ההון אוסרת על צ'ופרים ליועצי משכנתאות",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB0MVIzLVU5b1RvRTFfX1QwUGlvWnNmT012c2NpaTFhN215Y2l1enpzZkc4bEFJeXo5djR2MWE4UTUyWlFnZmgteFN0eUFZOHdHeC1UbTM4X1RRTVZpRVB2aWZGZw?oc=5",
       "date": "Wed, 21 Oct 2026 11:00:00 GMT",
-      "formattedDate": "לפני כ-6 שעות",
+      "formattedDate": "לפני כ-22 שעות",
       "category": "כלכליסט | נדל\"ן ומשכנתאות",
       "categoryKey": "realestate",
       "badgeColor": "#ea580c",
+      "source": "כלכליסט"
+    }
+  ],
+  "articles": [
+    {
+      "title": "רבעון שלישי בתיקים המנוהלים: זינוק חד במסלול המנייתי, למרות סביבת הריבית",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1UUGItVHNwcDNwbE0zZ285VjJuYWE2b0hUS1M5bnlxVmFWdGU2RDZDVUhIVFN6aEdXbnZTdVRHSVZyRUI1bE5PMVAzNVpCb1VPREEzT0xXaHZVbjcyZ1d1RzA4SQ?oc=5",
+      "date": "Wed, 21 Oct 2026 08:39:00 GMT",
+      "formattedDate": "21.10.2026",
+      "category": "כלכליסט | מאקרו וריבית",
+      "categoryKey": "macro",
+      "badgeColor": "#b45309",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "בנק ישראל הותיר את הריבית על 3.25% – ומזהיר מהסיכונים הפוליטיים שאחרי הבחירות",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBSRjBaSmZEU0FIaUZIQ3RWbFdMbU9ic3RkcFdzVGRvRmVRWUpNMVdIZjVaOWpFQWRxOEdKcFhTbHdKZDFrbnhUMnlsVHQ3akFzTURkQ1ZUMkd6cWhfQjJVdmdMX0lnVWpi?oc=5",
+      "date": "Wed, 21 Oct 2026 13:00:00 GMT",
+      "formattedDate": "לפני כ-20 שעות",
+      "category": "כלכליסט | מאקרו וריבית",
+      "categoryKey": "macro",
+      "badgeColor": "#b45309",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "מניות הביטוח קפצו ב-2% בבורסת ת\"א; אחרי ששבה מהשעיה - תומר מזון מחקה 15.4%",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5QQjVYOUFHXzNubUcwYl9xR19oRmZfU2JPZXNwWFFsOE1LREJld0FPc1hyTGpZSm9GcTJzSUZxTjRMX0xXbFJkanZHcW9pMVlicGNuVUYzcFl3MmRvWlJ5UjI4VQ?oc=5",
+      "date": "Wed, 21 Oct 2026 14:42:56 GMT",
+      "formattedDate": "לפני כ-18 שעות",
+      "category": "כלכליסט | פנסיה וחיסכון",
+      "categoryKey": "pension",
+      "badgeColor": "#059669",
       "source": "כלכליסט"
     },
     {
@@ -74,14 +96,36 @@
       "source": "כלכליסט"
     },
     {
+      "title": "הראל שיאנית תלונות הציבור, מרביתן בנושאי ביטוח",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9rYV9nb3Z5aUtqZlNxTndDd2ZDN0l3d1hyWGFKcWlOb3lDNTJJcjR3OHpEb3ZpLV9QLS1kVzd2WFBZS0NUcUxCRzJGaVdnYW14eUtTY0NQLVZ2Qy1rYXlEZjI0ZmZObWJL?oc=5",
+      "date": "Wed, 21 Oct 2026 03:10:00 GMT",
+      "formattedDate": "21.10.2026",
+      "category": "כלכליסט | פנסיה וחיסכון",
+      "categoryKey": "pension",
+      "badgeColor": "#059669",
+      "source": "כלכליסט"
+    },
+    {
       "title": "כשהריבית משנה כיוון מתחדד היתרון של שילוב מכשירי חוב בריבית משתנה CLO",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE93RXlwWXZQaVV0SUtGbjBVSWpTaGlMcWY1YjhHamVrd1VUQXNKaExOVlBXX1oteHdKeEkwTFBGUWwwbDQzZVAtNkxrVnc0VXpKMnNFakNkTm1jZw?oc=5",
       "date": "Wed, 21 Oct 2026 09:06:00 GMT",
-      "formattedDate": "לפני כ-7 שעות",
+      "formattedDate": "21.10.2026",
       "category": "כלכליסט | מאקרו וריבית",
       "categoryKey": "macro",
       "badgeColor": "#b45309",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "בורסת פריז נחתכת ב-1.5%, תשואות אג\"ח צרפת מזנקות, החוזים על נאסד\"ק יורדים ב-1.5%",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBTa1J5T2VINm04eno5NEZyTnNUY0ZJVjZ0LTUtT20zTU1YRUxyRHQ5QV9UOUVkNHVPN2Y5U3ZSS3I3aVdYNDVNa094UFVwbVItRnd1Rm5XbFdpLXdSWWFIX2JB?oc=5",
+      "date": "Thu, 22 Oct 2026 08:15:00 GMT",
+      "formattedDate": "לפני כ-1 שעות",
+      "category": "כלכליסט | וול סטריט ומדדים",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#0284c7",
       "source": "כלכליסט"
     },
     {
@@ -96,14 +140,25 @@
       "source": "כלכליסט"
     },
     {
-      "title": "קרן פרופימקס רכשה נכסים בארה\"ב ב-270 מיליון דולר",
+      "title": "בהשפעת האדום בעולם: ירידות בבורסת ת\"א, נסיגה בנדל\"ן וביטוח",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1mcmtaX1p0TEVWcm5yNThWMzRqbGpFcDgzTlRNZlhScmQwbTBVN1pVQ3VGNTZqaEdrZ0dJc0w2ZFdrNy1CekRHSjhSUFRjOElRVm51Ul9zVml0Q0ZrUjlCcE5pODdlbjZnc3c?oc=5",
-      "date": "Tue, 20 Oct 2026 14:24:00 GMT",
-      "formattedDate": "20.10.2026",
-      "category": "כלכליסט | וול סטריט ומדדים",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5VbmUzc0pYMHVabFRpY2pSOEE4S0dYUGRIOUhCc0kyZ1JjVWZsMXFuYkszcmhmQWpSRHIwMGRiWmFBLVhsZThPcEhrTU9paC1HVXBZVmJyWENGSG5ZOWhDMVNn?oc=5",
+      "date": "Thu, 22 Oct 2026 08:46:39 GMT",
+      "formattedDate": "לפני 32 דקות",
+      "category": "כלכליסט | פנסיה וחיסכון",
+      "categoryKey": "pension",
+      "badgeColor": "#059669",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "אחרי מטה החטופים: ראובן אבלגון מקים קרן פרייבט אקוויטי ומכוון לגיוס של 200 מיליון שקל",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5JcVU1MTRObXJVQUxwMzdmMTJ1VUdGYkppTUhBeHhJRFhsaHRudW9EYndKRDZINk9WakFDdDAtVnNJZ05IMlh1bFJmTVYtSzFvbEJNY2lEUktmUmVpVWRGbkNlUQ?oc=5",
+      "date": "Thu, 22 Oct 2026 03:00:00 GMT",
+      "formattedDate": "לפני כ-6 שעות",
+      "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
-      "badgeColor": "#0284c7",
+      "badgeColor": "#dc2626",
       "source": "כלכליסט"
     },
     {
@@ -115,6 +170,17 @@
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "סוף לעידן ללא פיקוח: נקבע המועד הרשמי להחלת כללי איסור הלבנת הון על הגמ\"חים",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9OeElOdGlzU2ZLN1lCNTBDeXJRb2ZWTWQ4OWJfb3dTSGpBQlpWcGNkWFJ3cGpHMmZxdzF2YWNWbi1WbE0zdWExV2pHcEctMm1uZjBCX0ZVQ1haZXhxemxVbWVDcGo2LUxx?oc=5",
+      "date": "Mon, 19 Oct 2026 17:52:00 GMT",
+      "formattedDate": "19.10.2026",
+      "category": "כלכליסט | פנסיה וחיסכון",
+      "categoryKey": "pension",
+      "badgeColor": "#059669",
       "source": "כלכליסט"
     },
     {
@@ -173,25 +239,14 @@
       "source": "כלכליסט"
     },
     {
-      "title": "קרן סנטרברידג' חוזרת למרוץ לרכישת כאל",
+      "title": "עליות בנעילה בוול סטריט: נאסד\"ק טיפס ב-1.1%, מניית SpaceX קפצה ב-7.8%",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBILVc2bVp6T0owdV80bV9aYkNWQ21iZmlDcERjVXRVOHJ5YmFfdVNYajl2Z1pyX0U2dVNFSUFhSFpYN2M5TE0wN2N6engzVHlCX2QzcDZIQzFXUEpoOHpWYkZKOA?oc=5",
-      "date": "Sun, 18 Oct 2026 03:00:00 GMT",
-      "formattedDate": "18.10.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBmemN0N2ZvNWl5NHZEdWh6THExRmVabURvaVJMdWtrU0RSMjZNdXNfMDdDV19FVVVzdjJtY2kzVEt4bVNUaXR3SnRlelNtR3dyTHBVTThJWjRTdU9ncmlRZGI1TQ?oc=5",
+      "date": "Wed, 21 Oct 2026 20:06:40 GMT",
+      "formattedDate": "לפני כ-13 שעות",
+      "category": "כלכליסט | וול סטריט ומדדים",
       "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "בנק ישראל הותיר את הריבית על 3.25% – ומזהיר מהסיכונים הפוליטיים שאחרי הבחירות",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBSRjBaSmZEU0FIaUZIQ3RWbFdMbU9ic3RkcFdzVGRvRmVRWUpNMVdIZjVaOWpFQWRxOEdKcFhTbHdKZDFrbnhUMnlsVHQ3akFzTURkQ1ZUMkd6cWhfQjJVdmdMX0lnVWpi?oc=5",
-      "date": "Wed, 21 Oct 2026 13:00:00 GMT",
-      "formattedDate": "לפני כ-4 שעות",
-      "category": "כלכליסט | מאקרו וריבית",
-      "categoryKey": "macro",
-      "badgeColor": "#b45309",
+      "badgeColor": "#0284c7",
       "source": "כלכליסט"
     },
     {
@@ -199,21 +254,10 @@
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE01RHBjWm5ycnFPc2xrR3p0bXJqenFMUGhfbFVDdWFFUUNtbXA5M0Eyc3IwV2I0Z3lQY25ETWRINl8zNHJzZHZUc1BnbDRuMjNIWllPMUpGTnZ2TXNVTGJaVFppV0hoeXR6?oc=5",
       "date": "Wed, 21 Oct 2026 15:56:00 GMT",
-      "formattedDate": "לפני כ-1 שעות",
+      "formattedDate": "לפני כ-17 שעות",
       "category": "כלכליסט | פנסיה וחיסכון",
       "categoryKey": "pension",
       "badgeColor": "#059669",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "וול סטריט ננעלה במגמה מעורבת; 3M זינקה ב-6% בראש דאו ג'ונס, GM נפלה ב-7%",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBVZzRnd2xuakRSMUctNFo1MHFBVkh0TGxNZkpFdWZfSU9BbHdZbVRrU2VNWmFwWVRzMlU5QklRTW5SNmZvSzNYbzlvdWx0dF8zNkxZaDdTVzJxQXZZREE4a2tR?oc=5",
-      "date": "Tue, 20 Oct 2026 20:17:38 GMT",
-      "formattedDate": "לפני כ-20 שעות",
-      "category": "כלכליסט | וול סטריט ומדדים",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#0284c7",
       "source": "כלכליסט"
     },
     {
@@ -228,69 +272,25 @@
       "source": "כלכליסט"
     },
     {
-      "title": "נעילה שלילית בבורסת ת\"א; פאלו אלטו נפלה ב-6.1%",
+      "title": "וול סטריט ננעלה במגמה מעורבת; 3M זינקה ב-6% בראש דאו ג'ונס, GM נפלה ב-7%",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE91NDh0Q3BFS2F0QnBtREt0UWgwSGM0YmlzUDNsb2FyVUxLOEJXYVQ3NDBaRkJHQzZjWHRPOFNDeTRoMTNOUktNeUZxX3hoR05zeE1YRHFuSnVFdGhEX29oWXln?oc=5",
-      "date": "Mon, 19 Oct 2026 14:26:23 GMT",
-      "formattedDate": "19.10.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "עשור לקופות הגמל להשקעה: התשואות מרשימות, אבל יש כוכבית",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBnakM5S0pQM0xqaUk4MTljOVFRaWFLUGVBUEtRLW1EcFFWQzI1WmVFd1RiRk93cmJLYWtjUlNycXBkeVEyemZESWdwYXAwaVNhczNRb0FuS1hrSXNLLTRXUmRUOA?oc=5",
-      "date": "Wed, 21 Oct 2026 03:00:00 GMT",
-      "formattedDate": "לפני כ-14 שעות",
-      "category": "כלכליסט | פנסיה וחיסכון",
-      "categoryKey": "pension",
-      "badgeColor": "#059669",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "צבר סולאר בדרך לאחוזת בית: קודם גיוס חוב ואחר כך הנפקת מניות לציבור",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1EdE82UEdCajFmSUpCZGo2RzhIaVVobWpmNnItQmZWTk9oQXhud3A5S2MwSnQ5QVMyRGZHczgtVmtrcE5qbkE0VUJaNEY5bFRlVm1UQzlHRXBDRDVBWGFYazI3dw?oc=5",
-      "date": "Wed, 21 Oct 2026 03:00:00 GMT",
-      "formattedDate": "לפני כ-14 שעות",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "לא רציונלי ולא רווחי: IBI סוגרת את הקרן שה��בססה על המודל של דן אריאלי",
-      "summary": "לא רציונלי ולא רווחי: IBI סוגרת את הקרן שהתבססה על המודל של דן אריאלי",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE95SmlFd0dXR1lmQklScXBnZDVKb2R6MDJxWnZOdkRfa3dpellyWlZvcHZaSU9tWjduc0kzRW81aUVuSGhJVWZYaWFSZjVORFlVbkdJREg4azkwMzN4dFBGanJPSQ?oc=5",
-      "date": "Wed, 21 Oct 2026 14:45:00 GMT",
-      "formattedDate": "לפני כ-2 שעות",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "בעקבות לחץ אמריקאי: קרן העושר הגדולה בעולם בדרך לחזור להשקיע בענקיות הדיפנס",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5jMWEyNmlCYTNlc0FQcmVuTDNqbjFUa1FDdmczT2ZwMUVlVi1JME1RRi0yYzc2d01NREdTTWJxZWZfQWRHTy00R2k1aTVYa0VMMmdKb3JzZmlWQ0c3N3FDQWllZVF4SHBn?oc=5",
-      "date": "Fri, 16 Oct 2026 14:38:00 GMT",
-      "formattedDate": "16.10.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "למרות החשש מבועת ה-AI: גולדמן זאקס צופה עלייה של 5% בוול סטריט עד סוף השנה",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBnUjAtajJiQ1NPNWFUdFhqakViWGRlUUlDbjYxeExNVE1LNzlCUkd4c3N6WVdrbFBOSnQ2SklzQmNLa2xvSGhTRWlKNlhqNFlHc0xXcmlhcEhiclAyUjlBc2V2dw?oc=5",
-      "date": "Mon, 19 Oct 2026 15:23:00 GMT",
-      "formattedDate": "19.10.2026",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBVZzRnd2xuakRSMUctNFo1MHFBVkh0TGxNZkpFdWZfSU9BbHdZbVRrU2VNWmFwWVRzMlU5QklRTW5SNmZvSzNYbzlvdWx0dF8zNkxZaDdTVzJxQXZZREE4a2tR?oc=5",
+      "date": "Tue, 20 Oct 2026 20:17:38 GMT",
+      "formattedDate": "20.10.2026",
       "category": "כלכליסט | וול סטריט ומדדים",
       "categoryKey": "wallstreet",
       "badgeColor": "#0284c7",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "קרן סנטרברידג' חוזרת למרוץ לרכישת כאל",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBILVc2bVp6T0owdV80bV9aYkNWQ21iZmlDcERjVXRVOHJ5YmFfdVNYajl2Z1pyX0U2dVNFSUFhSFpYN2M5TE0wN2N6engzVHlCX2QzcDZIQzFXUEpoOHpWYkZKOA?oc=5",
+      "date": "Sun, 18 Oct 2026 03:00:00 GMT",
+      "formattedDate": "18.10.2026",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
       "source": "כלכליסט"
     }
   ]
