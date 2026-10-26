@@ -1408,6 +1408,7 @@
 
         <div class="trending-tags">
             <span style="font-size: 0.85rem; font-weight: 700; color: #64748b; align-self: center;">נושאים חמים:</span>
+            <a href="javascript:void(0)" onclick="openArticleModal('life_insurance_reform')" class="tag-pill" style="background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; font-weight: 800;"><i class="fa-solid fa-sparkles"></i> #רפורמת_ביטוחי_חיים_2027</a>
             <a href="javascript:void(0)" onclick="filterNews('wallstreet')" class="tag-pill">#מדד_S&P_500</a>
             <a href="javascript:void(0)" onclick="filterNews('macro')" class="tag-pill">#החלטת_ריבית</a>
             <a href="javascript:void(0)" onclick="filterNews('pension')" class="tag-pill">#קרנות_השתלמות</a>
@@ -1420,11 +1421,11 @@
     <!-- Breaking News Ticker Bar -->
     <div class="breaking-bar">
         <div class="breaking-inner">
-            <div class="breaking-label">
-                <i class="fa-solid fa-bolt"></i> מבזק כלכליסט חי
+            <div class="breaking-label" style="background: #2563eb;">
+                <i class="fa-solid fa-bolt"></i> מבזק בלעדי
             </div>
             <div class="breaking-ticker" id="breakingTickerText" onclick="handleBreakingTickerClick()" title="לחץ לפתיחת הכתבה">
-                43% מהפקדות הציבור בספטמבר היו לפיקדונות לטווח קצר עם ריבית זניחה
+                סופי: רשות שוק ההון אוסרת על הנחות זמניות בביטוחי חיים – קיבוע הנחה ל-10 שנים לפחות
             </div>
             <div class="breaking-controls">
                 <button class="breaking-btn" onclick="prevBreakingNews()" title="הקודם" aria-label="מבזק קודם"><i class="fa-solid fa-chevron-right"></i></button>
@@ -1657,7 +1658,7 @@
                 <button class="filter-btn" onclick="filterNews('calcalist', this)" style="border-color: #fca5a5;"><i class="fa-solid fa-newspaper" style="color: #ef4444;"></i> כלכליסט שוק ההון</button>
                 <button class="filter-btn" onclick="filterNews('wallstreet', this)">וול סטריט ומדדים</button>
                 <button class="filter-btn" onclick="filterNews('macro', this)">מאקרו וריבית</button>
-                <button class="filter-btn" onclick="filterNews('pension', this)">פנסיה וגמל</button>
+                <button class="filter-btn" onclick="filterNews('pension', this)"><i class="fa-solid fa-shield-heart"></i> פנסיה וביטוח</button>
                 <button class="filter-btn" onclick="filterNews('tax', this)">מיסוי והטבות</button>
                 <button class="filter-btn" onclick="filterNews('psychology', this)">ניהול סיכונים</button>
             </div>
@@ -1746,6 +1747,29 @@
         </div>
 
         <div class="articles-grid" id="articlesGrid">
+
+            <!-- Card 0: רפורמת ביטוחי חיים (חדש!) -->
+            <article class="news-card" data-category="pension" data-keywords="רפורמת ביטוחי חיים ריסק משכנתא רשות שוק ההון הנחות 10 שנים עשר שנים פאנדר funder ביטוח עמית גל" style="border: 2px solid #2563eb; position: relative; box-shadow: 0 8px 24px rgba(37,99,235,0.12);">
+                <div style="position: absolute; top: 0; left: 20px; background: linear-gradient(135deg, #2563eb, #1d4ed8); color: white; font-size: 0.75rem; font-weight: 800; padding: 4px 14px; border-radius: 0 0 8px 8px; box-shadow: 0 2px 6px rgba(37,99,235,0.3); z-index: 2;">
+                    <i class="fa-solid fa-sparkles"></i> כתבה חדשה | רגולציה
+                </div>
+                <div class="card-top-bar" style="padding-top: 1.6rem;">
+                    <span class="card-badge" style="background: #eff6ff; color: #1d4ed8; font-weight: 800;"><i class="fa-solid fa-shield-heart"></i> ביטוח חיים ומשכנתא</span>
+                    <span class="card-read-time" style="color: #2563eb; font-weight: 700;"><i class="fa-regular fa-clock"></i> 26.10.2026 | 3 דק'</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title" onclick="openArticleModal('life_insurance_reform')" style="color: #0f172a; cursor: pointer; font-size: 1.25rem; line-height: 1.4;">
+                        סופי: רשות שוק ההון אוסרת על הנחות זמניות בביטוחי חיים – קיבוע הנחות ל-10 שנים לפחות
+                    </h3>
+                    <p class="card-excerpt">
+                        מהפכה צרכנית אדירה בביטוחי חיים ומשכנתאות: הרשות שמה סוף למבצעי "השנה הראשונה" שמזנקים במאות אחוזים לאחר מכן. חברות הביטוח יחויבו מעתה לקבע את שיעור ההנחה לעשור שלם. מה המשמעות על הפוליסות שלכם ואיך לפעול נכון?
+                    </p>
+                    <div class="card-footer">
+                        <span class="card-date" style="color: #1e40af; font-weight: 700;">מקור: Funder ורשות שוק ההון</span>
+                        <button class="card-btn" onclick="openArticleModal('life_insurance_reform')" style="background: #2563eb; color: white; padding: 6px 16px; border-radius: 20px; font-weight: 800; border: none; cursor: pointer;">קרא כתבה <i class="fa-solid fa-arrow-left"></i></button>
+                    </div>
+                </div>
+            </article>
 
             <!-- Card 1: תל אביב מול וול סטריט -->
             <article class="news-card" data-category="wallstreet" data-keywords="מדד תל אביב 125 35 ישראל וול סטריט פיזור השקעות מניות">
@@ -2224,6 +2248,7 @@ END:VCARD`;
 
         // 4. Breaking News Ticker Loop
         const breakingItems = [
+            "סופי: רשות שוק ההון אוסרת על הנחות זמניות בביטוחי חיים – קיבוע הנחה ל-10 שנים לפחות",
             "מדד S&P 500 רשם שיא חדש: מה המשמעות עבור קרן ההשתלמות וקופת הגמל שלכם?",
             "בנק ישראל מותיר את הריבית ללא שינוי: התשואות במסלולים המנייתיים ממשיכות להוביל",
             "הרפורמה בדמי הניהול: כיצד לבדוק האם אתם משלמים דמי ניהול מופרזים בקרן הפנסיה",
@@ -2301,6 +2326,59 @@ END:VCARD`;
 
         // 7. Full Article Data & Modal Logic
         const articleDatabase = {
+            life_insurance_reform: {
+                category: 'רגולציה וביטוח | רשות שוק ההון',
+                title: 'סופי: רשות שוק ההון אוסרת על הנחות זמניות בביטוחי חיים – קיבוע הנחות ל-10 שנים לפחות',
+                meta: 'מאת: דסק הביטוח והרגולציה IBS | פורסם: 26 באוקטובר 2026 | 3 דקות קריאה',
+                body: `
+                    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 1.2rem; margin-bottom: 1.5rem;">
+                        <div style="display: flex; align-items: center; gap: 8px; color: #1e40af; font-weight: 800; font-size: 1.05rem; margin-bottom: 0.5rem;">
+                            <i class="fa-solid fa-bullhorn"></i> מבזק רגולציה מיוחד | הגנת הצרכן בענף הביטוח
+                        </div>
+                        <p style="margin: 0; font-size: 0.95rem; color: #1e3a8a; line-height: 1.6;">
+                            רשות שוק ההון, ביטוח וחיסכון פרסמה את ההוראות הסופיות בחוזר דרמטי שמשנה את כללי המשחק בפוליסות ביטוח חיים (למקרה פטירה – ריסק) וביטוחי חיים למשכנתא בישראל.
+                        </p>
+                    </div>
+
+                    <p>במרכז ההוראות החדשות שפורסמו, נקבע כי חברת ביטוח שתציע הנחה בפוליסת ביטוח חיים תהיה מחויבת לשמור עליה כך ששיעורה <strong>לא יקטן במשך עשר שנים לפחות</strong> (או לתקופה ארוכה יותר, או במסלול של הנחה מדורגת ההולכת וגדלה עם השנים).</p>
+
+                    <p>בטיוטת החוזר המקורית שפורסמה לפני מספר חודשים קבעה הרשות את מועד הכניסה לתוקף ל-1 בדצמבר 2026, אך כעת נמסר רשמית כי <strong>המועד נדחה ל-1 בפברואר 2027</strong> כדי לאפשר לחברות הביטוח ולסוכנים להיערך טכנולוגית ותפעולית.</p>
+
+                    <div class="modal-takeaway-box" style="border-right-color: #2563eb; background: #f8faff; margin: 1.5rem 0;">
+                        <h5 style="color: #1e40af; font-size: 1.1rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-list-check"></i> עיקרי השינוי עבור המבוטחים:</h5>
+                        <ul style="margin: 0; padding-right: 1.2rem; line-height: 1.8; color: #334155;">
+                            <li><strong>הנחה קבועה שלא נעלמת אחרי שנה-שנתיים:</strong> שיעור ההנחה שנקבע בעת ההצטרפות יישאר קבוע למשך 10 שנים לפחות, מה שמעניק ודאות ויציבות כלכלית.</li>
+                            <li><strong>סוף לכפל תשלום בעת החלפת פוליסה (משכנתא):</strong> מבוטח שיחליף פוליסת ביטוח חיים קיימת בפוליסה חדשה (למשל בעת לקיחת או מחזור משכנתא) יוכל לקבל פטור מלא מתשלום בחודש הראשון, כדי למנוע תשלום כפול על שתי פוליסות באותו חודש.</li>
+                            <li><strong>התראה שקופה חודש מראש:</strong> חברות הביטוח יחויבו להודיע למבוטח במייל וב-SMS חודש לפני שההנחה עומדת להסתיים או להשתנות, ולפרט בכמה בדיוק יעלה התשלום החודשי בשקלים.</li>
+                            <li><strong>תחולה על נספחים וכיסויים נוספים:</strong> הכללים יחולו גם על כיסויים נלווים כגון נכות מתאונה, כך שגם שם ההנחה לא תקטן לפני שחלפו 10 שנים.</li>
+                        </ul>
+                    </div>
+
+                    <h4 style="margin-top: 1.5rem; color: #0f172a; font-weight: 800;">מדוע הרשות נאלצה להתערב?</h4>
+                    <p>ביטוח חיים הוא מוצר ארוך טווח שנרכש לרוב לעשרות שנים כדי להגן על המשפחה במקרה אסון. בשנים האחרונות שיווקו חברות הביטוח פוליסות ריסק עם הנחות ענק של 70% עד 85% לשנה הראשונה בלבד. לאחר תום תקופת המבצע, המחיר זינק במאות שקלים מדי חודש.</p>
+                    <p>מבוטחים רבים לא שמו לב לעלייה במחיר או שמצבם הבריאותי השתנה ולא איפשר להם לעבור שוב חיתום רפואי בחברה אחרת – וכך נלכדו בפוליסות יקרות להחריד.</p>
+                    <p><strong>עמית גל, הממונה על שוק ההון:</strong> <em>"ההוראות החדשות משקפות את מדיניות הרשות לעיצוב רגולציה ששמה את הצרכן במרכז ומעבירה את הכוח לידיו. עלינו לוודא כי התחרות נשארת הוגנת ושקופה ומעניקה למבוטחים ודאות וביטחון לאורך זמן."</em></p>
+
+                    <div class="modal-takeaway-box" style="border-right-color: #10b981; background: #ecfdf5; margin-top: 1.5rem;">
+                        <h5 style="color: #065f46; font-size: 1.1rem; margin-bottom: 0.6rem;"><i class="fa-solid fa-lightbulb"></i> מה כדאי לעשות כבר עכשיו? המלצת סוכנות IBS:</h5>
+                        <p style="margin-bottom: 0.8rem; color: #1e293b;">
+                            חברות הביטוח הגדולות יצאו לאחרונה במבצעי הנחות מיוחדים לקראת כניסת ההוראות לתוקף. זהו חלון הזדמנויות מצוין לבצע <strong>בדיקת פוליסות חיים ומשכנתא קיימות</strong>.
+                        </p>
+                        <p style="margin-bottom: 1.2rem; color: #1e293b;">
+                            בסוכנות IBS אנו מבצעים עבורכם בדיקה מקיפה בהר הביטוח, מזהים פוליסות ישנות עם הנחות שהסתיימו, ודואגים לקבע לכם את המחיר הנמוך והמשתלם ביותר מול כל חברות הביטוח בישראל.
+                        </p>
+                        <div style="text-align: center;">
+                            <a href="https://wa.me/972586603010?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%99%D7%A0%D7%95%D7%9F%2C%20%D7%A7%D7%A8%D7%90%D7%AA%D7%99%20%D7%91%D7%A2%D7%99%D7%AA%D7%95%D7%9F%20%D7%A2%D7%9C%20%D7%A8%D7%A4%D7%95%D7%A8%D7%9E%D7%AA%20%D7%91%D7%99%D7%98%D7%95%D7%97%D7%99%20%D7%94%D7%97%D7%99%D7%99%D7%9D%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%91%D7%93%D7%99%D7%A7%D7%AA%20%D7%94%D7%A4%D7%95%D7%9C%D7%99%D7%A1%D7%95%D7%AA%20%D7%A9%D7%9C%D7%99" target="_blank" rel="noopener noreferrer" style="background: #25d366; color: white; padding: 12px 26px; border-radius: 25px; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(37,211,102,0.3); font-size: 1rem;">
+                                <i class="fa-brands fa-whatsapp" style="font-size: 1.25rem;"></i> לבדיקת פוליסות חיים ומשכנתא בוואטסאפ מול ינון
+                            </a>
+                        </div>
+                    </div>
+
+                    <p style="font-size: 0.82rem; color: #94a3b8; margin-top: 1.5rem; text-align: left;">
+                        מקור הידיעה: עיתון Funder – עורכת ביטוח ובנקים רונית מורגנשטרן | רשות שוק ההון, ביטוח וחיסכון.
+                    </p>
+                `
+            },
             lead: {
                 category: 'וול סטריט והחיסכון הפנסיוני',
                 title: 'הסערה השקטה בשוק ההון: האם המעבר הגורף ל-S&P 500 הוא מהלך מנצח או סיכון סמוי?',
@@ -2663,6 +2741,10 @@ END:VCARD`;
         function handleBreakingTickerClick() {
             if (breakingItems.length === 0) return;
             const currentTitle = breakingItems[currentBreakingIdx];
+            if (currentTitle && (currentTitle.includes("ביטוחי חיים") || currentTitle.includes("רשות שוק ההון"))) {
+                openArticleModal('life_insurance_reform');
+                return;
+            }
             if (calcalistData) {
                 if (calcalistData.lead_story && calcalistData.lead_story.title === currentTitle) {
                     openItemCalcalistModal(0, 'lead');
