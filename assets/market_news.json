@@ -1,26 +1,26 @@
 {
   "source": "כלכליסט - שוק ההון (Calcalist Market)",
   "source_url": "https://www.calcalist.co.il/market",
-  "last_updated": "2026-11-03T11:48:15.386Z",
-  "formatted_updated": "יום שלישי, 3 בנובמבר 2026 בשעה 11:48",
+  "last_updated": "2026-11-03T19:23:35.726Z",
+  "formatted_updated": "יום שלישי, 3 בנובמבר 2026 בשעה 19:23",
   "breaking_news": [
     "קרן Ground Up Ventures ממנה את נבות וולק לשותף כללי",
     "מורגן סטנלי: התיקון בשוק המניות האמריקאי קרוב לסיום",
+    "עובדי ארקיע זועמים: האחים נקש מתכוונים לדלל את מניותיהם לקראת מכירת החברה",
+    "רשות שוק ההון: לא ניתן לייקר פוליסת רכב או לסרב לבטח - רק בגלל מקום המגורים",
     "המשקיעים הזרים רכשו מניות ב-440 מיליון שקל בבורסה בימים שאחרי הבחירות",
     "המניות הביטחוניות הכבידו על הבורסה, גם טאואר ופאלו אלטו",
-    "עובדי ארקיע זועמים: האחים נקש מתכוונים לדלל את מניותיהם לקראת מכירת החברה",
-    "אוקטובר בקרנות: גיוס של כ-7.6 מיליארד שקל, מתחזק המעבר ממניות בישראל לחו\"ל",
-    "נסיגה מתונה בבורסה, ירידות חזקות במניות הנדל\"ן, ממתינים לדוחות טבע",
     "המכירות מדשדשות - וגינדי יוצאת במבצע חריג",
-    "אפל מאבדת 4.5% בטרום, מגמה שלילית בבורסות אירופה",
-    "ויקטורי פנתה לרשות התחרות: מבקשת אישור לרכישת מניות קרפור בהנפקה"
+    "אוקטובר בקרנות: גיוס של כ-7.6 מיליארד שקל, מתחזק המעבר ממניות בישראל לחו\"ל",
+    "ויקטורי פנתה לרשות התחרות: מבקשת אישור לרכישת מניות קרפור בהנפקה",
+    "ת\"א ננעלה בעליות קלות, נייס נפלה ב-7.1%, טבע טיפסה ב-3.8%"
   ],
   "lead_story": {
     "title": "קרן Ground Up Ventures ממנה את נבות וולק לשותף כללי",
     "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
     "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1wM2RDUDY5OVIzVlVac1M3Z0lOWmhZZWFIUDh0SzMtNkF6MFJXVE5naU9FTWRvTXE4UnBBT1lmZkZQUXBoeEVjTnU0My1sbEtuWE5EWU9MSUp6d2otU3hSQ0d6THI5UFU4S2dj?oc=5",
     "date": "Mon, 02 Nov 2026 13:14:00 GMT",
-    "formattedDate": "לפני כ-22 שעות",
+    "formattedDate": "2.11.2026",
     "category": "כלכליסט | פנסיה וחיסכון",
     "categoryKey": "pension",
     "badgeColor": "#059669",
@@ -39,10 +39,10 @@
       "source": "כלכליסט"
     },
     {
-      "title": "המשקיעים הזרים רכשו מניות ב-440 מיליון שקל בבורסה בימים שאחרי הבחירות",
+      "title": "עובדי ארקיע זועמים: האחים נקש מתכוונים לדלל את מניותיהם לקראת מכירת החברה",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5acDkxb2kzdy11WkczZExKRWVxQTVFVGFEYms1dlVmMmFWVmFReG5zT0QzLVFIYVNuNFZZVXBDZlZiV25oaFhqOGZFOW1pal8zVDdDTHJKWWo0SWtnUll0b0J5QQ?oc=5",
-      "date": "Mon, 02 Nov 2026 09:31:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBwQWxlVXhoalpVUmpkVDJjWTN5VTZlZ2NBMGxIMl9yT1dnbkV0VlUxeXNqUXRQM2hPLUJxWFJscXFDcmZMaGpWUTBfNU8td0dUMnViZDh0LXZ2S09LemtYTmZKajN6SUJx?oc=5",
+      "date": "Mon, 02 Nov 2026 17:12:00 GMT",
       "formattedDate": "2.11.2026",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
@@ -52,54 +52,10 @@
   ],
   "articles": [
     {
-      "title": "המניות הביטחוניות הכבידו על הבורסה, גם טאואר ופאלו אלטו",
+      "title": "רשות שוק ההון: לא ניתן לייקר פוליסת רכב או לסרב לבטח - רק בגלל מקום המגורים",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE0tc2x6S0h3NGl5ejFSdERHOEtCaTRaaF9TRFI1WVRWc2ZabklxTnJ0TEJOU296NjloaWZrT0o0Tll3anBsTTV4SkZsVExIU2JzSklZUEtYdTI5aXZiZ3lnS25n?oc=5",
-      "date": "Mon, 02 Nov 2026 15:35:59 GMT",
-      "formattedDate": "לפני כ-20 שעות",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "עובדי ארקיע זועמים: האחים נקש מתכוונים לדלל את מניותיהם לקראת מכירת החברה",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBwQWxlVXhoalpVUmpkVDJjWTN5VTZlZ2NBMGxIMl9yT1dnbkV0VlUxeXNqUXRQM2hPLUJxWFJscXFDcmZMaGpWUTBfNU8td0dUMnViZDh0LXZ2S09LemtYTmZKajN6SUJx?oc=5",
-      "date": "Mon, 02 Nov 2026 17:12:00 GMT",
-      "formattedDate": "לפני כ-18 שעות",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "אוקטובר בקרנות: גיוס של כ-7.6 מיליארד שקל, מתחזק המעבר ממניות בישראל לחו\"ל",
-      "summary": "אוקטובר בקרנות: גיוס של כ-7.6 מיליארד שקל, מתחזק המ��בר ממניות בישראל לחו\"ל",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE0waVNBMUJQa2dRc3R5UHhhaVoxTFFWVUpHV1FfbkdpdWtXUFYzdjFuZDRBUm45RDBzTS1HZEdpcjZDalI0N3l0SFFGblVYTWFrT0dRZFEySUxsaVBsQlpldVIyOA?oc=5",
-      "date": "Mon, 02 Nov 2026 09:07:00 GMT",
-      "formattedDate": "2.11.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "נסיגה מתונה בבורסה, ירידות חזקות במניות הנדל\"ן, ממתינים לדוחות טבע",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE45UEZiREgyaUZ1UkZ1R0NBZTk0ZVZBNTgyOWlhNXJhQ1YwRHRWWWJpdHRZQTZpeVBweUxqNzRERWJZbE45SUZyRWxqSU9yLXBrMWgtMjB5NFVsRmNNbTVmYXBn?oc=5",
-      "date": "Tue, 03 Nov 2026 11:37:30 GMT",
-      "formattedDate": "לפני 10 דקות",
-      "category": "כלכליסט | נדל\"ן ומשכנתאות",
-      "categoryKey": "realestate",
-      "badgeColor": "#ea580c",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "המכירות מדשדשות - וגינדי יוצאת במבצע חריג",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0zS0tWd3lTQk5wUlZsQmdSVmdfT1NYS2VsVE5vaVl4Sm0wQjZoVEFaYW85SGZJM3lvNWsybEktZFNINlBmb3Bza1hSSWZ4QTFLb3N1UV9KeDBaSXI4OEZlYnI0SjBCUjFYRVE?oc=5",
-      "date": "Tue, 03 Nov 2026 04:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5YQVN6OFZRSWszWFpOVmZJZzFZQnZoVlJ6bmxXUUVkQ0tTekVTTDhWNWE4N3pWSnJadDVJSWR0QWdOTjBDVHZ2M1BJdU1MdWpzY2RqUHhMb1NKdkRBS3FqTkpGdzNjNUpL?oc=5",
+      "date": "Tue, 03 Nov 2026 12:20:00 GMT",
       "formattedDate": "לפני כ-7 שעות",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
@@ -107,14 +63,47 @@
       "source": "כלכליסט"
     },
     {
-      "title": "אפל מאבדת 4.5% בטרום, מגמה שלילית בבורסות אירופה",
+      "title": "המשקיעים הזרים רכשו מניות ב-440 מיליון שקל בבורסה בימים שאחרי הבחירות",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9KUjBqaU81T3hLMnBxYjBBcTF2QnpyUUhmTjU4a016T3VnQ3I4elJtRk4ySVliLUd6UEgweDRUcm1vZWUxaXBHUDZ0Z2ZGNUpqQ1lkYnlzM2F5VUdoV0tLTWdn?oc=5",
-      "date": "Tue, 03 Nov 2026 10:30:00 GMT",
-      "formattedDate": "לפני כ-1 שעות",
-      "category": "כלכליסט | וול סטריט ומדדים",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5acDkxb2kzdy11WkczZExKRWVxQTVFVGFEYms1dlVmMmFWVmFReG5zT0QzLVFIYVNuNFZZVXBDZlZiV25oaFhqOGZFOW1pal8zVDdDTHJKWWo0SWtnUll0b0J5QQ?oc=5",
+      "date": "Mon, 02 Nov 2026 09:31:00 GMT",
+      "formattedDate": "2.11.2026",
+      "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
-      "badgeColor": "#0284c7",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "המניות הביטחוניות הכבידו על הבורסה, גם טאואר ופאלו אלטו",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE0tc2x6S0h3NGl5ejFSdERHOEtCaTRaaF9TRFI1WVRWc2ZabklxTnJ0TEJOU296NjloaWZrT0o0Tll3anBsTTV4SkZsVExIU2JzSklZUEtYdTI5aXZiZ3lnS25n?oc=5",
+      "date": "Mon, 02 Nov 2026 15:35:59 GMT",
+      "formattedDate": "2.11.2026",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "המכירות מדשדשות - וגינדי יוצאת במבצע חריג",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0zS0tWd3lTQk5wUlZsQmdSVmdfT1NYS2VsVE5vaVl4Sm0wQjZoVEFaYW85SGZJM3lvNWsybEktZFNINlBmb3Bza1hSSWZ4QTFLb3N1UV9KeDBaSXI4OEZlYnI0SjBCUjFYRVE?oc=5",
+      "date": "Tue, 03 Nov 2026 04:00:00 GMT",
+      "formattedDate": "לפני כ-15 שעות",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "אוקטובר בקרנות: גיוס של כ-7.6 מיליארד שקל, מתחזק המעבר ממניות בישראל לחו\"ל",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE0waVNBMUJQa2dRc3R5UHhhaVoxTFFWVUpHV1FfbkdpdWtXUFYzdjFuZDRBUm45RDBzTS1HZEdpcjZDalI0N3l0SFFGblVYTWFrT0dRZFEySUxsaVBsQlpldVIyOA?oc=5",
+      "date": "Mon, 02 Nov 2026 09:07:00 GMT",
+      "formattedDate": "2.11.2026",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
       "source": "כלכליסט"
     },
     {
@@ -129,11 +118,33 @@
       "source": "כלכליסט"
     },
     {
+      "title": "ת\"א ננעלה בעליות קלות, נייס נפלה ב-7.1%, טבע טיפסה ב-3.8%",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE45UEZiREgyaUZ1UkZ1R0NBZTk0ZVZBNTgyOWlhNXJhQ1YwRHRWWWJpdHRZQTZpeVBweUxqNzRERWJZbE45SUZyRWxqSU9yLXBrMWgtMjB5NFVsRmNNbTVmYXBn?oc=5",
+      "date": "Tue, 03 Nov 2026 15:45:53 GMT",
+      "formattedDate": "לפני כ-3 שעות",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "מגמה מעורבת בוול סטריט; מניית AMD מזנקת ב-5.5%",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9KUjBqaU81T3hLMnBxYjBBcTF2QnpyUUhmTjU4a016T3VnQ3I4elJtRk4ySVliLUd6UEgweDRUcm1vZWUxaXBHUDZ0Z2ZGNUpqQ1lkYnlzM2F5VUdoV0tLTWdn?oc=5",
+      "date": "Tue, 03 Nov 2026 16:28:38 GMT",
+      "formattedDate": "לפני כ-2 שעות",
+      "category": "כלכליסט | וול סטריט ומדדים",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#0284c7",
+      "source": "כלכליסט"
+    },
+    {
       "title": "אינטל נחלשה ב-9%, צ'ק פוינט - ב-7%; הנפט צנח ביותר מ-7%",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9hU1IxbE44QWxOaUhHR0t5eDJlUXJySXNmTXRNUFUwSVF5VUM1WTd6ak5YQTZQYjFIVFppVFFWZXNOWHdNbDFlakxWWlg2NHdPSHpOOTBDYy1PdmVzN1JDRkl3?oc=5",
       "date": "Mon, 02 Nov 2026 23:20:06 GMT",
-      "formattedDate": "לפני כ-12 שעות",
+      "formattedDate": "לפני כ-20 שעות",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
@@ -155,7 +166,7 @@
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1GNFlHZUxUamU2R0pQQjU1aDR0VzRHcVhkeDlGdnc3VWtUS1VOWWFHUm15d3hBN0xzZXdROGluRVJhQUdvcTRtcVZoOG1jdXBseVhkdzZtRmNKcW00SFBXaGZ3?oc=5",
       "date": "Tue, 03 Nov 2026 04:00:00 GMT",
-      "formattedDate": "לפני כ-7 שעות",
+      "formattedDate": "לפני כ-15 שעות",
       "category": "כלכליסט | פנסיה וחיסכון",
       "categoryKey": "pension",
       "badgeColor": "#059669",
@@ -166,6 +177,17 @@
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5ZcTRLVzF1T3JMc0FvRDVvSnkwVm1jdmhPRnhjTTZoSDVJV1VSaVlCblh3Q0dfb05sakJ4Z19SMFkxdlY3R0VfeGF1bnVvSzhqR2NuVlRGbF81S1A5MUtPREZB?oc=5",
       "date": "Mon, 02 Nov 2026 04:00:00 GMT",
+      "formattedDate": "2.11.2026",
+      "category": "כלכליסט | מאקרו וריבית",
+      "categoryKey": "macro",
+      "badgeColor": "#b45309",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "בין ממ\"ד, מדד ומנדט: השנה שבה רוכשי הדירות חיכו ל\"אחרי\"",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5UZnZJNFlpeXRURHNsSmotUjBTNThxYnhtejZsdzJObi1NZzdIVjdwcFVkc185U3BoZktSZ2NTLXlaUGxoc2p4cHM3Nll4Q21UZng4MUxGQzF5UTlQSjdKN1NrWHJ3T24yTmc?oc=5",
+      "date": "Mon, 02 Nov 2026 12:44:00 GMT",
       "formattedDate": "2.11.2026",
       "category": "כלכליסט | מאקרו וריבית",
       "categoryKey": "macro",
@@ -184,17 +206,6 @@
       "source": "כלכליסט"
     },
     {
-      "title": "בין ממ\"ד, מדד ומנדט: השנה שבה רוכשי הדירות חיכו ל\"אחרי\"",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5UZnZJNFlpeXRURHNsSmotUjBTNThxYnhtejZsdzJObi1NZzdIVjdwcFVkc185U3BoZktSZ2NTLXlaUGxoc2p4cHM3Nll4Q21UZng4MUxGQzF5UTlQSjdKN1NrWHJ3T24yTmc?oc=5",
-      "date": "Mon, 02 Nov 2026 12:44:00 GMT",
-      "formattedDate": "לפני כ-23 שעות",
-      "category": "כלכליסט | מאקרו וריבית",
-      "categoryKey": "macro",
-      "badgeColor": "#b45309",
-      "source": "כלכליסט"
-    },
-    {
       "title": "יומיים של ירידות בוול סטריט מחקו 5.1 מיליארד שקל מהחסכונות",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9leEY3SzRNbER3VW93b2w4amxfckdSWlZjV1FvX3hVMjhvRG8tcDh6RkZ3aVBNdnBwcFhKdWZSQjhxbVhzNl81RHFZcjI0V3BDelkzSEVwVXl1d1VGQlp5RUxpaw?oc=5",
@@ -206,6 +217,17 @@
       "source": "כלכליסט"
     },
     {
+      "title": "הדולר מטפס ל-3.137 שקלים, אך נחלש מול היורו לקראת בחירות האמצע",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1qeHhpRmFZMHA1NVUyN3E0bEZteGJZUkM4bzVSMkRJY2U0ZjdkaUFQWUU4ak9WajNtRUczcFBEbW9pTXZzY1JMVVhIMGRPWGNtU3dyYzFUTjhNLUpVdVlId0VxTko?oc=5",
+      "date": "Mon, 02 Nov 2026 12:57:00 GMT",
+      "formattedDate": "2.11.2026",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
       "title": "מניות השבבים והביטוח הכבידו: הבורסה ירדה ב-2% והחודש איבדה 3.5%",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9Jc0x3RHZYTDVpWnJYR1YySjNSc2ZmdjFRTFN6cDlqckZHWTBPbmw0TmlITGpSaDlDemV6dUQ1ODJsNnI1N2drMXZNbTQ1azRUSWh4ZTVfWll2XzlHcjZOWFln?oc=5",
@@ -214,28 +236,6 @@
       "category": "כלכליסט | פנסיה וחיסכון",
       "categoryKey": "pension",
       "badgeColor": "#059669",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "הדולר מטפס ל-3.137 שקלים, אך נחלש מול היורו לקראת בחירות האמצע",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1qeHhpRmFZMHA1NVUyN3E0bEZteGJZUkM4bzVSMkRJY2U0ZjdkaUFQWUU4ak9WajNtRUczcFBEbW9pTXZzY1JMVVhIMGRPWGNtU3dyYzFUTjhNLUpVdVlId0VxTko?oc=5",
-      "date": "Mon, 02 Nov 2026 12:57:00 GMT",
-      "formattedDate": "לפני כ-22 שעות",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "מניות הטק משכו את נאסד”ק לנפילה של 2.9%; מניית אינטל התרסקה ב-29%",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9oN3R5bXZXNjl0ejRSeXFUR1FwM0ItdUZjbGc3aVA1azB5R2V4MmZfTVFXYkV0NFZNamh5eFgwTmtLeW9LdGo0aFUtQURzamhLNEd3RFBKQ290YzRybnM4dHh3?oc=5",
-      "date": "Fri, 30 Oct 2026 22:10:25 GMT",
-      "formattedDate": "30.10.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
       "source": "כלכליסט"
     },
     {
@@ -254,7 +254,18 @@
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBlN0xVX21xMndyMUV2NG9XdnBpY2NoU2NDb3IzZkw3RzV5STV2THY1SFJWUTJzLV9tLVdzcVlUZmtiV3RNMEd4dDJ6cFpLeThSVVllQng1TUM4VWhzZU1DSEptYw?oc=5",
       "date": "Tue, 03 Nov 2026 04:00:00 GMT",
-      "formattedDate": "לפני כ-7 שעות",
+      "formattedDate": "לפני כ-15 שעות",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "מניות הטק משכו את נאסד”ק לנפילה של 2.9%; מניית אינטל התרסקה ב-29%",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9oN3R5bXZXNjl0ejRSeXFUR1FwM0ItdUZjbGc3aVA1azB5R2V4MmZfTVFXYkV0NFZNamh5eFgwTmtLeW9LdGo0aFUtQURzamhLNEd3RFBKQ290YzRybnM4dHh3?oc=5",
+      "date": "Fri, 30 Oct 2026 22:10:25 GMT",
+      "formattedDate": "30.10.2026",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
@@ -265,21 +276,10 @@
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5pam1wdnBhVWZUZUZpUExoWlhZLXB3ck5YVzVHenp5dWduQmtQZWFubVdXUWhiektHTjhYdHVHbUM5UnZCSW5VZkUzMW1RRDdxTDI4M3d2VklNajJNTkpDcVZZNA?oc=5",
       "date": "Mon, 02 Nov 2026 12:28:00 GMT",
-      "formattedDate": "לפני כ-23 שעות",
+      "formattedDate": "2.11.2026",
       "category": "כלכליסט | נדל\"ן ומשכנתאות",
       "categoryKey": "realestate",
       "badgeColor": "#ea580c",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "אהרון פרנקל עלה להחזקה של 20% באלוני חץ, תמורת 121 מיליון שקל",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1nWUQ4c2wzNUREZWNMYXBiUW5ualFKQmlQcmp0TndIekNIdWhkOXF6VFMzWm9tNGItZ2RUM3JIM3FSd0Y5VnpoLTBkakt0ZzhIbjZNeTVjdUkzdzVtMVY1d0xkUQ?oc=5",
-      "date": "Fri, 30 Oct 2026 11:33:00 GMT",
-      "formattedDate": "30.10.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
       "source": "כלכליסט"
     },
     {
