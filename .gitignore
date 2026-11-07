@@ -11,10 +11,9 @@ whatsapp-bot/node_modules/
 crm/
 *sms*
 gmail/
+bot saas/
+*שליחת הודעה*
 
 # תיקיית טסטים ובדיקות (אינה מועלית ל-Git)
 טסט אתר בגי/
 *טסט*
-
-
-
