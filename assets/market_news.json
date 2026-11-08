@@ -1,32 +1,43 @@
 {
   "source": "כלכליסט - שוק ההון (Calcalist Market)",
   "source_url": "https://www.calcalist.co.il/market",
-  "last_updated": "2026-11-08T11:11:47.550Z",
-  "formatted_updated": "יום ראשון, 8 בנובמבר 2026 בשעה 11:11",
+  "last_updated": "2026-11-08T17:51:27.746Z",
+  "formatted_updated": "יום ראשון, 8 בנובמבר 2026 בשעה 17:51",
   "breaking_news": [
-    "הפוליטיקה טלטלה א�� מניות הטכנולוגיה, אבל הסכנה נמצאת במקום אחר",
+    "האחים נקש לא יזרימו כסף לארקיע - מניות העובדים לא ידוללו",
+    "הפוליטיקה טלטלה את מניות הטכנולוגיה, אבל הסכנה נמצאת במקום אחר",
     "קרן Ground Up Ventures ממנה את נבות וולק לשותף כללי",
     "הנפילות בבורסות: השוק מתחיל להציב גבולות למהפכת ה-AI",
-    "התרומות של יובלים, העמותה של השותף והקשר שלא דווח למשקי��ים",
+    "התרומות של יובלים, העמותה של השותף והקשר שלא דווח למשקיעים",
     "יממה לפני המפולת: עשירי ישראל הוזהרו מפני משבר בטק",
-    "הפניקס הציעה הגנה מפני ירידות, המשקיעים העדיפו את הרווחים הגדולים",
-    "מרכז שניידר נכנס להון סיכון: מקים קרן בהיקף של 50 מיליון דולר לבריאות ילדי��",
+    "מרכז שניידר נכנס להון סיכון: מקים קרן בהיקף של 50 מיליון דולר לבריאות ילדים",
     "משלושה יוצא אחד: סכסוך שותפים בקבוצת המסעדות לה שוק",
-    "רוח גבית לאנרגיה הירוקה, חשש בביטחוניות: ההשפעות האפשריות של בחירות האמצע בארה\"ב - כלכליסט",
+    "רוח גבית לאנרגיה הירוקה, חשש בביטחוניות: ההשפעות האפשריות של בחירות האמצע בארה\"ב",
     "אחרי שזינק מעל ל-3.22 שקלים ולשיא מדצמבר 2025: הדולר נחלש ל-3.18 ש'"
   ],
   "lead_story": {
-    "title": "הפוליטיקה טלטלה א�� מניות הטכנולוגיה, אבל הסכנה נמצאת במקום אחר",
-    "summary": "הפוליטיקה טלטלה את מניות הטכנולוגיה, אבל הסכנה נמצאת במקום אחר",
-    "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9rRm5Pb3UxYlE3UUJMckJ6elZLU255RENXTnJWODJFeHQ4WktWRExMaDNldUp5alY4Z2ZEWjRRaGVvc21hOThZNElHdHhRdlN6d1lnODNZUFdWNld3Y0dVT05rcw?oc=5",
-    "date": "Sat, 07 Nov 2026 20:04:00 GMT",
-    "formattedDate": "לפני כ-15 שעות",
+    "title": "האחים נקש לא יזרימו כסף לארקיע - מניות העובדים לא ידוללו",
+    "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9FcFZacFp2QzdOcE13S1d3M2lUYVVzb3BGYklwWU1yVXUxZFFfbnZHeG9tS0NaYk90V0pqTzB4bFJDQWczOVl2ZUVkNGxtQXUxMExMd0lGUUo2RFc2S25wTzRaeFFHY0tY?oc=5",
+    "date": "Sun, 08 Nov 2026 13:26:00 GMT",
+    "formattedDate": "לפני כ-4 שעות",
     "category": "כלכליסט | שוק ההון והבורסה",
     "categoryKey": "wallstreet",
     "badgeColor": "#dc2626",
     "source": "כלכליסט"
   },
   "side_stories": [
+    {
+      "title": "הפוליטיקה טלטלה את מניות הטכנולוגיה, אבל הסכנה נמצאת במקום אחר",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9rRm5Pb3UxYlE3UUJMckJ6elZLU255RENXTnJWODJFeHQ4WktWRExMaDNldUp5alY4Z2ZEWjRRaGVvc21hOThZNElHdHhRdlN6d1lnODNZUFdWNld3Y0dVT05rcw?oc=5",
+      "date": "Sat, 07 Nov 2026 20:04:00 GMT",
+      "formattedDate": "לפני כ-21 שעות",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
     {
       "title": "קרן Ground Up Ventures ממנה את נבות וולק לשותף כללי",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
@@ -37,7 +48,9 @@
       "categoryKey": "pension",
       "badgeColor": "#059669",
       "source": "כלכליסט"
-    },
+    }
+  ],
+  "articles": [
     {
       "title": "הנפילות בבורסות: השוק מתחיל להציב גבולות למהפכת ה-AI",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
@@ -48,12 +61,10 @@
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
       "source": "כלכליסט"
-    }
-  ],
-  "articles": [
+    },
     {
-      "title": "התרומות של יובלים, העמותה של השותף והקשר שלא דווח למשקי��ים",
-      "summary": "התרומות של יובלים, העמותה של השותף והקשר שלא דווח למשקיעים",
+      "title": "התרומות של יובלים, העמותה של השותף והקשר שלא דווח למשקיעים",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1PT0JLbzZqbjlCNzhEZXRQRVdKUmtnTnlUNHMtR1djbTlwYmJoMkVRdVkza0lLVmZ0MkdXdHRMUlAzWFN6V0RheWRoZlBjUGpBMnhRM0xoZGtGd1I4azNBbGdHb0hwY25TT2lwcg?oc=5",
       "date": "Thu, 05 Nov 2026 04:00:00 GMT",
       "formattedDate": "5.11.2026",
@@ -67,26 +78,15 @@
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE4tSk1UZ2FiVGNHaW96Y25rQlE1NXNNTTRhQnhUMlRBVGV2WFJLX2VYeUU3MmVaM1dvU3Z0MndhUFlNdjZ3YTRVNHpqQnRYU3lWM09rNWFzNGlpc0VSRmtzbFhkSQ?oc=5",
       "date": "Sun, 08 Nov 2026 04:00:00 GMT",
-      "formattedDate": "לפני כ-7 שעות",
+      "formattedDate": "לפני כ-13 שעות",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
       "source": "כלכליסט"
     },
     {
-      "title": "הפניקס הציעה הגנה מפני ירידות, המשקיעים העדיפו את הרווחים הגדולים",
+      "title": "מרכז שניידר נכנס להון סיכון: מקים קרן בהיקף של 50 מיליון דולר לבריאות ילדים",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBOajVJNDd2bzBWUEd4b0t2SVVUTEFGbWNRdFdHek9EaDVpUWxpdW5FTlVPQzZTYWlSZTVpWG10Yzgtb3dSVWNOWlMzSjBZVWJWRkVjSXVfYkRjdll0WU1nUnd5NA?oc=5",
-      "date": "Thu, 05 Nov 2026 04:00:00 GMT",
-      "formattedDate": "5.11.2026",
-      "category": "כלכליסט | פנסיה וחיסכון",
-      "categoryKey": "pension",
-      "badgeColor": "#059669",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "מרכז שניידר נכנס להון סיכון: מקים קרן בהיקף של 50 מיליון דולר לבריאות ילדי��",
-      "summary": "מרכז שניידר נכנס להון סיכון: מקים קרן בהיקף של 50 מיליון דולר לבריאות ילדים",
       "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE83RnNiRTlFYmhiTG1qUmxzeGFMajE3TmtiTTFScFBPOVJGUU1WcTBDYWtKVlNVUFhUQ1JPRHdpdTlqLXR1S0VWUVpFSVJ5TnRKcW5DOVFEVE4zSEc3QjFIUHE5V0FKOHJaamdz?oc=5",
       "date": "Wed, 04 Nov 2026 04:00:00 GMT",
       "formattedDate": "4.11.2026",
@@ -107,8 +107,8 @@
       "source": "כלכליסט"
     },
     {
-      "title": "רוח גבית לאנרגיה הירוקה, חשש בביטחוניות: ההשפעות האפשריות של בחירות האמצע בארה\"ב - כלכליסט",
-      "summary": "רוח גבית לאנרגיה הירוקה, חשש בביטחוניות: ההשפעות האפשריות של בחירות האמצע בארה\"ב כלכליסט",
+      "title": "רוח גבית לאנרגיה הירוקה, חשש בביטחוניות: ההשפעות האפשריות של בחירות האמצע בארה\"ב",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9welhzeWlGNmVRYUFrTEhqejM2eTJmR0Z3eXdLRFpkbnduZ2pxNHQxYWl3YlB1S2pmSjZRR3l6NUgzdGgxd3U0ZjU4VDFFaTRhY0JNOVVvWDdXOXdjTW0yeno1Yw?oc=5",
       "date": "Wed, 04 Nov 2026 07:26:00 GMT",
       "formattedDate": "4.11.2026",
@@ -151,8 +151,8 @@
       "source": "כלכליסט"
     },
     {
-      "title": "המכירות מדשדשות - וגינדי יוצאת במבצע חריג",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "title": "המכירות מדשדשות - וגינ��י יוצאת במבצע חריג",
+      "summary": "המכירות מדשדשות - וגינדי יוצאת במבצע חריג",
       "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0zS0tWd3lTQk5wUlZsQmdSVmdfT1NYS2VsVE5vaVl4Sm0wQjZoVEFaYW85SGZJM3lvNWsybEktZFNINlBmb3Bza1hSSWZ4QTFLb3N1UV9KeDBaSXI4OEZlYnI0SjBCUjFYRVE?oc=5",
       "date": "Tue, 03 Nov 2026 04:00:00 GMT",
       "formattedDate": "3.11.2026",
@@ -162,8 +162,8 @@
       "source": "כלכליסט"
     },
     {
-      "title": "השיתוק הגיע, ומנוע הצמיחה המרכזי של הכלכלה העולמית ישלם את המחיר - כלכליסט",
-      "summary": "השיתוק הגיע, ומנוע הצמיחה המרכזי של הכלכלה העולמית ישלם את המחיר כלכליסט",
+      "title": "השיתוק הגיע, ומנוע הצמיחה המרכזי של הכלכלה העולמית ישלם את המחיר",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1waGlhb2ZqSnRrM2JVaDE5cy1wUlItWDFZdkkxMDJWeWxZOFJZQTVhN3h1T0l3cHpUTUJTbXBCdmFqN2Jsa2kya0VxX29xaWFnczBaa3ZGbmFfTkFiRDFRZTd3cGU?oc=5",
       "date": "Wed, 04 Nov 2026 07:05:00 GMT",
       "formattedDate": "4.11.2026",
@@ -184,8 +184,8 @@
       "source": "כלכליסט"
     },
     {
-      "title": "אקרו נדל\"ן נפרדת מהבורסה: שווי המיזוג עם ישראל קנדה נחתך ב-45%",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "title": "אקרו נדל\"ן נפרדת מהבורס��: שווי המיזוג עם ישראל קנדה נחתך ב-45%",
+      "summary": "אקרו נדל\"ן נפרדת מהבורסה: שווי המיזוג עם ישראל קנדה נחתך ב-45%",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5pam1wdnBhVWZUZUZpUExoWlhZLXB3ck5YVzVHenp5dWduQmtQZWFubVdXUWhiektHTjhYdHVHbUM5UnZCSW5VZkUzMW1RRDdxTDI4M3d2VklNajJNTkpDcVZZNA?oc=5",
       "date": "Mon, 02 Nov 2026 12:28:00 GMT",
       "formattedDate": "2.11.2026",
@@ -217,7 +217,7 @@
       "source": "כלכליסט"
     },
     {
-      "title": "מפיצה ומתחרה: פרופיט בו��נת כניסה לתחום הגמל וההשתלמות",
+      "title": "מפיצה ומתחרה: פרופיט בוחנת כניסה לתחום הגמל וההשתל��ות",
       "summary": "מפיצה ומתחרה: פרופיט בוחנת כניסה לתחום הגמל וההשתלמות",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1GNFlHZUxUamU2R0pQQjU1aDR0VzRHcVhkeDlGdnc3VWtUS1VOWWFHUm15d3hBN0xzZXdROGluRVJhQUdvcTRtcVZoOG1jdXBseVhkdzZtRmNKcW00SFBXaGZ3?oc=5",
       "date": "Tue, 03 Nov 2026 04:00:00 GMT",
@@ -228,11 +228,11 @@
       "source": "כלכליסט"
     },
     {
-      "title": "לקראת מאבק שליטה בבית הזיקוק באשדוד? סאמיט תוקעת מקל בגלגלי שפיר - כלכליסט",
-      "summary": "לקראת מאבק שליטה בבית הזיקוק באשדוד? סאמיט תוקעת מקל בגלגלי שפיר כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5QQ1NoOEptdk5yR2NUT1RBZExuZGZoQWF2cUpJWDVraDlVcFFoSXUyWXhldWVFVWxmdUpsZkpaS2NrcjFSREgwSnFTMS03LUU3VGdUMmhmQjZsYS0wQ0swMWJB?oc=5",
-      "date": "Tue, 03 Nov 2026 04:00:00 GMT",
-      "formattedDate": "3.11.2026",
+      "title": "ברקשייר הכפילה הרכישות החוזרות של מניותיה, הרווח התפעולי ירד ב-6%",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1vUEJxbUFqS2xucHFBYjJZMUlDNHZhQ0RERWlsVWJOdGJVNWk0M0xyMk5VdWt1d0EtU0xtSDMyZkVnajVYblktaWRBS1VCb0VOQ0pZeGVQcmtZSjVVMzdfNGY0QQ?oc=5",
+      "date": "Sat, 07 Nov 2026 14:45:00 GMT",
+      "formattedDate": "7.11.2026",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
@@ -247,17 +247,6 @@
       "category": "כלכליסט | מאקרו וריבית",
       "categoryKey": "macro",
       "badgeColor": "#b45309",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "ברקשייר הכפילה הרכישות החוזרות של מניותיה, הרווח התפעולי ירד ב-6%",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1vUEJxbUFqS2xucHFBYjJZMUlDNHZhQ0RERWlsVWJOdGJVNWk0M0xyMk5VdWt1d0EtU0xtSDMyZkVnajVYblktaWRBS1VCb0VOQ0pZeGVQcmtZSjVVMzdfNGY0QQ?oc=5",
-      "date": "Sat, 07 Nov 2026 14:45:00 GMT",
-      "formattedDate": "לפני כ-20 שעות",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
       "source": "כלכליסט"
     },
     {
@@ -276,6 +265,17 @@
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9BOG1TNWtjcnIyOEFUTE5HOFpxRnljbnZRbXlNemhqRTNnT2N3dzRRUzc1Wm0tZkpIREJoWjBqRUdqSDRNYUNoVmlaU1kxMXotdVk1RXpHa25UWUFwOE9yckw5dw?oc=5",
       "date": "Tue, 03 Nov 2026 16:43:00 GMT",
+      "formattedDate": "3.11.2026",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "לקראת מאבק שליטה בבית הזיקוק באשדוד? סאמיט תוקעת מקל בגלגלי שפיר",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5QQ1NoOEptdk5yR2NUT1RBZExuZGZoQWF2cUpJWDVraDlVcFFoSXUyWXhldWVFVWxmdUpsZkpaS2NrcjFSREgwSnFTMS03LUU3VGdUMmhmQjZsYS0wQ0swMWJB?oc=5",
+      "date": "Tue, 03 Nov 2026 04:00:00 GMT",
       "formattedDate": "3.11.2026",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
