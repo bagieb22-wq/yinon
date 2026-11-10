@@ -1017,6 +1017,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </select>
                 </div>
                 <button type="submit" class="submit-btn">שלח פנייה מהירה לצוות IBS</button>
+                <p style="font-size: 0.8rem; color: #64748b; margin-top: 0.8rem; line-height: 1.4; text-align: center;">
+                    🔒 מסירת המידע נעשית בהסכמתך ומרצונך החופשי לצורך יצירת קשר ומענה מקצועי. בלחיצה על שליחה הנך מאשר/ת את <a href="privacy.html" target="_blank" style="color: #0d3b66; text-decoration: underline; font-weight: 700;">מדיניות הפרטיות</a>.
+                </p>
             </form>
         </div>
     </section>
@@ -1056,7 +1059,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     </main>
     <footer>
-        <p>&copy; 2026 IBS - סוכנות ביטוח ופיננסים | כל הזכויות שמורות | <button onclick="openAccessibilityModal()" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-size:1rem; font-family:inherit;">הצהרת נגישות</button></p>
+        <p>
+            &copy; 2026 IBS - סוכנות ביטוח ופיננסים | כל הזכויות שמורות | 
+            <a href="privacy.html" style="color:white; text-decoration:underline;">מדיניות פרטיות ועוגיות</a> | 
+            <button onclick="if(window.openCookieSettings) window.openCookieSettings();" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-size:inherit; font-family:inherit;">הגדרות עוגיות</button> | 
+            <button onclick="openAccessibilityModal()" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-size:inherit; font-family:inherit;">הצהרת נגישות</button>
+        </p>
     </footer>
 
     <script>
@@ -1443,6 +1451,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
     </script>
+    <!-- Cookie Consent Banner Script -->
+    <script src="assets/cookie-consent.js" defer></script>
 </body>
 </html>
 
