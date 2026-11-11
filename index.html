@@ -634,17 +634,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             display: none;
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 9999;
+            background: rgba(13, 37, 66, 0.7);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 999999;
             align-items: center;
             justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            padding: 1rem;
+            box-sizing: border-box;
+            opacity: 1;
+            cursor: pointer;
         }
 
         .modal-overlay.active {
-            display: flex;
-            animation: fadeIn 0.3s forwards;
+            display: flex !important;
+            opacity: 1 !important;
+            animation: fadeIn 0.25s forwards;
+        }
+
+        .modal-content {
+            cursor: default;
         }
 
         @keyframes fadeIn {
@@ -1690,12 +1699,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         // Accessibility Modal
         function openAccessibilityModal() {
-            document.getElementById('accessibilityModal').style.display = 'flex';
-            document.getElementById('accessibilityMenu').style.display = 'none';
+            const modal = document.getElementById('accessibilityModal');
+            if (modal) {
+                modal.classList.add('active');
+                modal.style.display = 'flex';
+                modal.style.opacity = '1';
+                document.body.style.overflow = 'hidden';
+            }
+            const menu = document.getElementById('accessibilityMenu');
+            if (menu) menu.style.display = 'none';
         }
         function closeAccessibilityModal() {
-            document.getElementById('accessibilityModal').style.display = 'none';
+            const modal = document.getElementById('accessibilityModal');
+            if (modal) {
+                modal.classList.remove('active');
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
         }
+
+        // Close modals on background click & Escape key
+        document.addEventListener('click', function(e) {
+            const accModal = document.getElementById('accessibilityModal');
+            if (accModal && e.target === accModal) {
+                closeAccessibilityModal();
+            }
+            const svcModal = document.getElementById('serviceModal');
+            if (svcModal && e.target === svcModal) {
+                closeServiceModal();
+            }
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeAccessibilityModal();
+                if (typeof closeServiceModal === 'function') closeServiceModal();
+            }
+        });
 
         // Service Modal Functions
         

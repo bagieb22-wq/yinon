@@ -171,6 +171,7 @@
                 font-family: 'Heebo', system-ui, -apple-system, sans-serif;
                 animation: ibsFadeIn 0.25s ease-out forwards;
                 box-sizing: border-box;
+                cursor: pointer;
             }
             @keyframes ibsFadeIn {
                 from { opacity: 0; }
@@ -190,6 +191,7 @@
                 position: relative;
                 animation: ibsPopIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
                 box-sizing: border-box;
+                cursor: default;
             }
             @keyframes ibsPopIn {
                 from { transform: scale(0.92); opacity: 0; }
@@ -355,6 +357,22 @@
                 background: #10b981;
                 color: white;
             }
+            .ibs-btn-cancel {
+                background: #f1f5f9;
+                color: #475569;
+                border: 1px solid #cbd5e1;
+                padding: 10px 18px;
+                border-radius: 25px;
+                font-size: 0.88rem;
+                font-weight: 700;
+                cursor: pointer;
+                transition: all 0.2s;
+                font-family: inherit;
+            }
+            .ibs-btn-cancel:hover {
+                background: #e2e8f0;
+                color: #0f172a;
+            }
 
             /* Toast Notification */
             #ibs-cookie-toast {
@@ -374,6 +392,7 @@
                 align-items: center;
                 gap: 10px;
                 animation: ibsFadeIn 0.2s forwards;
+                pointer-events: none;
             }
 
             /* Responsive */
@@ -478,11 +497,11 @@
         var banner = document.getElementById('ibs-cookie-banner');
         if (banner && banner.parentNode) banner.parentNode.removeChild(banner);
 
-        if (document.getElementById('ibs-cookie-modal-overlay')) {
-            document.getElementById('ibs-cookie-modal-overlay').style.display = 'flex';
-            return;
-        }
+        var existing = document.getElementById('ibs-cookie-modal-overlay');
+        if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
+
         injectStyles();
+        try { document.body.style.overflow = 'hidden'; } catch(e) {}
 
         var prefs = getPreferences();
 
@@ -556,7 +575,10 @@
                         <button type="button" class="ibs-save-btn" id="ibs-modal-save">שמירת העדפות</button>
                         <button type="button" class="ibs-accept-all-btn" id="ibs-modal-accept-all">אישור הכל</button>
                     </div>
-                    <button type="button" class="ibs-btn-essential" id="ibs-modal-essential-only">הכרחיות בלבד</button>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <button type="button" class="ibs-btn-essential" id="ibs-modal-essential-only">הכרחיות בלבד</button>
+                        <button type="button" class="ibs-btn-cancel" id="ibs-modal-cancel">סגירה ✕</button>
+                    </div>
                 </div>
             </div>
         `;
@@ -570,6 +592,9 @@
 
         // Close X
         document.getElementById('ibs-modal-close-x').addEventListener('click', closeModal);
+
+        // Close Cancel Button in footer
+        document.getElementById('ibs-modal-cancel').addEventListener('click', closeModal);
 
         // Save Custom Preferences
         document.getElementById('ibs-modal-save').addEventListener('click', function() {
@@ -609,6 +634,7 @@
         if (overlay && overlay.parentNode) {
             overlay.parentNode.removeChild(overlay);
         }
+        try { document.body.style.overflow = ''; } catch(e) {}
     }
 
     function getPreferences() {
