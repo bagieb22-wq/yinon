@@ -1058,12 +1058,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 
     </main>
-    <footer>
+    <footer style="position: relative; z-index: 100;">
         <p>
             &copy; 2026 IBS - סוכנות ביטוח ופיננסים | כל הזכויות שמורות | 
-            <a href="privacy.html" style="color:white; text-decoration:underline;">מדיניות פרטיות ועוגיות</a> | 
-            <button onclick="if(window.openCookieSettings) window.openCookieSettings();" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-size:inherit; font-family:inherit;">הגדרות עוגיות</button> | 
-            <button onclick="openAccessibilityModal()" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-size:inherit; font-family:inherit;">הצהרת נגישות</button>
+            <a href="privacy.html" style="color:white; text-decoration:underline; cursor:pointer; padding: 4px 6px;">מדיניות פרטיות ועוגיות</a> | 
+            <button type="button" class="ibs-open-cookie-settings" onclick="if(window.openCookieSettings){window.openCookieSettings();}else{location.href='privacy.html#cookies';}" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-size:inherit; font-family:inherit; padding: 4px 6px;">הגדרות עוגיות</button> | 
+            <button type="button" onclick="openAccessibilityModal()" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-size:inherit; font-family:inherit; padding: 4px 6px;">הצהרת נגישות</button>
         </p>
     </footer>
 

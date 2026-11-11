@@ -1276,14 +1276,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 
     <!-- Footer -->
-    <footer>
+    <footer style="position: relative; z-index: 100;">
         <p><strong>IBS סוכנות לביטוח ופיננסים</strong> | מורשה מטעם רשות שוק ההון, ביטוח וחיסכון</p>
         <p>כתובתנו: בן ציון גליס 18, פתח תקווה | טלפון: 058-660-3010 | דוא"ל: inon@ibs.co.il</p>
         <p style="font-size: 0.85rem; margin-top: 10px; color: rgba(255, 255, 255, 0.7);">
             כל הזכויות שמורות &copy; 2026 IBS סוכנות לביטוח ופיננסים | 
-            <a href="privacy.html" style="color: white; text-decoration: underline;">מדיניות פרטיות ועוגיות</a> | 
-            <button onclick="if(window.openCookieSettings) window.openCookieSettings();" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-size:inherit; font-family:inherit;">הגדרות עוגיות</button> | 
-            <button onclick="openAccessibilityModal()" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-size:inherit; font-family:inherit;">הצהרת נגישות</button>
+            <a href="privacy.html" style="color: white; text-decoration: underline; cursor: pointer; padding: 4px 6px;">מדיניות פרטיות ועוגיות</a> | 
+            <button type="button" class="ibs-open-cookie-settings" onclick="if(window.openCookieSettings){window.openCookieSettings();}else{location.href='privacy.html#cookies';}" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-size:inherit; font-family:inherit; padding: 4px 6px;">הגדרות עוגיות</button> | 
+            <button type="button" onclick="openAccessibilityModal()" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-size:inherit; font-family:inherit; padding: 4px 6px;">הצהרת נגישות</button>
         </p>
         <p style="font-size: 0.8rem; margin-top: 6px; color: rgba(255, 255, 255, 0.5);">
             האמור באתר אינו מהווה ייעוץ פנסיוני או תחליף לייעוץ המותאם לצרכי הלקוח.
