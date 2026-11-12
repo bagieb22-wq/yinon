@@ -33,7 +33,7 @@
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1107839165024404&ev=PageView&noscript=1"
-    /></noscript>
+    / alt="" aria-hidden="true"></noscript>
     <!-- End Meta Pixel Code -->
 
     <meta charset="UTF-8">
@@ -87,6 +87,33 @@
             line-height: 1.7;
             direction: rtl;
             text-align: right;
+        }
+
+        /* Accessibility: Skip to Content */
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: #ffffff;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 800;
+            z-index: 10000000;
+            border-radius: 0 0 8px 8px;
+            border: 2px solid var(--secondary-color);
+            text-decoration: none;
+            transition: top 0.2s ease;
+        }
+        .skip-link:focus, .skip-link:focus-visible {
+            top: 0;
+            outline: 3px solid var(--accent-color);
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--accent-color) !important;
+            outline-offset: 3px !important;
         }
 
         /* Header Navigation */
@@ -473,6 +500,8 @@
     </style>
 </head>
 <body>
+    <!-- Skip to Content Accessibility Link -->
+    <a href="#main-content" class="skip-link">דלג לתוכן המרכזי</a>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WGJH8GW"
@@ -506,13 +535,13 @@
             <i class="fa-solid fa-shield-halved"></i>
             <span>שקיפות, ביטחון ואבטחת מידע</span>
         </div>
-        <h1>מדיניות פרטיות, עוגיות ותנאי שימוש</h1>
+        <h1>מדיניות פרטיות ומדיניות קובצי עוגיות</h1>
         <p>אנו ב-IBS סוכנות לביטוח ופיננסים רואים בשמירה על פרטיותך וביטחון המידע האישי שלך ערך עליון ומחויבים להגנתו על פי כל דין.</p>
-        <span class="update-date"><i class="fa-regular fa-clock"></i> עודכן לאחרונה: נובמבר 2026 | מותאם לחוק הגנת הפרטיות ותיקון מס' 13</span>
+        <span class="update-date"><i class="fa-regular fa-clock"></i> תאריך עדכון אחרון: 12.11.2026 | מותאם לחוק הגנת הפרטיות (תיקון מס' 13)</span>
     </section>
 
     <!-- Main Content -->
-    <main class="content-container">
+    <main class="content-container" id="main-content">
         <div class="privacy-card">
 
             <!-- Section 11 Legal Notice Box -->
@@ -533,10 +562,10 @@
                     <span>1. זהות בעל השליטה במאגר המידע</span>
                 </h2>
                 <p>
-                    האתר מופעל ומנוהל על ידי <strong>IBS סוכנות לביטוח ופיננסים</strong> (להלן: "הסוכנות"), סוכנות ביטוח עצמאית ומורשית מטעם רשות שוק ההון, ביטוח וחיסכון במשרד האוצר (סוכן מורשה: ינון בן ציון).
+                    האתר מופעל ומנוהל על ידי <strong>ינון בגיזדה - IBS סוכנות לביטוח ופיננסים</strong> (להלן: "הסוכנות"), סוכנות ביטוח עצמאית ומורשית מטעם רשות שוק ההון, ביטוח וחיסכון במשרד האוצר (סוכן ביטוח פנסיוני מורשה: ינון בגיזדה).
                 </p>
                 <p>
-                    הסוכנות מחויבת לפעול בהתאם להוראות חוק הגנת הפרטיות, התשמ"א-1981, תקנות הגנת הפרטיות (אבטחת מידע), התשע"ז-2017, ותיקון מס' 13 לחוק הגנת הפרטיות.
+                    הסוכנות מחויבת לפעול בהתאם להוראות חוק הגנת הפרטיות, התשמ"א-1981, תקנות הגנת הפרטיות (אבטחת מידע), התשע"ז-2017, ותיקון מס' 13 לחוק הגנת הפרטיות (אוגוסט 2025).
                 </p>
             </section>
 
@@ -702,8 +731,8 @@
                     <div class="dpo-item">
                         <div class="dpo-icon"><i class="fa-solid fa-user-shield"></i></div>
                         <div class="dpo-info">
-                            <h5>אחראי פרטיות ופניות</h5>
-                            <p>ינון בן ציון (IBS)</p>
+                            <h5>אחראי פרטיות ורכז נגישות</h5>
+                            <p>ינון בגיזדה (IBS)</p>
                         </div>
                     </div>
                     <div class="dpo-item">
@@ -741,15 +770,114 @@
     </main>
 
     <!-- Footer -->
-    <footer style="position: relative; z-index: 100;">
-        <p><strong>IBS סוכנות לביטוח ופיננסים</strong> | מורשה מטעם רשות שוק ההון, ביטוח וחיסכון</p>
-        <p>כתובתנו: בן ציון גליס 18, פתח תקווה | טלפון: 058-660-3010 | דוא"ל: inon@ibs.co.il</p>
-        <p style="font-size: 0.85rem; margin-top: 10px; color: rgba(255, 255, 255, 0.7);">
-            כל הזכויות שמורות &copy; 2026 IBS סוכנות לביטוח ופיננסים | 
-            <a href="privacy.html" style="color: white; text-decoration: underline; cursor: pointer; padding: 4px 6px;">מדיניות פרטיות ועוגיות</a> | 
-            <button type="button" class="ibs-open-cookie-settings" onclick="if(window.openCookieSettings){window.openCookieSettings();}else{location.href='privacy.html#cookies';}" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-size:inherit; font-family:inherit; padding: 4px 6px;">הגדרות עוגיות</button> | 
-            <a href="index.html" style="color: white; text-decoration: underline; cursor: pointer; padding: 4px 6px;">דף הבית</a>
-        </p>
+    
+    <!-- Accessibility Modal (IS 5568 / WCAG 2.1 AA Compliant) -->
+    <div class="modal-overlay" id="accessibilityModal" role="dialog" aria-modal="true" aria-labelledby="acc-title" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(13, 37, 66, 0.75); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); z-index: 999999; align-items: center; justify-content: center; padding: 1rem; box-sizing: border-box; cursor: pointer;">
+        <div class="modal-content" style="position: relative; max-width: 650px; width: 90%; max-height: 85vh; overflow-y: auto; background: #ffffff; border-radius: 16px; padding: 2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.25); text-align: right; direction: rtl; font-family: 'Heebo', system-ui, -apple-system, sans-serif; cursor: default;">
+            <button type="button" class="close-modal" aria-label="סגור הצהרת נגישות" onclick="closeAccessibilityModal()" style="position: absolute; top: 1rem; left: 1rem; background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #1e293b; cursor: pointer; transition: all 0.2s ease;">&times;</button>
+            <h2 id="acc-title" style="margin-top: 0; margin-bottom: 1rem; color: #0d3b66; font-size: 1.6rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-universal-access" style="color: #00a896;" aria-hidden="true"></i>
+                <span>הצהרת נגישות</span>
+            </h2>
+            <p style="font-size: 0.95rem; color: #334155; line-height: 1.7; margin-bottom: 1rem;">
+                אנו ב-<strong>ינון בגיזדה - IBS סוכנות לביטוח ופיננסים</strong> רואים חשיבות עליונה במתן שירות שוויוני, מכבד, נגיש ומקצועי לכלל הציבור, לרבות אנשים עם מוגבלויות, בהתאם להוראות <strong>חוק שוויון זכויות לאנשים עם מוגבלות, תשנ"ח-1998</strong> ותקנות הנגישות.
+            </p>
+
+            <h3 style="font-size: 1.15rem; color: #0d3b66; margin: 1.2rem 0 0.5rem 0; font-weight: 700;">עמידה בתקנים והתאמות נגישות באתר</h3>
+            <p style="font-size: 0.92rem; color: #334155; line-height: 1.6; margin-bottom: 0.8rem;">
+                אתר אינטרנט זה עומד בדרישות תקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע"ג-2013, בהתאם ל<strong>תקן הישראלי ת"י 5568</strong> ולהנחיות הבינלאומיות <strong>WCAG 2.1 ברמת AA</strong>.
+            </p>
+            <ul style="padding-right: 1.2rem; font-size: 0.92rem; color: #334155; line-height: 1.7; margin-bottom: 1rem;">
+                <li><strong>ניווט מקלדת מלא:</strong> תמיכה מלאה בניווט באמצעות Tab, Shift+Tab, מקשי חיצים ו-Enter.</li>
+                <li><strong>קישור דילוג לתוכן:</strong> קישור מהיר בראש הדף למעבר ישיר לתוכן המרכזי.</li>
+                <li><strong>היררכיית כותרות ותגיות סמנטיות:</strong> מבנה HTML סמנטי, תגיות ARIA והיררכיית כותרות מסודרת.</li>
+                <li><strong>טקסט חלופי:</strong> תיאור תמונות (alt text) משמעותי לקוראי מסך.</li>
+                <li><strong>ניגודיות צבעים והדגשת פוקוס:</strong> עמידה ביחסי ניגודיות מחמירים ואינדיקטור פוקוס ברור (:focus-visible).</li>
+            </ul>
+
+            <h3 style="font-size: 1.15rem; color: #0d3b66; margin: 1.2rem 0 0.5rem 0; font-weight: 700;">הסדרי נגישות פיזיים במשרד הסוכנות</h3>
+            <p style="font-size: 0.92rem; color: #334155; line-height: 1.6; margin-bottom: 0.5rem;">
+                <strong>כתובת המשרד:</strong> רחוב בן ציון גליס 18, פתח תקווה.
+            </p>
+            <ul style="padding-right: 1.2rem; font-size: 0.92rem; color: #334155; line-height: 1.7; margin-bottom: 1rem;">
+                <li><strong>חניית נכים:</strong> קיימות חניות נכים מוסדרות ומסומנות בחניון הבניין בקרבת הכניסה.</li>
+                <li><strong>דרכי גישה:</strong> כניסה רציפה, מישורית ומפולסת ללא מדרגות מהחניון ומהמדרכה.</li>
+                <li><strong>מעליות:</strong> מעליות נגישות ומרווחות עם לחצני ברייל ומערכת כריזה קולית.</li>
+                <li><strong>שירותי נכים:</strong> שירותי נכים תקניים ונגישים ממוקמים בקומה.</li>
+                <li><strong>מעברים ודלתות:</strong> פתחי דלתות ומעברים רחבים המותאמים למעבר כיסאות גלגלים.</li>
+                <li><strong>חיות שירות:</strong> כניסה מותרת ומבורכת עם חיות שירות וכלבי נחייה.</li>
+            </ul>
+
+            <h3 style="font-size: 1.15rem; color: #0d3b66; margin: 1.2rem 0 0.5rem 0; font-weight: 700;">פרטי רכז הנגישות ופניות בנושא</h3>
+            <p style="font-size: 0.92rem; color: #334155; line-height: 1.6; margin-bottom: 0.5rem;">
+                אם במהלך הגלישה באתר או בביקור במשרד נתקלתם בקושי בנגישות או שיש לכם הצעה לשיפור, נשמח לעמוד לרשותכם:
+            </p>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1rem; font-size: 0.92rem; color: #1e293b; line-height: 1.6; margin-bottom: 1rem;">
+                <div><strong>רכז הנגישות:</strong> ינון בגיזדה</div>
+                <div><strong>טלפון ישיר / וואטסאפ:</strong> <a href="tel:0586603010" style="color: #00a896; text-decoration: underline; font-weight: 600;">058-660-3010</a></div>
+                <div><strong>דוא"ל לפניות נגישות:</strong> <a href="mailto:inon@ibs.co.il" style="color: #00a896; text-decoration: underline; font-weight: 600;">inon@ibs.co.il</a></div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 0.8rem; margin-top: 1rem;">
+                <span style="font-size: 0.8rem; color: #64748b;">תאריך עדכון אחרון: 12.11.2026</span>
+                <button type="button" onclick="closeAccessibilityModal()" style="background: #0d3b66; color: white; border: none; padding: 6px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: 600;">סגור</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function openAccessibilityModal() {
+            var modal = document.getElementById('accessibilityModal');
+            if (modal) {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        function closeAccessibilityModal() {
+            var modal = document.getElementById('accessibilityModal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        }
+        document.addEventListener('click', function(e) {
+            var accModal = document.getElementById('accessibilityModal');
+            if (accModal && e.target === accModal) {
+                closeAccessibilityModal();
+            }
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeAccessibilityModal();
+            }
+        });
+    </script>
+
+<footer style="position: relative; z-index: 100; background: #0d3b66; color: #ffffff; padding: 2.5rem 1rem 1.8rem; text-align: center; font-family: 'Heebo', system-ui, -apple-system, sans-serif;">
+        <div style="max-width: 1100px; margin: 0 auto; line-height: 1.7; font-size: 0.95rem;">
+            <p style="margin: 0 0 0.5rem 0; font-weight: 700; font-size: 1.05rem;">
+                ינון בגיזדה - IBS סוכנות לביטוח ופיננסים | בעל רישיון סוכן ביטוח פנסיוני מורשה מטעם רשות שוק ההון, ביטוח וחיסכון
+            </p>
+            <p style="margin: 0 0 0.8rem 0; color: rgba(255, 255, 255, 0.85); font-size: 0.9rem;">
+                כתובתנו: רחוב בן ציון גליס 18, פתח תקווה | טלפון: <a href="tel:0586603010" style="color: #ffffff; text-decoration: underline;">058-660-3010</a> | דוא"ל: <a href="mailto:inon@ibs.co.il" style="color: #ffffff; text-decoration: underline;">inon@ibs.co.il</a>
+            </p>
+            <p style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.7); max-width: 900px; margin: 0 auto 1.2rem auto; line-height: 1.5; border-top: 1px solid rgba(255, 255, 255, 0.15); border-bottom: 1px solid rgba(255, 255, 255, 0.15); padding: 0.7rem 0;">
+                <strong>הבהרה משפטית ודיסקליימר רגולטורי:</strong> המידע, התכנים, הכתבות והמחשבונים המופיעים באתר מוצגים כמידע כללי ואינפורמטיבי בלבד, ואינם מהווים ייעוץ פנסיוני, שיווק פנסיוני, ייעוץ השקעות או תחליף לייעוץ/שיווק אישי המותאם לצורכי הלקוח בהתאם להוראות הדין.
+            </p>
+            <div style="font-size: 0.88rem; color: rgba(255, 255, 255, 0.9); display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 14px; align-items: center;">
+                <span>&copy; 2026 IBS סוכנות לביטוח ופיננסים. כל הזכויות שמורות.</span>
+                <span aria-hidden="true" style="opacity: 0.5;">|</span>
+                <a href="privacy.html" style="color: #ffffff; text-decoration: underline; padding: 4px 6px;">מדיניות פרטיות</a>
+                <span aria-hidden="true" style="opacity: 0.5;">|</span>
+                <a href="terms.html" style="color: #ffffff; text-decoration: underline; padding: 4px 6px;">תנאי שימוש</a>
+                <span aria-hidden="true" style="opacity: 0.5;">|</span>
+                <button type="button" class="ibs-open-cookie-settings" onclick="if(window.openCookieSettings){window.openCookieSettings();}else{location.href='privacy.html#cookies';}" style="background: none; border: none; color: #ffffff; text-decoration: underline; cursor: pointer; font-size: inherit; font-family: inherit; padding: 4px 6px;">הגדרות עוגיות</button>
+                <span aria-hidden="true" style="opacity: 0.5;">|</span>
+                <button type="button" onclick="openAccessibilityModal()" style="background: none; border: none; color: #ffffff; text-decoration: underline; cursor: pointer; font-size: inherit; font-family: inherit; padding: 4px 6px;">הצהרת נגישות</button>
+                <span aria-hidden="true" style="opacity: 0.5;">|</span>
+                <a href="index.html" style="color: #ffffff; text-decoration: underline; padding: 4px 6px;">דף הבית</a>
+            </div>
+        </div>
     </footer>
 
     <!-- Cookie Consent Banner Script -->

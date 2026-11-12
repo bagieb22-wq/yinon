@@ -65,7 +65,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1107839165024404&ev=PageView&noscript=1"
-    /></noscript>
+    / alt="" aria-hidden="true"></noscript>
     <!-- End Meta Pixel Code -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -728,8 +728,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
     </style>
+
+        /* Accessibility Skip Link & Focus States */
+        .skip-link {
+            position: absolute;
+            top: -9999px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #00a896;
+            color: #ffffff !important;
+            padding: 12px 24px;
+            border-radius: 0 0 8px 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            z-index: 99999999;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: top 0.2s ease-in-out;
+        }
+        .skip-link:focus {
+            top: 0;
+            outline: 3px solid #ffd166;
+            outline-offset: 2px;
+        }
+        *:focus-visible {
+            outline: 3px solid #00a896 !important;
+            outline-offset: 3px !important;
+        }
+
 </head>
 <body>
+    <a href="#main-content" class="skip-link">דלג לתוכן המרכזי</a>
     
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WGJH8GW"
@@ -791,7 +820,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Travel Insurance Form Section -->
     <section class="booking-section" id="travel" style="background-color: var(--bg-light);">
-        <h2 class="section-title">טסים לחו"ל? בטחו את עצמכם בקליק!</h2>
+        <h1 class="section-title">טסים לחו"ל? בטחו את עצמכם בקליק!</h1>
         
         <!-- Online Purchase Section -->
         <div class="booking-container" style="margin-bottom: 2rem; border: 2px solid var(--accent-color); padding: 2rem; border-radius: 12px; background-color: #fff; text-align: center; box-shadow: 0 4px 15px rgba(0,168,150,0.15);">
@@ -863,7 +892,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <input type="tel" id="travel-phone" required>
                 </div>
 
-                <button type="submit" class="submit-btn" style="margin-top: 20px;">שלח פנייה מהירה לצוות IBS</button>
+                
+                <div class="form-checkboxes" style="margin: 1.2rem 0; text-align: right; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1rem;">
+                    <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.8rem;">
+                        <input type="checkbox" id="travel-consent" required style="margin-top: 4px; width: 18px; height: 18px; accent-color: #00a896; cursor: pointer; flex-shrink: 0;">
+                        <label for="travel-consent" style="font-size: 0.88rem; color: #1e293b; line-height: 1.5; cursor: pointer;">
+                            <strong style="color: #dc2626;">* חובה:</strong> קראתי ואני מאשר/ת את <a href="terms.html" target="_blank" style="color: #0d3b66; text-decoration: underline; font-weight: 700;">תנאי השימוש</a> ו<a href="privacy.html" target="_blank" style="color: #0d3b66; text-decoration: underline; font-weight: 700;">מדיניות הפרטיות</a>, ומסכים/ה למסירת פרטיי לצורך בדיקה ויצירת קשר.
+                        </label>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 10px;">
+                        <input type="checkbox" id="travel-marketing" style="margin-top: 4px; width: 18px; height: 18px; accent-color: #00a896; cursor: pointer; flex-shrink: 0;">
+                        <label for="travel-marketing" style="font-size: 0.88rem; color: #475569; line-height: 1.5; cursor: pointer;">
+                            (רשות) אני מאשר/ת קבלת עדכונים, הצעות שיווקיות ומידע פיננסי באמצעות WhatsApp, SMS או דוא"ל.
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn" style="margin-top: 10px;">שלח פנייה מהירה לצוות IBS</button>
                 <p style="font-size: 0.8rem; color: #64748b; margin-top: 0.8rem; line-height: 1.4; text-align: center;">
                     🔒 מסירת המידע נעשית בהסכמתך ומרצונך החופשי לצורך הפקת הצעת מחיר מותאמת אישית לביטוח נסיעות. בלחיצה על שליחה הנך מאשר/ת את <a href="privacy.html" target="_blank" style="color: #0d3b66; text-decoration: underline; font-weight: 700;">מדיניות הפרטיות</a>.
                 </p>
@@ -885,33 +929,84 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 
     <!-- Accessibility Modal -->
-    <div class="modal-overlay" id="accessibilityModal">
-        <div class="modal-content" role="document" aria-labelledby="acc-title">
-            <button class="close-modal" aria-label="סגור הצהרת נגישות" onclick="closeAccessibilityModal()"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
-            <h2 id="acc-title" style="margin-bottom: 1rem; color: var(--primary-color);">הצהרת נגישות</h2>
-            <p>אנו ב-IBS סוכנות ביטוח ופיננסים רואים חשיבות רבה במתן שירות שוויוני לכלל הלקוחות והגולשים, ועל כן השקענו מאמצים ומשאבים בהנגשת אתר האינטרנט שלנו. האתר הונגש ברמת AA לפי תקן WCAG 2.0.</p>
-            <h3 style="margin: 1rem 0 0.5rem 0;">התאמות שבוצעו באתר:</h3>
-            <ul style="margin-right: 1.5rem; margin-bottom: 1rem;">
-                <li>התאמה מלאה לניווט באמצעות מקלדת.</li>
-                <li>שימוש בתגיות ARIA לקוראי מסך.</li>
-                <li>תפריט נגישות מתקדם הכולל שינויי ניגודיות, הגדלת טקסט והדגשת קישורים.</li>
+    <!-- Accessibility Modal (IS 5568 / WCAG 2.1 AA Compliant) -->
+    <div class="modal-overlay" id="accessibilityModal" role="dialog" aria-modal="true" aria-labelledby="acc-title" style="display: none;">
+        <div class="modal-content" style="position: relative; max-width: 650px; width: 90%; max-height: 85vh; overflow-y: auto; background: #ffffff; border-radius: 16px; padding: 2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.25); text-align: right; direction: rtl; font-family: 'Heebo', system-ui, -apple-system, sans-serif; cursor: default;">
+            <button type="button" class="close-modal" aria-label="סגור הצהרת נגישות" onclick="closeAccessibilityModal()" style="position: absolute; top: 1rem; left: 1rem; background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #1e293b; cursor: pointer; transition: all 0.2s ease;">&times;</button>
+            <h2 id="acc-title" style="margin-top: 0; margin-bottom: 1rem; color: #0d3b66; font-size: 1.6rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-universal-access" style="color: #00a896;" aria-hidden="true"></i>
+                <span>הצהרת נגישות</span>
+            </h2>
+            <p style="font-size: 0.95rem; color: #334155; line-height: 1.7; margin-bottom: 1rem;">
+                אנו ב-<strong>ינון בגיזדה - IBS סוכנות לביטוח ופיננסים</strong> רואים חשיבות עליונה במתן שירות שוויוני, מכבד, נגיש ומקצועי לכלל הציבור, לרבות אנשים עם מוגבלויות, בהתאם להוראות <strong>חוק שוויון זכויות לאנשים עם מוגבלות, תשנ"ח-1998</strong> ותקנות הנגישות.
+            </p>
+
+            <h3 style="font-size: 1.15rem; color: #0d3b66; margin: 1.2rem 0 0.5rem 0; font-weight: 700;">עמידה בתקנים והתאמות נגישות באתר</h3>
+            <p style="font-size: 0.92rem; color: #334155; line-height: 1.6; margin-bottom: 0.8rem;">
+                אתר אינטרנט זה עומד בדרישות תקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע"ג-2013, בהתאם ל<strong>תקן הישראלי ת"י 5568</strong> ולהנחיות הבינלאומיות <strong>WCAG 2.1 ברמת AA</strong>.
+            </p>
+            <ul style="padding-right: 1.2rem; font-size: 0.92rem; color: #334155; line-height: 1.7; margin-bottom: 1rem;">
+                <li><strong>ניווט מקלדת מלא:</strong> תמיכה מלאה בניווט באמצעות Tab, Shift+Tab, מקשי חיצים ו-Enter.</li>
+                <li><strong>קישור דילוג לתוכן:</strong> קישור מהיר בראש הדף למעבר ישיר לתוכן המרכזי.</li>
+                <li><strong>היררכיית כותרות ותגיות סמנטיות:</strong> מבנה HTML סמנטי, תגיות ARIA והיררכיית כותרות מסודרת.</li>
+                <li><strong>טקסט חלופי:</strong> תיאור תמונות (alt text) משמעותי לקוראי מסך.</li>
+                <li><strong>ניגודיות צבעים והדגשת פוקוס:</strong> עמידה ביחסי ניגודיות מחמירים ואינדיקטור פוקוס ברור (:focus-visible).</li>
             </ul>
-            <h3 style="margin: 1rem 0 0.5rem 0;">פרטי רכז הנגישות:</h3>
-            <p>אם נתקלתם בבעיית נגישות באתר, נשמח לעמוד לרשותכם:</p>
-            <p><strong>צוות הסוכנות:</strong> IBS סוכנות ביטוח ופיננסים<br>
-            <strong>טלפון:</strong> 058-6603010<br>
-            <strong>אימייל:</strong> inon@ibs.co.il</p>
+
+            <h3 style="font-size: 1.15rem; color: #0d3b66; margin: 1.2rem 0 0.5rem 0; font-weight: 700;">הסדרי נגישות פיזיים במשרד הסוכנות</h3>
+            <p style="font-size: 0.92rem; color: #334155; line-height: 1.6; margin-bottom: 0.5rem;">
+                <strong>כתובת המשרד:</strong> רחוב בן ציון גליס 18, פתח תקווה.
+            </p>
+            <ul style="padding-right: 1.2rem; font-size: 0.92rem; color: #334155; line-height: 1.7; margin-bottom: 1rem;">
+                <li><strong>חניית נכים:</strong> קיימות חניות נכים מוסדרות ומסומנות בחניון הבניין בקרבת הכניסה.</li>
+                <li><strong>דרכי גישה:</strong> כניסה רציפה, מישורית ומפולסת ללא מדרגות מהחניון ומהמדרכה.</li>
+                <li><strong>מעליות:</strong> מעליות נגישות ומרווחות עם לחצני ברייל ומערכת כריזה קולית.</li>
+                <li><strong>שירותי נכים:</strong> שירותי נכים תקניים ונגישים ממוקמים בקומה.</li>
+                <li><strong>מעברים ודלתות:</strong> פתחי דלתות ומעברים רחבים המותאמים למעבר כיסאות גלגלים.</li>
+                <li><strong>חיות שירות:</strong> כניסה מותרת ומבורכת עם חיות שירות וכלבי נחייה.</li>
+            </ul>
+
+            <h3 style="font-size: 1.15rem; color: #0d3b66; margin: 1.2rem 0 0.5rem 0; font-weight: 700;">פרטי רכז הנגישות ופניות בנושא</h3>
+            <p style="font-size: 0.92rem; color: #334155; line-height: 1.6; margin-bottom: 0.5rem;">
+                אם במהלך הגלישה באתר או בביקור במשרד נתקלתם בקושי בנגישות או שיש לכם הצעה לשיפור, נשמח לעמוד לרשותכם:
+            </p>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1rem; font-size: 0.92rem; color: #1e293b; line-height: 1.6; margin-bottom: 1rem;">
+                <div><strong>רכז הנגישות:</strong> ינון בגיזדה</div>
+                <div><strong>טלפון ישיר / וואטסאפ:</strong> <a href="tel:0586603010" style="color: #00a896; text-decoration: underline; font-weight: 600;">058-660-3010</a></div>
+                <div><strong>דוא"ל לפניות נגישות:</strong> <a href="mailto:inon@ibs.co.il" style="color: #00a896; text-decoration: underline; font-weight: 600;">inon@ibs.co.il</a></div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 0.8rem; margin-top: 1rem;">
+                <span style="font-size: 0.8rem; color: #64748b;">תאריך עדכון אחרון: 12.11.2026</span>
+                <button type="button" onclick="closeAccessibilityModal()" style="background: #0d3b66; color: white; border: none; padding: 6px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: 600;">סגור</button>
+            </div>
         </div>
     </div>
 
     </main>
-    <footer style="position: relative; z-index: 100;">
-        <p>
-            &copy; 2026 IBS - סוכנות ביטוח ופיננסים | כל הזכויות שמורות | 
-            <a href="privacy.html" style="color:white; text-decoration:underline; cursor:pointer; padding: 4px 6px;">מדיניות פרטיות ועוגיות</a> | 
-            <button type="button" class="ibs-open-cookie-settings" onclick="if(window.openCookieSettings){window.openCookieSettings();}else{location.href='privacy.html#cookies';}" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-size:inherit; font-family:inherit; padding: 4px 6px;">הגדרות עוגיות</button> | 
-            <button type="button" onclick="openAccessibilityModal()" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-size:inherit; font-family:inherit; padding: 4px 6px;">הצהרת נגישות</button>
-        </p>
+    <footer style="position: relative; z-index: 100; background: #0d3b66; color: #ffffff; padding: 2.5rem 1rem 1.8rem; text-align: center; font-family: 'Heebo', system-ui, -apple-system, sans-serif;">
+        <div style="max-width: 1100px; margin: 0 auto; line-height: 1.7; font-size: 0.95rem;">
+            <p style="margin: 0 0 0.5rem 0; font-weight: 700; font-size: 1.05rem;">
+                ינון בגיזדה - IBS סוכנות לביטוח ופיננסים | בעל רישיון סוכן ביטוח פנסיוני מורשה מטעם רשות שוק ההון, ביטוח וחיסכון
+            </p>
+            <p style="margin: 0 0 0.8rem 0; color: rgba(255, 255, 255, 0.85); font-size: 0.9rem;">
+                כתובתנו: רחוב בן ציון גליס 18, פתח תקווה | טלפון: <a href="tel:0586603010" style="color: #ffffff; text-decoration: underline;">058-660-3010</a> | דוא"ל: <a href="mailto:inon@ibs.co.il" style="color: #ffffff; text-decoration: underline;">inon@ibs.co.il</a>
+            </p>
+            <p style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.7); max-width: 900px; margin: 0 auto 1.2rem auto; line-height: 1.5; border-top: 1px solid rgba(255, 255, 255, 0.15); border-bottom: 1px solid rgba(255, 255, 255, 0.15); padding: 0.7rem 0;">
+                <strong>הבהרה משפטית ודיסקליימר רגולטורי:</strong> המידע, התכנים, הכתבות והמחשבונים המופיעים באתר מוצגים כמידע כללי ואינפורמטיבי בלבד, ואינם מהווים ייעוץ פנסיוני, שיווק פנסיוני, ייעוץ השקעות או תחליף לייעוץ/שיווק אישי המותאם לצורכי הלקוח בהתאם להוראות הדין.
+            </p>
+            <div style="font-size: 0.88rem; color: rgba(255, 255, 255, 0.9); display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 14px; align-items: center;">
+                <span>&copy; 2026 IBS סוכנות לביטוח ופיננסים. כל הזכויות שמורות.</span>
+                <span aria-hidden="true" style="opacity: 0.5;">|</span>
+                <a href="privacy.html" style="color: #ffffff; text-decoration: underline; padding: 4px 6px;">מדיניות פרטיות</a>
+                <span aria-hidden="true" style="opacity: 0.5;">|</span>
+                <a href="terms.html" style="color: #ffffff; text-decoration: underline; padding: 4px 6px;">תנאי שימוש</a>
+                <span aria-hidden="true" style="opacity: 0.5;">|</span>
+                <button type="button" class="ibs-open-cookie-settings" onclick="if(window.openCookieSettings){window.openCookieSettings();}else{location.href='privacy.html#cookies';}" style="background: none; border: none; color: #ffffff; text-decoration: underline; cursor: pointer; font-size: inherit; font-family: inherit; padding: 4px 6px;">הגדרות עוגיות</button>
+                <span aria-hidden="true" style="opacity: 0.5;">|</span>
+                <button type="button" onclick="openAccessibilityModal()" style="background: none; border: none; color: #ffffff; text-decoration: underline; cursor: pointer; font-size: inherit; font-family: inherit; padding: 4px 6px;">הצהרת נגישות</button>
+            </div>
+        </div>
     </footer>
 
     <script>
@@ -1044,6 +1139,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         function sendTravelToWhatsapp(e) {
             e.preventDefault();
             if (!validateFields('travel-name', 'travel-phone')) return;
+
+            const consentEl = document.getElementById('travel-consent');
+            if (consentEl && !consentEl.checked) {
+                alert('יש לאשר את תנאי השימוש ומדיניות הפרטיות כדי לשלוח את הטופס.');
+                consentEl.focus();
+                return;
+            }
             
             const name = document.getElementById('travel-name').value;
             const phone = document.getElementById('travel-phone').value;
@@ -1054,6 +1156,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             const idNum = document.getElementById('travel-id').value;
             const dob = document.getElementById('travel-dob').value;
             const issue = document.getElementById('travel-issue').value;
+            const marketingConsent = document.getElementById('travel-marketing') && document.getElementById('travel-marketing').checked ? 'מאושר' : 'לא מאושר';
 
             const text = `היי צוות IBS, אשמח לקבל הצעת מחיר לביטוח נסיעות לחו"ל:%0A` +
                          `*שם:* ${encodeURIComponent(name)}%0A` +
@@ -1063,10 +1166,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                          `*טלפון:* ${encodeURIComponent(phone)}%0A` +
                          `*יעד:* ${encodeURIComponent(dest)}%0A` +
                          `*נוסעים:* ${encodeURIComponent(passengers)}%0A` +
-                         `*תאריכים:* ${encodeURIComponent(start)} עד ${encodeURIComponent(end)}`;
+                         `*תאריכים:* ${encodeURIComponent(start)} עד ${encodeURIComponent(end)}%0A` +
+                         `*אישור דיוור שיווקי:* ${encodeURIComponent(marketingConsent)}%0A` +
+                         `*הסכמה למדיניות ותנאים:* מאושר`;
 
-            // Open WhatsApp in a new tab/app
             window.open(`https://wa.me/972586603010?text=${text}`, '_blank');
+        }`, '_blank');
         }
 
         // Accessibility Menu
