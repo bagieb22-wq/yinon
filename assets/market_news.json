@@ -1,23 +1,23 @@
 {
   "source": "כלכליסט - שוק ההון (Calcalist Market)",
   "source_url": "https://www.calcalist.co.il/market",
-  "last_updated": "2026-11-13T21:53:04.790Z",
-  "formatted_updated": "יום שישי, 13 בנובמבר 2026 בשעה 21:53",
+  "last_updated": "2026-11-15T11:51:51.046Z",
+  "formatted_updated": "יום ראשון, 15 בנובמבר 2026 בשעה 11:51",
   "breaking_news": [
-    "קרן גידור, דאטה סנ��ר ופורמולה 1: המיליארדר הסודי פיטר דה פוטרון נחשף",
-    "האתגר הבא של מניות הבנקים: להצדיק את השווי הגבוה שלהן",
+    "וולדמורט של הסיטי",
+    "סייברסטארטס השלימה גיוס של 360 מיליון דולר לשתי קרנות חדשות",
     "המשקיעים הזרים זיהו כבר באוקטובר סימנים למפולת במניות הטק?",
-    "אחרי שצירפה את נועה ארגמני: קרן Vine Ventures גייסה 236 מיליון דולר ל-AI וביטחון",
+    "קרן סייברסטארטס תשקיע 300 מיליון דולר ביוניקורן סיארה",
+    "הירידות בבורסות הגיעו לחסכונות: כל קרנות ההשתלמות הפסידו באוקטובר - חוץ מאחת",
     "מה פרשת אנבידיה תעשה לשווקים ולכלכלה",
+    "אחרי שצירפה את נועה ארגמני: קרן Vine Ventures גייסה 236 מיליון דולר ל-AI וביטחון",
     "בדרך לבורסה: דוד אזולאי במגעים לרכישת שלד בורסאי לפי שווי של 150 מיליון שקל",
-    "מדד המחירים בארה\"ב עלה באוקטובר ב-0.4%, יותר ��התחזיות",
-    "טראמפ מוותר על הסכם איראן - הדולר קופץ ל-3.20 שקלים",
-    "חלל תקשורת בדרך לבעל שליטה חדש: חברת אומגה של לירון קרסין",
-    "חיתוך נוסף בשווי: ברזאני גייסה מיליארד שקל, אבל השווי ירד ל-2.25 מיליארד"
+    "\"קל מאי פעם לפתח משחק, אבל קשה הרבה יותר לגרום לאנשים לשחק בו\"",
+    "טראמפ מוותר על הסכם איראן - הדולר קופץ ל-3.20 שקלים"
   ],
   "lead_story": {
-    "title": "קרן גידור, דאטה סנ��ר ופורמולה 1: המיליארדר הסודי פיטר דה פוטרון נחשף",
-    "summary": "קרן גידור, דאטה סנטר ופורמולה 1: המיליארדר הסודי פיטר דה פוטרון נחשף",
+    "title": "וולדמורט של הסיטי",
+    "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
     "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9PdHB1S1cxck5UQW1uNEFYZFdKNlF4dFNqUTVRVy1laVRvVUloa1EzbnlxNnFhcURhakp4YlNGMVh4ZXg3NEFVVE5VamtDaUFjcDhHemp0WkFfMUExLUkxZ1lQZzQ?oc=5",
     "date": "Thu, 12 Nov 2026 07:00:00 GMT",
     "formattedDate": "12.11.2026",
@@ -28,11 +28,11 @@
   },
   "side_stories": [
     {
-      "title": "האתגר הבא של מניות הבנקים: להצדיק את השווי הגבוה שלהן",
+      "title": "סייברסטארטס השלימה גיוס של 360 מיליון דולר לשתי קרנות חדשות",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5FbllHQkJNRm9PVHg5ejdwRG9kQS1hSktWT19INzZ1aThyYk8tNXZGa2p0YWNzTkJNN3Mzdnc1YzFOV2o3b2JzV1lncGhKODBKQWhwU2tjdHgzUE92UDRyMkRLQQ?oc=5",
-      "date": "Thu, 12 Nov 2026 04:00:00 GMT",
-      "formattedDate": "12.11.2026",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBzXzJmRDRqbWVBZzRGOWxZWmZKQ3FuRjlGSTRUWUdST0twTnRyZjVWbUgxSHYxaVQ1bWhsaktVdzVQQ2EyY0NDSW03VkVDS1VLVkhjZVlwWUUzVmVDTmZOckFKUW1tZmd2UU5n?oc=5",
+      "date": "Sun, 15 Nov 2026 04:00:00 GMT",
+      "formattedDate": "לפני כ-7 שעות",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
@@ -52,14 +52,25 @@
   ],
   "articles": [
     {
-      "title": "אחרי שצירפה את נועה ארגמני: קרן Vine Ventures גייסה 236 מיליון דולר ל-AI וביטחון",
+      "title": "קרן סייברסטארטס תשקיע 300 מיליון דולר ביוניקורן סיארה",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1Mai1UMWdYUVd4MmdydkhLVXplLUhYYmhGeGFZWHdpdjVFbHdxSnpxM3V0VERndUo5dUdyaERtRkxuVXFCYXRHQ2ZSVmVTQ1VSR1I4TE9UcDVGZkUzYlJSLXBRQ2NHVVNJRF9N?oc=5",
-      "date": "Wed, 11 Nov 2026 13:00:00 GMT",
-      "formattedDate": "11.11.2026",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBFUUVfQWxaa1RJRXRWdnB0SzVPTlE5RG5aYnBWV1QtNUtMdDJlQ2cyYldlX0gwZHU4UENsZXB6M0hrVnBfN1ZMTnBPNzJSSXU0bkhkOGVOcXo1QXVlWlg4Vmh6OEtDNndwZ2dJ?oc=5",
+      "date": "Mon, 09 Nov 2026 04:00:00 GMT",
+      "formattedDate": "9.11.2026",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "הירידות בבורסות הגיעו לחסכונות: כל קרנות ההשתלמות הפסידו באוקטובר - חוץ מאחת",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1rR0NsaVlVdmd0ZFFMNGFWcHBTY3JhN1hjOXI0NTZkWDBqR3lzdk9WcVIzUXN0YkIxcjVDZi1kYlRaY096U1dyUm51ZTBONFRpNl9IWTJfV3ExT0t4Y0ZBSkpTQQ?oc=5",
+      "date": "Sun, 15 Nov 2026 11:11:00 GMT",
+      "formattedDate": "לפני 40 דקות",
+      "category": "כלכליסט | פנסיה וחיסכון",
+      "categoryKey": "pension",
+      "badgeColor": "#059669",
       "source": "כלכליסט"
     },
     {
@@ -74,6 +85,17 @@
       "source": "כלכליסט"
     },
     {
+      "title": "אחרי שצירפה את נועה ארגמני: קרן Vine Ventures גייסה 236 מיליון דולר ל-AI וביטחון",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1Mai1UMWdYUVd4MmdydkhLVXplLUhYYmhGeGFZWHdpdjVFbHdxSnpxM3V0VERndUo5dUdyaERtRkxuVXFCYXRHQ2ZSVmVTQ1VSR1I4TE9UcDVGZkUzYlJSLXBRQ2NHVVNJRF9N?oc=5",
+      "date": "Wed, 11 Nov 2026 13:00:00 GMT",
+      "formattedDate": "11.11.2026",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
       "title": "בדרך לבורסה: דוד אזולאי במגעים לרכישת שלד בורסאי לפי שווי של 150 מיליון שקל",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9ROERCTmtIaU5mazNoN1d3X1U0WjcxQVlHS2xNSXBESFRXeHNQS1hsZXJ0RTE0Ymk2ZjBpUHY2SUVVWUhzbkx4NWV6MUx3NWZFcDRWN2tWTkZHbkxEMXBvakNvQ2VFTmlLeVE?oc=5",
@@ -85,14 +107,14 @@
       "source": "כלכליסט"
     },
     {
-      "title": "מדד המחירים בארה\"ב עלה באוקטובר ב-0.4%, יותר ��התחזיות",
-      "summary": "מדד המחירים בארה\"ב עלה באוקטובר ב-0.4%, יותר מהתחזיות",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1PWHpRVVZwTXh5OFIyTVBNQUw3aVZ0VmFXVmR5UGJqR0pXQ01fMzJkMks3M0JmMlVMd1JZYkZhOTNIWUFWYkFHak9MOVJKS0JSejlNelhCU1ZzZDQxUGQtbEJRVQ?oc=5",
-      "date": "Tue, 10 Nov 2026 13:40:00 GMT",
-      "formattedDate": "10.11.2026",
-      "category": "כלכליסט | וול סטריט ומדדים",
+      "title": "\"קל מאי פעם לפתח משחק, אבל קשה הרבה יותר לגרום לאנשים לשחק בו\"",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFAxTm5pbjktZF9GNFlXaTVid0o5NHR4Z1paSHVQZlExaTdCTFhCbnRWNXE3RXRyT2ctR0ZiRFpLbHl3dlBFUnhkaF9tSmgzWXd5UUdGS2xCbGs0T05CY3hiTkM2OXRwSWppYWc?oc=5",
+      "date": "Wed, 11 Nov 2026 09:05:00 GMT",
+      "formattedDate": "11.11.2026",
+      "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
-      "badgeColor": "#0284c7",
+      "badgeColor": "#dc2626",
       "source": "כלכליסט"
     },
     {
@@ -107,11 +129,33 @@
       "source": "כלכליסט"
     },
     {
-      "title": "חלל תקשורת בדרך לבעל שליטה חדש: חברת אומגה של לירון קרסין",
+      "title": "מדד המחירים בארה\"ב עלה באוקטובר ב-0.4%, יותר מהתחזיות",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1fa0lQM3dDeVVtSTEwamN4NTl6S0thLW1tMU5RVmRsV3pjM0k1TzJzR3VpUVViS3kwMkZuYkZhTHRrM2pzek9DLTdBRnMyWG1rcWRvQXF6aGJ0QWRKZEtNODc3aU4?oc=5",
-      "date": "Thu, 12 Nov 2026 17:08:00 GMT",
-      "formattedDate": "12.11.2026",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1PWHpRVVZwTXh5OFIyTVBNQUw3aVZ0VmFXVmR5UGJqR0pXQ01fMzJkMks3M0JmMlVMd1JZYkZhOTNIWUFWYkFHak9MOVJKS0JSejlNelhCU1ZzZDQxUGQtbEJRVQ?oc=5",
+      "date": "Tue, 10 Nov 2026 13:40:00 GMT",
+      "formattedDate": "10.11.2026",
+      "category": "כלכליסט | וול סטריט ומדדים",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#0284c7",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "שלושה רומנים? יש מי שמוכנים לסלוח לג'נסן הואנג",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9fOUtjelVJZWdVRmRNS2EyNVo5QzJ0cmkwZFBxRjM1MzUzaUUxTWR3Sks3NWNaVEM1dVFheUpPREFRdUpHUGl1SHNHXzJVNWMyQldaV3hzUnVUSDdCMkhVTUNUcXlubnQyX284?oc=5",
+      "date": "Sat, 14 Nov 2026 19:04:00 GMT",
+      "formattedDate": "לפני כ-16 שעות",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "ההצעה החדשה לרכישת ארקיע: פחות מניות לעובדים ובלי טיסות בשבת",
+      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE41TV9Kc2RTODhsS1lwWVgtcXBUc0VkWXNaUkhlbVJmM3RuWkxjRjhKbVVqUHNONU11ZkRwSXVBU2hmOWh1SElWRW9hdjlRaG5ieHNUaE1tbDdrYnhrRHV3b0s3ZjVLaHll?oc=5",
+      "date": "Sun, 15 Nov 2026 10:31:00 GMT",
+      "formattedDate": "לפני כ-1 שעות",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
@@ -151,11 +195,11 @@
       "source": "כלכליסט"
     },
     {
-      "title": "הדולר צונח בעולם ובישראל - נסחר ב-3.16 שקלים",
+      "title": "אייזנברג מגדיל אחיזה, הציבור נדחק החוצה: יעז בדרך למחיקה מהבורסה?",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5XQkpRQ1hlOHg0UVMwTUhmbVpXclU2cklaMkhQeG5aM2x5bDFsOWhObG1sV01LNnBkVHBwSmJtTHFScEpIUjAwaVpLbGlRZjRhLW9QdERNTnMzalZsQXExc2tB?oc=5",
-      "date": "Mon, 09 Nov 2026 14:53:00 GMT",
-      "formattedDate": "9.11.2026",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8zQWdiWDFSakpfVTBEMjZzTHExSi1IczhtUjFpZEZVZG5jeHM5QUdaOFp3VW04V0VYR3RXWDVER0dYVERUSC16NTVRMW1oNXVmNERnM3hKZ0prTTlSVWxTNThiZw?oc=5",
+      "date": "Sun, 15 Nov 2026 04:07:00 GMT",
+      "formattedDate": "לפני כ-7 שעות",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
@@ -173,22 +217,11 @@
       "source": "כלכליסט"
     },
     {
-      "title": "יממה לפני המפולת: עשירי ישראל הוזהרו מפני משבר בטק",
+      "title": "הדולר צונח בעולם ובישראל - נסחר ב-3.16 שקלים",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE4tSk1UZ2FiVGNHaW96Y25rQlE1NXNNTTRhQnhUMlRBVGV2WFJLX2VYeUU3MmVaM1dvU3Z0MndhUFlNdjZ3YTRVNHpqQnRYU3lWM09rNWFzNGlpc0VSRmtzbFhkSQ?oc=5",
-      "date": "Sun, 08 Nov 2026 04:00:00 GMT",
-      "formattedDate": "8.11.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "הפוליטיקה טלטלה את מניות הטכנולוגיה, אבל הסכנה נמצאת במקום אחר",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9rRm5Pb3UxYlE3UUJMckJ6elZLU255RENXTnJWODJFeHQ4WktWRExMaDNldUp5alY4Z2ZEWjRRaGVvc21hOThZNElHdHhRdlN6d1lnODNZUFdWNld3Y0dVT05rcw?oc=5",
-      "date": "Sat, 07 Nov 2026 20:04:00 GMT",
-      "formattedDate": "7.11.2026",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5XQkpRQ1hlOHg0UVMwTUhmbVpXclU2cklaMkhQeG5aM2x5bDFsOWhObG1sV01LNnBkVHBwSmJtTHFScEpIUjAwaVpLbGlRZjRhLW9QdERNTnMzalZsQXExc2tB?oc=5",
+      "date": "Mon, 09 Nov 2026 14:53:00 GMT",
+      "formattedDate": "9.11.2026",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
@@ -206,8 +239,8 @@
       "source": "כלכליסט"
     },
     {
-      "title": "הדרמה מסתעפת: תביעה ייצוגית ראשונה נגד אנבידיה והואנג",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
+      "title": "הדרמה מסתעפת: תביעה ייצוגית ראשונה נגד אנבידיה ��הואנג",
+      "summary": "הדרמה מסתעפת: תביעה ייצוגית ראשונה נגד אנבידיה והואנג",
       "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1xMWs3SEktdnU0YXI4eDJCWUdxa2pyQmtWMmR4eEJqbjVwLXZuSFkyUzhNckdmQ3VOTDdQNnN6anJqSWpJeUtWeWJUaTI0a3A0WGRyVHRRcHhZLUZZNEZPZ1VvQ3VKZFJ6aW1B?oc=5",
       "date": "Wed, 11 Nov 2026 19:51:00 GMT",
       "formattedDate": "11.11.2026",
@@ -228,55 +261,22 @@
       "source": "כלכליסט"
     },
     {
-      "title": "ממענק מהקרן של ביל גייטס לחובות של מיליונים: המשבר של ארט מדיקל",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE95Rzl3MVl2SnBtREtZWmw3ZlRVSHRtQ0JFY2E3QmhhUEhIRV9mbWtxUUFzaVNBOTRFR0tIZHo1Y3Zvb1EtR0xOWmhqZjdzQXNNLVFDN2ZxLXRneEZTQnBTRk1td0VRRmRq?oc=5",
-      "date": "Tue, 10 Nov 2026 08:37:00 GMT",
-      "formattedDate": "10.11.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "בצל הפרשה: אשתו הנבגדת של הואנג עשויה לקבל יותר מ-80 מיליארד דולר",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5kZ2c4S0dRdDljYTNwY1VlZlZUVXh5UUJMajhCdzFibjc4S1lIOUo4RnZOV1B3aENraTI0OFhIdk1hZFFrUENULUgzcVVTOWJWUWlnWVY2N1paYkpSektfci1faEp4Y2VTVTQ1ZGt3?oc=5",
-      "date": "Thu, 12 Nov 2026 09:57:00 GMT",
-      "formattedDate": "12.11.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "רפק מחליפה את שמיר: במו\"מ על תחנת הכוח אורות יצחק של צחי אבו וג'קי בן זקן",
-      "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5seTRtMUZEaEo0R0JHd0ZidGNnMFFwc24zV1NFNms4VFEwXzZYczNoMS1XWkZHbDRKam5rWGdMSEc3UUlIcFF0TDdNc0x6bjFtWnphV3hoSnNmUld2ZXFMbXByOA?oc=5",
-      "date": "Sat, 07 Nov 2026 19:54:00 GMT",
-      "formattedDate": "7.11.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "רווחי הבורסה זינקו ב-37% לעומת הרבעון המקביל, אך ירדו לעומת הרבעונים הקודמים",
-      "summary": "רווחי הבורסה זינקו ב-37% לעומת הרבעון המקביל, אך ירדו לעומת הרבעונים הקו��מים",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1PV21Lc3JYcjFyekJyUnNqRGxjWWluSlNEejlnNEpLVlJDU3JnZjZ1bGk0cWw5d0VBQ2dhNFVra2R4dDhUVWU1b3FMcDBJYkozYzdDWnp4cGdhRXNQNFY4ZXVWbw?oc=5",
-      "date": "Tue, 10 Nov 2026 17:34:00 GMT",
-      "formattedDate": "10.11.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
       "title": "עובדי ארקיע מחפשים משקיעים חלופיים: קיבלו שלושה ימים לשיפור הצעת הרכישה",
       "summary": "דיווח שוטף ומבזק ישיר ממדורי שוק ההון, המסחר והבורסה של עיתון 'כלכליסט'. לחצו לקריאת הידיעה המלאה באתר כלכליסט.",
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE82WU5PcS1uRTI2amY5bmY0emxBSHRaRUUweEI1SFN1bUtxMjJ4YmIwMmc4b2FZMlM1U0czcU44UWVWUDUwUjJ4RlZJZlhhV1ozZmJoV3BsamdsN0dyX09uTDZwV0N6dE1F?oc=5",
       "date": "Fri, 13 Nov 2026 10:18:00 GMT",
-      "formattedDate": "לפני כ-11 שעות",
+      "formattedDate": "13.11.2026",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "בצל הפרשה: אשתו ה��בגדת של הואנג עשויה לקבל יותר מ-80 מיליארד דולר",
+      "summary": "בצל הפרשה: אשתו הנבגדת של הואנג עשויה לקבל יותר מ-80 מיליארד דולר",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5kZ2c4S0dRdDljYTNwY1VlZlZUVXh5UUJMajhCdzFibjc4S1lIOUo4RnZOV1B3aENraTI0OFhIdk1hZFFrUENULUgzcVVTOWJWUWlnWVY2N1paYkpSektfci1faEp4Y2VTVTQ1ZGt3?oc=5",
+      "date": "Thu, 12 Nov 2026 09:57:00 GMT",
+      "formattedDate": "12.11.2026",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
