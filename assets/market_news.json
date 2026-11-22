@@ -1,32 +1,89 @@
 {
   "source": "כלכליסט - שוק ההון (Calcalist Market)",
   "source_url": "https://www.calcalist.co.il/market",
-  "last_updated": "2026-11-22T12:25:28.438Z",
-  "formatted_updated": "יום ראשון, 22 בנובמבר 2026 בשעה 12:25",
+  "last_updated": "2026-11-22T21:39:33.307Z",
+  "formatted_updated": "יום ראשון, 22 בנובמבר 2026 בשעה 21:39",
   "breaking_news": [
-    "קונים בירידות או מוכרי��? מנהלי ההשקעות חלוקים על המפולת בוול סטריט - כלכליסט",
+    "מזרחי טפחות יבצע פיצול מניות: כל מניה תחולק לחמש - כלכליסט",
+    "מדד הפחד של גולדמן זאקס קרוב לשיא: ״גל המכירות בשווקים עוד לא נגמר״ - כלכליסט",
+    "קונים בירידות או מוכרים? מנהלי ההשקעות חלוקים על המפולת בוול סטריט - כלכליסט",
+    "\"אולי צריך להלום בציבור\": בכיר הפד שקורא להעלאה אגרסיבית של הריבית בדצמבר - כלכליסט",
+    "חשש לפתיחה סוערת באסיה מחר: החוזים בדרום קוריאה צנחו ב-7% - כלכליסט",
+    "פאניקה בשוק ה-AI: מניות השבבים מחקו 2.3 טריליון דולר בשבוע הגרוע שלהן זה רבע מאה - כלכליסט",
     "מימוש שני בתוך חצי שנה: פימי מכרה מניות הייפר גלובל בכ-100 מיליון שקל - כלכליסט",
     "דודי ורטהיים רכש מניות של מזרחי-טפחות ב-10 מיליון שקל - כלכליסט",
-    "פאניקה בשוק ה-AI: מניות השבבים מחקו 2.3 טריליון דולר בשבוע הגרוע שלהן זה רבע מאה - כלכליסט",
     "לאחר ההנפקה ההיסטורית שלה: אנתרופיק הגדילה את היקף הגיוס ל-93.5 מיליארד דולר - כלכליסט",
-    "מניות דואליות: חברות ישראליות בתל אביב ובוול סטריט - כלכליסט",
-    "יועץ לשעבר של ביידן ובכיר באנתרופיק מצטרפים לוועדה המייעצת של קרן ניו ארה - כלכליסט",
-    "150 מיליון שקל למוטי בן משה, 70 מיליון לפסגות - מערך המימון של עופר ינאי נחשף - כלכליסט",
-    "המספרים מאחורי ההנפקה הגדולה בהיסטוריה - כלכליסט",
-    "בש�� חובות של מיליונים: מונה נאמן לחברה שבה השקיע בן דודו המנוח של נתניהו - כלכליסט"
+    "מניות דואליות: חברות ישראליות בתל אביב ובוול סטריט - כלכליסט"
   ],
   "lead_story": {
-    "title": "קונים בירידות או מוכרי��? מנהלי ההשקעות חלוקים על המפולת בוול סטריט - כלכליסט",
-    "summary": "קונים בירידות או מוכרים? מנהלי ההשקעות חלוקים על המפולת בוול סטריט כלכליסט",
-    "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1PRmFMR3J5S3ExdFpGQndVcHFsWTNGclFvSHpidlJNV0ZIeS1PX3NTOF9iN2dGWmRhYWdJaXFucGhRMkJyUkk5YzQzS3UxcFhCWVZScGZBTVQ0bVh1aVRwUHFzcw?oc=5",
-    "date": "Sun, 22 Nov 2026 06:38:00 GMT",
+    "title": "מזרחי טפחות יבצע פיצול מניות: כל מניה תחולק לחמש - כלכליסט",
+    "summary": "מזרחי טפחות יבצע פיצול מניות: כל מניה תחולק לחמש כלכליסט",
+    "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5HWk5ScjlKdnNCelVJQmlXcWMwSnRCcUpZWXY0SGJ4OXRBSHJ5UWMyRWUyRTJ6X1FmMTA5UGFRc3pza3VXaTJ5UWtUX1pkZFV6WDVybjU2aWRuWG9GRkVhVE5iNA?oc=5",
+    "date": "Sun, 22 Nov 2026 16:03:00 GMT",
     "formattedDate": "לפני כ-5 שעות",
-    "category": "כלכליסט | וול סטריט ומדדים",
+    "category": "כלכליסט | שוק ההון והבורסה",
     "categoryKey": "wallstreet",
-    "badgeColor": "#0284c7",
+    "badgeColor": "#dc2626",
     "source": "כלכליסט"
   },
   "side_stories": [
+    {
+      "title": "מדד הפחד של גולדמן זאקס קרוב לשיא: ״גל המכירות בשווקים עוד לא נגמר״ - כלכליסט",
+      "summary": "מדד הפחד של גולדמן זאקס קרוב לשיא: ״גל המכירות בשווקים עוד לא נגמר״ כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1iS1dkcXR0UEpGY3RXcnlqRFVHWXA5RmJJbTJCRXFrMG83Wkl3RUlsQlA5SzZXaDNwSEowekpra2VfVnFucVotaHp2a2dXSjFRZC1WVm91NG1VNjNYZ3B5ZVM0Zw?oc=5",
+      "date": "Sun, 22 Nov 2026 15:14:00 GMT",
+      "formattedDate": "לפני כ-6 שעות",
+      "category": "כלכליסט | מאקרו וריבית",
+      "categoryKey": "macro",
+      "badgeColor": "#b45309",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "קונים בירידות או מוכרים? מנהלי ההשקעות חלוקים על המפולת בוול סטריט - כלכליסט",
+      "summary": "קונים בירידות או מוכרים? מנהלי ההשקעות חלוקים על המפולת בוול סטריט כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1PRmFMR3J5S3ExdFpGQndVcHFsWTNGclFvSHpidlJNV0ZIeS1PX3NTOF9iN2dGWmRhYWdJaXFucGhRMkJyUkk5YzQzS3UxcFhCWVZScGZBTVQ0bVh1aVRwUHFzcw?oc=5",
+      "date": "Sun, 22 Nov 2026 06:38:00 GMT",
+      "formattedDate": "לפני כ-15 שעות",
+      "category": "כלכליסט | וול סטריט ומדדים",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#0284c7",
+      "source": "כלכליסט"
+    }
+  ],
+  "articles": [
+    {
+      "title": "\"אולי צריך להלום בציבור\": בכיר הפד שקורא להעלאה אגרסיבית של הריבית בדצמבר - כלכליסט",
+      "summary": "\"אולי צריך להלום בציבור\": בכיר הפד שקורא להעלאה אגרסיבית של הריבית בדצמבר כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBUUVRlRXlzVEFHLWd2NklyTE5Hc1dmalRxel8teElVMGh6WEE5aTdRY0JrUmpaTWk2ek1hNEpVRDdwQml2Y2NDYlN2bUpFTm00ZHJmR19wU0EyZkxibjlYcjRUQQ?oc=5",
+      "date": "Wed, 18 Nov 2026 13:15:00 GMT",
+      "formattedDate": "18.11.2026",
+      "category": "כלכליסט | וול סטריט ומדדים",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#0284c7",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "חשש לפתיחה סוערת באסיה מחר: החוזים בדרום קוריאה צנחו ב-7% - כלכליסט",
+      "summary": "חשש לפתיחה סוערת באסיה מחר: החוזים בדרום קוריאה צנחו ב-7% כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBEOW1SWllFa25DZ2ZNRC1wZlJpUGk3b1NHQ1V5bTNBR0NsX0xkVm1rdDAxVE43M3pjblktWElZaDJ6bW1RSUtoanAyaHRNWEVFRnZaS3hDUTVzTDZTOFJNM1J1ZHA?oc=5",
+      "date": "Sun, 22 Nov 2026 18:09:00 GMT",
+      "formattedDate": "לפני כ-3 שעות",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "פאניקה בשוק ה-AI: מניות השבבים מחקו 2.3 טריליון דולר בשבוע הגרוע שלהן זה רבע מאה - כלכליסט",
+      "summary": "פאניקה בשוק ה-AI: מניות השבבים מחקו 2.3 טריליון דולר בשבוע הגרוע שלהן זה רבע מאה כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9ZTzFXMGt1YU9FWUYtbkVBTE14Z0g1MUl3UUMyS3pSSlJxcU84TlNJcXZTbWVBUmwzTUE2cEU5VzlxM1hsVkcwaHU4UUEtWmk2VHJSd3V0OTlLWlVuQ0hLTFhkQQ?oc=5",
+      "date": "Sat, 21 Nov 2026 06:08:00 GMT",
+      "formattedDate": "21.11.2026",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
     {
       "title": "מימוש שני בתוך חצי שנה: פימי מכרה מניות הייפר גלובל בכ-100 מיליון שקל - כלכליסט",
       "summary": "מימוש שני בתוך חצי שנה: פימי מכרה מניות הייפר גלובל בכ-100 מיליון שקל כלכליסט",
@@ -44,19 +101,6 @@
       "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1EdzZjbEdnMnJ3VllpX3VYM29wSDQ3eFh6dXE2ZW1DZTlYYVgxTlctcWwyVWtETVVuNk1WUjl3bVU1cE5rcmFzcGNPaXlWR1RpVzd0eDBESXc3Y0VKZmVxVWxqQTQ?oc=5",
       "date": "Fri, 20 Nov 2026 07:49:00 GMT",
       "formattedDate": "20.11.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    }
-  ],
-  "articles": [
-    {
-      "title": "פאניקה בשוק ה-AI: מניות השבבים מחקו 2.3 טריליון דולר בשבוע הגרוע שלהן זה רבע מאה - כלכליסט",
-      "summary": "פאניקה בשוק ה-AI: מניות השבבים מחקו 2.3 טריליון דולר בשבוע הגרוע שלהן זה רבע מאה כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9ZTzFXMGt1YU9FWUYtbkVBTE14Z0g1MUl3UUMyS3pSSlJxcU84TlNJcXZTbWVBUmwzTUE2cEU5VzlxM1hsVkcwaHU4UUEtWmk2VHJSd3V0OTlLWlVuQ0hLTFhkQQ?oc=5",
-      "date": "Sat, 21 Nov 2026 06:08:00 GMT",
-      "formattedDate": "21.11.2026",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
@@ -96,11 +140,33 @@
       "source": "כלכליסט"
     },
     {
+      "title": "בתזמון מאתגר: חברת הפינטק ברידג'וויז נערכת להנפקה בתל אביב - כלכליסט",
+      "summary": "בתזמון מאתגר: חברת הפינטק ברידג'וויז נערכת להנפקה בתל אביב כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAzYkljZVN6aTh6VEw2Q2RxeUYxUjZ1WEZ4QmUzZndEdmxJUzVCYkhiODQzVlZtUkxFQTNfMURGalFXTE1iSEZaSm1VbkRJakhMVUh1Nm9hYVRNZnNfNWZ4VF81Yw?oc=5",
+      "date": "Sun, 22 Nov 2026 13:14:00 GMT",
+      "formattedDate": "לפני כ-8 שעות",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
       "title": "150 מיליון שקל למוטי בן משה, 70 מיליון לפסגות - מערך המימון של עופר ינאי נחשף - כלכליסט",
       "summary": "150 מיליון שקל למוטי בן משה, 70 מיליון לפסגות - מערך המימון של עופר ינאי נחשף כלכליסט",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBNV2lLR2JfZkxVckpzZU90RFJHb3JrTFdlckEtTWNyTm1PaWM2eFAyZDdKNXdvdGdQOFRCVTdCRGtYR3JiSDhpbF9JeFlxeWJIeGZyemN6R05vbld2OVVVbFU5dw?oc=5",
       "date": "Thu, 19 Nov 2026 04:00:00 GMT",
       "formattedDate": "19.11.2026",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "5.5 מיליארד דולר במתנה לחג: תרומת הענק החדשה של וורן באפט - כלכליסט",
+      "summary": "5.5 מיליארד דולר במתנה לחג: תרומת הענק החדשה של וורן באפט כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBIZXV2UUtXWW1IQWNYZWJWR1QzSFRfWnJTdHhwbkd2bE41aDk2Rnd0V3NLSFYzS0l2QlRiSUVYSjRNTTQ3MF9HeHpYaDcyY0VUMzRfaVlqS0lGQkg4ZDFNMXlXWXNDZ0NC?oc=5",
+      "date": "Mon, 16 Nov 2026 17:23:00 GMT",
+      "formattedDate": "16.11.2026",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
@@ -118,17 +184,6 @@
       "source": "כלכליסט"
     },
     {
-      "title": "בש�� חובות של מיליונים: מונה נאמן לחברה שבה השקיע בן דודו המנוח של נתניהו - כלכליסט",
-      "summary": "בשל חובות של מיליונים: מונה נאמן לחברה שבה השקיע בן דודו המנוח של נתניהו כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1oR3pydlRXQnNyYWJ1aHM1RHZ3d3BkSnNLMzB5bnhHTUVrdTMtRHAxLURqNjh4Y203bjI4QTFQVG1nMVY1YkZGbnRxbFRaSFJjejFacVVnaWxfVlBzY2hCOFVqVU5jd3Jf?oc=5",
-      "date": "Wed, 18 Nov 2026 08:20:00 GMT",
-      "formattedDate": "18.11.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
       "title": "אנתרופיק תתחיל להיסחר מחר בנאסד\"ק ב-83 דולר למניה - מעל המחיר הראשוני שקבעה - כלכליסט",
       "summary": "אנתרופיק תתחיל להיסחר מחר בנאסד\"ק ב-83 דולר למניה - מעל המחיר הראשוני שקבעה כלכליסט",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBHSWg2VUtUMFlPazZDYW5VVHJoS1pQU2RubEZqNkNQc3VIRlVjWHJDOWwtR1E0bzBLTVJVWU5ibXRLd0YwclNVOFU3Zml5a3p1WjA4OTJiZ0lrX1Z1UVROTDVtYw?oc=5",
@@ -140,11 +195,22 @@
       "source": "כלכליסט"
     },
     {
+      "title": "הכסף הוקצה, הבנייה תקועה: משבר הדיור ביישובים הערביים - כלכליסט",
+      "summary": "הכסף הוקצה, הבנייה תקועה: משבר הדיור ביישובים הערביים כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1oYVlFSm9OTGZUeFZTVFlXMUFnV04xOXBteXJaTElzRlVrMHIxN0lMNUVrOXNHVXB6eHJEWkVGQlpHLUdWdS1RdVdfaWxBaVRqc3ZvcXVBcC16ZV9QbFFTOG1RNVE1MGNN?oc=5",
+      "date": "Sun, 22 Nov 2026 12:36:00 GMT",
+      "formattedDate": "לפני כ-9 שעות",
+      "category": "כלכליסט | נדל\"ן ומשכנתאות",
+      "categoryKey": "realestate",
+      "badgeColor": "#ea580c",
+      "source": "כלכליסט"
+    },
+    {
       "title": "\"בשלוש שנים עשינו תשואות של קרוב לעשור. זה מצוין שיוצא עכשיו אוויר מהשווקים\" - כלכליסט",
       "summary": "\"בשלוש שנים עשינו תשואות של קרוב לעשור. זה מצוין שיוצא עכשיו אוויר מהשווקים\" כלכליסט",
       "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE51Q0lxY0tDZnV3Vi1mSEUxeGh1QzRVS1JLNEM2SkN3UWRycVRUcEFzM2tIeXhtdTlMa1hRZjBHMTA0UVhOSWFFSDRTTkR3M2ItU0tWZ3cyYUZXVXp2d0V0Vzgyel8?oc=5",
       "date": "Sat, 21 Nov 2026 13:23:00 GMT",
-      "formattedDate": "לפני כ-23 שעות",
+      "formattedDate": "21.11.2026",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
@@ -184,17 +250,6 @@
       "source": "כלכליסט"
     },
     {
-      "title": "מי בית ההשקעות שאיבד כמעט 18% מכספי לקוחותיו מתחילת השנה? - כלכליסט",
-      "summary": "מי בית ההשקעות שאיבד כמעט 18% מכספי לקוחותיו מתחילת השנה? כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1fb2JiSkJMWFdxRXRoX2dJOTdKZkV6U29XSEJiZEE5NlA5TWM1VXExeVVxYk8xWFFCWFRxT1paemdsbU1wNUl6dWdhN3VnNmluSjUtbUR1eHFiWDFmT3VaZEs3RQ?oc=5",
-      "date": "Wed, 18 Nov 2026 16:55:00 GMT",
-      "formattedDate": "18.11.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
       "title": "המדד שהפתיע: האם הריבית בישראל תרד כבר ביום שני - כלכליסט",
       "summary": "המדד שהפתיע: האם הריבית בישראל תרד כבר ביום שני כלכליסט",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1MMEh0a0hReElBczRIS2Y4TkZjOHdGR251Yk54YzdUc3J2NHZ5Y1p6NnVJbDZVUWRKaWROSUFrbW5PSU55NjZ6QlJHSjk5TTZ6c2ZZWGlEcUllVXRQNHhVZ3Rn?oc=5",
@@ -206,14 +261,14 @@
       "source": "כלכליסט"
     },
     {
-      "title": "בעלי מניות באקסיליון לביהמ\"ש: \"הראל הרשטיק מנע את הדחתו מהדירקטוריון בעזרת מסמכים מזויפים\" - כלכליסט",
-      "summary": "בעלי מניות באקסיליון לביהמ\"ש: \"הראל הרשטיק מנע את הדחתו מהדירקטוריון בעזרת מסמכים מזויפים\" כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE16NzBNbHRXamhhLVBCNzRZRkJXMjJXUU9JT2lOWk9Tc0NJeG1Rd3RvRkVZT1FnU0F1OFdsQzFoSjVqSTlZSmpRV2hZWXRMcTl2NGZBckt6dDY4cHNiTEF5THVITVM?oc=5",
-      "date": "Tue, 17 Nov 2026 04:00:00 GMT",
-      "formattedDate": "17.11.2026",
-      "category": "כלכליסט | פנסיה וחיסכון",
-      "categoryKey": "pension",
-      "badgeColor": "#059669",
+      "title": "מי בית ההשקעות שאיבד כמעט 18% מכספי לקוחותיו מתחילת השנה? - כלכליסט",
+      "summary": "מי בית ההשקעות שאיבד כמעט 18% מכספי לקוחותיו מתחילת השנה? כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1fb2JiSkJMWFdxRXRoX2dJOTdKZkV6U29XSEJiZEE5NlA5TWM1VXExeVVxYk8xWFFCWFRxT1paemdsbU1wNUl6dWdhN3VnNmluSjUtbUR1eHFiWDFmT3VaZEs3RQ?oc=5",
+      "date": "Wed, 18 Nov 2026 16:55:00 GMT",
+      "formattedDate": "18.11.2026",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
       "source": "כלכליסט"
     },
     {
@@ -228,69 +283,14 @@
       "source": "כלכליסט"
     },
     {
-      "title": "מסודרים: הסכום שיקבלו עובדי אנתרופיק בעקבות ההנפקה - כלכליסט",
-      "summary": "מסודרים: הסכום שיקבלו עובדי אנתרופיק בעקבות ההנפקה כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1sOFZua0J3dmw5N1ZFcXIwTF9WRHVQVlROcDZKalhvd256RkJLNDFwc0FJRUxKS3Y4X3VXQWJzYTlPNGtNZXo3VlJuWkRvZHprdEFIT3lQZ1BmVnMwUlhqVjVObHhwdE8wdWFz?oc=5",
-      "date": "Tue, 17 Nov 2026 09:56:00 GMT",
-      "formattedDate": "17.11.2026",
-      "category": "כלכליסט | מיסוי והטבות",
-      "categoryKey": "tax",
-      "badgeColor": "#7c3aed",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "הלוגיסטיקה מקדמת, המשרדים תוקעים: ההכנסות התפעוליות של קרן הריט מניבים עלו ב-11% - כלכליסט",
-      "summary": "הלוגיסטיקה מקדמת, המשרדים תוקעים: ההכנסות התפעוליות של קרן הריט מניבים עלו ב-11% כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5FNjBPcXBzZGxsQzVFdVNrTUZTZ3R4dk9tU05RX1lTb21POHVVLWxiWm1JeGljNE9udU1vNVNqMDUzaFdCb1lPMWVBdWsyckdWZmo0NVNtVVFmeVN1RGdsaFZ5SQ?oc=5",
-      "date": "Tue, 17 Nov 2026 11:02:00 GMT",
-      "formattedDate": "17.11.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "קרן הניקיון התרוקנה: תקציב הפיקוח על מפעלים מזהמים בסכנת קיצוץ של 70% - כלכליסט",
-      "summary": "קרן הניקיון התרוקנה: תקציב הפיקוח על מפעלים מזהמים בסכנת קיצוץ של 70% כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9Tay1rWDh4VjBVNTY0X2p4UkFlckJ2clpicHM5MmZrRXdJWGFQY01RcGlYLXJ5Rjg2c2lwRnhnZDl0VDhaZkliN2k0a1kxVG9yM2RIVXZBTDBLajFzMUFDWnlyWW8wSTN0?oc=5",
-      "date": "Mon, 16 Nov 2026 10:21:00 GMT",
-      "formattedDate": "16.11.2026",
-      "category": "כלכליסט | מאקרו וריבית",
-      "categoryKey": "macro",
-      "badgeColor": "#b45309",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "קשיים בהשלמת העסקה לרכישת מניות רוטשטיין באנשי העיר בידי המייסדים - כלכליסט",
-      "summary": "קשיים בהשלמת העסקה לרכישת מניות רוטשטיין באנשי העיר בידי המייסדים כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFByTzN0UlVFRjlsSHRVY2FTQkwyRUVWMTBnc3JNM1VXNDkzajJqNkZmb1l6N3JjTDZ4Q3hLbWhBbkxmZzVwUk5FYUc4d0hzX0huSTEtaG0yVGNma0JlclVYc0wxOA?oc=5",
-      "date": "Sun, 22 Nov 2026 04:00:00 GMT",
-      "formattedDate": "לפני כ-8 שעות",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "בפעם השלישית: לקוחות הפועלים יוכלו לקבל מניה של הבנק - בשווי של כ-70 שקל - כלכליסט",
-      "summary": "בפעם השלישית: לקוחות הפועלים יו��לו לקבל מניה של הבנק - בשווי של כ-70 שקל כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5acjJEbVc2M2lDTjQ2R2swaGdxOXhIMzRyWFFtX25YeDJ6VG5aS3Z2SC1XUTZjRncyMkZ1cVRDcFl3Wk14bGFhaXZ6bTB6dmxpdFhZNkl1ZHVtT2JTeXhjQWU3WQ?oc=5",
-      "date": "Tue, 17 Nov 2026 07:58:00 GMT",
-      "formattedDate": "17.11.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "רמי לוי ייתן ללקוחות הלוואות: רשות שוק ההון אישרה לו פעילות אשראי חוץ בנקאי - כלכליסט",
-      "summary": "רמי לוי ייתן ללקוחות הלוואות: רשות שוק ההון אישרה לו פעילות אשראי חוץ בנקאי כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9OYUNOejN1bVVvZTRaY3RqRzRNUW9VdGVTRU83Q0M4bWVtZ19RblhleXdRdzhySWp5S3VBR04yREM4WnpWdzBUX0lNQkJMUE9VQVpDanFUMjY0QzhPMnRDMXNxX1pxWnM?oc=5",
-      "date": "Mon, 16 Nov 2026 06:49:00 GMT",
-      "formattedDate": "16.11.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
+      "title": "כלכליסט - חדשות הכלכלה, שוק ההון, הייטק ונדל\"ן בישראל | כלכליסט - כלכליסט",
+      "summary": "כלכליסט - חדשות הכלכלה, שוק ההון, הייטק ונדל\"ן בישראל | כלכליסט כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5CVTM2QnpFUFBMSEZfdTJSbzdqVERDdUF2dlRDNXZwWkFkMFdaUm41UmNMdldtSE9lTnB4MmN1Y1c4LWF3WHQ0eGVrMTgwREwwV3lWZEtiTjJMU2IxOGxocw?oc=5",
+      "date": "Sat, 24 Dec 2016 01:22:04 GMT",
+      "formattedDate": "24.12.2016",
+      "category": "כלכליסט | נדל\"ן ומשכנתאות",
+      "categoryKey": "realestate",
+      "badgeColor": "#ea580c",
       "source": "כלכליסט"
     }
   ]
