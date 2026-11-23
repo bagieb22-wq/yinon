@@ -423,7 +423,12 @@
         injectStyles();
         var existingConsent = localStorage.getItem(STORAGE_KEY);
         if (!existingConsent) {
+            // First visit: strictly enforce denial until user approves
+            applyConsent({ analytics: false, marketing: false });
             showBanner();
+        } else {
+            var prefs = getPreferences();
+            applyConsent(prefs);
         }
     }
 
@@ -637,12 +642,47 @@
         try { document.body.style.overflow = ''; } catch(e) {}
     }
 
+    // Apply user consent to Google Analytics, Google Tag Manager & Meta Pixel
+    function applyConsent(prefs) {
+        if (!prefs) prefs = { analytics: false, marketing: false };
+
+        window._ibs_has_analytics_consent = !!prefs.analytics;
+        window._ibs_has_marketing_consent = !!prefs.marketing;
+
+        // 1. Google Analytics / GTM Consent Mode v2
+        if (typeof window.gtag === 'function') {
+            window.gtag('consent', 'update', {
+                'analytics_storage': prefs.analytics ? 'granted' : 'denied',
+                'ad_storage': prefs.marketing ? 'granted' : 'denied',
+                'ad_user_data': prefs.marketing ? 'granted' : 'denied',
+                'ad_personalization': prefs.marketing ? 'granted' : 'denied'
+            });
+        }
+
+        // 2. Meta / Facebook Pixel Consent API
+        if (typeof window.fbq === 'function') {
+            if (prefs.marketing) {
+                window.fbq('consent', 'grant');
+                if (!window._ibs_fbq_pageview_tracked) {
+                    window.fbq('track', 'PageView');
+                    window._ibs_fbq_pageview_tracked = true;
+                }
+            } else {
+                window.fbq('consent', 'revoke');
+            }
+        }
+    }
+
     function getPreferences() {
         try {
+            var consent = localStorage.getItem(STORAGE_KEY);
+            if (consent === 'essential') return { analytics: false, marketing: false };
+            if (consent === 'all') return { analytics: true, marketing: true };
             var raw = localStorage.getItem(PREFS_KEY);
             if (raw) return JSON.parse(raw);
         } catch(e) {}
-        return { analytics: true, marketing: true };
+        // Default under Amendment 13 / GDPR Opt-In: strictly false until explicit choice
+        return { analytics: false, marketing: false };
     }
 
     function saveConsent(type, prefs) {
@@ -651,6 +691,7 @@
             localStorage.setItem(DATE_KEY, new Date().toISOString());
             localStorage.setItem(PREFS_KEY, JSON.stringify(prefs));
         } catch(e) {}
+        applyConsent(prefs);
     }
 
     function showToast(text) {

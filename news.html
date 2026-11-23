@@ -1,6 +1,38 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
+        <!-- Google Consent Mode v2 (Israeli Privacy Protection Law Amendment 13 / GDPR Default: Denied) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      (function() {
+        var hasAnalytics = false;
+        var hasMarketing = false;
+        try {
+          var consent = localStorage.getItem('ibs_cookie_consent');
+          var prefs = JSON.parse(localStorage.getItem('ibs_cookie_preferences') || '{}');
+          if (consent === 'all') {
+            hasAnalytics = true;
+            hasMarketing = true;
+          } else if (consent === 'custom') {
+            hasAnalytics = !!prefs.analytics;
+            hasMarketing = !!prefs.marketing;
+          }
+        } catch(e) {}
+
+        window._ibs_has_analytics_consent = hasAnalytics;
+        window._ibs_has_marketing_consent = hasMarketing;
+
+        gtag('consent', 'default', {
+          'analytics_storage': hasAnalytics ? 'granted' : 'denied',
+          'ad_storage': hasMarketing ? 'granted' : 'denied',
+          'ad_user_data': hasMarketing ? 'granted' : 'denied',
+          'ad_personalization': hasMarketing ? 'granted' : 'denied'
+        });
+      })();
+    </script>
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -12,13 +44,11 @@
     <!-- Google tag (gtag.js) - Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JSQCTTDWQ2"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-JSQCTTDWQ2');
     </script>
 
-    <!-- Meta Pixel Code -->
+    <!-- Meta Pixel Code (Conditional on User Cookie Consent) -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -28,14 +58,22 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1107839165024404');
-    fbq('track', 'PageView');
 
-    // Auto-track WhatsApp, Phone, and Lead Clicks for Meta Ads Retargeting
+    // Revoke tracking until user explicitly accepts cookies
+    if (!window._ibs_has_marketing_consent) {
+        fbq('consent', 'revoke');
+    } else {
+        fbq('consent', 'grant');
+        fbq('track', 'PageView');
+        window._ibs_fbq_pageview_tracked = true;
+    }
+    fbq('init', '1107839165024404');
+
+    // Auto-track WhatsApp, Phone, and Lead Clicks for Meta Ads Retargeting ONLY if marketing consent is active
     document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
             el.addEventListener('click', function() {
-                if (typeof fbq === 'function') {
+                if (typeof fbq === 'function' && window._ibs_has_marketing_consent) {
                     fbq('track', 'Contact', { content_name: 'WhatsApp Click' });
                     fbq('track', 'Lead', { content_name: 'WhatsApp Lead' });
                 }
@@ -43,21 +81,21 @@
         });
         document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
             el.addEventListener('click', function() {
-                if (typeof fbq === 'function') {
+                if (typeof fbq === 'function' && window._ibs_has_marketing_consent) {
                     fbq('track', 'Contact', { content_name: 'Phone Call Click' });
                 }
             });
         });
         document.querySelectorAll('a[href*="surense.com"]').forEach(function(el) {
             el.addEventListener('click', function() {
-                if (typeof fbq === 'function') {
+                if (typeof fbq === 'function' && window._ibs_has_marketing_consent) {
                     fbq('track', 'Lead', { content_name: 'Surense Portfolio Review' });
                 }
             });
         });
         document.querySelectorAll('a[href*="calendar.app.google"]').forEach(function(el) {
             el.addEventListener('click', function() {
-                if (typeof fbq === 'function') {
+                if (typeof fbq === 'function' && window._ibs_has_marketing_consent) {
                     fbq('track', 'Schedule', { content_name: 'Google Calendar Meeting' });
                 }
             });
