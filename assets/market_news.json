@@ -1,26 +1,26 @@
 {
   "source": "כלכליסט - שוק ההון (Calcalist Market)",
   "source_url": "https://www.calcalist.co.il/market",
-  "last_updated": "2026-11-26T13:43:31.389Z",
-  "formatted_updated": "יום חמישי, 26 בנובמבר 2026 בשעה 13:43",
+  "last_updated": "2026-11-27T00:28:17.806Z",
+  "formatted_updated": "יום שישי, 27 בנובמבר 2026 בשעה 00:28",
   "breaking_news": [
-    "SpaceX ומאסק יתרמו מניות של החברה לתוכנית החיסכון הממשלתית לילדים - כלכליסט",
+    "SpaceX ומאסק יתרמו מניות של ��חברה לתוכנית החיסכון הממשלתית לילדים - כלכליסט",
     "שוק ההון נערך ליום שאחרי - איפה ישקיעו את הכסף של 2027 - כלכליסט",
+    "המיזוג הענק יוצא לפועל: דוניץ אלעד רוכשת את דן נדל\"ן - שתקבל שליש ממניותיה - כלכליסט",
     "אפקט הפניקס: הרגולטור מחמיר את הכללים להענקת אופציות לבכירים - כלכליסט",
     "נורסטאר של חיים כצמן יוצאת להנפקת מניות, והמניה צונחת - כלכליסט",
-    "שוק ההון הכביד גם על מנורה מבטחים: הרווח הרבעוני עמד על 374 מיליון שקל - כלכליסט",
-    "המיזוג הענק יוצא לפועל: דוניץ אלעד רוכשת את דן נדל\"ן - שתקבל שליש ממניותיה - כלכליסט",
-    "לאחר יום של טלטלות וצניחות: נורסטאר הצליח�� לגייס כ־90 מיליון שקל - כלכליסט",
+    "לאחר יום של טלטלות וצניחות: נורסטאר הצליחה לגייס כ־90 מיליון שקל - כלכליסט",
     "המשק זקוק לזריקת מרץ, לא להעלאת מסים - כלכליסט",
-    "אל על מאשרת חשיפת כלכליסט: רוכשת את מניות הפניקס במועדון הנוסע המתמיד ב-979 מיליון שקל - כלכליסט",
-    "למרות חזרת חברות התעופה הזרות: מחירי הטיסות עלו ב-7 מ-10 היעדים המבוקשים בישראל - כלכליסט"
+    "למרות חזרת חברות התעופה הזרות: מחירי הטיסות עלו ב-7 מ-10 היעדים המבוקשים בישראל - כלכליסט",
+    "ארה\"ב: נתון האינפלציה המועדף על הפד עלה ל-3.8%, הצמיחה עודכנה כלפי מעלה - כלכליסט",
+    "עסקת מולטי ריטייל הושלמה: קרן קדמה מכרה את השליטה ��אייס וביתילי - כלכליסט"
   ],
   "lead_story": {
-    "title": "SpaceX ומאסק יתרמו מניות של החברה לתוכנית החיסכון הממשלתית לילדים - כלכליסט",
+    "title": "SpaceX ומאסק יתרמו מניות של ��חברה לתוכנית החיסכון הממשלתית לילדים - כלכליסט",
     "summary": "SpaceX ומאסק יתרמו מניות של החברה לתוכנית החיסכון הממשלתית לילדים כלכליסט",
     "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9WMFN1RUhmRVJOSEJTVU9rSldhX0VzYU43NTBYcWlGSk8yMG9XejBVZVBfTTVNeW5NbWZkTWVDZkVZRTRiRTI3bTM4aVZzVEg4VldCOG1jMEUzSHlLQlBqaHJLbTY4X3d0?oc=5",
     "date": "Wed, 25 Nov 2026 20:48:00 GMT",
-    "formattedDate": "לפני כ-16 שעות",
+    "formattedDate": "25.11.2026",
     "category": "כלכליסט | פנסיה וחיסכון",
     "categoryKey": "pension",
     "badgeColor": "#059669",
@@ -39,6 +39,19 @@
       "source": "כלכליסט"
     },
     {
+      "title": "המיזוג הענק יוצא לפועל: דוניץ אלעד רוכשת את דן נדל\"ן - שתקבל שליש ממניותיה - כלכליסט",
+      "summary": "המיזוג הענק יוצא לפועל: דוניץ אלעד רוכשת את דן נדל\"ן - שתקבל שליש ממניותיה כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9vV3B3WE1fMmhMY0lvdFhoa2xPVEFUQ2FJMGZXVmNoQVdpMGxlaHRTdUJJYXNlWm5qend1aS1rMDFRdWtYRkR5OWxkSGE5aUtpMldhVWNxWEVId09rM1A2MDV3?oc=5",
+      "date": "Thu, 26 Nov 2026 08:39:00 GMT",
+      "formattedDate": "לפני כ-15 שעות",
+      "category": "כלכליסט | נדל\"ן ומשכנתאות",
+      "categoryKey": "realestate",
+      "badgeColor": "#ea580c",
+      "source": "כלכליסט"
+    }
+  ],
+  "articles": [
+    {
       "title": "אפקט הפניקס: הרגולטור מחמיר את הכללים להענקת אופציות לבכירים - כלכליסט",
       "summary": "אפקט הפניקס: הרגולטור מחמיר את הכללים להענקת אופציות לבכירים כלכליסט",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBOTmk0al92UkItaW5zeHE5dklXVkFaYjFOTEMwbXFoSkp6NUtNQ3F6QnFPdFBUZDZobWpQNlpVRFdjYS0tbjFLODIxNUZHY04xbGl2VDlUbWJKSGJLNnlRTVNTNA?oc=5",
@@ -48,9 +61,7 @@
       "categoryKey": "pension",
       "badgeColor": "#059669",
       "source": "כלכליסט"
-    }
-  ],
-  "articles": [
+    },
     {
       "title": "נורסטאר של חיים כצמן יוצאת להנפקת מניות, והמניה צונחת - כלכליסט",
       "summary": "נורסטאר של חיים כצמן יוצאת להנפקת מניות, והמניה צונחת כלכליסט",
@@ -63,33 +74,11 @@
       "source": "כלכליסט"
     },
     {
-      "title": "שוק ההון הכביד גם על מנורה מבטחים: הרווח הרבעוני עמד על 374 מיליון שקל - כלכליסט",
-      "summary": "שוק ההון הכביד גם על מנורה מבטחים: הרווח הרבעוני עמד על 374 מיליון שקל כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1pVTU2QjRTYlhEQ2pvbHJyTU54N1B3UGkzUG0xV3ZFNUtra283bDZnM3J2ZW85THMxOVFUa0lYSGs2cmRIc00zXzNHOHByS01KMGMtRm1EdElyZlE4b0J2MWJ5dw?oc=5",
-      "date": "Wed, 25 Nov 2026 07:59:00 GMT",
-      "formattedDate": "25.11.2026",
-      "category": "כלכליסט | פנסיה וחיסכון",
-      "categoryKey": "pension",
-      "badgeColor": "#059669",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "המיזוג הענק יוצא לפועל: דוניץ אלעד רוכשת את דן נדל\"ן - שתקבל שליש ממניותיה - כלכליסט",
-      "summary": "המיזוג הענק יוצא לפועל: דוניץ אלעד רוכשת את דן נדל\"ן - שתקבל שליש ממניותיה כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9vV3B3WE1fMmhMY0lvdFhoa2xPVEFUQ2FJMGZXVmNoQVdpMGxlaHRTdUJJYXNlWm5qend1aS1rMDFRdWtYRkR5OWxkSGE5aUtpMldhVWNxWEVId09rM1A2MDV3?oc=5",
-      "date": "Thu, 26 Nov 2026 08:39:00 GMT",
-      "formattedDate": "לפני כ-5 שעות",
-      "category": "כלכליסט | נדל\"ן ומשכנתאות",
-      "categoryKey": "realestate",
-      "badgeColor": "#ea580c",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "לאחר יום של טלטלות וצניחות: נורסטאר הצליח�� לגייס כ־90 מיליון שקל - כלכליסט",
+      "title": "לאחר יום של טלטלות וצניחות: נורסטאר הצליחה לגייס כ־90 מיליון שקל - כלכליסט",
       "summary": "לאחר יום של טלטלות וצניחות: נורסטאר הצליחה לגייס כ־90 מיליון שקל כלכליסט",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5RRC14emtidlNOT0h2RlVULWFWT05EWFU4OVJONS1XNUhwNTQycW1GdzhxeEI0QVZ6RktGaWQ4aWZBRC1EZGNfRHJ3WmVsRV9ENlVLczBYLVk2WUpkeHhjalJR?oc=5",
       "date": "Wed, 25 Nov 2026 17:05:00 GMT",
-      "formattedDate": "לפני כ-20 שעות",
+      "formattedDate": "25.11.2026",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
@@ -107,6 +96,39 @@
       "source": "כלכליסט"
     },
     {
+      "title": "למרות חזרת חברות התעופה הזרות: מחירי הטיסות עלו ב-7 מ-10 היעדים המבוקשים בישראל - כלכליסט",
+      "summary": "למרות חזרת חברות התעופה הזרות: מחירי הטיסות עלו ב-7 מ-10 היעדים המבוקשים בישראל כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5RSURJaDl2cWhiY1VzRDJqZWE4d1Z4QUxuN2drdWVYQUFvWEhkTUJZSTk1bGFKcGVLQ2k2SHlNY0N5TDlPcVB2aWZ4anFpdGRldTI0Uk4tTGJhWXdjdFhJbmZ6MnF2U2RB?oc=5",
+      "date": "Wed, 25 Nov 2026 16:41:00 GMT",
+      "formattedDate": "25.11.2026",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "ארה\"ב: נתון האינפלציה המועדף על הפד עלה ל-3.8%, הצמיחה עודכנה כלפי מעלה - כלכליסט",
+      "summary": "ארה\"ב: נתון האינפלציה המועדף על הפד עלה ל-3.8%, הצמיחה עודכנה כלפי מעלה כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBIbmZXbnRsUkh0dzQ4M1g2a0RiVmtoSG15cVZjdzNrdjg3Y2k3eHRVeGlneXVXQmhPdWRuSmhKaGNzT2R0bmw3c21nZHctTmlWS3AwVVhZcVZfTU9xUVJiVFUtQW9oN2VF?oc=5",
+      "date": "Wed, 25 Nov 2026 15:28:00 GMT",
+      "formattedDate": "25.11.2026",
+      "category": "כלכליסט | וול סטריט ומדדים",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#0284c7",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "עסקת מולטי ריטייל הושלמה: קרן קדמה מכרה את השליטה ��אייס וביתילי - כלכליסט",
+      "summary": "עסקת מולטי ריטייל הושלמה: קרן קדמה מכרה את השליטה באייס וביתילי כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBVcWJDX3hBSUg3OHJBLVdnT2lXbDFMY3h4R01sd25IV2I0SnJqZU1HRTlHZ2FNbUZlNGJiSXM3MkpjNC1NRnM3a3JHZFNta2RmMTRSeFlkMzlJYW1kdEhfbmtsdw?oc=5",
+      "date": "Thu, 26 Nov 2026 15:30:00 GMT",
+      "formattedDate": "לפני כ-8 שעות",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
       "title": "אל על מאשרת חשיפת כלכליסט: רוכשת את מניות הפניקס במועדון הנוסע המתמיד ב-979 מיליון שקל - כלכליסט",
       "summary": "אל על מאשרת חשיפת כלכליסט: רוכשת את מניות הפניקס במועדון הנוסע המתמיד ב-979 מיליון שקל כלכליסט",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5DX3ZWZGNxcEFWMFY1NkxETWFfY0pmRGU1cjVTN1lyTkJYcDFXSko3ZC01R1Nla0dDb1dSMHRMamQ1WFNnX3RFR2h0Mk1RZ2Roc1l0OU5Tc2lUQkJOUnFLVGlWWQ?oc=5",
@@ -118,25 +140,14 @@
       "source": "כלכליסט"
     },
     {
-      "title": "למרות חזרת חברות התעופה הזרות: מחירי הטיסות עלו ב-7 מ-10 היעדים המבוקשים בישראל - כלכליסט",
-      "summary": "למרות חזרת חברות התעופה הזרות: מחירי הטיסות עלו ב-7 מ-10 היעדים המבוקשים בישראל כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5RSURJaDl2cWhiY1VzRDJqZWE4d1Z4QUxuN2drdWVYQUFvWEhkTUJZSTk1bGFKcGVLQ2k2SHlNY0N5TDlPcVB2aWZ4anFpdGRldTI0Uk4tTGJhWXdjdFhJbmZ6MnF2U2RB?oc=5",
-      "date": "Wed, 25 Nov 2026 16:41:00 GMT",
-      "formattedDate": "לפני כ-21 שעות",
+      "title": "הולנדיה מתקרבת להנפקה בת\"א בהצעת מכר של בעלי המניות - לפי שווי של מיליארד שקל - כלכליסט",
+      "summary": "הולנדיה מתקרבת להנפקה בת\"א בהצעת מכר של בעלי המניות - לפי שווי של מיליארד שקל כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8zOUFLd1owM0o5WEEwdDNYTHZXalgtY0J3M09JTkVUVFlmWlhDOVE0bVRrNkJHQ21yaUduNWx5eTItTHpaM1RrcXMxOWpqNGxDUXNBVFJrVVJFd1V5S09mV1BR?oc=5",
+      "date": "Wed, 25 Nov 2026 18:06:00 GMT",
+      "formattedDate": "25.11.2026",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "ארה\"ב: נתון האינפלציה המועדף על הפד עלה ל-3.8%, הצמיחה עודכנה כלפי מעלה - כלכליסט",
-      "summary": "ארה\"ב: נתון האינפלציה המועדף על הפד עלה ל-3.8%, הצמיחה עודכנה כלפי מעלה כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBIbmZXbnRsUkh0dzQ4M1g2a0RiVmtoSG15cVZjdzNrdjg3Y2k3eHRVeGlneXVXQmhPdWRuSmhKaGNzT2R0bmw3c21nZHctTmlWS3AwVVhZcVZfTU9xUVJiVFUtQW9oN2VF?oc=5",
-      "date": "Wed, 25 Nov 2026 15:28:00 GMT",
-      "formattedDate": "לפני כ-22 שעות",
-      "category": "כלכליסט | וול סטריט ומדדים",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#0284c7",
       "source": "כלכליסט"
     },
     {
@@ -151,11 +162,11 @@
       "source": "כלכליסט"
     },
     {
-      "title": "הולנדיה מתקרבת להנפקה בת\"א בהצעת מכר של בעלי המניות - לפי שווי של מיליארד שקל - כלכליסט",
-      "summary": "הולנדיה מתקרבת להנפקה בת\"א בהצעת מכר של בעלי המניות - לפי שווי של מיליארד שקל כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8zOUFLd1owM0o5WEEwdDNYTHZXalgtY0J3M09JTkVUVFlmWlhDOVE0bVRrNkJHQ21yaUduNWx5eTItTHpaM1RrcXMxOWpqNGxDUXNBVFJrVVJFd1V5S09mV1BR?oc=5",
-      "date": "Wed, 25 Nov 2026 18:06:00 GMT",
-      "formattedDate": "לפני כ-19 שעות",
+      "title": "השקל ממשיך ליפול: הדולר על 3.39 שקלים, שיא של 15 חודשים - כלכליסט",
+      "summary": "השקל ממשיך ליפול: הדולר על 3.39 שקלים, שיא של 15 חודשים כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9aUFVKb3Nvd3dWYVk0RjVBaUpENkZ1OVQzRkJjdVJ4S1AzZFRERVU2LWZfY0V6WmplS3hvdUFMRjVlLUM2RXU5bnYzQnB3VlRaZWV2OWNFR3pKa0NJT1JuQkN0SQ?oc=5",
+      "date": "Wed, 25 Nov 2026 15:32:00 GMT",
+      "formattedDate": "25.11.2026",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
@@ -170,17 +181,6 @@
       "category": "כלכליסט | וול סטריט ומדדים",
       "categoryKey": "wallstreet",
       "badgeColor": "#0284c7",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "השקל ממשיך ליפול: הדולר על 3.39 שקלים, שיא של 15 חודשים - כלכליסט",
-      "summary": "השקל ממשיך ליפול: הדולר על 3.39 שקלים, שיא של 15 חודשים כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9aUFVKb3Nvd3dWYVk0RjVBaUpENkZ1OVQzRkJjdVJ4S1AzZFRERVU2LWZfY0V6WmplS3hvdUFMRjVlLUM2RXU5bnYzQnB3VlRaZWV2OWNFR3pKa0NJT1JuQkN0SQ?oc=5",
-      "date": "Wed, 25 Nov 2026 15:32:00 GMT",
-      "formattedDate": "לפני כ-22 שעות",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
       "source": "כלכליסט"
     },
     {
@@ -206,6 +206,17 @@
       "source": "כלכליסט"
     },
     {
+      "title": "״לא ראינו את זה בעבר״: התנודתיות בשווקים זה הנורמלי החדש - כלכליסט",
+      "summary": "״לא ראינו את זה בעבר״: התנודתיות בשווקים זה הנורמלי החדש כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1vell5THd1VllTMWEzbVpNd2lHQzI0M0ZOc2Y1c1gwTTBWaGxQZXZPQ09ZZWd2dHEwRzJXcUU2NW9aV1hsV2FBZUZBcE1iRldVUFFpZGZJNUU3cTlVc3pQcWNB?oc=5",
+      "date": "Thu, 26 Nov 2026 16:25:00 GMT",
+      "formattedDate": "לפני כ-8 שעות",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
       "title": "הדולר נופל מתחת ל-3.30 אחרי הריבית וההפתעה של אנבידיה - כלכליסט",
       "summary": "הדולר נופל מתחת ל-3.30 אחרי הריבית וההפתעה של אנבידיה כלכליסט",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5IdHhURnFMNW5qM1VJT3RUck9OWHhQUlQwMzF1R2JFZ1c5UlNaaGNzSTVWcVh1Sm5VQkFmR0VIeGUwcDlpQWVpdVlXQ0lnZEtaV1pETXN6UFZWcENuTHJ5VWR3?oc=5",
@@ -217,22 +228,11 @@
       "source": "כלכליסט"
     },
     {
-      "title": "הסטרט-אפ הצליח, המייסד נכשל - כלכליסט",
-      "summary": "הסטרט-אפ הצליח, המייסד נכשל כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5vWEJwaVZQcUh4LVlWNjY5YW9tcm5iNlJmU09pbmtTYnRtMW1yeVpzZ0thY2FKZ2t3UEFzckdQcmZVLTk4YkJvRDhrMUxVQ1pEa0p3dzRrV1JKaVFmSzh2a19QVFFVRC1k?oc=5",
-      "date": "Wed, 25 Nov 2026 14:51:00 GMT",
-      "formattedDate": "לפני כ-22 שעות",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
       "title": "סלקום קיבלה בלעדיות במגעים לרכישת אייקון - בעלת איי דיגיטל - ב-500 מיליון שקל - כלכליסט",
       "summary": "סלקום קיבלה בלעדיות במגעים לרכישת אייקון - בעלת איי דיגיטל - ב-500 מיליון שקל כלכליסט",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFAzMC1mWE1CUUdsemFwaWxHSU1WOElPRExyeWppYWdjRG9wVW14aV9OeDJYTG5yTG1xdnZrbFJwbWp3XzdTclN0eFdIdExNT0lqWmVyLXNkUXd0QjA5QVlDc1p3?oc=5",
       "date": "Thu, 26 Nov 2026 07:26:00 GMT",
-      "formattedDate": "לפני כ-6 שעות",
+      "formattedDate": "לפני כ-17 שעות",
       "category": "כלכליסט | שוק ההון והבורסה",
       "categoryKey": "wallstreet",
       "badgeColor": "#dc2626",
@@ -250,18 +250,7 @@
       "source": "כלכליסט"
     },
     {
-      "title": "מזרחי טפחות יבצע פיצול מניות: כל מניה תחולק לחמש - כלכליסט",
-      "summary": "מזרחי טפחות יבצע פיצול מניות: כל מניה תחולק לחמש כלכליסט",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5HWk5ScjlKdnNCelVJQmlXcWMwSnRCcUpZWXY0SGJ4OXRBSHJ5UWMyRWUyRTJ6X1FmMTA5UGFRc3pza3VXaTJ5UWtUX1pkZFV6WDVybjU2aWRuWG9GRkVhVE5iNA?oc=5",
-      "date": "Sun, 22 Nov 2026 16:03:00 GMT",
-      "formattedDate": "22.11.2026",
-      "category": "כלכליסט | שוק ההון והבורסה",
-      "categoryKey": "wallstreet",
-      "badgeColor": "#dc2626",
-      "source": "כלכליסט"
-    },
-    {
-      "title": "וואן טכנולוגיות תרכוש מפימי את השליטה באמת מחשוב, לפי שווי של 358 מיליון שקל - כלכליסט",
+      "title": "וואן טכנולוגיות תרכוש מפימי את השליטה באמת מחשוב, לפי שווי ��ל 358 מיליון שקל - כלכליסט",
       "summary": "וואן טכנולוגיות תרכוש מפימי את השליטה באמת מחשוב, לפי שווי של 358 מיליון שקל כלכליסט",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9va29kMDdTelMzVW9SYWM4bnN0eW1MN3FIUm81N0Qxa1JNZ29NQ25RczRITS02QzVBOHRERDlhcmRyN1V6RWY0eUhOcjhRTjRnLTdnSllSY19yLVdwcmJTM2dn?oc=5",
       "date": "Mon, 23 Nov 2026 06:28:00 GMT",
@@ -283,7 +272,18 @@
       "source": "כלכליסט"
     },
     {
-      "title": "מדד הפחד של גולדמן זאקס קרוב לשיא: ״גל המכירות בשווקים עוד לא נגמ��״ - כלכליסט",
+      "title": "מזרחי טפחות יבצע פיצול מניות: כל מניה תחולק לחמש - כלכליסט",
+      "summary": "מזרחי טפחות יבצע פיצול מניות: כל מניה תחולק לחמש כלכליסט",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5HWk5ScjlKdnNCelVJQmlXcWMwSnRCcUpZWXY0SGJ4OXRBSHJ5UWMyRWUyRTJ6X1FmMTA5UGFRc3pza3VXaTJ5UWtUX1pkZFV6WDVybjU2aWRuWG9GRkVhVE5iNA?oc=5",
+      "date": "Sun, 22 Nov 2026 16:03:00 GMT",
+      "formattedDate": "22.11.2026",
+      "category": "כלכליסט | שוק ההון והבורסה",
+      "categoryKey": "wallstreet",
+      "badgeColor": "#dc2626",
+      "source": "כלכליסט"
+    },
+    {
+      "title": "מדד הפחד של גולדמן זאקס קרוב לשיא: ״גל המכירות בשווקים עוד לא נגמר�� - כלכליסט",
       "summary": "מדד הפחד של גולדמן זאקס קרוב לשיא: ״גל המכירות בשווקים עוד לא נגמר״ כלכליסט",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1iS1dkcXR0UEpGY3RXcnlqRFVHWXA5RmJJbTJCRXFrMG83Wkl3RUlsQlA5SzZXaDNwSEowekpra2VfVnFucVotaHp2a2dXSjFRZC1WVm91NG1VNjNYZ3B5ZVM0Zw?oc=5",
       "date": "Sun, 22 Nov 2026 15:14:00 GMT",
